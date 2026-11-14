@@ -19,6 +19,7 @@
     // Apply saved theme before paint to avoid a flash.
     try {
       var t = localStorage.getItem('tg-theme');
+      if (!t && window.matchMedia) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       if (t) document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   </script>

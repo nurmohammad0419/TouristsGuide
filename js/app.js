@@ -516,7 +516,7 @@
     const map = L.map(el, { scrollWheelZoom: false, attributionControl: true });
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
-      className: dark ? 'tiles-dark' : ''
+      className: 'tiles'
     }).addTo(map);
     const bounds = [];
     spots.forEach((s) => {
@@ -652,7 +652,9 @@
     const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     try { localStorage.setItem('tg-theme', next); } catch (_) {}
-    if (maps.length) route();
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = next === 'dark' ? '#0b1220' : '#f7f3ec';
+    $('#themeBtn').blur();
   });
   $('#toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   document.addEventListener('keydown', (e) => {
