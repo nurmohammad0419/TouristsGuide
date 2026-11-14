@@ -29,7 +29,7 @@ window.TG_CONFIG = {
       region: 'Middle East',
       status: 'live',
       tagline: 'Holy cities, Nabataean tombs, coral seas and endless dunes.',
-      cover: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Qasr_al-Farid%2C_Hegra_%28Madain_Salih%29%2C_1st_cent._CE%2C_Saudi_Arabia_%2810%29.jpg/1920px-Qasr_al-Farid%2C_Hegra_%28Madain_Salih%29%2C_1st_cent._CE%2C_Saudi_Arabia_%2810%29.jpg'
+      cover: 'assets/photos/hegra/1.jpg'
     },
     { id: 'turkey', name: 'Türkiye', flag: '🇹🇷', region: 'Europe / Asia', status: 'soon', tagline: 'Where continents meet.' },
     { id: 'egypt', name: 'Egypt', flag: '🇪🇬', region: 'Africa', status: 'soon', tagline: 'Pharaohs, the Nile and the Red Sea.' },

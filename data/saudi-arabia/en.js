@@ -18,7 +18,7 @@ TG.registerCountry('saudi-arabia', 'en', {
   nativeName: 'المملكة العربية السعودية',
   flag: '🇸🇦',
   tagline: 'From the two holiest sites in Islam to Nabataean tombs, coral reefs and the Empty Quarter.',
-  heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Qasr_al-Farid%2C_Hegra_%28Madain_Salih%29%2C_1st_cent._CE%2C_Saudi_Arabia_%2810%29.jpg/1920px-Qasr_al-Farid%2C_Hegra_%28Madain_Salih%29%2C_1st_cent._CE%2C_Saudi_Arabia_%2810%29.jpg',
+  heroImage: 'assets/photos/hegra/1.jpg',
 
   intro: [
     'Saudi Arabia occupies most of the Arabian Peninsula and is the largest country in the Middle East. It is the birthplace of Islam and home to its two holiest cities, Makkah and Madinah, which receive millions of pilgrims every year.',
