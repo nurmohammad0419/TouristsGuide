@@ -62,7 +62,8 @@
   };
   function img(src, alt, cls = '', attrs = '', width) {
     if (!src) return `<div class="ph ${cls}" aria-hidden="true"></div>`;
-    const small = width && /\/\d+px-/.test(src) ? src.replace(/\/\d+px-/, `/${width}px-`) : src;
+    // Local photos have a small version: name.jpg -> name-sm.jpg (used for cards, popups, search).
+    const small = width && width <= 960 && /^assets\/photos\/.+\.jpg$/.test(src) && !/-sm\.jpg$/.test(src) ? src.replace(/\.jpg$/, '-sm.jpg') : src;
     return `<img class="${cls}" src="${esc(small)}" ${small !== src ? `data-full="${esc(src)}"` : ''} alt="${esc(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="TG_imgErr(this)" ${attrs}>`;
   }
   const mapsUrl = (c) => `https://www.google.com/maps/search/?api=1&query=${c[0]},${c[1]}`;
@@ -571,7 +572,7 @@
   function openLightbox(list, i, title) { Object.assign(lb, { list, i, title }); $('#lightbox').hidden = false; document.body.classList.add('locked'); showLb(); }
   function showLb() {
     const g = lb.list[lb.i]; if (!g) return;
-    $('#lbImg').src = g.src.replace(/\/\d+px-/, '/1920px-'); $('#lbImg').alt = lb.title;
+    $('#lbImg').src = g.src; $('#lbImg').alt = lb.title;
     $('#lbImg').onerror = function () { this.onerror = null; this.src = g.src; };
     $('#lbCap').innerHTML = `<span>${lb.i + 1} / ${lb.list.length}</span> ${g.credit ? esc(g.credit) + ' · ' : ''}${g.license ? esc(g.license) + ' · ' : ''}${g.page ? `<a href="${esc(g.page)}" target="_blank" rel="noopener">Source</a>` : ''}`;
   }
