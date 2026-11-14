@@ -1341,7 +1341,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%B9%D8%A7%D8%A6%DB%8C%D8%B4%DB%81.jpg"
   }
  ],
- "clock-tower-museum": [],
+ "clock-tower-museum": [
+  {
+   "src": "assets/photos/clock-tower-museum/b2.jpg",
+   "thumb": "assets/photos/clock-tower-museum/b2-sm.jpg",
+   "credit": "Yousefmadari",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B4%85%E0%B4%AC%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%9C%E0%B5%8D_%E0%B4%85%E0%B5%BD-%E0%B4%AC%E0%B5%88%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%8D_%E0%B4%9F%E0%B4%B5%E0%B5%BC.jpg"
+  },
+  {
+   "src": "assets/photos/clock-tower-museum/b3.jpg",
+   "thumb": "assets/photos/clock-tower-museum/b3-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abraj-al-Bait_largest_clock_tower_in_the_world.jpg"
+  },
+  {
+   "src": "assets/photos/clock-tower-museum/b4.jpg",
+   "thumb": "assets/photos/clock-tower-museum/b4-sm.jpg",
+   "credit": "jakman1",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Makkah_clock_tower_with_Abraj_Al_Bait_Towers.jpg"
+  },
+  {
+   "src": "assets/photos/clock-tower-museum/b5.jpg",
+   "thumb": "assets/photos/clock-tower-museum/b5-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abraj-al-Bait_largest_clock_tower_ever.jpg"
+  }
+ ],
  "al-wahbah-crater": [
   {
    "src": "assets/photos/al-wahbah-crater/1.jpg",
@@ -1948,6 +1977,20 @@ TG.registerMedia('saudi-arabia', { spots: {
    "credit": "Lawrence of Arabia",
    "license": "CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/wiki/File:Ibrahim%27s_palace_in_the_city_of_Hofuf_in_Al-Ahsa.jpg"
+  },
+  {
+   "src": "assets/photos/ibrahim-palace/b1.jpg",
+   "thumb": "assets/photos/ibrahim-palace/b1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Qasr_Ibrahim,_al-Hofuf.jpg"
+  },
+  {
+   "src": "assets/photos/ibrahim-palace/b3.jpg",
+   "thumb": "assets/photos/ibrahim-palace/b3-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85.jpg"
   }
  ],
  "jawatha-mosque": [
@@ -2264,7 +2307,29 @@ TG.registerMedia('saudi-arabia', { spots: {
   }
  ],
  "georgios-shipwreck": [],
- "jabal-al-lawz": [],
+ "jabal-al-lawz": [
+  {
+   "src": "assets/photos/jabal-al-lawz/b3.jpg",
+   "thumb": "assets/photos/jabal-al-lawz/b3-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B7%D8%B1%D9%8A%D9%82_%D8%AD%D9%88%D9%84_%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2_%D8%A8%D9%8A%D9%86_%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%A8%D9%85%D9%86%D8%B7%D9%82%D8%A9_%D8%AA%D8%A8%D9%88%D9%83.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-al-lawz/b4.jpg",
+   "thumb": "assets/photos/jabal-al-lawz/b4-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%AA%D8%BA%D8%B7%D9%8A_%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2_%D9%81%D9%8A_%D8%AA%D8%A8%D9%88%D9%83_2022.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-al-lawz/b5.jpg",
+   "thumb": "assets/photos/jabal-al-lawz/b5-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A5%D8%A8%D9%84_%D8%AA%D8%B3%D8%B1%D8%AD_%D9%81%D9%8A_%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%A8%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2.jpg"
+  }
+ ],
  "qishlah-palace": [],
  "aarif-fort": [
   {
@@ -2397,5 +2462,41 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Zabalcastle1.jpg"
   }
  ],
- "al-rajajil": []
+ "al-rajajil": [
+  {
+   "src": "assets/photos/al-rajajil/b1.jpg",
+   "thumb": "assets/photos/al-rajajil/b1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(6).jpg"
+  },
+  {
+   "src": "assets/photos/al-rajajil/b2.jpg",
+   "thumb": "assets/photos/al-rajajil/b2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(2).jpg"
+  },
+  {
+   "src": "assets/photos/al-rajajil/b3.jpg",
+   "thumb": "assets/photos/al-rajajil/b3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(3).jpg"
+  },
+  {
+   "src": "assets/photos/al-rajajil/b4.jpg",
+   "thumb": "assets/photos/al-rajajil/b4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(19).jpg"
+  },
+  {
+   "src": "assets/photos/al-rajajil/b5.jpg",
+   "thumb": "assets/photos/al-rajajil/b5-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(20).jpg"
+  }
+ ]
 } });

@@ -508,3 +508,7 @@ kbd { font: inherit; font-size: .72rem; padding: 3px 7px; border-radius: 6px; bo
 
 /* Dark map tiles (OSM tiles inverted) */
 :root[data-theme="dark"] .tiles { filter: invert(1) hue-rotate(180deg) brightness(.95) contrast(.9) saturate(.6); }
+
+/* Placeholder label when a spot has no photo yet */
+.spot-card__media .ph, .gallery__item .ph, .hero__bg .ph { position: relative; }
+.spot-card__media .ph::after { content: '📷  Photo coming soon'; position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255, 255, 255, .75); font-size: .9rem; font-weight: 600; letter-spacing: .02em; }
