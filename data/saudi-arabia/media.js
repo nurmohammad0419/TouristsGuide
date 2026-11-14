@@ -1832,7 +1832,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Rub_al_khali_sunset_Nov_2007.jpg"
   }
  ],
- "red-sands": [],
+ "red-sands": [
+  {
+   "src": "assets/photos/red-sands/c1.jpg",
+   "thumb": "assets/photos/red-sands/c1-sm.jpg",
+   "credit": "Arif917",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khurais_Red_Sand_Dunes.jpg"
+  },
+  {
+   "src": "assets/photos/red-sands/c3.jpg",
+   "thumb": "assets/photos/red-sands/c3-sm.jpg",
+   "credit": "Modsupremo",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sands_-_A_Typical_Saudi_Landscape.jpg"
+  }
+ ],
  "wadi-hanifa": [
   {
    "src": "assets/photos/wadi-hanifa/1.jpg",
@@ -1916,7 +1931,15 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D8%B3%D9%88%D9%82_%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3.jpg"
   }
  ],
- "half-moon-bay": [],
+ "half-moon-bay": [
+  {
+   "src": "assets/photos/half-moon-bay/c1.jpg",
+   "thumb": "assets/photos/half-moon-bay/c1-sm.jpg",
+   "credit": "Ibtihal nasser Alsalman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B4%D8%A7%D8%B7%D8%A6_%D9%86%D8%B5%D9%81_%D8%A7%D9%84%D9%82%D9%85%D8%B1_%D8%B9%D9%86%D8%AF_%D8%A7%D9%84%D8%BA%D8%B1%D9%88%D8%A8.jpg"
+  }
+ ],
  "tarout-castle": [
   {
    "src": "assets/photos/tarout-castle/1.jpg",
@@ -1972,18 +1995,18 @@ TG.registerMedia('saudi-arabia', { spots: {
  ],
  "ibrahim-palace": [
   {
-   "src": "assets/photos/ibrahim-palace/1.jpg",
-   "thumb": "assets/photos/ibrahim-palace/1-sm.jpg",
-   "credit": "Lawrence of Arabia",
-   "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ibrahim%27s_palace_in_the_city_of_Hofuf_in_Al-Ahsa.jpg"
-  },
-  {
    "src": "assets/photos/ibrahim-palace/b1.jpg",
    "thumb": "assets/photos/ibrahim-palace/b1-sm.jpg",
    "credit": "Richard Mortel",
    "license": "CC BY 2.0",
    "page": "https://commons.wikimedia.org/wiki/File:Qasr_Ibrahim,_al-Hofuf.jpg"
+  },
+  {
+   "src": "assets/photos/ibrahim-palace/1.jpg",
+   "thumb": "assets/photos/ibrahim-palace/1-sm.jpg",
+   "credit": "Lawrence of Arabia",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ibrahim%27s_palace_in_the_city_of_Hofuf_in_Al-Ahsa.jpg"
   },
   {
    "src": "assets/photos/ibrahim-palace/b3.jpg",
@@ -2330,7 +2353,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D8%A5%D8%A8%D9%84_%D8%AA%D8%B3%D8%B1%D8%AD_%D9%81%D9%8A_%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%A8%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2.jpg"
   }
  ],
- "qishlah-palace": [],
+ "qishlah-palace": [
+  {
+   "src": "assets/photos/qishlah-palace/c1.jpg",
+   "thumb": "assets/photos/qishlah-palace/c1-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Qishlah_2.jpg"
+  },
+  {
+   "src": "assets/photos/qishlah-palace/c2.jpg",
+   "thumb": "assets/photos/qishlah-palace/c2-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D9%82%D8%B4%D9%84%D8%A9.jpg"
+  },
+  {
+   "src": "assets/photos/qishlah-palace/c3.jpg",
+   "thumb": "assets/photos/qishlah-palace/c3-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D9%82%D8%B4%D9%84%D8%A91.jpg"
+  },
+  {
+   "src": "assets/photos/qishlah-palace/c4.jpg",
+   "thumb": "assets/photos/qishlah-palace/c4-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Qishlah.jpg"
+  }
+ ],
  "aarif-fort": [
   {
    "src": "assets/photos/aarif-fort/1.jpg",
