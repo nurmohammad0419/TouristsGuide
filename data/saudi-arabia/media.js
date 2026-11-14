@@ -1250,5 +1250,1152 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY 2.0",
    "page": "https://commons.wikimedia.org/wiki/File:Ushaiger_Heritage_Village,_Najd,_Saudi_Arabia.jpg"
   }
- ]
+ ],
+ "jabal-thawr": [
+  {
+   "src": "assets/photos/jabal-thawr/1.jpg",
+   "thumb": "assets/photos/jabal-thawr/1-sm.jpg",
+   "credit": "Abdul Razzaq Phulpot…",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jabele_thor_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-thawr/2.jpg",
+   "thumb": "assets/photos/jabal-thawr/2-sm.jpg",
+   "credit": "Mohammed Tawsif Salam",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Turkish_Pilgrims_at_Jabal_Thawr_in_Makkah,_Saudi_Arabia,_4_April_2015.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-thawr/3.jpg",
+   "thumb": "assets/photos/jabal-thawr/3-sm.jpg",
+   "credit": "Yousefmadari at ml.wikipedia",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Mount_sour1.jpg"
+  }
+ ],
+ "arafat-mina": [
+  {
+   "src": "assets/photos/arafat-mina/1.jpg",
+   "thumb": "assets/photos/arafat-mina/1-sm.jpg",
+   "credit": "Fahad Faisal",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jabal-e-Rehmat_(Mount_of_Mercy)_Mount_Arafat.jpg"
+  },
+  {
+   "src": "assets/photos/arafat-mina/2.jpg",
+   "thumb": "assets/photos/arafat-mina/2-sm.jpg",
+   "credit": "Edibiz",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mount_Arafat(Jabal_ar-Ra%E1%B8%A5mah).jpg"
+  },
+  {
+   "src": "assets/photos/arafat-mina/3.jpg",
+   "thumb": "assets/photos/arafat-mina/3-sm.jpg",
+   "credit": "Al Jazeera English",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Pilgrims_cover_Arafat%27s_roads,_plains_and_mountain_-_Flickr_-_Al_Jazeera_English.jpg"
+  },
+  {
+   "src": "assets/photos/arafat-mina/4.jpg",
+   "thumb": "assets/photos/arafat-mina/4-sm.jpg",
+   "credit": "Fahad Faisal",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jabal-e-Rehmat_(Mount_of_Mercy_Mount_Arafat).jpg"
+  }
+ ],
+ "masjid-aisha": [
+  {
+   "src": "assets/photos/masjid-aisha/1.jpg",
+   "thumb": "assets/photos/masjid-aisha/1-sm.jpg",
+   "credit": "King Eliot",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_Aisha_Taneem_Makkah.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-aisha/2.jpg",
+   "thumb": "assets/photos/masjid-aisha/2-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_al-Taneem_Interior.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-aisha/3.jpg",
+   "thumb": "assets/photos/masjid-aisha/3-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_Aisha_(1).jpg"
+  },
+  {
+   "src": "assets/photos/masjid-aisha/4.jpg",
+   "thumb": "assets/photos/masjid-aisha/4-sm.jpg",
+   "credit": "HolyArtThou",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wide_angle_of_Ayesha_Mosque.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-aisha/5.jpg",
+   "thumb": "assets/photos/masjid-aisha/5-sm.jpg",
+   "credit": "HolyArtThou",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%B9%D8%A7%D8%A6%DB%8C%D8%B4%DB%81.jpg"
+  }
+ ],
+ "clock-tower-museum": [],
+ "al-wahbah-crater": [
+  {
+   "src": "assets/photos/al-wahbah-crater/1.jpg",
+   "thumb": "assets/photos/al-wahbah-crater/1-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Wahbah_crater_-_panorama.jpg"
+  },
+  {
+   "src": "assets/photos/al-wahbah-crater/2.jpg",
+   "thumb": "assets/photos/al-wahbah-crater/2-sm.jpg",
+   "credit": "SariSabban",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wahbah_Crater_Panorama.JPG"
+  },
+  {
+   "src": "assets/photos/al-wahbah-crater/3.jpg",
+   "thumb": "assets/photos/al-wahbah-crater/3-sm.jpg",
+   "credit": "SariSabban",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wahbah_Crater_Palm_Trees.JPG"
+  },
+  {
+   "src": "assets/photos/al-wahbah-crater/4.jpg",
+   "thumb": "assets/photos/al-wahbah-crater/4-sm.jpg",
+   "credit": "SariSabban",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wahbah_Crater.jpg"
+  },
+  {
+   "src": "assets/photos/al-wahbah-crater/5.jpg",
+   "thumb": "assets/photos/al-wahbah-crater/5-sm.jpg",
+   "credit": "Stephen Bainbridge",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Wahba_Crater_High_Res.jpg"
+  }
+ ],
+ "shubra-palace": [
+  {
+   "src": "assets/photos/shubra-palace/1.jpg",
+   "thumb": "assets/photos/shubra-palace/1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shubra_Palace,_1905,_al-Taif,_Saudi_Arabia.jpg"
+  },
+  {
+   "src": "assets/photos/shubra-palace/2.jpg",
+   "thumb": "assets/photos/shubra-palace/2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shubra_Palace,_1905,_al-Taif,_Saudi_Arabia_(6).jpg"
+  },
+  {
+   "src": "assets/photos/shubra-palace/3.jpg",
+   "thumb": "assets/photos/shubra-palace/3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shubra_Palace,_1905,_al-Taif,_Saudi_Arabia_(5).jpg"
+  },
+  {
+   "src": "assets/photos/shubra-palace/4.jpg",
+   "thumb": "assets/photos/shubra-palace/4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Roof_decorations_at_the_Shubra_Palace,_al-Taif,_Saudi_Arabia.jpg"
+  },
+  {
+   "src": "assets/photos/shubra-palace/5.jpg",
+   "thumb": "assets/photos/shubra-palace/5-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shubra_Palace,_1905,_al-Taif,_Saudi_Arabia_(4).jpg"
+  }
+ ],
+ "souq-okaz": [],
+ "fakieh-aquarium": [
+  {
+   "src": "assets/photos/fakieh-aquarium/1.jpg",
+   "thumb": "assets/photos/fakieh-aquarium/1-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Fakieh_Aquarium_(9).jpg"
+  },
+  {
+   "src": "assets/photos/fakieh-aquarium/2.jpg",
+   "thumb": "assets/photos/fakieh-aquarium/2-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Fakieh_Aquarium_(7).jpg"
+  },
+  {
+   "src": "assets/photos/fakieh-aquarium/3.jpg",
+   "thumb": "assets/photos/fakieh-aquarium/3-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Fakieh_Aquarium_(4).jpg"
+  },
+  {
+   "src": "assets/photos/fakieh-aquarium/4.jpg",
+   "thumb": "assets/photos/fakieh-aquarium/4-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Fakieh_Aquarium_(1).jpg"
+  },
+  {
+   "src": "assets/photos/fakieh-aquarium/5.jpg",
+   "thumb": "assets/photos/fakieh-aquarium/5-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Fakieh_Aquarium_(3).jpg"
+  }
+ ],
+ "masjid-qiblatain": [
+  {
+   "src": "assets/photos/masjid-qiblatain/1.jpg",
+   "thumb": "assets/photos/masjid-qiblatain/1-sm.jpg",
+   "credit": "Aiman titi",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_al-Qiblatain.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-qiblatain/2.jpg",
+   "thumb": "assets/photos/masjid-qiblatain/2-sm.jpg",
+   "credit": "Muhammad Mahdi Karim at English Wikipedia",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_Qiblatain.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-qiblatain/3.jpg",
+   "thumb": "assets/photos/masjid-qiblatain/3-sm.jpg",
+   "credit": "المهندس نجاح السلامي",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D9%82%D8%A8%D9%84%D8%AA%D9%8A%D9%86_-_%D8%A8%D9%86%D9%8A_%D8%B3%D9%84%D9%85%D8%A9_-.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-qiblatain/4.jpg",
+   "thumb": "assets/photos/masjid-qiblatain/4-sm.jpg",
+   "credit": "Bluemangoa2z at Malayalam Wikipedia",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Qiblathain.JPG"
+  },
+  {
+   "src": "assets/photos/masjid-qiblatain/5.jpg",
+   "thumb": "assets/photos/masjid-qiblatain/5-sm.jpg",
+   "credit": "Bintladen",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Masjid_al-Qiblatayn.jpg"
+  }
+ ],
+ "al-baqi": [
+  {
+   "src": "assets/photos/al-baqi/1.jpg",
+   "thumb": "assets/photos/al-baqi/1-sm.jpg",
+   "credit": "Saleh Al Hussain",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Baqi_Cemetery_2021.jpg"
+  },
+  {
+   "src": "assets/photos/al-baqi/2.jpg",
+   "thumb": "assets/photos/al-baqi/2-sm.jpg",
+   "credit": "Kerina yin",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Panorama_Perkuburan_Baqi%27_(Maqbaratu_al-Baqi%27).jpg"
+  },
+  {
+   "src": "assets/photos/al-baqi/3.jpg",
+   "thumb": "assets/photos/al-baqi/3-sm.jpg",
+   "credit": "Kerina yin",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Perkuburan_Baqi%27_(Maqbaratu_al-Baqi%27)_%26_Masjid_al-Nabawi.jpg"
+  },
+  {
+   "src": "assets/photos/al-baqi/4.jpg",
+   "thumb": "assets/photos/al-baqi/4-sm.jpg",
+   "credit": "Yasser.Bakhsh",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Baqi%271.jpg"
+  },
+  {
+   "src": "assets/photos/al-baqi/5.jpg",
+   "thumb": "assets/photos/al-baqi/5-sm.jpg",
+   "credit": "Kerina yin",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Perkuburan_Baqi%27_(Maqbaratu_al-Baqi%27).jpg"
+  }
+ ],
+ "seven-mosques": [
+  {
+   "src": "assets/photos/seven-mosques/1.jpg",
+   "thumb": "assets/photos/seven-mosques/1-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sab%27u_Masajid.jpg"
+  },
+  {
+   "src": "assets/photos/seven-mosques/2.jpg",
+   "thumb": "assets/photos/seven-mosques/2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Salman_al-Farisi_at_the_Seven_Mosques,_Madinah,_Saudi_Arabia_(2).jpg"
+  },
+  {
+   "src": "assets/photos/seven-mosques/3.jpg",
+   "thumb": "assets/photos/seven-mosques/3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Salman_al-Farisi_at_the_Seven_Mosques,_Madinah,_Saudi_Arabia_(1).jpg"
+  },
+  {
+   "src": "assets/photos/seven-mosques/4.jpg",
+   "thumb": "assets/photos/seven-mosques/4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Umar_ibn_al-Khattab_at_the_Seven_Mosques,_Madinah,_Saudi_Arabia_(1).jpg"
+  },
+  {
+   "src": "assets/photos/seven-mosques/5.jpg",
+   "thumb": "assets/photos/seven-mosques/5-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques,_Madinah,_Saudi_Arabia_(2).jpg"
+  }
+ ],
+ "hejaz-railway-museum": [
+  {
+   "src": "assets/photos/hejaz-railway-museum/1.jpg",
+   "thumb": "assets/photos/hejaz-railway-museum/1-sm.jpg",
+   "credit": "الدبوني",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Medina_Railway_Station_2016.jpg"
+  },
+  {
+   "src": "assets/photos/hejaz-railway-museum/2.jpg",
+   "thumb": "assets/photos/hejaz-railway-museum/2-sm.jpg",
+   "credit": "Trkia1984",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hejaz_Railway_Station.JPG"
+  },
+  {
+   "src": "assets/photos/hejaz-railway-museum/3.jpg",
+   "thumb": "assets/photos/hejaz-railway-museum/3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hijaz_Railway_Station_2020.jpg"
+  },
+  {
+   "src": "assets/photos/hejaz-railway-museum/4.jpg",
+   "thumb": "assets/photos/hejaz-railway-museum/4-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%AA%D8%AD%D9%81_%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%A7%D9%84%D9%85%D9%86%D9%88%D8%B1%D8%A9_1.jpg"
+  },
+  {
+   "src": "assets/photos/hejaz-railway-museum/5.jpg",
+   "thumb": "assets/photos/hejaz-railway-museum/5-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%AA%D8%AD%D9%81_%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%A7%D9%84%D9%85%D9%86%D9%88%D8%B1%D8%A9_2.jpg"
+  }
+ ],
+ "dadan-jabal-ikmah": [
+  {
+   "src": "assets/photos/dadan-jabal-ikmah/1.jpg",
+   "thumb": "assets/photos/dadan-jabal-ikmah/1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ancient_site_of_Dadan_at_al-Ula,_1st_millenium_BCE,_Saudi_Arabia_45.jpg"
+  },
+  {
+   "src": "assets/photos/dadan-jabal-ikmah/2.jpg",
+   "thumb": "assets/photos/dadan-jabal-ikmah/2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ancient_site_of_Dadan_at_al-Ula,_1st_millenium_BCE,_Saudi_Arabia_44.jpg"
+  },
+  {
+   "src": "assets/photos/dadan-jabal-ikmah/3.jpg",
+   "thumb": "assets/photos/dadan-jabal-ikmah/3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ancient_site_of_Dadan_at_al-Ula,_1st_millenium_BCE,_Saudi_Arabia_46.jpg"
+  },
+  {
+   "src": "assets/photos/dadan-jabal-ikmah/4.jpg",
+   "thumb": "assets/photos/dadan-jabal-ikmah/4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ancient_site_of_Dadan_at_al-Ula,_1st_millenium_BCE,_Saudi_Arabia_35.jpg"
+  },
+  {
+   "src": "assets/photos/dadan-jabal-ikmah/5.jpg",
+   "thumb": "assets/photos/dadan-jabal-ikmah/5-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ancient_site_of_Dadan_at_al-Ula,_1st_millenium_BCE,_Saudi_Arabia_37.jpg"
+  }
+ ],
+ "khaybar": [
+  {
+   "src": "assets/photos/khaybar/1.jpg",
+   "thumb": "assets/photos/khaybar/1-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khaybar_-_fortress_Qamus_(2).jpg"
+  },
+  {
+   "src": "assets/photos/khaybar/2.jpg",
+   "thumb": "assets/photos/khaybar/2-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khaybar_-_fortress_Qamus_(1).jpg"
+  },
+  {
+   "src": "assets/photos/khaybar/3.jpg",
+   "thumb": "assets/photos/khaybar/3-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khaybar_-_fortress_Qamus_(3).jpg"
+  },
+  {
+   "src": "assets/photos/khaybar/4.jpg",
+   "thumb": "assets/photos/khaybar/4-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khaybar_-_inside_Qamus.jpg"
+  },
+  {
+   "src": "assets/photos/khaybar/5.jpg",
+   "thumb": "assets/photos/khaybar/5-sm.jpg",
+   "credit": "Hardscarf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Panorama_-_Khaybar_valley_with_two_jewish_fortresses.jpg"
+  }
+ ],
+ "yanbu-historic": [
+  {
+   "src": "assets/photos/yanbu-historic/2.jpg",
+   "thumb": "assets/photos/yanbu-historic/2-sm.jpg",
+   "credit": "Ahmed Abdulbasit (Pakistan)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Yanbu_flower_festival.jpg"
+  },
+  {
+   "src": "assets/photos/yanbu-historic/3.jpg",
+   "thumb": "assets/photos/yanbu-historic/3-sm.jpg",
+   "credit": "Mahmoud Farrag",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Yanbu_Al_Sinaiyah,_Yanbu_Saudi_Arabia_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/yanbu-historic/4.jpg",
+   "thumb": "assets/photos/yanbu-historic/4-sm.jpg",
+   "credit": "Mahmoud Farrag",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Alimhan,_Yanbu_Al_Sinaiyah,_Yanbu_46458,_Saudi_Arabia_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/yanbu-historic/5.jpg",
+   "thumb": "assets/photos/yanbu-historic/5-sm.jpg",
+   "credit": "Abdullah Imran (Pakistan)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Yanbu_Park_1.jpg"
+  }
+ ],
+ "badr": [
+  {
+   "src": "assets/photos/badr/3.jpg",
+   "thumb": "assets/photos/badr/3-sm.jpg",
+   "credit": "Devu Anchal",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Badr_Saudi_Arabia_-_panoramio_(3).jpg"
+  },
+  {
+   "src": "assets/photos/badr/4.jpg",
+   "thumb": "assets/photos/badr/4-sm.jpg",
+   "credit": "Devu Anchal",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Badr_Saudi_Arabia_-_panoramio_(1).jpg"
+  },
+  {
+   "src": "assets/photos/badr/5.jpg",
+   "thumb": "assets/photos/badr/5-sm.jpg",
+   "credit": "Devu Anchal",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Badr_Saudi_Arabia_-_panoramio_(2).jpg"
+  },
+  {
+   "src": "assets/photos/badr/2.jpg",
+   "thumb": "assets/photos/badr/2-sm.jpg",
+   "credit": "Devu Anchal",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Badr_Saudi_Arabia_-_panoramio.jpg"
+  }
+ ],
+ "al-faw": [
+  {
+   "src": "assets/photos/al-faw/1.jpg",
+   "thumb": "assets/photos/al-faw/1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B5%D9%88%D8%B1%D8%A9_%D8%AC%D9%88%D9%8A%D8%A9_%D9%84%D9%85%D9%88%D9%82%D8%B9_%D8%A7%D9%84%D9%81%D8%A7%D9%88_%D8%A7%D9%84%D8%A3%D8%AB%D8%B1%D9%8A.jpg"
+  },
+  {
+   "src": "assets/photos/al-faw/2.jpg",
+   "thumb": "assets/photos/al-faw/2-sm.jpg",
+   "credit": "Nesnad",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Thamudic_-_Qaryat_al-Faw_-_on_fragment_-_20180430.jpg"
+  },
+  {
+   "src": "assets/photos/al-faw/3.jpg",
+   "thumb": "assets/photos/al-faw/3-sm.jpg",
+   "credit": "Nesnad",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lintel_-_Qaryat_al-Faw_-_3rd_Century_BCE_-_20180430.jpg"
+  },
+  {
+   "src": "assets/photos/al-faw/4.jpg",
+   "thumb": "assets/photos/al-faw/4-sm.jpg",
+   "credit": "Nesnad",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lion_door_knockers_-_Qaryat_al-Faw_-_3rd_Century_BCE_-_20180430.jpg"
+  },
+  {
+   "src": "assets/photos/al-faw/5.jpg",
+   "thumb": "assets/photos/al-faw/5-sm.jpg",
+   "credit": "JRB2023",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fragment_of_a_mural_painting_from_Qaryat_al-Faw_with_the_Ancient_South_Arabian_inscription_reading_%E2%80%98zky,%E2%80%99_(%E2%80%9Cpious,_blessed%E2%80%9D)._Photo_by_Juan_de_Lara.jpg"
+  }
+ ],
+ "uruq-bani-maarid": [
+  {
+   "src": "assets/photos/uruq-bani-maarid/1.jpg",
+   "thumb": "assets/photos/uruq-bani-maarid/1-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Uruq_Bani_Ma%27arid_Reserve,_Saudi_Arabia_(2025).jpg"
+  },
+  {
+   "src": "assets/photos/uruq-bani-maarid/2.jpg",
+   "thumb": "assets/photos/uruq-bani-maarid/2-sm.jpg",
+   "credit": "Nepenthes",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rub_al_Khali_002.JPG"
+  },
+  {
+   "src": "assets/photos/uruq-bani-maarid/3.jpg",
+   "thumb": "assets/photos/uruq-bani-maarid/3-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Uruq_Bani_Ma%27arid_Reserve,_Saudi_Arabia,_2025.jpg"
+  },
+  {
+   "src": "assets/photos/uruq-bani-maarid/4.jpg",
+   "thumb": "assets/photos/uruq-bani-maarid/4-sm.jpg",
+   "credit": "Javierblas",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rub_al_khali_sunset_Nov_2007.jpg"
+  }
+ ],
+ "red-sands": [],
+ "wadi-hanifa": [
+  {
+   "src": "assets/photos/wadi-hanifa/1.jpg",
+   "thumb": "assets/photos/wadi-hanifa/1-sm.jpg",
+   "credit": "Peter Dowley from Dubai, United Arab Emirates",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lake_at_Wadi_Hanifah_(5218227168).jpg"
+  },
+  {
+   "src": "assets/photos/wadi-hanifa/2.jpg",
+   "thumb": "assets/photos/wadi-hanifa/2-sm.jpg",
+   "credit": "Ahmedpictures12",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_Hanifa.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-hanifa/3.jpg",
+   "thumb": "assets/photos/wadi-hanifa/3-sm.jpg",
+   "credit": "Dainomite",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_Hanifa_from_King_Fahd_Rd.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-hanifa/4.jpg",
+   "thumb": "assets/photos/wadi-hanifa/4-sm.jpg",
+   "credit": "Dainomite",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_Hanifa_from_King_Fahd_Rd2.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-hanifa/5.jpg",
+   "thumb": "assets/photos/wadi-hanifa/5-sm.jpg",
+   "credit": "Sammy Six",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_Hanifah_(7024874479).jpg"
+  }
+ ],
+ "boulevard-city": [
+  {
+   "src": "assets/photos/boulevard-city/1.jpg",
+   "thumb": "assets/photos/boulevard-city/1-sm.jpg",
+   "credit": "Humanized",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Boulevard_Riyadh_City.jpg"
+  },
+  {
+   "src": "assets/photos/boulevard-city/2.jpg",
+   "thumb": "assets/photos/boulevard-city/2-sm.jpg",
+   "credit": "Slayym",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Boulevard_Riyadh_-_2021.jpg"
+  }
+ ],
+ "shaqra": [
+  {
+   "src": "assets/photos/shaqra/2.jpg",
+   "thumb": "assets/photos/shaqra/2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Minaret_of_an_old_mosque_in_Shaqra,_Saudi_Arabia.jpg"
+  },
+  {
+   "src": "assets/photos/shaqra/3.jpg",
+   "thumb": "assets/photos/shaqra/3-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D9%84%D8%AF%D8%A9_%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D9%81%D8%A9.jpg"
+  },
+  {
+   "src": "assets/photos/shaqra/4.jpg",
+   "thumb": "assets/photos/shaqra/4-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B3%D9%88%D9%82_%D8%AD%D9%84%D9%8A%D9%88%D8%A9.jpg"
+  },
+  {
+   "src": "assets/photos/shaqra/5.jpg",
+   "thumb": "assets/photos/shaqra/5-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B3%D9%88%D9%82_%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3.jpg"
+  }
+ ],
+ "half-moon-bay": [],
+ "tarout-castle": [
+  {
+   "src": "assets/photos/tarout-castle/1.jpg",
+   "thumb": "assets/photos/tarout-castle/1-sm.jpg",
+   "credit": "Mustafa Al-Elq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%88%D8%A7%D8%AC%D9%87%D8%A9-%D9%82%D9%84%D8%B9%D8%A9-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA.jpg"
+  },
+  {
+   "src": "assets/photos/tarout-castle/2.jpg",
+   "thumb": "assets/photos/tarout-castle/2-sm.jpg",
+   "credit": "Reda Ahmed Nazer",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Tarout_Castle,_1964.jpg"
+  },
+  {
+   "src": "assets/photos/tarout-castle/3.jpg",
+   "thumb": "assets/photos/tarout-castle/3-sm.jpg",
+   "credit": "AhmadElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:PANO_20160923_170835.jpg"
+  },
+  {
+   "src": "assets/photos/tarout-castle/4.jpg",
+   "thumb": "assets/photos/tarout-castle/4-sm.jpg",
+   "credit": "Ahmed Elg",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tarout_Castle_(181189153).jpeg"
+  },
+  {
+   "src": "assets/photos/tarout-castle/5.jpg",
+   "thumb": "assets/photos/tarout-castle/5-sm.jpg",
+   "credit": "Ahmed Elg",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tarout_Castle_(181188329).jpeg"
+  }
+ ],
+ "uqair": [
+  {
+   "src": "assets/photos/uqair/1.jpg",
+   "thumb": "assets/photos/uqair/1-sm.jpg",
+   "credit": "Qasim Al Eid",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rocks_Al_Uqayr_(65609121).jpeg"
+  },
+  {
+   "src": "assets/photos/uqair/2.jpg",
+   "thumb": "assets/photos/uqair/2-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Uqair_port.jpg"
+  }
+ ],
+ "ibrahim-palace": [
+  {
+   "src": "assets/photos/ibrahim-palace/1.jpg",
+   "thumb": "assets/photos/ibrahim-palace/1-sm.jpg",
+   "credit": "Lawrence of Arabia",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ibrahim%27s_palace_in_the_city_of_Hofuf_in_Al-Ahsa.jpg"
+  }
+ ],
+ "jawatha-mosque": [
+  {
+   "src": "assets/photos/jawatha-mosque/1.jpg",
+   "thumb": "assets/photos/jawatha-mosque/1-sm.jpg",
+   "credit": "FShbib",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jawatha_Mosque_1.jpg"
+  },
+  {
+   "src": "assets/photos/jawatha-mosque/2.jpg",
+   "thumb": "assets/photos/jawatha-mosque/2-sm.jpg",
+   "credit": "O.Mustafin",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jawatha1.jpg"
+  },
+  {
+   "src": "assets/photos/jawatha-mosque/4.jpg",
+   "thumb": "assets/photos/jawatha-mosque/4-sm.jpg",
+   "credit": "O.Mustafin",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jawatha.jpg"
+  },
+  {
+   "src": "assets/photos/jawatha-mosque/5.jpg",
+   "thumb": "assets/photos/jawatha-mosque/5-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Juwatha_Mosque,_ca._628._al-Ahsa_(7)_(50619837498).jpg"
+  }
+ ],
+ "khobar-corniche": [
+  {
+   "src": "assets/photos/khobar-corniche/1.jpg",
+   "thumb": "assets/photos/khobar-corniche/1-sm.jpg",
+   "credit": "Francisco Anzola",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khobar_water_tower.jpg"
+  },
+  {
+   "src": "assets/photos/khobar-corniche/2.jpg",
+   "thumb": "assets/photos/khobar-corniche/2-sm.jpg",
+   "credit": "Hezmok Media",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Khobar_Water_Tower.jpg"
+  },
+  {
+   "src": "assets/photos/khobar-corniche/3.jpg",
+   "thumb": "assets/photos/khobar-corniche/3-sm.jpg",
+   "credit": "Ahsanismail199715",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khobar_water_Tower.JPG"
+  },
+  {
+   "src": "assets/photos/khobar-corniche/4.jpg",
+   "thumb": "assets/photos/khobar-corniche/4-sm.jpg",
+   "credit": "Bhuboy Villanueva",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Khobar_water_tower_view.jpg"
+  },
+  {
+   "src": "assets/photos/khobar-corniche/5.jpg",
+   "thumb": "assets/photos/khobar-corniche/5-sm.jpg",
+   "credit": "King Eliot",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Khobar_Water_Tower.JPG"
+  }
+ ],
+ "king-fahd-causeway": [
+  {
+   "src": "assets/photos/king-fahd-causeway/1.jpg",
+   "thumb": "assets/photos/king-fahd-causeway/1-sm.jpg",
+   "credit": "Greens n cornbread",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Fahd_Causeway_bridge_num4.jpg"
+  },
+  {
+   "src": "assets/photos/king-fahd-causeway/2.jpg",
+   "thumb": "assets/photos/king-fahd-causeway/2-sm.jpg",
+   "credit": "Peter Dowley from Dubai, United Arab Emirates",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Fahd_Causeway_(3206595761).jpg"
+  },
+  {
+   "src": "assets/photos/king-fahd-causeway/3.jpg",
+   "thumb": "assets/photos/king-fahd-causeway/3-sm.jpg",
+   "credit": "marviikad from Al Khobar, Saudi Arabia",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_fahd_causeway_(8467829330).jpg"
+  },
+  {
+   "src": "assets/photos/king-fahd-causeway/4.jpg",
+   "thumb": "assets/photos/king-fahd-causeway/4-sm.jpg",
+   "credit": "edward musiak from Riyadh, Saudi Arabia",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Fahd_Causeway_(5972741629).jpg"
+  },
+  {
+   "src": "assets/photos/king-fahd-causeway/5.jpg",
+   "thumb": "assets/photos/king-fahd-causeway/5-sm.jpg",
+   "credit": "Navin Shetty Brahmavar at English Wikipedia.",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:KingFahdCauseway01.jpg"
+  }
+ ],
+ "abha-muftaha": [
+  {
+   "src": "assets/photos/abha-muftaha/1.jpg",
+   "thumb": "assets/photos/abha-muftaha/1-sm.jpg",
+   "credit": "Elyas4320",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%84%D9%81%D8%B1%D9%8A%D9%83_%D8%A3%D8%A8%D9%87%D8%A7.jpg"
+  },
+  {
+   "src": "assets/photos/abha-muftaha/3.jpg",
+   "thumb": "assets/photos/abha-muftaha/3-sm.jpg",
+   "credit": "Aiman titi",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abha_49.jpg"
+  },
+  {
+   "src": "assets/photos/abha-muftaha/4.jpg",
+   "thumb": "assets/photos/abha-muftaha/4-sm.jpg",
+   "credit": "Chad Nagle",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abha_(51289579187).jpg"
+  },
+  {
+   "src": "assets/photos/abha-muftaha/5.jpg",
+   "thumb": "assets/photos/abha-muftaha/5-sm.jpg",
+   "credit": "Chad Nagle",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abha_(51289577112).jpg"
+  }
+ ],
+ "habala": [
+  {
+   "src": "assets/photos/habala/2.jpg",
+   "thumb": "assets/photos/habala/2-sm.jpg",
+   "credit": "Wajahatmr",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Living_on_the_verge_of_Habala_Valley.jpg"
+  },
+  {
+   "src": "assets/photos/habala/3.jpg",
+   "thumb": "assets/photos/habala/3-sm.jpg",
+   "credit": "Aiman titi",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Alhabalah_in_Aseer.jpg"
+  },
+  {
+   "src": "assets/photos/habala/4.jpg",
+   "thumb": "assets/photos/habala/4-sm.jpg",
+   "credit": "Wajahatmr",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Ridges_of_Sarawat_Mountains.jpg"
+  }
+ ],
+ "tanomah": [],
+ "raghadan-forest": [],
+ "fayfa": [
+  {
+   "src": "assets/photos/fayfa/1.jpg",
+   "thumb": "assets/photos/fayfa/1-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Clouds_Embrace_Fayfa_Mountains_in_Jazan_(2025).jpg"
+  },
+  {
+   "src": "assets/photos/fayfa/2.jpg",
+   "thumb": "assets/photos/fayfa/2-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jazan%27s_Fayfa_Mountains_(2025).jpg"
+  }
+ ],
+ "dosariyah-fort": [],
+ "emara-palace": [
+  {
+   "src": "assets/photos/emara-palace/1.jpg",
+   "thumb": "assets/photos/emara-palace/1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:1%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D8%B1%D8%A9_%D9%86%D8%AC%D8%B1%D8%A7%D9%86.jpg"
+  },
+  {
+   "src": "assets/photos/emara-palace/2.jpg",
+   "thumb": "assets/photos/emara-palace/2-sm.jpg",
+   "credit": "Mansour mohsen",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A_%D8%A8%D9%86%D8%AC%D8%B1%D8%A7%D9%86.jpg"
+  },
+  {
+   "src": "assets/photos/emara-palace/3.jpg",
+   "thumb": "assets/photos/emara-palace/3-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D8%B1%D8%A9_%D9%86%D8%AC%D8%B1%D8%A7%D9%86.jpg"
+  },
+  {
+   "src": "assets/photos/emara-palace/4.jpg",
+   "thumb": "assets/photos/emara-palace/4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Imarah_Palace.jpg"
+  },
+  {
+   "src": "assets/photos/emara-palace/5.jpg",
+   "thumb": "assets/photos/emara-palace/5-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D8%B9%D8%A7%D9%86.jpg"
+  }
+ ],
+ "najran-dam": [
+  {
+   "src": "assets/photos/najran-dam/1.jpg",
+   "thumb": "assets/photos/najran-dam/1-sm.jpg",
+   "credit": "Retlaw Snellac Photography",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_najran_dam.jpg"
+  }
+ ],
+ "hisma-desert": [
+  {
+   "src": "assets/photos/hisma-desert/1.jpg",
+   "thumb": "assets/photos/hisma-desert/1-sm.jpg",
+   "credit": "Clemens Schmillen",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hisma_Desert1.jpg"
+  },
+  {
+   "src": "assets/photos/hisma-desert/2.jpg",
+   "thumb": "assets/photos/hisma-desert/2-sm.jpg",
+   "credit": "Moritz, B. (Bernhard), 1859-1939.",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Sandebene_%E1%B8%A4ism%C4%81_bei_D%CC%B2%C3%A2t_el_%E1%B8%A5a%C7%A7%C7%A7,_608_km_von_Damaskus,_691_m_%C3%BC._M.._LCCN2014648760.jpg"
+  }
+ ],
+ "maqna": [],
+ "tayma": [
+  {
+   "src": "assets/photos/tayma/1.jpg",
+   "thumb": "assets/photos/tayma/1-sm.jpg",
+   "credit": "Nabataeus",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tayma_horseman.jpg"
+  },
+  {
+   "src": "assets/photos/tayma/2.jpg",
+   "thumb": "assets/photos/tayma/2-sm.jpg",
+   "credit": "Qadeer Ahmad",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tayma_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/tayma/3.jpg",
+   "thumb": "assets/photos/tayma/3-sm.jpg",
+   "credit": "Unknown artistUnknown artist",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Stele_Salm_Louvre_AO5009.jpg"
+  },
+  {
+   "src": "assets/photos/tayma/4.jpg",
+   "thumb": "assets/photos/tayma/4-sm.jpg",
+   "credit": "Onceinawhile",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tayma_stones_display_(169).jpg"
+  },
+  {
+   "src": "assets/photos/tayma/5.jpg",
+   "thumb": "assets/photos/tayma/5-sm.jpg",
+   "credit": "Onceinawhile",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tayma_stones_(173).jpg"
+  }
+ ],
+ "umluj": [
+  {
+   "src": "assets/photos/umluj/1.jpg",
+   "thumb": "assets/photos/umluj/1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_sunset;_Umm_Lajj,_Saudi_Arabia_(8).jpg"
+  },
+  {
+   "src": "assets/photos/umluj/2.jpg",
+   "thumb": "assets/photos/umluj/2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_sunset;_Umm_Lajj,_Saudi_Arabia_(5).jpg"
+  },
+  {
+   "src": "assets/photos/umluj/3.jpg",
+   "thumb": "assets/photos/umluj/3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_at_Umm_Lajj,_Saudi_Arabia_(24).jpg"
+  },
+  {
+   "src": "assets/photos/umluj/4.jpg",
+   "thumb": "assets/photos/umluj/4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_at_Umm_Lajj,_Saudi_Arabia_(2).jpg"
+  },
+  {
+   "src": "assets/photos/umluj/5.jpg",
+   "thumb": "assets/photos/umluj/5-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_at_Umm_Lajj,_Saudi_Arabia_(4).jpg"
+  }
+ ],
+ "georgios-shipwreck": [],
+ "jabal-al-lawz": [],
+ "qishlah-palace": [],
+ "aarif-fort": [
+  {
+   "src": "assets/photos/aarif-fort/1.jpg",
+   "thumb": "assets/photos/aarif-fort/1-sm.jpg",
+   "credit": "Iain Cheyne",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_of_Aarif_Fort,_Hail,_Saudi.jpg"
+  },
+  {
+   "src": "assets/photos/aarif-fort/2.jpg",
+   "thumb": "assets/photos/aarif-fort/2-sm.jpg",
+   "credit": "Iain Cheyne",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_of_Aarif_Fort,_Hail,_Saudi_(cropped).jpg"
+  }
+ ],
+ "jabal-aja": [
+  {
+   "src": "assets/photos/jabal-aja/1.jpg",
+   "thumb": "assets/photos/jabal-aja/1-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D8%BA%D8%B7%D8%A7%D8%A1_%D8%A7%D9%84%D9%86%D8%A8%D8%A7%D8%AA%D9%8A_%D8%AD%D9%88%D9%84_%D8%AC%D8%A8%D8%A7%D9%84_%D8%A3%D8%AC%D8%A7_%D8%A8%D9%85%D9%86%D8%B7%D9%82%D8%A9_%D8%AD%D8%A7%D8%A6%D9%84.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-aja/3.jpg",
+   "thumb": "assets/photos/jabal-aja/3-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%86%D9%88%D8%B9_%D8%A7%D9%84%D8%BA%D8%B7%D8%A7%D8%A1_%D8%A7%D9%84%D9%86%D8%A8%D8%A7%D8%AA%D9%8A_%D8%A8%D9%8A%D9%86_%D8%AC%D8%A8%D8%A7%D9%84_%D8%A3%D8%AC%D8%A7_%D8%A8%D9%85%D9%86%D8%B7%D9%82%D8%A9_%D8%AD%D8%A7%D8%A6%D9%84.jpg"
+  },
+  {
+   "src": "assets/photos/jabal-aja/4.jpg",
+   "thumb": "assets/photos/jabal-aja/4-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A8%D8%A7%D9%84_%D8%A3%D8%AC%D8%A7.jpg"
+  }
+ ],
+ "fayd": [],
+ "unaizah": [
+  {
+   "src": "assets/photos/unaizah/2.jpg",
+   "thumb": "assets/photos/unaizah/2-sm.jpg",
+   "credit": "Meshal Obeidallah at en.wikipedia",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Unaizah_View.jpg"
+  },
+  {
+   "src": "assets/photos/unaizah/4.jpg",
+   "thumb": "assets/photos/unaizah/4-sm.jpg",
+   "credit": "Suliman Al-Kurishan from Unaizah , Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Showing_sheep_in_Unaizah_2.jpg"
+  },
+  {
+   "src": "assets/photos/unaizah/5.jpg",
+   "thumb": "assets/photos/unaizah/5-sm.jpg",
+   "credit": "Suliman Al-Kurishan from Unaizah , Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Showing_sheep_in_Unaizah_1.jpg"
+  },
+  {
+   "src": "assets/photos/unaizah/1.jpg",
+   "thumb": "assets/photos/unaizah/1-sm.jpg",
+   "credit": "Meshal Obeidallah (talk)",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Unaizah,_late_2007.jpg"
+  }
+ ],
+ "al-shinanah": [
+  {
+   "src": "assets/photos/al-shinanah/1.jpg",
+   "thumb": "assets/photos/al-shinanah/1-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim_region,_ca._1700_(1)_(49321083582).jpg"
+  },
+  {
+   "src": "assets/photos/al-shinanah/2.jpg",
+   "thumb": "assets/photos/al-shinanah/2-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim,_ca._1700_(2)_(49316029283).jpg"
+  },
+  {
+   "src": "assets/photos/al-shinanah/3.jpg",
+   "thumb": "assets/photos/al-shinanah/3-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim_region,_ca._1700_(8)_(49320467818).jpg"
+  },
+  {
+   "src": "assets/photos/al-shinanah/4.jpg",
+   "thumb": "assets/photos/al-shinanah/4-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim_region,_ca._1700_(7)_(49320471793).jpg"
+  },
+  {
+   "src": "assets/photos/al-shinanah/5.jpg",
+   "thumb": "assets/photos/al-shinanah/5-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim_region,_ca._1700_(5)_(49321186902).jpg"
+  }
+ ],
+ "linah": [],
+ "zaabal-castle": [
+  {
+   "src": "assets/photos/zaabal-castle/1.jpg",
+   "thumb": "assets/photos/zaabal-castle/1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%B2%D8%B9%D8%A8%D9%84.jpg"
+  },
+  {
+   "src": "assets/photos/zaabal-castle/2.jpg",
+   "thumb": "assets/photos/zaabal-castle/2-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:ZABAL_CASTLE.jpg"
+  },
+  {
+   "src": "assets/photos/zaabal-castle/3.jpg",
+   "thumb": "assets/photos/zaabal-castle/3-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Zabalcastle1.jpg"
+  }
+ ],
+ "al-rajajil": []
 } });
