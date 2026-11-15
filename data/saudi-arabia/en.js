@@ -667,17 +667,42 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'wadi-disah', name: 'Wadi Al-Disah', nativeName: 'وادي الديسة',
-      region: 'tabuk', city: 'Tabuk', categories: ['nature'],
-      coords: [27.6000, 36.5000], wiki: 'https://en.wikipedia.org/wiki/Wadi_Al_Disah',
-      tagline: 'Towering sandstone pillars, palms and a flowing stream.',
-      overview: ['A 15 km canyon with sandstone towers up to 500 m, a freshwater stream, palms and reeds — one of the most beautiful valleys in Arabia.'],
-      history: ['Nabataean tombs are scattered at the canyon entrance. The valley is part of the NEOM region.'],
+      region: 'tabuk', city: 'Al-Disah', categories: ['nature', 'archaeology'], featured: true,
+      coords: [27.6319, 36.5506], wiki: 'https://en.wikipedia.org/wiki/Wadi_Al_Disah',
+      tagline: '"Valley of Palm Trees" — a red sandstone canyon with springs, palms and Nabataean tombs.',
+      overview: [
+        'Wadi Al-Disah (meaning "Valley of Palm Trees") is a dramatic mountain canyon and lush desert oasis in Tabuk Province, north-west Saudi Arabia. It lies within the Prince Mohammed bin Salman Royal Reserve and is recognised on UNESCO\'s Tentative List as part of the Bioclimatic Refuges of Western Arabia.',
+        'Water and wind erosion have sculpted massive red sandstone cliffs and rock columns reaching up to about 500 m high. At sunrise and sunset the towers glow orange and red above the green valley floor.',
+        'Unlike most dry desert wadis, Al-Disah is fed by perennial freshwater springs and seasonal streams. This constant water supports dense palm groves, tall reeds, wild mint, citrus trees and jujube shrubs, so the canyon floor stays green all year.',
+        'The valley sits at around 400 m elevation, giving warm summers and mild winters — ideal for nature walks, picnics and off-road drives.'
+      ],
+      history: [
+        'Like Madyan Shuaib and Hegra, the valley was inhabited by the Nabataeans. Visitors can find rock-cut Nabataean tomb façades — including an unfinished façade near the village entrance — as well as pit graves.',
+        'The sandstone walls carry thousands of rock carvings and inscriptions spanning many centuries, written in Thamudic, Lihyanite, Aramaic, Ancient Greek, Nabataean and early Kufic Arabic scripts.',
+        'Remains of historic settlements and burial sites such as Al-Mushayrif, Al-Sukhnah and Al-Maskunah are scattered through the valley and fenced for protection by the Heritage Commission.'
+      ],
       religious: null,
-      highlights: ['Canyon drive', 'Stream and palms', 'Nabataean tombs'],
-      hours: { summary: 'Daytime', details: [], note: 'Access may be managed by NEOM; check before going.' },
-      tickets: { required: false, price: 'Free', how: ['Self-drive with 4x4 or a guided tour.'], links: [] },
-      gettingThere: { airport: 'Tabuk (TUU)', road: 'About 220 km south of Tabuk.', transport: '4x4 required.' },
-      bestTime: 'November – March', duration: 'Full day', dress: 'Hiking gear.', tips: ['Avoid after rain — flash floods.']
+      highlights: [
+        'Sandstone towers up to ~500 m high',
+        'Year-round springs and streams',
+        'Palm groves, tall reeds and wild mint',
+        'Nabataean tomb façades and pit graves',
+        'Ancient inscriptions in six scripts',
+        'Golden-hour photography',
+        '4x4 drives through the stream bed'
+      ],
+      hours: { summary: 'Open daily; best visited from early morning to sunset', details: ['Sunrise and the last 1–2 hours before sunset give the best light on the cliffs'], note: 'The valley is inside a royal reserve; rules and access points can change — check locally or on VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Free entry (4x4 hire / tours paid)', how: ['No ticket is needed to enter the valley.', 'Local 4x4 drivers are usually available for hire near the entrance in Al-Disah village.', 'Guided day trips can also be booked from Tabuk.'], links: [{ label: 'VisitSaudi', url: 'https://www.visitsaudi.com' }] },
+      gettingThere: { airport: 'Tabuk Regional Airport (TUU)', road: 'Drive south from Tabuk city to Al-Disah village (roughly 2 hours by road); the canyon begins at the village.', transport: 'No public transport. The valley floor is soft sand, gravel and shallow water, so a 4x4 is essential to go deeper into the canyon.' },
+      bestTime: 'October – April (mild days); avoid after heavy rain', duration: 'Half to full day',
+      dress: 'Comfortable clothes, sturdy shoes that can get wet, hat and sunscreen; a warm layer for winter evenings.',
+      tips: [
+        'Hire a local 4x4 driver at the entrance if you are not experienced in sand and water crossings.',
+        'Do not drive into the canyon during or right after rain — flash floods are dangerous.',
+        'Do not touch or scratch the inscriptions and tomb façades.',
+        'Carry water, snacks and offline maps; phone signal is weak deep in the canyon.',
+        'Combine with Madyan Shuaib, Tayma or the Red Sea coast for a longer Tabuk itinerary.'
+      ]
     },
 
     /* ======================= AL-JAWF PROVINCE ======================= */

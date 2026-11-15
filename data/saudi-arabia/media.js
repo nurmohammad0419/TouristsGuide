@@ -1066,11 +1066,88 @@ TG.registerMedia('saudi-arabia', { spots: {
  ],
  "wadi-disah": [
   {
-   "src": "assets/photos/wadi-disah/1.jpg",
-   "thumb": "assets/photos/wadi-disah/1-sm.jpg",
-   "credit": "Clemens Schmillen",
-   "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Wadi_al-Disah2,_Nabataean_tomb_facade.jpg"
+   "src": "assets/photos/wadi-disah/u1.jpg",
+   "thumb": "assets/photos/wadi-disah/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u2.jpg",
+   "thumb": "assets/photos/wadi-disah/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u3.jpg",
+   "thumb": "assets/photos/wadi-disah/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u4.jpg",
+   "thumb": "assets/photos/wadi-disah/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u5.jpg",
+   "thumb": "assets/photos/wadi-disah/u5-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u6.jpg",
+   "thumb": "assets/photos/wadi-disah/u6-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u7.jpg",
+   "thumb": "assets/photos/wadi-disah/u7-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u8.jpg",
+   "thumb": "assets/photos/wadi-disah/u8-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u9.jpg",
+   "thumb": "assets/photos/wadi-disah/u9-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u10.jpg",
+   "thumb": "assets/photos/wadi-disah/u10-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u11.jpg",
+   "thumb": "assets/photos/wadi-disah/u11-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/wadi-disah/u12.jpg",
+   "thumb": "assets/photos/wadi-disah/u12-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
   }
  ],
  "marid-castle": [
