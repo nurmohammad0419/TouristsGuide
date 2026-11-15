@@ -2597,18 +2597,41 @@ TG.registerCountry('saudi-arabia', 'en', {
       ]
     },
     {
-      id: 'tayeb-ism', name: 'Tayeb Ism Canyon', nativeName: 'طيب اسم',
-      region: 'tabuk', city: 'Maqna', categories: ['nature'],
+      id: 'tayeb-ism', name: 'Wadi Tayyib Ism (Tayeb Al-Ism) Canyon', nativeName: 'وادي طيب اسم',
+      region: 'tabuk', city: 'Maqna', categories: ['nature', 'religious'], featured: true,
+      status: 'closed',
+      notice: 'This site is currently closed to visitors. We will update this page as soon as it reopens — please check the latest status locally before travelling.',
       coords: [28.5500, 34.8000],
-      tagline: 'A narrow granite canyon that opens onto the Gulf of Aqaba.',
-      overview: ['Tayeb Ism is a dramatic gorge between 600 m granite walls, with palms, a small stream and a path leading down to the sea. It is one of the most photographed spots in north-west Saudi Arabia.'],
-      history: ['Local tradition links the area to the route of Prophet Musa (Moses) through Madyan.'],
-      religious: ['Some local traditions connect the valley with Prophet Musa\'s journey to Madyan, though this is not confirmed historically.'],
-      highlights: ['Canyon walk', 'Palm-lined stream', 'Sea views'],
-      hours: { summary: 'Daytime', details: [], note: 'Part of NEOM; access may be managed.' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'NEOM Bay (NUM) or Tabuk (TUU)', road: 'Coastal road north of Maqna.', transport: 'Car.' },
-      bestTime: 'October – April', duration: '2–3 hours', dress: 'Hiking shoes.', tips: ['Combine with Maqna and Madyan Shuaib.']
+      tagline: 'The "Valley of the Good Name" — a 600 m-deep granite gorge with a stream flowing to the sea.',
+      overview: [
+        'Wadi Tayyib Ism (also spelled Tayeb Al-Ism), meaning "Valley of the Good Name", is a dramatic 5 km granite gorge in Tabuk Province. Sheer, polished cliffs rise up to about 600 m on both sides of a narrow floor that opens onto the Gulf of Aqaba near Maqna.',
+        'Unlike most desert valleys, a high water table feeds a year-round freshwater stream, which supports date palms, reeds and wildlife such as the Nubian ibex.'
+      ],
+      history: [
+        'The cliffs are made of ancient Precambrian granite, cut by water over a very long time into a narrow gorge.',
+        'The valley lies in the historical land of Madyan (Midian), and today it falls within the NEOM development zone.'
+      ],
+      religious: [
+        'Local tradition associates the valley with Prophet Musa (Moses) and his years in Madyan after leaving Egypt (Qur\'an, Al-Qasas 28:22–28). Some traditions also connect its springs and palms with the oasis of Elim mentioned in the Bible. These links are traditional and not confirmed historically.'
+      ],
+      highlights: [
+        '600 m granite walls',
+        'Year-round freshwater stream and palm groves',
+        'Gorge opening onto the Gulf of Aqaba',
+        'Nubian ibex and desert wildlife',
+        '60–90 minute walk along the canyon floor (when open)'
+      ],
+      hours: { summary: 'Currently closed — reopening date not announced', details: [], note: 'Within the NEOM zone; the coastal exit has a coast-guard checkpoint. Permits or fees may apply when reopened.' },
+      tickets: { required: false, price: 'Closed at present', how: ['The site is currently closed; this page will be updated when it reopens.', 'When open, check permit rules before travelling, as clearances may be required.'], links: [] },
+      gettingThere: { airport: 'NEOM Bay Airport (NUM) or Tabuk Regional Airport (TUU)', road: 'Usually approached from the east via Al-Bad\' on a 27.5 km unpaved track; a 2WD can manage in dry weather, but the track turns muddy after rain.', transport: 'Car only.' },
+      bestTime: 'October – April (once reopened)', duration: '2–3 hours',
+      dress: 'Sturdy shoes with good grip, sun hat.',
+      tips: [
+        'Currently closed — do not try to enter restricted areas.',
+        'When open: carry 1.5–3 litres of water per person and avoid midday heat.',
+        'Never enter the gorge when rain is forecast — flash floods are dangerous.',
+        'Nearby: Maqna coast, Madyan Shuaib and Ras Alsheikh Hamid.'
+      ]
     },
 
     /* ======================= ROUND 4: HAIL / QASSIM / AL-JAWF ======================= */

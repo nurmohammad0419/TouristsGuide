@@ -3784,7 +3784,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "tayeb-ism": [],
+ "tayeb-ism": [
+  {
+   "src": "assets/photos/tayeb-ism/u1.jpg",
+   "thumb": "assets/photos/tayeb-ism/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tayeb-ism/u2.jpg",
+   "thumb": "assets/photos/tayeb-ism/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "barzan-palace": [
   {
    "src": "assets/photos/barzan-palace/f1.jpg",
