@@ -3809,7 +3809,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%B1%D8%B2%D8%A7%D9%86.jpg"
   }
  ],
- "buraidah-camel-market": [],
+ "buraidah-camel-market": [
+  {
+   "src": "assets/photos/buraidah-camel-market/u1.jpg",
+   "thumb": "assets/photos/buraidah-camel-market/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/buraidah-camel-market/u2.jpg",
+   "thumb": "assets/photos/buraidah-camel-market/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/buraidah-camel-market/u3.jpg",
+   "thumb": "assets/photos/buraidah-camel-market/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "qasr-kaf": [
   {
    "src": "assets/photos/qasr-kaf/f1.jpg",

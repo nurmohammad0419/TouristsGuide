@@ -2650,18 +2650,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'Evening', duration: '30 minutes', dress: 'Modest clothes.', tips: ['Walk to Qishlah Palace and A\'arif Fort.']
     },
     {
-      id: 'buraidah-camel-market', name: 'Buraidah Camel Market', nativeName: 'سوق الإبل ببريدة',
-      region: 'qassim', city: 'Buraidah', categories: ['heritage'],
+      id: 'buraidah-camel-market', name: 'Buraidah Camel Market (Al-An\'am City)', nativeName: 'سوق الإبل ببريدة — مدينة الأنعام',
+      region: 'qassim', city: 'Buraidah', categories: ['heritage'], featured: true,
       coords: [26.3700, 43.9300],
-      tagline: 'One of the largest camel markets in the Middle East.',
-      overview: ['Every morning traders gather to buy and sell hundreds of camels — a lively glimpse of Bedouin heritage and the camel\'s enduring role in Saudi culture.'],
-      history: ['Qassim has long been a centre of camel trading on the caravan routes of Najd.'],
+      tagline: 'One of the world\'s largest camel markets — lively dawn auctions in the heart of Qassim.',
+      overview: [
+        'The Buraidah Camel Market is located inside Al-An\'am City, the livestock market complex on the outskirts of Buraidah in Al-Qassim Province. Covering more than 600,000 m², it is often described as one of the largest camel markets in the world.',
+        'Every day thousands of camels, sheep and goats are traded here. Arabian one-humped camels in white, beige, brown and black fill the sandy pens, and the market offers a vivid glimpse of Bedouin heritage and the camel\'s central role in Saudi culture.'
+      ],
+      history: [
+        'Qassim has been a centre of camel and livestock trading for centuries, on the caravan routes that crossed Najd.',
+        'The market was moved to the purpose-built Al-An\'am City complex, which gathers camel, sheep, goat and bird sections, feed stores and traders in one place.'
+      ],
       religious: null,
-      highlights: ['Morning auctions', 'Camel milk tasting'],
-      hours: { summary: 'Early morning (about 6:00 – 10:00 AM)', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Prince Naif bin Abdulaziz (ELQ)', road: 'Outskirts of Buraidah.', transport: 'Car.' },
-      bestTime: 'Winter mornings', duration: '1 hour', dress: 'Casual modest.', tips: ['Ask before photographing people.']
+      highlights: [
+        'Fast-paced dawn camel auctions',
+        'Thousands of camels in many colours',
+        'Camels traded for milk, meat, breeding and racing',
+        'Stalls selling saddles, halters, blankets and fodder',
+        'Cranes lifting newly bought camels onto trucks',
+        'Sheep, goat and bird sections'
+      ],
+      hours: { summary: 'Complex about 6:00 AM – midnight; main camel auctions about 6:00 – 9:00 AM', details: ['Busiest on Saturday mornings', 'Trading starts right after the dawn (Fajr) prayer'], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No ticket needed — just walk in.'], links: [] },
+      gettingThere: { airport: 'Prince Naif bin Abdulaziz Airport (ELQ), Buraidah', road: 'Al-An\'am City, along Ali bin Abi Talib Road / East Ring Road in Buraidah. About 3.5–4 hours by road from Riyadh.', transport: 'Car or taxi; train from Riyadh to Qassim station, then taxi.' },
+      bestTime: 'Winter mornings, right after sunrise', duration: '1–2 hours',
+      dress: 'Modest clothes and sturdy closed shoes for sand and dust.',
+      tips: [
+        'Arrive just after sunrise for the busiest auctions and cooler air.',
+        'Ask before photographing people.',
+        'Keep a safe distance from camels — they can kick and bite.',
+        'Combine with the Buraidah Dates City market in the same morning.'
+      ]
     },
     {
       id: 'qasr-kaf', name: 'Kaf Palace, Qurayyat', nativeName: 'قصر كاف',
