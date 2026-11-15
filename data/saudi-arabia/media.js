@@ -3510,7 +3510,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "rainbow-rock": [],
+ "rainbow-rock": [
+  {
+   "src": "assets/photos/rainbow-rock/u1.jpg",
+   "thumb": "assets/photos/rainbow-rock/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/rainbow-rock/u2.jpg",
+   "thumb": "assets/photos/rainbow-rock/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/rainbow-rock/u3.jpg",
+   "thumb": "assets/photos/rainbow-rock/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "umm-jarsan": [],
  "murabba-palace": [
   {

@@ -2355,18 +2355,36 @@ TG.registerCountry('saudi-arabia', 'en', {
       ]
     },
     {
-      id: 'rainbow-rock', name: 'Rainbow Rock, AlUla', nativeName: 'صخرة قوس قزح',
-      region: 'madinah', city: 'AlUla', categories: ['nature'],
-      coords: [26.7900, 38.0400],
-      tagline: 'A natural sandstone arch with colourful layered bands.',
-      overview: ['Rainbow Rock is a striking sandstone arch in the desert near AlUla, named for its curved shape and multicoloured mineral bands.'],
-      history: ['Formed by wind erosion of layered sandstone.'],
+      id: 'rainbow-rock', name: 'Rainbow Rock (Arch Rock), AlUla', nativeName: 'صخرة قوس قزح',
+      region: 'madinah', city: 'AlUla', categories: ['nature'], featured: true,
+      coords: [27.0467, 37.8189],
+      tagline: 'A 41-metre natural sandstone arch shaped like a rainbow in the desert north of AlUla.',
+      overview: [
+        'Rainbow Rock — also called The Arch or Arch Rock — is a massive natural sandstone arch in the desert north of AlUla. Its curved bridge resembles a rainbow flanked by two cloud-like rock masses.',
+        'The arch spans about 41 m (135 ft) and rises around 20 m (67 ft). Its remote setting makes it a favourite spot for sunrise and sunset photography, desert camping and stargazing.'
+      ],
+      history: [
+        'The arch was carved by millions of years of wind and water erosion of layered sandstone.',
+        'The sand and rock faces around it contain small multicoloured quartz crystals, known locally as "desert diamonds".'
+      ],
       religious: null,
-      highlights: ['Natural arch', 'Photography'],
-      hours: { summary: 'Daytime', details: [], note: 'Off-road access; often visited on tours.' },
-      tickets: { required: false, price: 'Free (tours paid)', how: ['Visit with a guide or 4x4.'], links: [{ label: 'Experience AlUla', url: 'https://www.experiencealula.com' }] },
-      gettingThere: { airport: 'AlUla International (ULH)', road: 'Desert track from AlUla.', transport: '4x4 or tour.' },
-      bestTime: 'Late afternoon', duration: '1 hour', dress: 'Casual, hat.', tips: ['Combine with Gharameel stargazing.']
+      highlights: [
+        'Natural arch about 41 m wide and 20 m high',
+        'Sunrise and sunset photography',
+        'Dark skies for stargazing',
+        '"Desert diamond" quartz crystals in the sand'
+      ],
+      hours: { summary: 'Open 24 hours (natural landmark)', details: ['Best at sunrise, sunset and on clear nights'], note: 'No facilities on site.' },
+      tickets: { required: false, price: 'Free (4x4 tours paid)', how: ['No ticket needed.', 'Without a 4x4, book a private SUV tour with a local AlUla operator.'], links: [{ label: 'Experience AlUla – Rocks of AlUla', url: 'https://www.experiencealula.com/en/about/features/rocks-of-alula' }] },
+      gettingThere: { airport: 'AlUla International (ULH)', road: 'Take Route 375 north from AlUla towards Tabuk, then an unpaved desert track for the last stretch (GPS 27.0467, 37.8189). About 45–90 minutes from AlUla depending on your start point.', transport: '4x4 strongly recommended for the soft-sand final approach, or join a tour.' },
+      bestTime: 'October – March; sunrise or sunset', duration: '1–2 hours plus driving',
+      dress: 'Sun hat, sunglasses, closed shoes; warm layers after dark.',
+      tips: [
+        'There are no restrooms, shops or lights — bring water, snacks and offline maps.',
+        'Do not climb on the arch; the sandstone is fragile.',
+        'Leave the crystals where they are for others to enjoy.',
+        'Combine with Elephant Rock and Gharameel for a desert day.'
+      ]
     },
     {
       id: 'umm-jarsan', name: 'Umm Jirsan Lava Tube', nativeName: 'كهف أم جرسان',
