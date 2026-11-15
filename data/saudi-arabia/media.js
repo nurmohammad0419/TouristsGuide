@@ -2602,7 +2602,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A8%D8%A7%D9%84_%D8%A3%D8%AC%D8%A7.jpg"
   }
  ],
- "fayd": [],
+ "fayd": [
+  {
+   "src": "assets/photos/fayd/u1.jpg",
+   "thumb": "assets/photos/fayd/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/fayd/u2.jpg",
+   "thumb": "assets/photos/fayd/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "unaizah": [
   {
    "src": "assets/photos/unaizah/2.jpg",

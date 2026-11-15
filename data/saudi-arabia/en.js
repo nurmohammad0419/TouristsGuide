@@ -1564,18 +1564,40 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'November – March', duration: 'Half to full day', dress: 'Hiking gear.', tips: ['Hire a local guide for canyon routes.']
     },
     {
-      id: 'fayd', name: 'Fayd Archaeological Site', nativeName: 'موقع فيد الأثري',
-      region: 'hail', city: 'Fayd', categories: ['archaeology', 'religious', 'heritage'],
-      coords: [27.1170, 42.5100], wiki: 'https://en.wikipedia.org/wiki/Fayd',
-      tagline: 'A major station on the Darb Zubaydah pilgrim road.',
-      overview: ['Fayd preserves the remains of a fortified Abbasid-era station (Qasr Kharash), wells and cisterns on the pilgrim road from Kufa to Makkah.'],
-      history: ['Fayd was the halfway point of Darb Zubaydah and one of its most important stations in the 8th–10th centuries.'],
-      religious: ['Pilgrims rested and drew water here on their journey to Hajj; the road\'s wells were built as charitable endowments.'],
-      highlights: ['Qasr Kharash ruins', 'Ancient cisterns'],
-      hours: { summary: 'Daytime', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Hail (HAS)', road: 'About 120 km south-east of Hail.', transport: 'Car.' },
-      bestTime: 'November – March', duration: '1–2 hours', dress: 'Desert gear.', tips: ['Read about Darb Zubaydah before visiting.']
+      id: 'fayd', name: 'Fayd Archaeological Site & Faid Fort', nativeName: 'مدينة فيد الأثرية',
+      region: 'hail', city: 'Fayd', categories: ['archaeology', 'heritage', 'religious'], featured: true,
+      coords: [27.1170, 42.5100],
+      tagline: '"Capital of the Route" — the great midpoint station of the Darb Zubaydah pilgrim road.',
+      overview: [
+        'Fayd is a major historical settlement about 120 km south-east of Hail. Known historically as the "Capital of the Route", it was the most important midpoint station on Darb Zubaydah, the pilgrimage and trade road between Kufa in Iraq and Makkah.',
+        'The archaeological zone covers roughly 1.5 km by 1.5 km and includes the massive basalt fortress of Qasr Al-Kharash, wells, cisterns, residential quarters, markets and tombs. An on-site visitor centre run by the Heritage Commission presents the finds.'
+      ],
+      history: [
+        'Fayd was originally inhabited by the Arab tribes of Asad and Tayy before Islam. In the early Islamic and Abbasid periods it grew into a vital administrative centre and open market where pilgrims and caravans rested and resupplied, lying roughly halfway between Kufa and Makkah.',
+        'Its importance is recorded by medieval travellers and geographers; Ibn Jubayr and Ibn Battuta, who travelled the pilgrim route, mentioned Fayd in their writings.',
+        'Engineers built an advanced desert water system here — around 45 wells (such as Al-Hamra well), underground channels and connected stone cisterns, often called the Zubaydah pools after Queen Zubaydah, wife of Caliph Harun al-Rashid, who funded works along the road.'
+      ],
+      religious: [
+        'For centuries Fayd served Hajj pilgrims from Iraq and beyond on their journey to Makkah. The wells and cisterns of Darb Zubaydah were built as charitable endowments (sadaqah jariyah) so that pilgrims could find water in the desert — an example of the Islamic tradition of serving the guests of Allah.'
+      ],
+      highlights: [
+        'Qasr Al-Kharash fortress — basalt walls about 115 m long and 2 m thick, with round towers',
+        'Zubaydah pools, wells and underground water channels',
+        'Ruins of early Islamic houses, markets, a large grain mill and an old mosque',
+        'Pre-Islamic rock art and early Arabic inscriptions on nearby hills',
+        'Faid Fort Archaeological Visitor Centre with coins, jewellery and pottery (Arabic & English)'
+      ],
+      hours: { summary: 'Visitor centre: Sat – Thu 10:00 AM – 6:00 PM; Fri 1:00 PM – 6:00 PM', details: ['Outdoor ruins are best visited in the morning or late afternoon'], note: 'Hours as listed by VisitSaudi / Heritage Commission — confirm before travelling.' },
+      tickets: { required: false, price: 'Free (check on arrival)', how: ['No advance booking is usually needed.', 'See VisitSaudi for the latest visitor-centre information.'], links: [{ label: 'VisitSaudi – Faid Fort Visitor Center', url: 'https://www.visitsaudi.com/en/hail/attractions/visitor-center-faid-fort-archaeological' }] },
+      gettingThere: { airport: 'Hail Regional Airport (HAS)', road: 'About 120 km (≈1.5 hours) south-east of Hail city.', transport: 'Car or tour; no public transport.' },
+      bestTime: 'November – March', duration: '2–3 hours',
+      dress: 'Sun hat, sunglasses and sturdy shoes — the ruins are fully exposed to the desert sun.',
+      tips: [
+        'Start at the visitor centre to understand the site.',
+        'Carry plenty of water; there is little shade.',
+        'Do not climb on the walls or remove stones and pottery.',
+        'Combine with other Darb Zubaydah sites and the Tabah volcanic craters in Hail Province.'
+      ]
     },
 
     /* ======================= MORE: QASSIM ======================= */
