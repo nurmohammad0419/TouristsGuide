@@ -1324,6 +1324,8 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dosariyah-fort', name: 'Al-Dosariyah (Adosareyah) Castle, Jazan', nativeName: 'قلعة الدوسرية',
       region: 'jazan', city: 'Jazan', categories: ['heritage'],
+      status: 'closed',
+      notice: 'The castle has recently been listed as closed (temporarily or for maintenance). The hilltop viewpoint outside is still popular. This page will be updated when it reopens.',
       coords: [16.8880, 42.5456],
       tagline: 'An Ottoman-era hilltop fortress with four round towers overlooking Jazan port and the Red Sea.',
       overview: [
@@ -1403,18 +1405,43 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'November – March', duration: 'Full day', dress: 'Desert gear.', tips: ['Nights are very cold in winter.']
     },
     {
-      id: 'maqna', name: 'Maqna & Moses\' Wells (Uyun Musa)', nativeName: 'مقنا وعيون موسى',
-      region: 'tabuk', city: 'Al-Bad\'', categories: ['coast', 'religious', 'nature'],
-      coords: [28.3900, 34.7500], 
-      tagline: 'Palm springs and turquoise water on the Gulf of Aqaba.',
-      overview: ['Maqna is a coastal oasis where palm-fringed springs meet the clear waters of the Gulf of Aqaba, with views across to the mountains of Sinai. Nearby Tayeb Ism is a dramatic canyon that runs down to the sea.'],
-      history: ['The area is part of the historical land of Madyan (Midian).'],
-      religious: ['Local tradition associates the springs with Prophet Musa (Moses), who, according to the Qur\'an (Al-Qasas 28:22–28), travelled to Madyan and watered the flocks of two women at a well.'],
-      highlights: ['Moses\' Wells springs', 'Tayeb Ism canyon', 'Beaches and snorkelling'],
-      hours: { summary: 'Open at all times', details: [], note: 'Part of the NEOM region; access rules may change.' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Tabuk (TUU) or NEOM Bay (NUM)', road: 'About 3 hours west of Tabuk via Al-Bad\'.', transport: 'Car.' },
-      bestTime: 'October – April', duration: 'Full day', dress: 'Modest clothes and swimwear.', tips: ['Combine with Al-Bad\' (Shu\'ayb caves / Maghaer Shuaib).']
+      id: 'maqna', name: 'Wells & Springs of Moses, Maqna (Ayn Musa)', nativeName: 'عيون موسى وبئر السعيداني — مقنا',
+      region: 'tabuk', city: 'Maqna', categories: ['religious', 'coast', 'nature'], featured: true,
+      status: 'closed',
+      notice: 'This site is currently closed to visitors. We will update this page as soon as it reopens — please check the latest status locally before travelling.',
+      coords: [28.3900, 34.7500],
+      tagline: 'A palm oasis where freshwater springs bubble from the sand beside the Gulf of Aqaba.',
+      overview: [
+        'The Wells and Springs of Moses in Maqna — known locally as Ayn Musa ("the springs of Moses") and Bir Al-Sa\'idani — form a historic desert oasis on the Gulf of Aqaba in north-west Saudi Arabia.',
+        'Surrounded by dense date palm groves, natural freshwater springs bubble up directly from the sandy ground and flow towards the sea. Paved paths and a small bridge cross clear water channels fed by roughly a dozen springs.',
+        'The oasis sits on a slight rise overlooking the Gulf of Aqaba, with panoramic views across the water to the mountains of Egypt\'s Sinai Peninsula.'
+      ],
+      history: [
+        'Maqna lies in the historical land of Madyan (Midian). The area around the springs includes remains of an early Islamic archaeological site.',
+        'Local historical sources note Maqna as a place where an agreement was made between the Muslims and the local tribes (such as Judham) in the time of the Prophet ﷺ.',
+        'Today the site has been landscaped with walkways, a parking area and step-free paths, and it lies within the NEOM development region.'
+      ],
+      religious: [
+        'Local tradition associates these springs with Prophet Musa (Moses). The Qur\'an describes how Musa struck a rock with his staff and twelve springs gushed forth, one for each tribe of the Children of Israel (Al-Baqarah 2:60) — local tradition links the dozen springs here with that miracle, although the event is usually placed in Sinai.',
+        'Bir Al-Sa\'idani is linked by tradition with Musa\'s years in Madyan after fleeing Egypt. The Qur\'an tells how he watered the flocks of two women at a well in Madyan and later married one of them, the daughter of an elderly man of Madyan, often identified with Prophet Shu\'ayb (Al-Qasas 28:22–28).'
+      ],
+      highlights: [
+        'Around a dozen natural springs rising from the sand',
+        'Palm-shaded walkways and a small bridge over the channels',
+        'Bir Al-Sa\'idani historic well',
+        'Views across the Gulf of Aqaba to Sinai',
+        'Remains of an early Islamic site nearby'
+      ],
+      hours: { summary: 'Currently closed — reopening date not announced', details: ['When open, it was usually visited during daylight hours'], note: 'Check the latest status locally or on VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Free when open', how: ['No ticket was needed when the site was open.', 'The site is currently closed; this page will be updated when it reopens.'], links: [] },
+      gettingThere: { airport: 'NEOM Bay Airport (NUM) or Tabuk Regional Airport (TUU)', road: 'Coastal town of Maqna on the Gulf of Aqaba, south-west of Al-Bad\'; about 3 hours west of Tabuk city. There is a dedicated parking area a short walk from the springs.', transport: 'Car or tour; no public transport.' },
+      bestTime: 'October – April (once reopened)', duration: '1 hour',
+      dress: 'Modest clothes, sun hat; comfortable shoes.',
+      tips: [
+        'The site is currently closed — please do not attempt to enter fenced areas.',
+        'Nearby you can still enjoy the Maqna coastline and the Tayeb Ism canyon just to the north.',
+        'Combine with Madyan Shuaib (Mughair Shu\'ayb) at Al-Bad\' for a half-day itinerary.'
+      ]
     },
     {
       id: 'tayma', name: 'Tayma Oasis & Haddaj Well', nativeName: 'تيماء وبئر هداج',

@@ -2404,7 +2404,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Sandebene_%E1%B8%A4ism%C4%81_bei_D%CC%B2%C3%A2t_el_%E1%B8%A5a%C7%A7%C7%A7,_608_km_von_Damaskus,_691_m_%C3%BC._M.._LCCN2014648760.jpg"
   }
  ],
- "maqna": [],
+ "maqna": [
+  {
+   "src": "assets/photos/maqna/u1.jpg",
+   "thumb": "assets/photos/maqna/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/maqna/u2.jpg",
+   "thumb": "assets/photos/maqna/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "tayma": [
   {
    "src": "assets/photos/tayma/1.jpg",

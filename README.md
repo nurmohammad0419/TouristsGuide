@@ -40,3 +40,11 @@ data/saudi-arabia/media.js  photos for each spot (Wikimedia Commons)
 
 ## Data notes
 Opening hours, prices and booking rules change often. Each page says so and links to the official source (Nusuk, Experience AlUla, Diriyah, Ithra, VisitSaudi and others). Photos come from Wikimedia Commons, and each image links to its author and license page.
+
+### Marking a spot as closed
+Add these two fields to a spot in `data/<country>/en.js`:
+```js
+status: 'closed',
+notice: 'This site is currently closed. We will update this page when it reopens.',
+```
+The card gets a red "Temporarily closed" badge and the spot page shows the notice at the top. When the spot reopens, delete both lines.

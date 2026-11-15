@@ -8,7 +8,7 @@ window.TG_I18N.en = {
     searchPlaceholder: 'Search spots, cities, provinces…', noResults: 'No matches found.', results: 'results',
     spots: 'spots', spot: 'spot', province: 'Province', city: 'City', category: 'Category', capital: 'Capital',
     area: 'Area', population: 'Population', governorates: 'Governorates', openMap: 'Open in Google Maps',
-    official: 'Official website', bookNow: 'Book tickets', free: 'Free', required: 'Required', partly: 'Partly required', notRequired: 'Not required',
+    official: 'Official website', bookNow: 'Book tickets', free: 'Free', required: 'Required', partly: 'Partly required', closed: 'Temporarily closed', notRequired: 'Not required',
     sortBy: 'Sort', sortFeatured: 'Featured', sortAZ: 'A – Z', sortRegion: 'By province', unesco: 'UNESCO',
     muslimsOnly: 'Muslims only', photos: 'photos', photoCredit: 'Photos: Wikimedia Commons contributors and site contributors (open a photo to see its source)',
     lastReviewed: 'Information last reviewed', disclaimer: 'Opening hours, prices and booking rules change often — always confirm on the official link before you travel.',
@@ -44,7 +44,7 @@ window.TG_I18N.en = {
     nearestAirport: 'Nearest airport', byRoad: 'By road', publicTransport: 'Public transport', tips: 'Travel tips',
     bestTime: 'Best time to visit', duration: 'Time needed', dressCode: 'Dress code & etiquette', location: 'Location',
     morePlaces: 'More places in', related: 'You may also like', quickInfo: 'Quick info', links: 'Useful links',
-    nonMuslimNote: 'Access note'
+    nonMuslimNote: 'Access note', noticeTitle: 'Important notice'
   },
   footer: {
     about: 'TouristsGuide is an independent travel guide. Content is for planning purposes; always check official sources.',

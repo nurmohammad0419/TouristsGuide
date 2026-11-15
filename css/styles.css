@@ -513,3 +513,7 @@ kbd { font: inherit; font-size: .72rem; padding: 3px 7px; border-radius: 6px; bo
 .spot-card__media .ph, .gallery__item .ph, .hero__bg .ph { position: relative; }
 .spot-card__media .ph::after { content: '📷  Photo coming soon'; position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255, 255, 255, .75); font-size: .9rem; font-weight: 600; letter-spacing: .02em; }
 .btn--block { white-space: normal; text-align: center; height: auto; min-height: 48px; padding-top: 10px; padding-bottom: 10px; }
+
+/* Closed / notice styling */
+.badge--closed { background: rgba(190, 40, 40, .9); }
+.callout--closed { background: rgba(190, 40, 40, .12); border-color: #c0392b; }
