@@ -876,17 +876,37 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'souq-okaz', name: 'Souq Okaz', nativeName: 'سوق عكاظ',
-      region: 'makkah', city: 'Taif', categories: ['heritage'],
-      coords: [21.5500, 40.6600], 
-      tagline: 'The legendary pre-Islamic poetry market, revived as a festival.',
-      overview: ['Souq Okaz was the greatest annual market of ancient Arabia, where tribes traded goods and poets competed. Today a reconstructed site hosts a summer festival with poetry, theatre, crafts and camel caravans.'],
-      history: ['The market flourished in the 6th century CE. Famous poems (the Mu\'allaqat) are said to have been honoured here. It was revived as a cultural festival in 2007.'],
-      religious: ['Before his prophethood, Muhammad ﷺ is reported to have attended the market and heard the preaching of Quss ibn Sa\'ida, a famous orator.'],
-      highlights: ['Poetry performances', 'Traditional crafts', 'Historical re-enactments'],
-      hours: { summary: 'Mainly open during the annual festival (summer)', details: [], note: 'Festival dates change each year.' },
-      tickets: { required: true, price: 'Festival tickets (varies)', how: ['Check the official festival announcements and buy tickets online when the season opens.'], links: [{ label: 'VisitSaudi – events', url: 'https://www.visitsaudi.com' }] },
-      gettingThere: { airport: 'Taif (TIF)', road: 'About 40 km north-east of Taif.', transport: 'Car or festival shuttles.' },
-      bestTime: 'Festival season (summer)', duration: 'Half a day', dress: 'Modest clothes.', tips: ['Evenings are the liveliest time.']
+      region: 'makkah', city: 'Taif', categories: ['heritage'], featured: true,
+      coords: [21.5500, 40.6600], wiki: 'https://en.wikipedia.org/wiki/Souk_Okaz',
+      tagline: 'The legendary pre-Islamic market of poets and traders, revived as a cultural festival.',
+      overview: [
+        'Souq Okaz is a famous historic open-air marketplace near Taif. Founded around the early 6th century CE, it was the greatest annual gathering of pre-Islamic Arabia, where tribes came to trade, settle disputes and hold poetry contests.',
+        'Revived in 2007 on its original site in northern Taif, the reconstructed souq recreates ancient Arabian streets alongside modern exhibition halls and a large theatre, and comes alive during the seasonal Souq Okaz festival.'
+      ],
+      history: [
+        'Poets competed here in eloquence, and celebrated poems were honoured before the gathered tribes — the famous Mu\'allaqat are traditionally linked to this tradition.',
+        'Merchants traded leather, weapons, perfumes and silk, while tribal leaders negotiated alliances, treaties and reconciliations.',
+        'The market declined in the 8th century CE. Its location on the outskirts of Taif was identified again in the 20th century and restored under Saudi heritage programmes.'
+      ],
+      religious: ['Before his prophethood, Muhammad ﷺ is reported to have attended the market, where he heard the famous preacher Quss ibn Sa\'ida al-Iyadi, and in the early years of his mission he invited the tribes gathered at Okaz to Islam.'],
+      highlights: [
+        'Reconstructed ancient Arabian market streets',
+        'Live historical re-enactments and storytelling',
+        'Camel and horse shows and folk arts',
+        'Around 200 traditional shops — pottery, silver, Taif rose products, perfumes',
+        'Awards for Arabic poetry, calligraphy and handicrafts',
+        'Large open-air theatre for performances'
+      ],
+      hours: { summary: 'Open mainly during the seasonal festival (usually summer)', details: ['Outside festival dates the grounds are often closed to walk-in visitors'], note: 'Festival dates are announced each year under the Saudi Seasons programme — check before travelling.' },
+      tickets: { required: true, price: 'Festival tickets (price varies)', how: ['Watch for official festival announcements each year.', 'Buy tickets online when the season opens (VisitSaudi / official ticketing).'], links: [{ label: 'VisitSaudi – events', url: 'https://www.visitsaudi.com' }] },
+      gettingThere: { airport: 'Taif International Airport (TIF) — nearby', road: 'Along Souq Okaz Road in northern Taif.', transport: 'Car, taxi or festival shuttles.' },
+      bestTime: 'Festival season (summer evenings)', duration: 'Half a day',
+      dress: 'Modest clothes; a light jacket for Taif evenings.',
+      tips: [
+        'Evenings are the liveliest time during the festival.',
+        'Combine with Taif\'s rose farms and Al-Rudaf Park.',
+        'Check the dates before going — the site is often closed outside the season.'
+      ]
     },
     {
       id: 'fakieh-aquarium', name: 'Fakieh Aquarium, Jeddah', nativeName: 'فقيه أكواريوم',

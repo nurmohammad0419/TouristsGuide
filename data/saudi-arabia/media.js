@@ -1522,7 +1522,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Shubra_Palace,_1905,_al-Taif,_Saudi_Arabia_(4).jpg"
   }
  ],
- "souq-okaz": [],
+ "souq-okaz": [
+  {
+   "src": "assets/photos/souq-okaz/u1.jpg",
+   "thumb": "assets/photos/souq-okaz/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/souq-okaz/u2.jpg",
+   "thumb": "assets/photos/souq-okaz/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "fakieh-aquarium": [
   {
    "src": "assets/photos/fakieh-aquarium/1.jpg",
