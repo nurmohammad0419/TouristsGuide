@@ -3761,7 +3761,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B1%D9%8A%D8%A9_%D8%A7%D9%84%D8%A3%D8%B7%D8%A7%D9%88%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AB%D9%8A%D8%A9.jpg"
   }
  ],
- "ras-alsheikh-hamid": [],
+ "ras-alsheikh-hamid": [
+  {
+   "src": "assets/photos/ras-alsheikh-hamid/u1.jpg",
+   "thumb": "assets/photos/ras-alsheikh-hamid/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/ras-alsheikh-hamid/u2.jpg",
+   "thumb": "assets/photos/ras-alsheikh-hamid/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/ras-alsheikh-hamid/u3.jpg",
+   "thumb": "assets/photos/ras-alsheikh-hamid/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "tayeb-ism": [],
  "barzan-palace": [
   {

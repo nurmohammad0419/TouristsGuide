@@ -2565,17 +2565,36 @@ TG.registerCountry('saudi-arabia', 'en', {
     /* ======================= ROUND 4: TABUK ======================= */
     {
       id: 'ras-alsheikh-hamid', name: 'Ras Alsheikh Hamid', nativeName: 'رأس الشيخ حميد',
-      region: 'tabuk', city: 'Al-Bad\'', categories: ['coast', 'nature'],
-      coords: [27.9000, 34.5600],
-      tagline: 'Where the Gulf of Aqaba meets the Red Sea — turquoise water and coral.',
-      overview: ['Ras Alsheikh Hamid is a remote headland at the mouth of the Gulf of Aqaba, with crystal-clear water, white sand, coral reefs close to shore and views across to Sinai. It is popular for snorkelling and camping.'],
-      history: ['The area is within the NEOM region and has long been used by fishermen.'],
+      region: 'tabuk', city: 'Al-Bad\'', categories: ['coast', 'nature', 'heritage'], featured: true,
+      coords: [28.1330, 34.5928], wiki: 'https://en.wikipedia.org/wiki/Ras_Alsheikh_Hamid',
+      tagline: 'Saudi Arabia\'s westernmost point — turquoise water where the Red Sea meets the Gulf of Aqaba.',
+      overview: [
+        'Ras Alsheikh Hamid is an uninhabited sandy headland in Tabuk Province and the westernmost point of the Saudi mainland. It sits at the meeting point of the Red Sea and the Gulf of Aqaba, directly across the Strait of Tiran from Egypt\'s Sinai Peninsula.',
+        'Its clear turquoise water, coral reefs and white sand make it popular for swimming, snorkelling, diving and fishing. On clear days you can see Tiran Island and the mountains around Sharm El-Sheikh across the water.'
+      ],
+      history: [
+        'The cape is known for the abandoned wreck of a Consolidated PBY Catalina amphibious aircraft lying on the sand. In March 1960 an American family flying around the world landed on the beach and was mistakenly fired upon; the family was rescued and taken to Jeddah, but the damaged plane was left on the shore.',
+        'The headland is planned as the western end of THE LINE in NEOM, and has been proposed as the Saudi landing point of a future Saudi–Egypt causeway across the Strait of Tiran.'
+      ],
       religious: null,
-      highlights: ['Snorkelling on shore reefs', 'Turquoise lagoons', 'Views of Sinai'],
-      hours: { summary: 'Open at all times', details: [], note: 'Access rules may change due to NEOM development.' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'NEOM Bay (NUM) or Tabuk (TUU)', road: 'South-west of Al-Bad\' and Sharma.', transport: 'Car (4x4 helpful).' },
-      bestTime: 'October – May', duration: 'Half to full day', dress: 'Modest swimwear.', tips: ['Bring reef shoes and snorkel gear.']
+      highlights: [
+        'Westernmost point of mainland Saudi Arabia',
+        'Turquoise lagoons and coral reefs for snorkelling and diving',
+        '1960 Catalina seaplane wreck on the beach',
+        'Views of Tiran Island and the Sinai mountains',
+        'Remote, undeveloped coastline'
+      ],
+      hours: { summary: 'Open area; visit in daylight', details: [], note: 'Within the NEOM region — access rules may change with development.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket required.', 'Carry valid ID (National ID, Iqama or passport) for Border Guard checks.'], links: [] },
+      gettingThere: { airport: 'NEOM Bay Airport (NUM) or Tabuk Regional Airport (TUU)', road: 'About 50 km south-west of Al-Bad\' and roughly 220 km from Tabuk city. Paved road most of the way; 4x4 recommended for the sandy final stretch to the beach and the plane wreck.', transport: 'Car only; no public transport.' },
+      bestTime: 'October – May', duration: 'Half to full day',
+      dress: 'Modest swimwear; sun protection and reef shoes.',
+      tips: [
+        'The area is patrolled by the Saudi Border Guard — carry ID and follow instructions.',
+        'Drone photography is strictly prohibited here.',
+        'There are no shops, restrooms or campsites — bring all water, food and supplies.',
+        'Combine with Maqna, Tayeb Ism and Madyan Shuaib for a coastal road trip.'
+      ]
     },
     {
       id: 'tayeb-ism', name: 'Tayeb Ism Canyon', nativeName: 'طيب اسم',
