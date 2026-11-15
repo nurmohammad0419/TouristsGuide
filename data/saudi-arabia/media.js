@@ -3006,5 +3006,277 @@ TG.registerMedia('saudi-arabia', { spots: {
   }
  ],
  "red-sea-global": [],
- "dumat-lake": []
+ "dumat-lake": [],
+ "al-rudaf-park": [],
+ "masjid-jiranah": [
+  {
+   "src": "assets/photos/masjid-jiranah/f1.jpg",
+   "thumb": "assets/photos/masjid-jiranah/f1-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_-_Jaranah_Mosque.jpg"
+  }
+ ],
+ "masjid-al-bayah": [
+  {
+   "src": "assets/photos/masjid-al-bayah/f1.jpg",
+   "thumb": "assets/photos/masjid-al-bayah/f1-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9%D8%A9.jpeg"
+  },
+  {
+   "src": "assets/photos/masjid-al-bayah/f2.jpg",
+   "thumb": "assets/photos/masjid-al-bayah/f2-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bay%27ah_Mosque1.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-al-bayah/f3.jpg",
+   "thumb": "assets/photos/masjid-al-bayah/f3-sm.jpg",
+   "credit": "saudipics",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bay%27ah_Mosque.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-al-bayah/f4.jpg",
+   "thumb": "assets/photos/masjid-al-bayah/f4-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_the_Pledge_(Masjid_al-Bay%27a),_outside_Makkah,_Saudi_Arabia,_founded_by_Abbasid_Caliph_Abu_Ja%27far_al-Mansur_in_761-2_(11)_(52500917917).jpg"
+  },
+  {
+   "src": "assets/photos/masjid-al-bayah/f5.jpg",
+   "thumb": "assets/photos/masjid-al-bayah/f5-sm.jpg",
+   "credit": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_the_Pledge_(Masjid_al-Bay%27a),_outside_Makkah,_Saudi_Arabia,_founded_by_Abbasid_Caliph_Abu_Ja%27far_al-Mansur_in_761-2_(9)_(52500918192).jpg"
+  }
+ ],
+ "masjid-ghamama": [
+  {
+   "src": "assets/photos/masjid-ghamama/f1.jpg",
+   "thumb": "assets/photos/masjid-ghamama/f1-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_3.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-ghamama/f2.jpg",
+   "thumb": "assets/photos/masjid-ghamama/f2-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_6.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-ghamama/f3.jpg",
+   "thumb": "assets/photos/masjid-ghamama/f3-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_5.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-ghamama/f4.jpg",
+   "thumb": "assets/photos/masjid-ghamama/f4-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_2.jpg"
+  },
+  {
+   "src": "assets/photos/masjid-ghamama/f5.jpg",
+   "thumb": "assets/photos/masjid-ghamama/f5-sm.jpg",
+   "credit": "Kaliper1",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_4.jpg"
+  }
+ ],
+ "madinah-dates-market": [],
+ "harrat-viewpoint": [],
+ "rainbow-rock": [],
+ "umm-jarsan": [],
+ "murabba-palace": [
+  {
+   "src": "assets/photos/murabba-palace/f1.jpg",
+   "thumb": "assets/photos/murabba-palace/f1-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Murabba_Palace_(1).jpg"
+  },
+  {
+   "src": "assets/photos/murabba-palace/f2.jpg",
+   "thumb": "assets/photos/murabba-palace/f2-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Murabba_Palace_(2).jpg"
+  },
+  {
+   "src": "assets/photos/murabba-palace/f3.jpg",
+   "thumb": "assets/photos/murabba-palace/f3-sm.jpg",
+   "credit": "Shirazibustan",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D9%85%D8%B1%D8%A8%D9%91%D8%B9.jpg"
+  },
+  {
+   "src": "assets/photos/murabba-palace/f4.jpg",
+   "thumb": "assets/photos/murabba-palace/f4-sm.jpg",
+   "credit": "Shirazibustan",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Qa%E1%B9%A3r_al-Murabba%27.jpg"
+  },
+  {
+   "src": "assets/photos/murabba-palace/f5.jpg",
+   "thumb": "assets/photos/murabba-palace/f5-sm.jpg",
+   "credit": "Unknown authorUnknown author",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Qa%E1%B9%A3r_Murabba%CA%BF.jpg"
+  }
+ ],
+ "souq-al-zal": [
+  {
+   "src": "assets/photos/souq-al-zal/f1.jpg",
+   "thumb": "assets/photos/souq-al-zal/f1-sm.jpg",
+   "credit": "Francisco Anzola",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Incense_souk_in_downtown_Riyadh_(12754047044).jpg"
+  }
+ ],
+ "kafd": [
+  {
+   "src": "assets/photos/kafd/f1.jpg",
+   "thumb": "assets/photos/kafd/f1-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_184713.jpg"
+  },
+  {
+   "src": "assets/photos/kafd/f2.jpg",
+   "thumb": "assets/photos/kafd/f2-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_184701.jpg"
+  },
+  {
+   "src": "assets/photos/kafd/f3.jpg",
+   "thumb": "assets/photos/kafd/f3-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_170553.jpg"
+  },
+  {
+   "src": "assets/photos/kafd/f4.jpg",
+   "thumb": "assets/photos/kafd/f4-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_184625.jpg"
+  },
+  {
+   "src": "assets/photos/kafd/f5.jpg",
+   "thumb": "assets/photos/kafd/f5-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_170555.jpg"
+  }
+ ],
+ "dahl-heet": [],
+ "dammam-corniche": [
+  {
+   "src": "assets/photos/dammam-corniche/f1.jpg",
+   "thumb": "assets/photos/dammam-corniche/f1-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Dammam_Corniche_(3).jpg"
+  },
+  {
+   "src": "assets/photos/dammam-corniche/f2.jpg",
+   "thumb": "assets/photos/dammam-corniche/f2-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Dammam_Corniche_(2).jpg"
+  },
+  {
+   "src": "assets/photos/dammam-corniche/f3.jpg",
+   "thumb": "assets/photos/dammam-corniche/f3-sm.jpg",
+   "credit": "Radosław Botev",
+   "license": "CC BY 3.0 pl",
+   "page": "https://commons.wikimedia.org/wiki/File:Dammam_Corniche_(1).jpg"
+  },
+  {
+   "src": "assets/photos/dammam-corniche/f4.jpg",
+   "thumb": "assets/photos/dammam-corniche/f4-sm.jpg",
+   "credit": "King Eliot",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Dammam_Corniche.jpg"
+  }
+ ],
+ "yellow-lake": [
+  {
+   "src": "assets/photos/yellow-lake/f1.jpg",
+   "thumb": "assets/photos/yellow-lake/f1-sm.jpg",
+   "credit": "محمد الفهيد",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9_%D8%A7%D9%84%D8%A3%D8%B5%D9%81%D8%B1_%D9%81%D9%8A_%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1_%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.jpg"
+  },
+  {
+   "src": "assets/photos/yellow-lake/f2.jpg",
+   "thumb": "assets/photos/yellow-lake/f2-sm.jpg",
+   "credit": "محمد الفهيد",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9_%D8%A7%D9%84%D8%A3%D8%B5%D9%81%D8%B1_%D9%81%D9%8A_%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1.jpg"
+  },
+  {
+   "src": "assets/photos/yellow-lake/f3.jpg",
+   "thumb": "assets/photos/yellow-lake/f3-sm.jpg",
+   "credit": "محمد الفهيد",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%BA%D8%B1%D9%88%D8%A8_%D8%A7%D9%84%D8%B4%D9%85%D8%B3_%D8%B9%D9%84%D9%89_%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9_%D8%A7%D9%84%D8%A3%D8%B5%D9%81%D8%B1.jpg"
+  },
+  {
+   "src": "assets/photos/yellow-lake/f5.jpg",
+   "thumb": "assets/photos/yellow-lake/f5-sm.jpg",
+   "credit": "NASA",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:AEROSOLS_OVER_YELLOW_SEA_SEDIMENTS.jpg"
+  }
+ ],
+ "al-aan-palace": [
+  {
+   "src": "assets/photos/al-aan-palace/f1.jpg",
+   "thumb": "assets/photos/al-aan-palace/f1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D8%B9%D8%A7%D9%86.jpg"
+  }
+ ],
+ "al-atawlah": [
+  {
+   "src": "assets/photos/al-atawlah/f1.jpg",
+   "thumb": "assets/photos/al-atawlah/f1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B1%D9%8A%D8%A9_%D8%A7%D9%84%D8%A3%D8%B7%D8%A7%D9%88%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AB%D9%8A%D8%A9.jpg"
+  }
+ ],
+ "ras-alsheikh-hamid": [],
+ "tayeb-ism": [],
+ "barzan-palace": [
+  {
+   "src": "assets/photos/barzan-palace/f1.jpg",
+   "thumb": "assets/photos/barzan-palace/f1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%B1%D8%B2%D8%A7%D9%86.jpg"
+  }
+ ],
+ "buraidah-camel-market": [],
+ "qasr-kaf": [
+  {
+   "src": "assets/photos/qasr-kaf/f1.jpg",
+   "thumb": "assets/photos/qasr-kaf/f1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D9%84%D8%B9%D8%A9_%D9%83%D8%A7%D9%81.jpg"
+  }
+ ],
+ "jouf-olive-festival": []
 } });
