@@ -3372,7 +3372,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "al-rudaf-park": [],
+ "al-rudaf-park": [
+  {
+   "src": "assets/photos/al-rudaf-park/u1.jpg",
+   "thumb": "assets/photos/al-rudaf-park/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/al-rudaf-park/u2.jpg",
+   "thumb": "assets/photos/al-rudaf-park/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "masjid-jiranah": [
   {
    "src": "assets/photos/masjid-jiranah/f1.jpg",

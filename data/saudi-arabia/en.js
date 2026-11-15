@@ -2203,18 +2203,39 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     /* ======================= ROUND 4: MAKKAH PROVINCE ======================= */
     {
-      id: 'al-rudaf-park', name: 'Al-Rudaf Park, Taif', nativeName: 'منتزه الردف',
-      region: 'makkah', city: 'Taif', categories: ['nature'],
+      id: 'al-rudaf-park', name: 'Al-Rudaf (Arruddaf) Park, Taif', nativeName: 'منتزه الردف',
+      region: 'makkah', city: 'Taif', categories: ['nature', 'modern'], featured: true,
       coords: [21.2500, 40.4000],
-      tagline: 'Giant granite boulders and gardens in the heart of Taif.',
-      overview: ['Al-Rudaf is a large public park among huge, smooth granite boulders on the edge of Taif. Walking paths, gardens, playgrounds and picnic areas wind between the rock formations, and the park hosts events during the Taif summer season.'],
-      history: ['The granite outcrops were shaped by millions of years of weathering; the park was developed by Taif municipality as a family recreation area.'],
+      tagline: 'Taif\'s great family park — granite boulders, a lake and a musical dancing fountain.',
+      overview: [
+        'Al-Rudaf Park (also spelled Arruddaf or Ruddaf) is one of the largest public parks in Taif, covering more than 565,000 m² of lawns, weathered granite rock formations and mountain views in the south of the city, along the Taif–Al-Shafa road.',
+        'At its heart is a 13,000 m² artificial lake with a musical dancing fountain. Walking tracks, sports courts, playgrounds, cafés and picnic lawns make it a favourite evening outing for families.'
+      ],
+      history: [
+        'The giant granite boulders that give the park its character were shaped by millions of years of weathering. The area was developed by Taif municipality into a large family park.',
+        'In spring the park hosts events linked to the Taif Rose Festival, with floral displays and stalls selling local rose water and rose oil.'
+      ],
       religious: null,
-      highlights: ['Granite rock formations', 'Walking paths', 'Summer festival events'],
-      hours: { summary: 'Open daily; busiest in the evening', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Taif (TIF)', road: 'South-east Taif city.', transport: 'Taxi.' },
-      bestTime: 'Summer evenings', duration: '1–2 hours', dress: 'Casual.', tips: ['Climb the lower boulders for sunset views.']
+      highlights: [
+        'Central lake with a musical dancing fountain (750 water jets) — evening shows',
+        '2 km walking and running track, cycling lanes and an open-air gym',
+        'Free football, basketball and volleyball courts',
+        'Children\'s playgrounds and a mini-zoo',
+        'Granite rock formations and mountain views',
+        'Taif Rose Festival displays in spring',
+        'Pony, horse and camel rides outside the gates (paid)'
+      ],
+      hours: { summary: 'Mon – Sat 4:00 PM – 1:00 AM; closed Sunday for maintenance', details: ['Fountain shows usually about 7:30 – 10:30 PM (not on Fridays)', 'Friday evenings are the busiest; weekday afternoons are quieter'], note: 'Hours can change by season — check before visiting.' },
+      tickets: { required: false, price: 'Free entry and parking', how: ['No ticket needed.'], links: [{ label: 'VisitSaudi – Arruddaf Park', url: 'https://www.visitsaudi.com/en/taif/attractions/arruddaf-park-in-taif' }] },
+      gettingThere: { airport: 'Taif (TIF) or King Abdulaziz International, Jeddah (JED)', road: 'Abu Talib Street, Al-Ruddaf district, southern Taif, along the Taif–Al-Shafa road. Free parking.', transport: 'Taxi or ride-hailing.' },
+      bestTime: 'Summer evenings; spring for the rose season', duration: '2–3 hours',
+      dress: 'Casual modest clothes; a light jacket for cool Taif evenings.',
+      tips: [
+        'Barbecues and open fires are not allowed inside the park.',
+        'Arrive before 7:30 PM to get a good spot for the fountain show.',
+        'Prayer rooms, restrooms, wheelchair access and a fruit market are on site.',
+        'Combine with the Al-Shafa and Al-Hada mountains for a full Taif day.'
+      ]
     },
     {
       id: 'masjid-jiranah', name: 'Masjid al-Ji\'ranah', nativeName: 'مسجد الجعرانة',
