@@ -521,3 +521,4 @@ kbd { font: inherit; font-size: .72rem; padding: 3px 7px; border-radius: 6px; bo
 .callout--check { background: rgba(230, 150, 30, .14); border-color: #d68910; }
 .badge--check { background: rgba(196, 120, 10, .92); }
 .callout--check { background: rgba(230, 150, 30, .14); border-color: #d68910; }
+.approx { display: block; font-style: normal; font-size: .75rem; color: var(--muted); margin-top: 2px; }

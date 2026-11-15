@@ -429,7 +429,7 @@
               <li>${icon.ticket}<div><small>${t('spot.ticketRequired')}</small><b><span class="pill pill--${ticketClass(T.required)}">${ticketLabel(T.required)}</span> ${esc(T.price)}</b></div></li>
               <li>${icon.hour}<div><small>${t('spot.duration')}</small><b>${esc(s.duration)}</b></div></li>
               <li>${icon.cal}<div><small>${t('spot.bestTime')}</small><b>${esc(s.bestTime)}</b></div></li>
-              <li>${icon.pin}<div><small>${t('spot.location')}</small><b>${esc(s.city)}, ${esc(r.name)}</b></div></li>
+              <li>${icon.pin}<div><small>${t('spot.location')}</small><b>${esc(s.city)}, ${esc(r.name)}</b>${s.approx ? `<em class="approx">${t('spot.approxLocation')}</em>` : ''}</div></li>
             </ul>
             ${T.links && T.links[0] ? `<a class="btn btn--primary btn--block" href="${esc(T.links[0].url)}" target="_blank" rel="noopener">${icon.ticket} ${T.required ? t('common.bookNow') : esc(T.links[0].label)}</a>` : ''}
             <a class="btn btn--ghost btn--block" href="${mapsUrl(s.coords)}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a>

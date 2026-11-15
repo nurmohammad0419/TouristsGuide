@@ -44,7 +44,7 @@ window.TG_I18N.en = {
     nearestAirport: 'Nearest airport', byRoad: 'By road', publicTransport: 'Public transport', tips: 'Travel tips',
     bestTime: 'Best time to visit', duration: 'Time needed', dressCode: 'Dress code & etiquette', location: 'Location',
     morePlaces: 'More places in', related: 'You may also like', quickInfo: 'Quick info', links: 'Useful links',
-    nonMuslimNote: 'Access note', noticeTitle: 'Important notice'
+    nonMuslimNote: 'Access note', noticeTitle: 'Important notice', approxLocation: 'Map pin shows the approximate area'
   },
   footer: {
     about: 'TouristsGuide is an independent travel guide. Content is for planning purposes; always check official sources.',

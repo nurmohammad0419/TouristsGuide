@@ -237,7 +237,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'taif-al-hada', name: 'Taif — Al-Hada Mountains & Rose Farms', nativeName: 'الطائف — الهدا',
       region: 'makkah', city: 'Taif', categories: ['nature', 'heritage'],
-      coords: [21.3667, 40.2833], wiki: 'https://en.wikipedia.org/wiki/Taif',
+      approx: true, coords: [21.3667, 40.2833], wiki: 'https://en.wikipedia.org/wiki/Taif',
       tagline: 'The cool "City of Roses" above the Hijaz escarpment.',
       overview: [
         'Taif sits at about 1,800 m in the Sarawat mountains, making it the traditional summer retreat for people from Makkah and Jeddah. The spectacular Al-Hada road winds up the escarpment through dozens of hairpin bends.',
@@ -313,7 +313,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'mount-uhud', name: 'Mount Uhud & the Martyrs\' Cemetery', nativeName: 'جبل أحد',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage', 'nature'],
-      coords: [24.5097, 39.6150], wiki: 'https://en.wikipedia.org/wiki/Mount_Uhud',
+      coords: [24.5227, 39.6183], wiki: 'https://en.wikipedia.org/wiki/Mount_Uhud',
       tagline: 'The mountain of the Battle of Uhud, "a mountain that loves us".',
       overview: [
         'Mount Uhud is a 1,077 m red granite ridge about 5 km north of the Prophet\'s Mosque. At its foot lies the cemetery of the martyrs of the Battle of Uhud and Jabal al-Rumat (the Archers\' Hill).',
@@ -438,7 +438,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masmak-fort', name: 'Al Masmak Fortress', nativeName: 'قصر المصمك',
       region: 'riyadh', city: 'Riyadh', categories: ['heritage'],
-      coords: [24.6312, 46.7134], wiki: 'https://en.wikipedia.org/wiki/Al_Masmak_Palace',
+      coords: [24.6312, 46.7133], wiki: 'https://en.wikipedia.org/wiki/Al_Masmak_Palace',
       tagline: 'The clay fort where the modern Kingdom began.',
       overview: [
         'Masmak is a squat clay-and-mud-brick fortress with four watchtowers in the heart of old Riyadh. Inside, a museum displays weapons, maps, photographs and the story of the 1902 recapture of Riyadh.',
@@ -502,7 +502,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'ushaiger', name: 'Ushaiger Heritage Village', nativeName: 'قرية أشيقر التراثية',
       region: 'riyadh', city: 'Shaqra', categories: ['heritage'],
-      coords: [25.3420, 45.1830], wiki: 'https://en.wikipedia.org/wiki/Ushaiger',
+      coords: [25.3391, 45.1786], wiki: 'https://en.wikipedia.org/wiki/Ushaiger',
       tagline: 'A beautifully preserved Najdi mud-brick village.',
       overview: ['Ushaiger is a traditional village of mud-brick homes, mosques and palm gardens around 200 km north-west of Riyadh, with a small private museum and family-run guesthouses.'],
       history: ['Settled for more than 1,500 years, Ushaiger was a centre of learning and trade in Najd and produced many scholars and judges.'],
@@ -532,7 +532,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jabal-al-qarah', name: 'Al-Qarah Mountain Caves', nativeName: 'جبل القارة',
       region: 'eastern', city: 'Al-Ahsa', categories: ['nature'],
-      coords: [25.4170, 49.6740], wiki: 'https://en.wikipedia.org/wiki/Al-Qarah_Mountain_(Saudi_Arabia)',
+      coords: [25.4098, 49.6879], wiki: 'https://en.wikipedia.org/wiki/Al-Qarah_Mountain_(Saudi_Arabia)',
       tagline: 'Naturally cool limestone caves in the heart of the oasis.',
       overview: ['Jabal Al-Qarah is a 75 m hill riddled with narrow canyons and caves that stay cool even in summer. A visitor path leads through the main cave, and the area hosts a heritage village and pottery workshops.'],
       history: ['The caves were formed by erosion of soft limestone. The nearby pottery tradition has been passed down for generations.'],
@@ -546,7 +546,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'ithra', name: 'Ithra — King Abdulaziz Center for World Culture', nativeName: 'إثراء',
       region: 'eastern', city: 'Dhahran', categories: ['modern'],
-      coords: [26.3474, 50.1022], wiki: 'https://en.wikipedia.org/wiki/King_Abdulaziz_Center_for_World_Culture',
+      coords: [26.335, 50.122], wiki: 'https://en.wikipedia.org/wiki/King_Abdulaziz_Center_for_World_Culture',
       tagline: 'Award-winning cultural centre shaped like stacked river stones.',
       overview: ['Ithra is an architectural landmark housing a museum, library, theatre, cinema, children\'s museum and exhibition halls. It stands on the site of Prosperity Well (Dammam No. 7), where commercial oil was first found in Saudi Arabia.'],
       history: ['Built by Saudi Aramco, designed by Snøhetta and opened in 2018.'],
@@ -562,7 +562,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'rijal-almaa', name: 'Rijal Almaa Heritage Village', nativeName: 'قرية رجال ألمع',
       region: 'asir', city: 'Rijal Almaa', categories: ['heritage'], featured: true,
-      coords: [18.2161, 42.2722], wiki: 'https://en.wikipedia.org/wiki/Rijal_Almaa',
+      coords: [18.2125, 42.2734], wiki: 'https://en.wikipedia.org/wiki/Rijal_Almaa',
       tagline: 'Colourful stone tower houses in a green mountain valley.',
       overview: ['Rijal Almaa is a village of around 60 multi-storey stone houses decorated with white quartz stones and colourful Al-Qatt Al-Asiri paintings. A museum shows local weapons, costumes and manuscripts.'],
       history: ['The village stood on an ancient trade route linking Yemen and the Levant and was a centre of commerce. Al-Qatt Al-Asiri, the painted interior art practised by Asiri women, was added to UNESCO\'s Intangible Heritage list in 2017.'],
@@ -576,7 +576,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-soudah', name: 'Al-Soudah & Jabal Sawda', nativeName: 'السودة',
       region: 'asir', city: 'Abha', categories: ['nature'],
-      coords: [18.2700, 42.3700], wiki: 'https://en.wikipedia.org/wiki/Jabal_Sawda',
+      coords: [18.2832, 42.3976], wiki: 'https://en.wikipedia.org/wiki/Jabal_Sawda',
       tagline: 'The roof of Saudi Arabia — misty juniper forests at 3,000 m.',
       overview: ['Al-Soudah is a highland area near Abha including Jabal Sawda, the highest peak in the country. Cool temperatures, clouds and juniper forests make it a summer favourite.'],
       history: ['Traditional villages here practise terraced farming. The area is being developed by Soudah Development as a mountain destination.'],
@@ -592,7 +592,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'farasan-islands', name: 'Farasan Islands', nativeName: 'جزر فرسان',
       region: 'jazan', city: 'Farasan', categories: ['coast', 'nature'], featured: true,
-      coords: [16.7000, 42.1167], wiki: 'https://en.wikipedia.org/wiki/Farasan_Islands',
+      coords: [16.7022, 42.1183], wiki: 'https://en.wikipedia.org/wiki/Farasan_Islands',
       tagline: 'Untouched coral islands with turquoise waters and gazelles.',
       overview: ['An archipelago of 84 coral islands in the Red Sea, part of a protected marine reserve with mangroves, dolphins, sea turtles and the rare Farasan gazelle.'],
       history: ['The islands have Roman inscriptions, Ottoman buildings and the Al-Rifai House, a coral-stone merchant house famous for pearl-trade wealth.'],
@@ -608,7 +608,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'hail-rock-art', name: 'Jubbah & Shuwaymis Rock Art', nativeName: 'النقوش الصخرية في جبة والشويمس',
       region: 'hail', city: 'Jubbah', categories: ['archaeology'], unesco: true,
-      coords: [28.0167, 40.9333], wiki: 'https://en.wikipedia.org/wiki/Rock_Art_of_Hail_Province',
+      coords: [28.0169, 40.953], wiki: 'https://en.wikipedia.org/wiki/Rock_Art_of_Hail_Province',
       tagline: '10,000 years of human history carved in stone.',
       overview: ['Jubbah and Shuwaymis hold thousands of petroglyphs showing humans, camels, horses, ibex and inscriptions — one of the richest rock-art sites in the world, inscribed by UNESCO in 2015.'],
       history: ['The carvings span from about 10,000 years ago, when the Nafud had lakes, to the Thamudic and Islamic periods.'],
@@ -624,7 +624,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-ukhdood', name: 'Al-Ukhdood Archaeological Site', nativeName: 'موقع الأخدود الأثري',
       region: 'najran', city: 'Najran', categories: ['archaeology', 'religious'],
-      coords: [17.4950, 44.1230], wiki: 'https://en.wikipedia.org/wiki/Al-Okhdood',
+      coords: [17.4773, 44.1793], wiki: 'https://en.wikipedia.org/wiki/Al-Okhdood',
       tagline: 'Ruins of the ancient city mentioned in the Qur\'an.',
       overview: ['Al-Ukhdood is the walled ruin of ancient Najran (Raqmat), with foundations, inscriptions and a millstone.'],
       history: ['It flourished from around 500 BCE on the incense route. In the 6th century CE it was the scene of persecution described in the Qur\'an.'],
@@ -638,7 +638,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'hima', name: 'Hima Cultural Area', nativeName: 'منطقة حمى الثقافية',
       region: 'najran', city: 'Najran', categories: ['archaeology'], unesco: true,
-      coords: [18.2569, 44.4527], wiki: 'https://en.wikipedia.org/wiki/Bir_Hima_Rock_Petroglyphs_and_Inscriptions',
+      coords: [18.2508, 44.4515], wiki: 'https://en.wikipedia.org/wiki/Bir_Hima_Rock_Petroglyphs_and_Inscriptions',
       tagline: 'Ancient wells and petroglyphs on the incense road.',
       overview: ['Hima holds wells that served caravans for 3,000 years and thousands of rock carvings and inscriptions in multiple ancient scripts. UNESCO listed it in 2021.'],
       history: ['The Bir Hima wells were among the last water sources before crossing the desert. Carvings include hunting scenes and inscriptions in Musnad, Thamudic, Greek and early Arabic.'],
@@ -757,7 +757,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'darb-zubaydah', name: 'Darb Zubaydah — Zubala', nativeName: 'درب زبيدة',
       region: 'northern-borders', city: 'Rafha', categories: ['heritage', 'religious', 'archaeology'],
-      coords: [29.4000, 43.6000], 
+      coords: [29.5511, 43.6005], 
       tagline: 'The great Abbasid pilgrim road from Kufa to Makkah.',
       overview: ['Zubala is one of the best-preserved stations on Darb Zubaydah, with large stone water cisterns and ruins of a fort.'],
       history: ['The road was improved in the 8th century and named after Zubaydah, wife of Caliph Harun al-Rashid.'],
@@ -772,7 +772,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jabal-thawr', name: 'Jabal Thawr & Cave of Thawr', nativeName: 'جبل ثور وغار ثور',
       region: 'makkah', city: 'Makkah', categories: ['religious', 'nature'], muslimsOnly: true,
-      coords: [21.3772, 39.8497], wiki: 'https://en.wikipedia.org/wiki/Jabal_Thawr',
+      coords: [21.377, 39.8499], wiki: 'https://en.wikipedia.org/wiki/Jabal_Thawr',
       tagline: 'The cave where the Prophet ﷺ sheltered during the Hijrah.',
       overview: [
         'Jabal Thawr is a rugged 759 m mountain on the southern edge of Makkah. Near its summit is the small Cave of Thawr, reached by a steep rocky path.',
@@ -819,7 +819,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masjid-aisha', name: 'Masjid Aisha (Tan\'eem Mosque)', nativeName: 'مسجد عائشة (التنعيم)',
       region: 'makkah', city: 'Makkah', categories: ['religious'], muslimsOnly: true,
-      coords: [21.4706, 39.7908], 
+      coords: [21.4677, 39.8014], 
       tagline: 'The nearest miqat for entering ihram from within Makkah.',
       overview: ['Masjid Aisha stands at al-Tan\'eem, about 7.5 km north of the Grand Mosque at the boundary of the Haram. It has large ablution areas and changing facilities for pilgrims.'],
       history: ['It marks the place where Aisha, the wife of the Prophet ﷺ, entered ihram for Umrah after Hajj in 632 CE, accompanied by her brother Abdur-Rahman, on the Prophet\'s ﷺ instruction.'],
@@ -863,7 +863,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'shubra-palace', name: 'Shubra Palace, Taif', nativeName: 'قصر شبرا',
       region: 'makkah', city: 'Taif', categories: ['heritage'],
-      coords: [21.2700, 40.4140], wiki: 'https://en.wikipedia.org/wiki/Shubra_Palace',
+      coords: [21.2859, 40.4151], wiki: 'https://en.wikipedia.org/wiki/Shubra_Palace',
       tagline: 'An elegant early 20th-century palace with wooden balconies.',
       overview: ['Shubra Palace is a four-storey palace of stone and wood with marble from Italy and ornate rawasheen balconies. It has served as Taif\'s regional museum.'],
       history: ['Built around 1905 during the late Ottoman era, it later became a residence of King Abdulaziz and King Faisal during summer stays in Taif.'],
@@ -877,7 +877,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'souq-okaz', name: 'Souq Okaz', nativeName: 'سوق عكاظ',
       region: 'makkah', city: 'Taif', categories: ['heritage'], featured: true,
-      coords: [21.5500, 40.6600], wiki: 'https://en.wikipedia.org/wiki/Souk_Okaz',
+      coords: [21.4813, 40.663], wiki: 'https://en.wikipedia.org/wiki/Souk_Okaz',
       tagline: 'The legendary pre-Islamic market of poets and traders, revived as a cultural festival.',
       overview: [
         'Souq Okaz is a famous historic open-air marketplace near Taif. Founded around the early 6th century CE, it was the greatest annual gathering of pre-Islamic Arabia, where tribes came to trade, settle disputes and hold poetry contests.',
@@ -911,7 +911,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'fakieh-aquarium', name: 'Fakieh Aquarium, Jeddah', nativeName: 'فقيه أكواريوم',
       region: 'makkah', city: 'Jeddah', categories: ['modern', 'coast'],
-      coords: [21.6153, 39.1083], 
+      coords: [21.5723, 39.1094], 
       tagline: 'Red Sea marine life on the Jeddah corniche.',
       overview: ['A family-friendly public aquarium with Red Sea fish, sharks, rays and other species, plus shows and an educational focus on marine conservation.'],
       history: ['Opened in 2006 on Jeddah\'s northern corniche.'],
@@ -970,7 +970,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'hejaz-railway-museum', name: 'Hejaz Railway Museum, Madinah', nativeName: 'متحف سكة حديد الحجاز',
       region: 'madinah', city: 'Madinah', categories: ['heritage'],
-      coords: [24.4628, 39.6000], wiki: 'https://en.wikipedia.org/wiki/Hejaz_railway',
+      approx: true, coords: [24.4628, 39.6000], wiki: 'https://en.wikipedia.org/wiki/Hejaz_railway',
       tagline: 'The southern terminus of the Ottoman railway to Damascus.',
       overview: ['The restored Anbariya station complex houses a museum with historic locomotives, carriages, photographs and stories of the railway that once carried pilgrims from Damascus to Madinah.'],
       history: ['The Hejaz Railway opened to Madinah in 1908, cutting the journey from Damascus from about 40 days to a few days. It was repeatedly sabotaged during the First World War and the line south of Jordan never reopened.'],
@@ -984,7 +984,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dadan-jabal-ikmah', name: 'Dadan & Jabal Ikmah', nativeName: 'دادان وجبل عكمة',
       region: 'madinah', city: 'AlUla', categories: ['archaeology'],
-      coords: [26.6450, 37.9180], 
+      approx: true, coords: [26.6450, 37.9180], 
       tagline: 'Capital of the Dadanite and Lihyanite kingdoms and an "open library" of inscriptions.',
       overview: ['Dadan is the excavated capital of an ancient Arabian kingdom, famous for its "Lion Tombs" carved high in the cliff. Nearby Jabal Ikmah is a canyon whose walls carry hundreds of inscriptions — often called an open-air library.'],
       history: ['Dadan flourished from around the 9th to the 1st century BCE, controlling the incense route before the Nabataeans. The Ikmah inscriptions, in Dadanitic and other ancient scripts, record prayers, laws and offerings.'],
@@ -1042,7 +1042,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-faw', name: 'Al-Faw Archaeological Area', nativeName: 'قرية الفاو الأثرية',
       region: 'riyadh', city: 'Wadi ad-Dawasir', categories: ['archaeology'], unesco: true,
-      coords: [19.7800, 45.1500], wiki: 'https://en.wikipedia.org/wiki/Qaryat_al-Faw',
+      coords: [19.7832, 45.1404], wiki: 'https://en.wikipedia.org/wiki/Qaryat_al-Faw',
       tagline: 'The ancient capital of Kindah on the edge of the Empty Quarter.',
       overview: ['Al-Faw (Qaryat al-Faw) is the ruin of a major caravan city on the north-western edge of the Rub\' al Khali, with a market, temples, houses, tombs, wall paintings and inscriptions. It became a UNESCO World Heritage Site in 2024.'],
       history: ['Al-Faw flourished from about the 1st century BCE to the 4th century CE as the capital of the Kingdom of Kindah, on the trade route between southern Arabia and the Gulf and Mesopotamia.'],
@@ -1056,7 +1056,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'uruq-bani-maarid', name: '\'Uruq Bani Ma\'arid (Empty Quarter)', nativeName: 'عروق بني معارض',
       region: 'riyadh', city: 'Wadi ad-Dawasir', categories: ['nature'], unesco: true,
-      coords: [19.4000, 45.6000], wiki: 'https://en.wikipedia.org/wiki/%27Uruq_Bani_Ma%27arid',
+      coords: [19.6183, 45.6499], wiki: 'https://en.wikipedia.org/wiki/%27Uruq_Bani_Ma%27arid',
       tagline: 'Towering red dunes of the Rub\' al Khali, a UNESCO natural site.',
       overview: ['This protected area on the western edge of the Empty Quarter has some of the most spectacular linear dunes on Earth. It is a refuge for reintroduced Arabian oryx, sand gazelles and Nubian ibex. UNESCO listed it in 2023 as Saudi Arabia\'s first natural World Heritage Site.'],
       history: ['The Rub\' al Khali is the largest continuous sand desert in the world. Bedouin tribes have crossed it for millennia.'],
@@ -1070,7 +1070,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'red-sands', name: 'Red Sand Dunes (Nafud al-Thuwayrat)', nativeName: 'الرمال الحمراء',
       region: 'riyadh', city: 'Near Riyadh', categories: ['nature'],
-      coords: [24.4700, 46.1400], 
+      approx: true, coords: [24.4700, 46.1400], 
       tagline: 'Glowing red dunes for dune bashing, quad bikes and sunset camps.',
       overview: ['About an hour from Riyadh, these deep-red dunes are the capital\'s favourite desert playground: quad biking, sandboarding, camel rides and evening desert camps.'],
       history: ['The red colour comes from iron oxide coating the sand grains.'],
@@ -1084,7 +1084,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'wadi-hanifa', name: 'Wadi Hanifa', nativeName: 'وادي حنيفة',
       region: 'riyadh', city: 'Riyadh', categories: ['nature'],
-      coords: [24.6500, 46.6200], wiki: 'https://en.wikipedia.org/wiki/Wadi_Hanifa',
+      approx: true, coords: [24.6500, 46.6200], wiki: 'https://en.wikipedia.org/wiki/Wadi_Hanifa',
       tagline: 'A green valley park running through Riyadh.',
       overview: ['Wadi Hanifa is a 120 km valley crossing Riyadh. A major environmental restoration turned it into a long park with lakes, walking paths, picnic areas and palm groves.'],
       history: ['The valley was the lifeline of early Najdi settlements, including Diriyah. Its restoration project won the Aga Khan Award for Architecture in 2010.'],
@@ -1128,7 +1128,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'half-moon-bay', name: 'Half Moon Bay', nativeName: 'شاطئ نصف القمر',
       region: 'eastern', city: 'Khobar', categories: ['coast'],
-      coords: [26.0000, 50.0500], 
+      coords: [26.1258, 49.9922], 
       tagline: 'A crescent-shaped Gulf bay with calm waters and beaches.',
       overview: ['Half Moon Bay is a sweeping bay south of Khobar with shallow, calm water, public beaches, resorts, water sports and nearby sand dunes.'],
       history: ['It has long been a favourite weekend escape for residents of Dammam, Khobar and Dhahran.'],
@@ -1184,7 +1184,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jawatha-mosque', name: 'Jawatha Mosque', nativeName: 'مسجد جواثا',
       region: 'eastern', city: 'Al-Ahsa', categories: ['religious', 'heritage'],
-      coords: [25.4930, 49.6960], wiki: 'https://en.wikipedia.org/wiki/Jawatha_Mosque',
+      coords: [25.4698, 49.6785], wiki: 'https://en.wikipedia.org/wiki/Jawatha_Mosque',
       tagline: 'One of the earliest mosques in Islam.',
       overview: ['Jawatha Mosque is a small restored mosque in a palm-ringed area north-east of Hofuf, marking one of the oldest places of Islamic worship.'],
       history: ['Built in the 7th century (around 629 CE) by the Banu Abd al-Qays tribe, who embraced Islam during the Prophet\'s ﷺ lifetime.'],
@@ -1198,7 +1198,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'khobar-corniche', name: 'Khobar Corniche & Water Tower', nativeName: 'كورنيش الخبر',
       region: 'eastern', city: 'Khobar', categories: ['modern', 'coast'],
-      coords: [26.2950, 50.2200], wiki: 'https://en.wikipedia.org/wiki/Khobar',
+      coords: [26.3078, 50.2319], wiki: 'https://en.wikipedia.org/wiki/Khobar',
       tagline: 'Seafront promenade with the iconic Khobar Water Tower.',
       overview: ['Khobar\'s corniche is a long seaside promenade with parks, cafés, fishing spots and playgrounds. The landmark Khobar Water Tower, with a viewing deck, rises at its edge.'],
       history: ['Khobar grew from a small fishing village into a modern city after oil was discovered nearby in 1938.'],
@@ -1256,7 +1256,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'tanomah', name: 'Tanomah Mountains', nativeName: 'جبال تنومة',
       region: 'asir', city: 'Tanomah', categories: ['nature'], featured: true,
-      coords: [18.9300, 42.1700], wiki: 'https://en.wikipedia.org/wiki/Tanomah',
+      coords: [18.9535, 42.1703], wiki: 'https://en.wikipedia.org/wiki/Tanomah',
       tagline: 'Misty granite peaks, forests and seasonal waterfalls high in the Sarawat range.',
       overview: [
         'The Tanomah Mountains are a high-altitude mountain area in Asir Province, south-western Saudi Arabia, about 120 km north of Abha by road along the Sarawat range. Rising roughly 2,000–3,000 m above sea level, they stand out from most of the Arabian Peninsula for their cool climate, juniper forests and misty green peaks.',
@@ -1330,7 +1330,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'fayfa', name: 'Fayfa Mountains', nativeName: 'جبال فيفاء',
       region: 'jazan', city: 'Fayfa', categories: ['nature', 'heritage'],
-      coords: [17.2600, 43.1000], wiki: 'https://en.wikipedia.org/wiki/Fayfa',
+      coords: [17.2276, 43.1064], wiki: 'https://en.wikipedia.org/wiki/Fayfa',
       tagline: 'Terraced coffee mountains with houses clinging to steep slopes.',
       overview: ['Fayfa rises to about 1,800 m above the hot Jazan plain. Stone houses dot steep terraces planted with coffee, bananas and fragrant herbs.'],
       history: ['The Khawlani coffee grown here is a traditional heritage crop and was inscribed on UNESCO\'s Intangible Cultural Heritage list in 2022.'],
@@ -1383,7 +1383,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'emara-palace', name: 'Al-Emara Palace, Najran', nativeName: 'قصر الإمارة التاريخي',
       region: 'najran', city: 'Najran', categories: ['heritage'],
-      coords: [17.5470, 44.2280], wiki: 'https://en.wikipedia.org/wiki/Najran',
+      coords: [17.4901, 44.1318], wiki: 'https://en.wikipedia.org/wiki/Najran',
       tagline: 'A striking mud-brick palace with whitewashed details.',
       overview: ['The historic Emara Palace is a multi-storey mud fort-palace typical of Najran\'s architecture, with white-edged windows and crenellations. It contains a well and mosque.'],
       history: ['Built in the 1940s as the seat of the regional governor; now a museum.'],
@@ -1397,7 +1397,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'najran-dam', name: 'Najran Valley Dam', nativeName: 'سد وادي نجران',
       region: 'najran', city: 'Najran', categories: ['nature', 'modern'],
-      coords: [17.6000, 44.0000], wiki: 'https://en.wikipedia.org/wiki/Najran',
+      coords: [17.4081, 44.0142], wiki: 'https://en.wikipedia.org/wiki/Najran',
       tagline: 'A dramatic concrete dam in a granite gorge.',
       overview: ['The Najran Valley Dam is one of the largest dams in Saudi Arabia, holding back floodwater in a rocky gorge west of Najran city. Its lake and viewpoints are popular picnic spots.'],
       history: ['Completed in the early 1980s to control floods and recharge groundwater for the valley\'s farms.'],
@@ -1413,7 +1413,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'hisma-desert', name: 'Hisma Desert', nativeName: 'صحراء حسمى',
       region: 'tabuk', city: 'Tabuk', categories: ['nature'],
-      coords: [28.0000, 36.0000], 
+      approx: true, coords: [28.0000, 36.0000], 
       tagline: 'Sandstone towers and red sand — Arabia\'s answer to Wadi Rum.',
       overview: ['The Hisma is a vast sandstone plateau of towers, arches and canyons stretching from Tabuk towards Jordan\'s Wadi Rum, with ancient rock art and inscriptions.'],
       history: ['Nabataean and Thamudic inscriptions are found throughout the area, which lay on ancient caravan routes.'],
@@ -1429,7 +1429,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       region: 'tabuk', city: 'Maqna', categories: ['religious', 'coast', 'nature'], featured: true,
       status: 'closed',
       notice: 'This site is currently closed to visitors. We will update this page as soon as it reopens — please check the latest status locally before travelling.',
-      coords: [28.3900, 34.7500],
+      coords: [28.4024, 34.7447],
       tagline: 'A palm oasis where freshwater springs bubble from the sand beside the Gulf of Aqaba.',
       overview: [
         'The Wells and Springs of Moses in Maqna — known locally as Ayn Musa ("the springs of Moses") and Bir Al-Sa\'idani — form a historic desert oasis on the Gulf of Aqaba in north-west Saudi Arabia.',
@@ -1496,7 +1496,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       region: 'tabuk', city: 'Haql', categories: ['coast', 'heritage'], featured: true,
       status: 'check',
       notice: 'Access to this site may currently be restricted, but this has not been confirmed. Please check the latest status locally before travelling. We will update this page once the status is confirmed.',
-      coords: [28.7800, 34.7900],
+      approx: true, coords: [28.7800, 34.7900],
       tagline: 'A rusting 1949 cargo ship stranded on a coral reef in turquoise Gulf of Aqaba waters.',
       overview: [
         'The Georgios G — known locally as the "Saudi Titanic" or Safinat Haql (the Haql ship) — is a partially submerged British-built cargo ship resting on a coral reef off the Gulf of Aqaba coast in Tabuk Province.',
@@ -1572,7 +1572,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jabal-aja', name: 'Jabal Aja & Jabal Salma', nativeName: 'جبلا أجا وسلمى',
       region: 'hail', city: 'Hail', categories: ['nature'],
-      coords: [27.6000, 41.4000], 
+      approx: true, coords: [27.6000, 41.4000], 
       tagline: 'Twin granite mountain ranges celebrated in Arabic poetry.',
       overview: ['Two granite ranges flank Hail: Aja to the west and Salma to the east. Their canyons hold palm groves, rock pools and inscriptions, and they are a hiking and camping favourite.'],
       history: ['Legends of the lovers Aja and Salma appear in classical Arabic poetry; the area is also linked with the famously generous Hatim al-Tai.'],
@@ -1586,7 +1586,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'fayd', name: 'Fayd Archaeological Site & Faid Fort', nativeName: 'مدينة فيد الأثرية',
       region: 'hail', city: 'Fayd', categories: ['archaeology', 'heritage', 'religious'], featured: true,
-      coords: [27.1170, 42.5100],
+      coords: [27.1132, 42.5188],
       tagline: '"Capital of the Route" — the great midpoint station of the Darb Zubaydah pilgrim road.',
       overview: [
         'Fayd is a major historical settlement about 120 km south-east of Hail. Known historically as the "Capital of the Route", it was the most important midpoint station on Darb Zubaydah, the pilgrimage and trade road between Kufa in Iraq and Makkah.',
@@ -1638,7 +1638,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-shinanah', name: 'Al-Shinanah Tower, Ar Rass', nativeName: 'مرقب الشنانة',
       region: 'qassim', city: 'Ar Rass', categories: ['heritage'],
-      coords: [25.8300, 43.4700], wiki: 'https://en.wikipedia.org/wiki/Ar_Rass',
+      coords: [25.8341, 43.4398], wiki: 'https://en.wikipedia.org/wiki/Ar_Rass',
       tagline: 'A tall mud watchtower famous from Najdi history.',
       overview: ['The Al-Shinanah watchtower is a tall slender tower of mud brick rising above the palms near Ar Rass, the most famous of its kind in Qassim.'],
       history: ['The tower is associated with the battles of the early 20th century in Qassim during the unification of Saudi Arabia.'],
@@ -1654,7 +1654,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'linah', name: 'Linah (Laynah) Historic Village', nativeName: 'قرية لينة التاريخية',
       region: 'northern-borders', city: 'Rafha', categories: ['heritage', 'archaeology'], featured: true,
-      coords: [28.7600, 43.7700],
+      coords: [28.7611, 43.7389],
       tagline: 'Rock-cut wells, a 1930s royal palace and a mud-brick souq on the Darb Zubaydah route.',
       overview: [
         'Linah (also spelled Laynah) is one of the oldest settlements in the Arabian Peninsula, located in the Northern Borders Region about 100 km south of Rafha. It lies in the desert along the historic Darb Zubaydah pilgrimage and trade route.',
@@ -1694,7 +1694,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'zaabal-castle', name: 'Za\'abal Castle, Sakaka', nativeName: 'قلعة زعبل',
       region: 'jawf', city: 'Sakaka', categories: ['heritage'],
-      coords: [29.9710, 40.2140], 
+      coords: [29.9931, 40.2019], 
       tagline: 'A hilltop mud-and-stone fort above Sakaka.',
       overview: ['Za\'abal Castle sits on a sandstone ridge overlooking Sakaka, with four towers and views over the town and palm groves. Below it is the ancient Sisra well.'],
       history: ['The current castle is about 200 years old, built on older foundations; it guarded the town and its water supply.'],
@@ -1708,7 +1708,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-rajajil', name: 'Al-Rajajil Standing Stones', nativeName: 'أعمدة الرجاجيل',
       region: 'jawf', city: 'Sakaka', categories: ['archaeology'],
-      coords: [29.8000, 40.1000], 
+      coords: [29.8129, 40.2197], 
       tagline: 'Arabia\'s "Stonehenge" — 6,000-year-old stone pillars.',
       overview: ['Al-Rajajil ("the men") is a group of about 50 clusters of tall sandstone pillars, some up to 3 m high, standing in the desert south of Sakaka.'],
       history: ['The pillars date to around the 4th millennium BCE. Their purpose is still debated — possibly ritual, astronomical or funerary.'],
@@ -1738,7 +1738,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'kiswa-complex', name: 'Kiswa Complex & Two Holy Mosques Architecture Exhibition', nativeName: 'مجمع الملك عبدالعزيز لكسوة الكعبة المشرفة ومعرض عمارة الحرمين',
       region: 'makkah', city: 'Makkah', categories: ['religious', 'heritage'], muslimsOnly: true, featured: true,
-      coords: [21.4330, 39.7720], wiki: 'https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition',
+      approx: true, coords: [21.4330, 39.7720], wiki: 'https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition',
       tagline: 'Watch the Kaaba\'s black-and-gold Kiswah being made, and see historic relics of the two holy mosques.',
       overview: [
         'The King Abdulaziz Complex for the Holy Kaaba Kiswa and the Exhibition of the Two Holy Mosques Architecture are two neighbouring cultural landmarks in the Al-Hamra / Umm Al-Jud district of Makkah, on the Old Makkah–Jeddah Road about 10 km from Masjid al-Haram.',
@@ -1776,7 +1776,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'tayebat-museum', name: 'Tayebat City Museum (Al Taybat International City)', nativeName: 'مدينة الطيبات العالمية للعلوم والمعرفة',
       region: 'makkah', city: 'Jeddah', categories: ['heritage', 'modern'], featured: true,
-      coords: [21.5650, 39.1530],
+      approx: true, coords: [21.5650, 39.1530],
       tagline: 'A vast Hijazi-style museum city with 60,000+ artefacts and 365 rooms.',
       overview: [
         'Tayebat City Museum — officially Al Taybat International City Museum of Science and Information — is a huge private heritage museum complex in Jeddah. It covers about 10,000 m² across 12 buildings and 365 rooms, all built in traditional Hijazi style.',
@@ -1813,7 +1813,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'obhur', name: 'Obhur Creek (Sharm Obhur), Jeddah', nativeName: 'شرم أبحر',
       region: 'makkah', city: 'Jeddah', categories: ['coast'],
-      coords: [21.7300, 39.1000], 
+      coords: [21.7428, 39.1219], 
       tagline: 'Jeddah\'s beach and diving playground on a deep Red Sea inlet.',
       overview: ['Obhur is a long, deep creek north of Jeddah lined with beach clubs, marinas and public beaches. It is the city\'s main spot for swimming, jet skis, boat trips and diving on nearby reefs.'],
       history: ['Once a quiet fishing area, Obhur became a resort district as Jeddah expanded north.'],
@@ -1866,7 +1866,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dar-al-madinah', name: 'Dar Al Madinah Museum', nativeName: 'متحف دار المدينة',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
-      coords: [24.4611, 39.5870], 
+      coords: [24.4767, 39.6877], 
       tagline: 'The history of Madinah and the Prophet\'s ﷺ era in models and artefacts.',
       overview: ['Dar Al Madinah is a museum about the city\'s history, with detailed models of the Prophet\'s Mosque through the ages, the Prophet\'s ﷺ house, old Madinah, coins, manuscripts and Hejaz railway memorabilia.'],
       history: ['Opened in 2011 within the Knowledge Economic City area.'],
@@ -1880,7 +1880,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'wadi-al-jinn', name: 'Wadi al-Jinn (Wadi al-Baida "Gravity Hill")', nativeName: 'وادي الجن (وادي البيضاء)',
       region: 'madinah', city: 'Madinah', categories: ['nature'],
-      coords: [24.6700, 39.3700], wiki: 'https://en.wikipedia.org/wiki/Wadi_Al_Baida',
+      approx: true, coords: [24.6700, 39.3700], wiki: 'https://en.wikipedia.org/wiki/Wadi_Al_Baida',
       tagline: 'A desert valley where cars in neutral seem to roll uphill.',
       overview: [
         'Wadi al-Jinn — officially Wadi al-Baida — is a desert valley about 30 km north-west of Madinah, inside Al-Baida Park. It is famous as a "gravity hill", where vehicles left in neutral appear to roll uphill by themselves and even pick up speed.',
@@ -1913,7 +1913,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'sharaan', name: 'Sharaan Nature Reserve', nativeName: 'محمية شرعان الطبيعية',
       region: 'madinah', city: 'AlUla', categories: ['nature'],
-      coords: [26.3000, 38.0500],
+      coords: [26.8663, 38.2442],
       tagline: 'Protected canyons where Arabian leopards and ibex are being restored.',
       overview: ['Sharaan is a large protected area south-east of AlUla, with sandstone canyons, volcanic plateaus and acacia valleys. It is the focus of programmes to reintroduce Arabian oryx, gazelles and ibex, and to protect the critically endangered Arabian leopard.'],
       history: ['Established by the Royal Commission for AlUla in 2019.'],
@@ -1927,7 +1927,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'gharameel', name: 'Gharameel Nature Reserve (Rock Pillars & Stargazing)', nativeName: 'محمية الغراميل',
       region: 'madinah', city: 'AlUla', categories: ['nature'], featured: true,
-      coords: [27.1500, 37.9800],
+      approx: true, coords: [27.1500, 37.9800],
       tagline: 'Surreal sandstone pillars and one of the darkest night skies in the Middle East.',
       overview: [
         'Gharameel (Al-Gharameel) is a field of dramatic sandstone rock pillars about 60 km — roughly a 1 to 1.5-hour drive — north of AlUla, inside the Gharameel Nature Reserve.',
@@ -1992,7 +1992,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'thumamah', name: 'Al-Thumamah National Park', nativeName: 'متنزه الثمامة',
       region: 'riyadh', city: 'Riyadh', categories: ['nature'],
-      coords: [25.0700, 46.6600],
+      approx: true, coords: [25.0700, 46.6600],
       tagline: 'Desert park and camping area north of Riyadh.',
       overview: ['Thumamah is a large desert area north of Riyadh with sand dunes, acacia trees, campsites and spring wildflowers. It is a favourite winter escape for desert picnics and camping.'],
       history: ['Protected as a national park to restore native vegetation near the capital.'],
@@ -2006,7 +2006,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-ghat', name: 'Al-Ghat Heritage Village', nativeName: 'قرية الغاط التراثية',
       region: 'riyadh', city: 'Al-Ghat', categories: ['heritage'],
-      coords: [26.0300, 44.9600], wiki: 'https://en.wikipedia.org/wiki/Al-Ghat',
+      coords: [26.0286, 44.9508], wiki: 'https://en.wikipedia.org/wiki/Al-Ghat',
       tagline: 'A beautifully preserved Najdi village under a dramatic escarpment.',
       overview: ['Al-Ghat\'s old town is a large mud-brick village beneath the cliffs of the Tuwaiq escarpment, with restored houses, a museum, mosques and palm groves.'],
       history: ['A historic town on the routes of northern Najd; the restored village was developed as a heritage destination.'],
@@ -2055,7 +2055,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'fanateer-beach', name: 'Al-Fanateer Beach, Jubail', nativeName: 'شاطئ الفناتير',
       region: 'eastern', city: 'Jubail', categories: ['coast'],
-      coords: [27.0600, 49.6200],
+      approx: true, coords: [27.0600, 49.6200],
       tagline: 'A long, clean family beach and corniche in Jubail.',
       overview: ['Al-Fanateer is a well-kept beach and corniche in Jubail Industrial City, with parks, playgrounds, cycling paths and calm Gulf waters.'],
       history: ['Developed as part of the planned city of Jubail.'],
@@ -2101,7 +2101,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'wadi-lajab', name: 'Wadi Lajab', nativeName: 'وادي لجب',
       region: 'jazan', city: 'Ar Rayth', categories: ['nature'],
-      coords: [17.4900, 42.8400],
+      coords: [17.6096, 42.9394],
       tagline: 'A narrow green canyon with streams and hanging plants.',
       overview: ['Wadi Lajab is a dramatic slot canyon in the mountains of Jazan, with sheer rock walls, palms, ferns and a flowing stream for much of the year.'],
       history: ['Little developed, it has become a favourite of hikers and photographers in recent years.'],
@@ -2115,7 +2115,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'shada-al-ala', name: 'Shada Al-A\'la Mountain', nativeName: 'جبل شدا الأعلى',
       region: 'bahah', city: 'Al-Mikhwah', categories: ['nature', 'heritage'],
-      coords: [19.8500, 41.3000],
+      approx: true, coords: [19.8500, 41.3000],
       tagline: 'A granite mountain reserve with houses built under boulders.',
       overview: ['Shada Al-A\'la is a protected granite mountain rising above the Tihama. Its villages have homes built beneath giant boulders, surrounded by terraces of coffee, figs and herbs.'],
       history: ['The mountain has long been farmed by local communities and was declared a protected area for its biodiversity.'],
@@ -2158,7 +2158,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'red-sea-global', name: 'Shura Island — The Red Sea', nativeName: 'جزيرة شورى — البحر الأحمر',
       region: 'tabuk', city: 'Umluj / Al-Wajh', categories: ['coast', 'modern'], featured: true,
-      coords: [25.5500, 36.8800], wiki: 'https://en.wikipedia.org/wiki/Red_Sea_Global',
+      approx: true, coords: [25.5500, 36.8800], wiki: 'https://en.wikipedia.org/wiki/Red_Sea_Global',
       tagline: 'A dolphin-shaped luxury island of beach resorts, coral lagoons and an island golf course.',
       overview: [
         'Shura Island is the central hub of The Red Sea destination, a vast luxury tourism project on Saudi Arabia\'s west coast. The island is planned to host 11 luxury resorts, more than 300 branded residences, a marina and Shura Links — the country\'s first 18-hole island golf course.',
@@ -2192,7 +2192,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dumat-lake', name: 'Dumat al-Jandal Lake', nativeName: 'بحيرة دومة الجندل',
       region: 'jawf', city: 'Dumat al-Jandal', categories: ['nature'], featured: true,
-      coords: [29.7800, 39.8000], wiki: 'https://en.wikipedia.org/wiki/Lake_Dumat_al-Jandal',
+      coords: [29.8165, 39.9092], wiki: 'https://en.wikipedia.org/wiki/Lake_Dumat_al-Jandal',
       tagline: 'The largest artificial lake in Saudi Arabia — a blue oasis among desert cliffs.',
       overview: [
         'Dumat al-Jandal Lake is the largest artificial lake in Saudi Arabia and the Arabian Peninsula. It lies in Al-Jawf Province, next to the historic oasis town of Dumat al-Jandal, covering about 1.1 km² with an average depth of around 15 m.',
@@ -2225,7 +2225,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-rudaf-park', name: 'Al-Rudaf (Arruddaf) Park, Taif', nativeName: 'منتزه الردف',
       region: 'makkah', city: 'Taif', categories: ['nature', 'modern'], featured: true,
-      coords: [21.2500, 40.4000],
+      coords: [21.2297, 40.4248],
       tagline: 'Taif\'s great family park — granite boulders, a lake and a musical dancing fountain.',
       overview: [
         'Al-Rudaf Park (also spelled Arruddaf or Ruddaf) is one of the largest public parks in Taif, covering more than 565,000 m² of lawns, weathered granite rock formations and mountain views in the south of the city, along the Taif–Al-Shafa road.',
@@ -2306,7 +2306,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'madinah-dates-market', name: 'Madinah Dates Markets & Ajwa Farms', nativeName: 'أسواق التمور ومزارع العجوة بالمدينة',
       region: 'madinah', city: 'Madinah', categories: ['heritage', 'religious'], featured: true,
-      coords: [24.4420, 39.6150],
+      coords: [24.4638, 39.6081],
       tagline: 'Taste and buy the famous Ajwa dates straight from Madinah\'s markets and palm orchards.',
       overview: [
         'Madinah is world-famous for its dates, above all Ajwa — small, dark brown to near-black, softly wrinkled and gently sweet. Visitors can shop in busy wholesale markets for bulk bargains, or visit orchards in the fertile Al-Aliya area near Quba to taste fresh dates at the source.',
@@ -2345,7 +2345,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'harrat-viewpoint', name: 'Harrat Viewpoint, AlUla', nativeName: 'إطلالة الحرة',
       region: 'madinah', city: 'AlUla', categories: ['nature'], featured: true,
-      coords: [26.6200, 37.8600],
+      coords: [26.6318, 37.8973],
       tagline: 'A 1,219 m volcanic lookout with sweeping sunset views over the AlUla oasis.',
       overview: [
         'Harrat Viewpoint is a panoramic lookout on top of Harrat Uwayrid, a volcanic mountain in a field of black lava above AlUla. At about 1,219 m (4,000 ft) above sea level, it gives sweeping views over the AlUla oasis, AlUla Old Town, Dadan and the surrounding sandstone canyons.',
@@ -2409,7 +2409,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'umm-jarsan', name: 'Umm Jirsan Lava Tube', nativeName: 'كهف أم جرسان',
       region: 'madinah', city: 'Khaybar', categories: ['nature', 'archaeology'], featured: true,
-      coords: [25.1817, 39.9614], wiki: 'https://en.wikipedia.org/wiki/Harrat_Khaybar',
+      coords: [25.5886, 39.7573], wiki: 'https://en.wikipedia.org/wiki/Harrat_Khaybar',
       tagline: 'Arabia\'s longest lava cave — 1.5 km of tunnels with 10,000 years of human history.',
       overview: [
         'Umm Jirsan is the longest known lava-tube cave in Saudi Arabia and the Arabian Peninsula, stretching about 1,481 m beneath the Harrat Khaybar volcanic field, roughly 125–150 km north of Madinah.',
@@ -2526,7 +2526,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dammam-corniche', name: 'Dammam Corniche & Marjan Island', nativeName: 'كورنيش الدمام',
       region: 'eastern', city: 'Dammam', categories: ['coast', 'modern'],
-      coords: [26.4500, 50.1000],
+      approx: true, coords: [26.4500, 50.1000],
       tagline: 'Seafront parks, a man-made island and Gulf sunsets.',
       overview: ['Dammam\'s long corniche has gardens, walking and cycling paths, play areas and cafés. Marjan Island, linked by a bridge, is a favourite for evening strolls and fishing.'],
       history: ['Dammam grew rapidly after oil was discovered in the region in the 1930s and is now the capital of the Eastern Province.'],
@@ -2556,7 +2556,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-aan-palace', name: 'Al-Aan Palace, Najran', nativeName: 'قصر العان',
       region: 'najran', city: 'Najran', categories: ['heritage'],
-      coords: [17.5300, 44.2000],
+      coords: [17.4803, 44.096],
       tagline: 'A hilltop mud fortress overlooking the Najran valley.',
       overview: ['Al-Aan Palace crowns a hill above the palm groves of Najran. Its tall mud-brick walls and towers are a classic example of Najrani architecture, with wide views across the valley.'],
       history: ['The fortress-palace is around 300 years old and was built for defence and to watch over the valley\'s farms.'],
@@ -2570,7 +2570,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-atawlah', name: 'Al-Atawlah Heritage Village', nativeName: 'قرية الأطاولة التراثية',
       region: 'bahah', city: 'Al-Bahah', categories: ['heritage'],
-      coords: [20.1800, 41.3800],
+      coords: [20.2475, 41.3607],
       tagline: 'A centuries-old stone village in the Al-Bahah highlands.',
       overview: ['Al-Atawlah is a restored highland village of multi-storey stone houses, narrow lanes and watchtowers, with a heritage market and seasonal festivals.'],
       history: ['The village is several centuries old and reflects the stone architecture of the Sarawat mountains.'],
@@ -2621,7 +2621,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       region: 'tabuk', city: 'Maqna', categories: ['nature', 'religious'], featured: true,
       status: 'closed',
       notice: 'This site is currently closed to visitors. We will update this page as soon as it reopens — please check the latest status locally before travelling.',
-      coords: [28.5500, 34.8000],
+      approx: true, coords: [28.5500, 34.8000],
       tagline: 'The "Valley of the Good Name" — a 600 m-deep granite gorge with a stream flowing to the sea.',
       overview: [
         'Wadi Tayyib Ism (also spelled Tayeb Al-Ism), meaning "Valley of the Good Name", is a dramatic 5 km granite gorge in Tabuk Province. Sheer, polished cliffs rise up to about 600 m on both sides of a narrow floor that opens onto the Gulf of Aqaba near Maqna.',
@@ -2672,7 +2672,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'buraidah-camel-market', name: 'Buraidah Camel Market (Al-An\'am City)', nativeName: 'سوق الإبل ببريدة — مدينة الأنعام',
       region: 'qassim', city: 'Buraidah', categories: ['heritage'], featured: true,
-      coords: [26.3700, 43.9300],
+      coords: [26.3605, 44.0436],
       tagline: 'One of the world\'s largest camel markets — lively dawn auctions in the heart of Qassim.',
       overview: [
         'The Buraidah Camel Market is located inside Al-An\'am City, the livestock market complex on the outskirts of Buraidah in Al-Qassim Province. Covering more than 600,000 m², it is often described as one of the largest camel markets in the world.',
@@ -2706,7 +2706,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'qasr-kaf', name: 'Kaf Palace, Qurayyat', nativeName: 'قصر كاف',
       region: 'jawf', city: 'Qurayyat', categories: ['heritage'],
-      coords: [31.4000, 37.3900],
+      approx: true, coords: [31.4000, 37.3900],
       tagline: 'A basalt-and-stone palace near the Jordanian border.',
       overview: ['Kaf Palace stands on a hill in the village of Kaf near Qurayyat, built from local stone, with towers and views over the salt plains of Wadi Sirhan.'],
       history: ['Built in the early 20th century; King Abdulaziz\'s forces took control of the area in the 1920s.'],
@@ -2720,7 +2720,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jouf-olive-festival', name: 'Al-Jouf Olive Farms & International Olive Festival', nativeName: 'مزارع ومهرجان زيتون الجوف الدولي',
       region: 'jawf', city: 'Sakaka', categories: ['heritage', 'nature'], featured: true,
-      coords: [29.9700, 40.2000],
+      coords: [29.9559, 40.1959],
       tagline: 'The olive capital of Saudi Arabia — millions of trees and a winter festival in Sakaka.',
       overview: [
         'Al-Jouf is known as the olive capital of Saudi Arabia, with more than 20 million olive trees on thousands of farms. Most commercial groves lie in the fertile Busayta agricultural area south-west of Sakaka.',
