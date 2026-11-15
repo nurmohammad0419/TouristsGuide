@@ -1804,18 +1804,31 @@ TG.registerCountry('saudi-arabia', 'en', {
 
     /* ======================= ROUND 3: TABUK / AL-JAWF ======================= */
     {
-      id: 'maghaer-shuaib', name: 'Maghaer Shuaib (Al-Bad\')', nativeName: 'مغاير شعيب',
-      region: 'tabuk', city: 'Al-Bad\'', categories: ['archaeology', 'religious'],
-      coords: [28.4800, 35.0300], wiki: 'https://en.wikipedia.org/wiki/Al-Bad%27',
-      tagline: 'Nabataean tombs in the land of Madyan.',
-      overview: ['Maghaer Shuaib ("the caves of Shuaib") are Nabataean rock-cut tombs in a sandstone outcrop near Al-Bad\', similar in style to Hegra and Petra.'],
-      history: ['The site is identified with ancient Madyan (Midian) on the trade routes of north-west Arabia.'],
-      religious: ['In Islamic tradition the area is linked with Madyan, the people to whom Prophet Shu\'ayb was sent (mentioned in the Qur\'an, e.g. Al-A\'raf 7:85), and where Prophet Musa stayed after leaving Egypt.'],
-      highlights: ['Rock-cut tomb façades', 'Visitor walkways'],
-      hours: { summary: 'Typically daily, daytime', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Tabuk (TUU) or NEOM Bay (NUM)', road: 'Near Al-Bad\', about 3 hours west of Tabuk.', transport: 'Car.' },
-      bestTime: 'October – April', duration: '1–2 hours', dress: 'Modest clothes, hat.', tips: ['Combine with Maqna and Tayeb Ism.']
+      id: 'maghaer-shuaib', name: 'Madyan Shuaib (Mughair Shu\'ayb)', nativeName: 'مدين شعيب — مغاير شعيب',
+      region: 'tabuk', city: 'Al-Bad\'', categories: ['archaeology', 'religious', 'heritage'], featured: true,
+      coords: [28.4878, 35.0032], wiki: 'https://en.wikipedia.org/wiki/Shuaib',
+      tagline: 'Rock-cut tombs in the ancient land of Madyan, the people of Prophet Shu\'ayb.',
+      overview: [
+        'Madyan Shuaib — also called Mughair Shu\'ayb ("the caves of Shu\'ayb") — is an ancient archaeological site in Al-Bad\' Governorate of Tabuk Province, about 225 km north-west of Tabuk city and close to the Gulf of Aqaba, inside the NEOM region.',
+        'The site is famous for its monumental tombs and façades carved into sandstone cliffs, with stepped "crow-step" decorations very similar to those of Hegra (Mada\'in Salih) and Petra. Around them are the remains of ancient water wells and residential quarters.',
+        'Stairs and walkways now lead visitors between the tomb groups, and a visitor area explains the history of the site.'
+      ],
+      history: [
+        'The area is widely identified with ancient Madyan (Midian), a people and land in north-west Arabia known from both Islamic and Biblical sources. Madyan lay on the incense and trade routes linking southern Arabia with Egypt and the Levant.',
+        'The rock-cut tombs date mainly to the Nabataean period (around the 1st century BCE to the 1st century CE). Their architecture shows Nabataean influence alongside traces of earlier Lihyanite and later Roman-era styles.',
+        'Archaeological surveys have documented tombs, wells, and the remains of settlements, showing that the oasis was an important stop for caravans for many centuries.'
+      ],
+      religious: [
+        'In Islamic tradition, Madyan is the land to which Allah sent Prophet Shu\'ayb (often identified with Jethro in the Bible, the father-in-law of Moses). He called his people to worship one God and to be honest in trade: "O my people, worship Allah; you have no deity other than Him… So give full measure and weight and do not deprive people of their due" (Qur\'an, Al-A\'raf 7:85).',
+        'The people of Madyan — also described as Ashab al-Aykah, "the Companions of the Thicket" — cheated in weights and measures and rejected his warnings. According to the Qur\'an they were destroyed by a punishment described as a severe earthquake and "the torment of the day of the black cloud" (Al-A\'raf 7:91, Ash-Shu\'ara 26:189).',
+        'The Qur\'an also tells how Prophet Musa (Moses) fled from Egypt to Madyan, helped two women water their flocks at a well, and later married one of them, staying in Madyan for eight to ten years (Al-Qasas 28:22–28). For many Muslim visitors, the site is a place to reflect on honesty, justice and the fate of past nations.'
+      ],
+      highlights: ['Nabataean rock-cut tomb façades', 'Crow-step decorations similar to Hegra', 'Ancient wells and settlement remains', 'Visitor stairways between tomb groups', 'Nearby Moses\' Wells (Maqna) and Tayeb Ism canyon'],
+      hours: { summary: 'Typically open daily during daylight hours', details: ['Best visited in the morning or late afternoon for softer light'], note: 'The site is in the NEOM area; opening times and access rules may change — check locally before travelling.' },
+      tickets: { required: false, price: 'Free (at the time of writing)', how: ['No advance booking is usually required.', 'Guided tours can be arranged through Tabuk or NEOM-area tour operators.'], links: [{ label: 'VisitSaudi', url: 'https://www.visitsaudi.com' }] },
+      gettingThere: { airport: 'NEOM Bay Airport (NUM) or Tabuk Regional Airport (TUU)', road: 'Drive to the town of Al-Bad\'; the site is on the edge of town. About 225 km (≈3 hours) north-west of Tabuk city.', transport: 'No public transport; a rental car or tour is needed.' },
+      bestTime: 'October – April', duration: '1–2 hours', dress: 'Modest clothes, a hat and sturdy shoes for the steps and uneven ground.',
+      tips: ['Do not touch or climb on the carved façades.', 'Combine with Moses\' Wells (Maqna) and the Tayeb Ism canyon on the coast.', 'Bring water — there are few facilities nearby.', 'Read Surah Al-A\'raf (7:85–93) and Al-Qasas (28:22–28) before visiting for context.']
     },
     {
       id: 'red-sea-global', name: 'The Red Sea — Shura Island Resorts', nativeName: 'البحر الأحمر — جزيرة شورى',

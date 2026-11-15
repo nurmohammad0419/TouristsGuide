@@ -2898,7 +2898,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A8%D9%84_%D8%B4%D8%AF%D8%A71.jpg"
   }
  ],
- "maghaer-shuaib": [],
+ "maghaer-shuaib": [
+  {
+   "src": "assets/photos/maghaer-shuaib/u2.jpg",
+   "thumb": "assets/photos/maghaer-shuaib/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/maghaer-shuaib/u3.jpg",
+   "thumb": "assets/photos/maghaer-shuaib/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/maghaer-shuaib/u4.jpg",
+   "thumb": "assets/photos/maghaer-shuaib/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/maghaer-shuaib/u1.jpg",
+   "thumb": "assets/photos/maghaer-shuaib/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "red-sea-global": [],
  "dumat-lake": []
 } });
