@@ -2468,18 +2468,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'Evening', duration: '1–2 hours', dress: 'Smart casual.', tips: ['Arrive by metro to see the station.']
     },
     {
-      id: 'dahl-heet', name: 'Dahl Heet Cave', nativeName: 'دحل هيت',
+      id: 'dahl-heet', name: 'Heet Cave (Dahl Heet / Ain Heet)', nativeName: 'دحل هيت (عين هيت)',
       region: 'riyadh', city: 'Near Riyadh', categories: ['nature'],
-      coords: [24.5000, 47.0000],
-      tagline: 'A limestone sinkhole cave with a clear underground pool.',
-      overview: ['Dahl Heet (Ain Heet) is a sinkhole cave in the hills south-east of Riyadh, where a sloping passage leads down to a pool of clear groundwater.'],
-      history: ['The cave was once an important water source; explorers in the 1930s used it while searching for water and oil.'],
+      status: 'check',
+      notice: 'Visitors have recently reported fencing and civil-defence warnings restricting access to the inner cave, and the water quality has declined. Entry to the lake may not be possible — check the latest status before travelling, and never swim here.',
+      coords: [24.4861, 46.9972], wiki: 'https://en.wikipedia.org/wiki/Ein_Heet_Cave',
+      tagline: 'An eye-shaped sinkhole cave with an underground lake near Riyadh.',
+      overview: [
+        'Heet Cave — also called Dahl Heet or Ain Heet ("Eye of Heet") — is a limestone and anhydrite sinkhole cave about 40 km south-east of Riyadh, off the Riyadh–Al-Kharj highway near the village of Heet.',
+        'Its eye-shaped entrance, about 20 m wide, is set into the face of Jabal Al-Jubayl in Wadi As-Sulay. Inside, a steep slope leads down to an underground groundwater lake about 150 m long and more than 30 m deep.'
+      ],
+      history: [
+        'For centuries desert caravans relied on the cave\'s water as a vital source in the dry Najd plateau.',
+        'In 1938 geologists invited by King Abdulaziz surveyed the cave while searching for water, and recorded Saudi Arabia\'s first known anhydrite rock deposits here.'
+      ],
       religious: null,
-      highlights: ['Underground pool', 'Limestone cave'],
-      hours: { summary: 'Access may be restricted or closed', details: [], note: 'The site has been fenced for safety at times — check before going.' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 40 km south-east of Riyadh off the Al-Kharj road.', transport: 'Car.' },
-      bestTime: 'Winter', duration: '1–2 hours', dress: 'Sturdy shoes.', tips: ['Do not swim — the water is deep and cold.']
+      highlights: [
+        'Eye-shaped cave entrance in the escarpment',
+        'Underground lake ~150 m long and 30+ m deep',
+        'Layered limestone and anhydrite rock',
+        'Historic caravan water source'
+      ],
+      hours: { summary: 'Access currently uncertain — may be restricted', details: [], note: 'No facilities, lighting or phone signal inside the cave.' },
+      tickets: { required: false, price: 'Free (when accessible)', how: ['No ticket required.', 'Check recent reports before travelling, as fences may block the inner chamber.'], links: [{ label: 'VisitSaudi – Heet Cave', url: 'https://www.visitsaudi.com/en/riyadh/attractions/heet-cave' }] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 40 km south-east of Riyadh on the Al-Kharj road, then about 5 km east on an unpaved desert track past an old pump house to the escarpment.', transport: 'Car (4x4 helpful); no public transport.' },
+      bestTime: 'Winter mornings', duration: '1–2 hours',
+      dress: 'Sturdy shoes with good grip.',
+      tips: [
+        'The descent is a steep 45° slope of loose boulders with no handrails — do not attempt it without experience.',
+        'Swimming is strongly discouraged: the water is deep, cold and its quality has declined.',
+        'Respect fences and civil-defence warning signs.',
+        'Take your rubbish home — litter has damaged the site.'
+      ]
     },
 
     /* ======================= ROUND 4: EASTERN PROVINCE ======================= */

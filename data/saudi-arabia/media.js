@@ -3653,7 +3653,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:King_Abdullah_Financial_District_170555.jpg"
   }
  ],
- "dahl-heet": [],
+ "dahl-heet": [
+  {
+   "src": "assets/photos/dahl-heet/u1.jpg",
+   "thumb": "assets/photos/dahl-heet/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dahl-heet/u2.jpg",
+   "thumb": "assets/photos/dahl-heet/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dahl-heet/u3.jpg",
+   "thumb": "assets/photos/dahl-heet/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dahl-heet/u4.jpg",
+   "thumb": "assets/photos/dahl-heet/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "dammam-corniche": [
   {
    "src": "assets/photos/dammam-corniche/f1.jpg",
