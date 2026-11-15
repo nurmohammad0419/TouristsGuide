@@ -48,3 +48,5 @@ status: 'closed',
 notice: 'This site is currently closed. We will update this page when it reopens.',
 ```
 The card gets a red "Temporarily closed" badge and the spot page shows the notice at the top. When the spot reopens, delete both lines.
+
+If a closure is **not confirmed**, use `status: 'check'` instead. That shows an orange "Check status before visiting" badge and notice.

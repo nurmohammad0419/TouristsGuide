@@ -1472,18 +1472,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – May', duration: '1–2 days', dress: 'Modest swimwear.', tips: ['Bring reef-safe sunscreen and snorkel gear.']
     },
     {
-      id: 'georgios-shipwreck', name: 'Georgios G Shipwreck, Haql', nativeName: 'السفينة الغارقة بحقل',
-      region: 'tabuk', city: 'Haql', categories: ['coast'],
-      coords: [27.9600, 34.5600], wiki: 'https://en.wikipedia.org/wiki/Haql',
-      tagline: 'A rusting shipwreck stranded on a reef near the shore.',
-      overview: ['The Georgios G is a cargo ship that ran aground on a reef close to the Gulf of Aqaba coast. Its photogenic hulk is a popular sunset spot.'],
-      history: ['The ship ran aground in 1978.'],
+      id: 'georgios-shipwreck', name: 'Georgios G Shipwreck ("Saudi Titanic"), Haql', nativeName: 'سفينة حقل الغارقة (جورجيوس جي)',
+      region: 'tabuk', city: 'Haql', categories: ['coast', 'heritage'], featured: true,
+      status: 'check',
+      notice: 'Access to this site may currently be restricted, but this has not been confirmed. Please check the latest status locally before travelling. We will update this page once the status is confirmed.',
+      coords: [28.7800, 34.7900],
+      tagline: 'A rusting 1949 cargo ship stranded on a coral reef in turquoise Gulf of Aqaba waters.',
+      overview: [
+        'The Georgios G — known locally as the "Saudi Titanic" or Safinat Haql (the Haql ship) — is a partially submerged British-built cargo ship resting on a coral reef off the Gulf of Aqaba coast in Tabuk Province.',
+        'It lies about 30 m offshore in clear, shallow water near Bi\'r Al-Mashi beach, roughly 55 km south of Haql. The rusted hull rising from the turquoise sea, with the mountains of Sinai behind, has made it one of north-west Saudi Arabia\'s most photographed coastal landmarks.'
+      ],
+      history: [
+        'The ship was built in Sunderland, England, in 1949. It was about 71.6 m long and 11 m wide.',
+        'In April 1978, while sailing from Greece to Aqaba (Jordan) with a cargo of flour, the vessel drifted off course into Saudi waters and ran aground on a shallow coral reef.',
+        'When the crew tried to restart the engines, a fire broke out that ignited the flour and burned for several days. Salvage attempts failed, and around two-thirds of the rusted hull has remained stuck on the reef ever since.'
+      ],
       religious: null,
-      highlights: ['Sunset photography', 'Coastal drive'],
-      hours: { summary: 'Open at all times', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Tabuk (TUU)', road: 'South of Haql along the coastal road.', transport: 'Car.' },
-      bestTime: 'Sunset, October – April', duration: '1 hour', dress: 'Casual.', tips: ['Do not try to swim to the wreck — currents and sharp coral.']
+      highlights: [
+        'Rusted hull rising from turquoise water',
+        'Views of the Sinai mountains across the Gulf of Aqaba',
+        'Photography from the shoreline, especially at sunset',
+        'Snorkelling and diving on the surrounding reef (with operators)'
+      ],
+      hours: { summary: 'Status unconfirmed — may be restricted', details: ['When accessible, best visited in the late afternoon for golden light'], note: 'The site is within the NEOM region; barriers and guards may restrict access. Climbing onto the wreck is unsafe and not allowed.' },
+      tickets: { required: false, price: 'Free (when accessible)', how: ['No ticket was needed to view the wreck from the shore.', 'Dives and snorkelling trips should be booked with licensed operators.'], links: [] },
+      gettingThere: { airport: 'NEOM Bay Airport (NUM) or Tabuk Regional Airport (TUU)', road: 'About a 30–45 minute drive south of Haql along the coastal road, then a short sandy track to the shore — a 4x4 is recommended.', transport: 'Car only; no public transport.' },
+      bestTime: 'October – April; late afternoon for sunset', duration: '1–2 hours',
+      dress: 'Casual modest clothes, sun hat; modest swimwear if snorkelling.',
+      tips: [
+        'Do not try to swim to or climb on the wreck — it is unstable and surrounded by sharp coral.',
+        'Check access locally first, as NEOM development may close the area.',
+        'Combine with Haql beaches and Ras Alsheikh Hamid further south.'
+      ]
     },
     {
       id: 'jabal-al-lawz', name: 'Jabal Al-Lawz', nativeName: 'جبل اللوز',

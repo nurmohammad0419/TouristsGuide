@@ -8,7 +8,7 @@ window.TG_I18N.en = {
     searchPlaceholder: 'Search spots, cities, provinces…', noResults: 'No matches found.', results: 'results',
     spots: 'spots', spot: 'spot', province: 'Province', city: 'City', category: 'Category', capital: 'Capital',
     area: 'Area', population: 'Population', governorates: 'Governorates', openMap: 'Open in Google Maps',
-    official: 'Official website', bookNow: 'Book tickets', free: 'Free', required: 'Required', partly: 'Partly required', closed: 'Temporarily closed', notRequired: 'Not required',
+    official: 'Official website', bookNow: 'Book tickets', free: 'Free', required: 'Required', partly: 'Partly required', closed: 'Temporarily closed', checkStatus: 'Check status before visiting', notRequired: 'Not required',
     sortBy: 'Sort', sortFeatured: 'Featured', sortAZ: 'A – Z', sortRegion: 'By province', unesco: 'UNESCO',
     muslimsOnly: 'Muslims only', photos: 'photos', photoCredit: 'Photos: Wikimedia Commons contributors and site contributors (open a photo to see its source)',
     lastReviewed: 'Information last reviewed', disclaimer: 'Opening hours, prices and booking rules change often — always confirm on the official link before you travel.',

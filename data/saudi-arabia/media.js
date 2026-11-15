@@ -2494,7 +2494,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Red_Sea_at_Umm_Lajj,_Saudi_Arabia_(4).jpg"
   }
  ],
- "georgios-shipwreck": [],
+ "georgios-shipwreck": [
+  {
+   "src": "assets/photos/georgios-shipwreck/u1.jpg",
+   "thumb": "assets/photos/georgios-shipwreck/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/georgios-shipwreck/u2.jpg",
+   "thumb": "assets/photos/georgios-shipwreck/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "jabal-al-lawz": [
   {
    "src": "assets/photos/jabal-al-lawz/b3.jpg",

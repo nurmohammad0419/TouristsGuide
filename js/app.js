@@ -176,6 +176,7 @@
             ${s.unesco ? `<span class="badge badge--unesco">${t('common.unesco')}</span>` : ''}
             ${s.muslimsOnly ? `<span class="badge badge--muslim">${t('common.muslimsOnly')}</span>` : ''}
             ${s.status === 'closed' ? `<span class="badge badge--closed">⛔ ${t('common.closed')}</span>` : ''}
+            ${s.status === 'check' ? `<span class="badge badge--check">⚠️ ${t('common.checkStatus')}</span>` : ''}
           </div>
           <span class="spot-card__cat">${cats.map((c) => c.icon).join(' ')}</span>
         </div>
@@ -410,6 +411,7 @@
             ${s.unesco ? `<span class="badge badge--unesco">🏛️ ${t('common.unesco')}</span>` : ''}
             ${s.muslimsOnly ? `<span class="badge badge--muslim">☪️ ${t('common.muslimsOnly')}</span>` : ''}
             ${s.status === 'closed' ? `<span class="badge badge--closed">⛔ ${t('common.closed')}</span>` : ''}
+            ${s.status === 'check' ? `<span class="badge badge--check">⚠️ ${t('common.checkStatus')}</span>` : ''}
           </div>
           <h1 class="hero__title reveal">${esc(s.name)}</h1>
           ${s.nativeName ? `<p class="hero__native reveal"><bdi lang="ar">${esc(s.nativeName)}</bdi></p>` : ''}
@@ -439,7 +441,7 @@
         </aside>
 
         <article class="spot-main">
-          ${s.notice ? `<div class="callout callout--closed reveal" role="alert"><b>⛔ ${t('spot.noticeTitle')}:</b> ${esc(s.notice)}</div>` : ''}
+          ${s.notice ? `<div class="callout ${s.status === 'check' ? 'callout--check' : 'callout--closed'} reveal" role="alert"><b>${s.status === 'check' ? '⚠️' : '⛔'} ${t('spot.noticeTitle')}:</b> ${esc(s.notice)}</div>` : ''}
           ${s.access ? `<div class="callout callout--warn reveal"><b>☪️ ${t('spot.nonMuslimNote')}:</b> ${esc(s.access)}</div>` : ''}
           ${sec('overview', t('spot.overview'), paras(s.overview))}
           ${sec('history', t('spot.history'), paras(s.history))}

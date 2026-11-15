@@ -517,3 +517,7 @@ kbd { font: inherit; font-size: .72rem; padding: 3px 7px; border-radius: 6px; bo
 /* Closed / notice styling */
 .badge--closed { background: rgba(190, 40, 40, .9); }
 .callout--closed { background: rgba(190, 40, 40, .12); border-color: #c0392b; }
+.badge--check { background: rgba(196, 120, 10, .92); }
+.callout--check { background: rgba(230, 150, 30, .14); border-color: #d68910; }
+.badge--check { background: rgba(196, 120, 10, .92); }
+.callout--check { background: rgba(230, 150, 30, .14); border-color: #d68910; }
