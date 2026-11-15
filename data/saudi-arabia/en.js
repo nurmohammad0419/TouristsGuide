@@ -2171,17 +2171,35 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'dumat-lake', name: 'Dumat al-Jandal Lake', nativeName: 'بحيرة دومة الجندل',
-      region: 'jawf', city: 'Dumat al-Jandal', categories: ['nature'],
-      coords: [29.7800, 39.8000],
-      tagline: 'A surprising blue lake in the northern desert.',
-      overview: ['A large lake on the edge of Dumat al-Jandal, surrounded by sand dunes and palm groves. It is popular for kayaking, picnics and sunset views.'],
-      history: ['The lake formed from surplus irrigation and drainage water; it has become a local landmark.'],
+      region: 'jawf', city: 'Dumat al-Jandal', categories: ['nature'], featured: true,
+      coords: [29.7800, 39.8000], wiki: 'https://en.wikipedia.org/wiki/Lake_Dumat_al-Jandal',
+      tagline: 'The largest artificial lake in Saudi Arabia — a blue oasis among desert cliffs.',
+      overview: [
+        'Dumat al-Jandal Lake is the largest artificial lake in Saudi Arabia and the Arabian Peninsula. It lies in Al-Jawf Province, next to the historic oasis town of Dumat al-Jandal, covering about 1.1 km² with an average depth of around 15 m.',
+        'Paved, lit walkways, green areas and a waterfront promenade line the shore, making it a favourite place for evening walks, picnics and watching the sunset over the desert cliffs.'
+      ],
+      history: [
+        'The lake was created by an irrigation and drainage project that began in 1987. Surplus agricultural drainage water and groundwater from the surrounding date-palm farms were pumped into a natural desert depression to stop the farms from flooding.',
+        'Today it holds about 11 million m³ of water. Reeds (Typha) grow along its edges, and it supports fish and attracts both resident and migratory birds.'
+      ],
       religious: null,
-      highlights: ['Kayaking', 'Sunset over the dunes', 'Picnics'],
-      hours: { summary: 'Open at all times', details: [], note: '' },
-      tickets: { required: false, price: 'Free (rentals paid)', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Al-Jouf (AJF)', road: 'Near Dumat al-Jandal, about 50 km from Sakaka.', transport: 'Car.' },
-      bestTime: 'November – March', duration: '1–2 hours', dress: 'Casual.', tips: ['Visit after Marid Castle and Umar Mosque.']
+      highlights: [
+        'Jet-ski rentals and speed-boat rides',
+        'Lit promenade and walkways along the shore',
+        'Sunset views over desert cliffs',
+        'Birdwatching (resident and migratory birds)',
+        'Nearby Marid Castle, Umar ibn al-Khattab Mosque and the Al-Dir\' old quarter'
+      ],
+      hours: { summary: 'Open 24 hours', details: ['Water-sport rentals mainly afternoon to evening'], note: '' },
+      tickets: { required: false, price: 'Free entry (boat and jet-ski rides paid)', how: ['No ticket needed; pay for rides on site.'], links: [] },
+      gettingThere: { airport: 'Al-Jouf Airport (AJF), Sakaka', road: 'On the edge of Dumat al-Jandal, about 50 km south-west of Sakaka. Free parking, including wheelchair-accessible spaces.', transport: 'Car or taxi.' },
+      bestTime: 'October – April; sunset', duration: '1–2 hours',
+      dress: 'Casual modest clothes; a jacket for winter evenings.',
+      tips: [
+        'Swimming is not recommended — the water is deep and the banks are steep in places.',
+        'Combine with Marid Castle and the Umar Mosque for a half-day in Dumat al-Jandal.',
+        'Restrooms and small cafés are available near the promenade.'
+      ]
     },
     /* ======================= ROUND 4: MAKKAH PROVINCE ======================= */
     {

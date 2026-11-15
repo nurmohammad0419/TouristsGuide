@@ -3342,7 +3342,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "dumat-lake": [],
+ "dumat-lake": [
+  {
+   "src": "assets/photos/dumat-lake/u1.jpg",
+   "thumb": "assets/photos/dumat-lake/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dumat-lake/u2.jpg",
+   "thumb": "assets/photos/dumat-lake/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dumat-lake/u3.jpg",
+   "thumb": "assets/photos/dumat-lake/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dumat-lake/u4.jpg",
+   "thumb": "assets/photos/dumat-lake/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "al-rudaf-park": [],
  "masjid-jiranah": [
   {
