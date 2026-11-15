@@ -2856,7 +2856,43 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "tayebat-museum": [],
+ "tayebat-museum": [
+  {
+   "src": "assets/photos/tayebat-museum/u1.jpg",
+   "thumb": "assets/photos/tayebat-museum/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tayebat-museum/u2.jpg",
+   "thumb": "assets/photos/tayebat-museum/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tayebat-museum/u3.jpg",
+   "thumb": "assets/photos/tayebat-museum/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tayebat-museum/u4.jpg",
+   "thumb": "assets/photos/tayebat-museum/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tayebat-museum/u5.jpg",
+   "thumb": "assets/photos/tayebat-museum/u5-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "obhur": [
   {
    "src": "assets/photos/obhur/e1.jpg",

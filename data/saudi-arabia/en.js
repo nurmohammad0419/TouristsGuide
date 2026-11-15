@@ -1754,18 +1754,41 @@ TG.registerCountry('saudi-arabia', 'en', {
       ]
     },
     {
-      id: 'tayebat-museum', name: 'Tayebat City Museum, Jeddah', nativeName: 'مدينة الطيبات العالمية',
-      region: 'makkah', city: 'Jeddah', categories: ['heritage', 'modern'],
+      id: 'tayebat-museum', name: 'Tayebat City Museum (Al Taybat International City)', nativeName: 'مدينة الطيبات العالمية للعلوم والمعرفة',
+      region: 'makkah', city: 'Jeddah', categories: ['heritage', 'modern'], featured: true,
       coords: [21.5650, 39.1530],
-      tagline: 'A vast private museum of Hijazi and Islamic heritage.',
-      overview: ['Tayebat International City is a large museum complex built in traditional Hijazi style with coral-stone façades and rawasheen. Its many halls display Islamic manuscripts, coins, costumes, weapons and the history of Jeddah.'],
-      history: ['Founded by Sheikh Abdul Raouf Khalil and opened to the public in the 1990s.'],
-      religious: ['Several galleries cover Islamic history and calligraphy, including Qur\'an manuscripts.'],
-      highlights: ['Hijazi architecture', 'Islamic manuscripts', 'Old Jeddah house reconstructions'],
-      hours: { summary: 'Typically Sat – Thu, morning and evening sessions', details: [], note: 'Hours vary; check before going.' },
-      tickets: { required: true, price: 'Paid entry (small fee)', how: ['Buy at the entrance.'], links: [] },
-      gettingThere: { airport: 'King Abdulaziz International (JED)', road: 'Al-Faisaliyah district, central Jeddah.', transport: 'Taxi.' },
-      bestTime: 'Any time', duration: '2 hours', dress: 'Modest clothes.', tips: ['Good option on a hot afternoon.']
+      tagline: 'A vast Hijazi-style museum city with 60,000+ artefacts and 365 rooms.',
+      overview: [
+        'Tayebat City Museum — officially Al Taybat International City Museum of Science and Information — is a huge private heritage museum complex in Jeddah. It covers about 10,000 m² across 12 buildings and 365 rooms, all built in traditional Hijazi style.',
+        'The interconnected buildings recreate historic Jeddah houses with coral-stone walls, carved wooden rawasheen balconies, domes, minarets and open courtyards — the museum itself is one of the main attractions.',
+        'Its collection of more than 60,000 artefacts covers around 2,500 years of local, Islamic and world history.'
+      ],
+      history: [
+        'The museum was founded by the collector Sheikh Abdul Raouf Khalil and opened to the public in 1999.',
+        'Exhibits trace Jeddah\'s story from early fishing settlements through the Islamic centuries to the unification of Saudi Arabia under King Abdulaziz.'
+      ],
+      religious: [
+        'Galleries on Islamic heritage and the holy cities display rare copies of the Qur\'an, ancient manuscripts, historic coins and a framed piece of the Kiswah — the sacred cloth that covers the Kaaba.'
+      ],
+      highlights: [
+        'Hijazi architecture with rawasheen balconies, domes and minarets',
+        'Rare Qur\'ans, manuscripts and a framed piece of the Kaaba\'s Kiswah',
+        'Historic weapons and antique coins',
+        'Pre-Islamic and Saudi history galleries',
+        'Bedouin artefacts, regional costumes and Hijazi bridal wear',
+        'Large scale model of old Jeddah'
+      ],
+      hours: { summary: 'Sat – Thu 10:00 AM – 1:00 PM and 5:00 – 9:00 PM; closed Friday', details: [], note: 'Hours can change seasonally and in Ramadan — check before visiting.' },
+      tickets: { required: true, price: 'About SAR 50–80 per adult (walk-in)', how: ['Buy tickets at the gate — carrying cash is recommended.', 'Guided tours can be booked through local operators or on webook.com.'], links: [{ label: 'VisitSaudi – Tayebat Museum', url: 'https://www.visitsaudi.com/en/jeddah/attractions/tayebat-museum' }, { label: 'Webook', url: 'https://webook.com' }] },
+      gettingThere: { airport: 'King Abdulaziz International (JED) — about 25 minutes', road: '3170 Raihanat Al Jazirah, Al-Faisaliyah district, Jeddah. Free parking on site.', transport: 'Taxi or ride-hailing.' },
+      bestTime: 'Evening session, any season', duration: '2–3 hours',
+      dress: 'Modest clothes; comfortable shoes for many stairs.',
+      tips: [
+        'The layout is maze-like with little signage — consider hiring an in-house guide.',
+        'Allow 2–3 hours to see the main wings without rushing.',
+        'Wheelchair-accessible entrances and restrooms, plus an on-site restaurant.',
+        'Combine with Al-Balad (Historic Jeddah) on the same day.'
+      ]
     },
     {
       id: 'obhur', name: 'Obhur Creek (Sharm Obhur), Jeddah', nativeName: 'شرم أبحر',
