@@ -2550,5 +2550,355 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY 2.0",
    "page": "https://commons.wikimedia.org/wiki/File:Rajajil_standing_columns,_al-Jouf,_6th_-_5th_millenia_BCE_(20).jpg"
   }
- ]
+ ],
+ "jannat-al-mualla": [
+  {
+   "src": "assets/photos/jannat-al-mualla/d1.jpg",
+   "thumb": "assets/photos/jannat-al-mualla/d1-sm.jpg",
+   "credit": "Md iet (talk)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jannat-ul-Maualla_at_present.JPG"
+  },
+  {
+   "src": "assets/photos/jannat-al-mualla/d2.jpg",
+   "thumb": "assets/photos/jannat-al-mualla/d2-sm.jpg",
+   "credit": "Tubi719",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jannat_ul_Mualla_Cemetery.jpg"
+  },
+  {
+   "src": "assets/photos/jannat-al-mualla/d3.jpg",
+   "thumb": "assets/photos/jannat-al-mualla/d3-sm.jpg",
+   "credit": "Mohammed Shakil Shai…",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Jummayzah,_Mecca_Saudi_Arabia_-_panoramio_-_Mohammed_Shakil_Shai%E2%80%A6_(16).jpg"
+  },
+  {
+   "src": "assets/photos/jannat-al-mualla/d4.jpg",
+   "thumb": "assets/photos/jannat-al-mualla/d4-sm.jpg",
+   "credit": "Najamuddin Shahwani",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Janat_ul_Mala,_Makkah_Mukarma_-_panoramio_(1).jpg"
+  },
+  {
+   "src": "assets/photos/jannat-al-mualla/d5.jpg",
+   "thumb": "assets/photos/jannat-al-mualla/d5-sm.jpg",
+   "credit": "Mohammed Shakil Shai…",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Jummayzah,_Mecca_Saudi_Arabia_-_panoramio_-_Mohammed_Shakil_Shai%E2%80%A6_(10).jpg"
+  }
+ ],
+ "kiswa-complex": [],
+ "tayebat-museum": [],
+ "obhur": [
+  {
+   "src": "assets/photos/obhur/e1.jpg",
+   "thumb": "assets/photos/obhur/e1-sm.jpg",
+   "credit": "Kolaiel",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_084.jpg"
+  },
+  {
+   "src": "assets/photos/obhur/e2.jpg",
+   "thumb": "assets/photos/obhur/e2-sm.jpg",
+   "credit": "Kolaiel",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_034.jpg"
+  },
+  {
+   "src": "assets/photos/obhur/e3.jpg",
+   "thumb": "assets/photos/obhur/e3-sm.jpg",
+   "credit": "Kolaiel",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_138.jpg"
+  },
+  {
+   "src": "assets/photos/obhur/e4.jpg",
+   "thumb": "assets/photos/obhur/e4-sm.jpg",
+   "credit": "Kolaiel",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_158.jpg"
+  },
+  {
+   "src": "assets/photos/obhur/e5.jpg",
+   "thumb": "assets/photos/obhur/e5-sm.jpg",
+   "credit": "Kolaiel",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_096.jpg"
+  }
+ ],
+ "masjid-al-jumuah": [],
+ "dar-al-madinah": [
+  {
+   "src": "assets/photos/dar-al-madinah/d1.jpg",
+   "thumb": "assets/photos/dar-al-madinah/d1-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Dar_al-Madinah_Museum.JPG"
+  },
+  {
+   "src": "assets/photos/dar-al-madinah/d2.jpg",
+   "thumb": "assets/photos/dar-al-madinah/d2-sm.jpg",
+   "credit": "",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Museum_al-Madinah_al-Munawwarah_Mariz_al-Iman.jpg"
+  },
+  {
+   "src": "assets/photos/dar-al-madinah/d3.jpg",
+   "thumb": "assets/photos/dar-al-madinah/d3-sm.jpg",
+   "credit": "Imam Khairul Annas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Madinah_Museum.JPG"
+  }
+ ],
+ "wadi-al-jinn": [],
+ "sharaan": [
+  {
+   "src": "assets/photos/sharaan/d1.jpg",
+   "thumb": "assets/photos/sharaan/d1-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Geological_Wonders_of_Sharaan_Nature_Reserve_(2021).jpg"
+  },
+  {
+   "src": "assets/photos/sharaan/d2.jpg",
+   "thumb": "assets/photos/sharaan/d2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Landscape_at_al-Ula,_Saudi_Arabia_(3).jpg"
+  },
+  {
+   "src": "assets/photos/sharaan/d3.jpg",
+   "thumb": "assets/photos/sharaan/d3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Landscape_at_al-Ula,_Saudi_Arabia_(9).jpg"
+  }
+ ],
+ "gharameel": [],
+ "al-faisaliah": [
+  {
+   "src": "assets/photos/al-faisaliah/d2.jpg",
+   "thumb": "assets/photos/al-faisaliah/d2-sm.jpg",
+   "credit": "الشيخ هيثم الدخين",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:All_Faisaliah_Tower_Riyadh,_2023.jpg"
+  },
+  {
+   "src": "assets/photos/al-faisaliah/d3.jpg",
+   "thumb": "assets/photos/al-faisaliah/d3-sm.jpg",
+   "credit": "Hamza A. Durrani",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:All_Faisaliah_Tower_Riyadh,_2023.jpeg"
+  },
+  {
+   "src": "assets/photos/al-faisaliah/d4.jpg",
+   "thumb": "assets/photos/al-faisaliah/d4-sm.jpg",
+   "credit": "B.alotaby",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Riyadh_Skyline.jpg"
+  },
+  {
+   "src": "assets/photos/al-faisaliah/d5.jpg",
+   "thumb": "assets/photos/al-faisaliah/d5-sm.jpg",
+   "credit": "Saud-Al-Marzouq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Faisaliyyah_Tower.jpg"
+  }
+ ],
+ "wadi-namar": [
+  {
+   "src": "assets/photos/wadi-namar/e1.jpg",
+   "thumb": "assets/photos/wadi-namar/e1-sm.jpg",
+   "credit": "JeedaGhazal",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9_%D9%86%D9%85%D8%A7%D8%B1_%D8%A8%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6_%D9%84%D9%8A%D9%84%D8%A7%D9%8B.jpg"
+  }
+ ],
+ "thumamah": [
+  {
+   "src": "assets/photos/thumamah/d1.jpg",
+   "thumb": "assets/photos/thumamah/d1-sm.jpg",
+   "credit": "Ismael Cacharro",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Thumamah_Dessert_in_Saudi_Arabia.JPG"
+  }
+ ],
+ "al-ghat": [
+  {
+   "src": "assets/photos/al-ghat/d4.jpg",
+   "thumb": "assets/photos/al-ghat/d4-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_town_of_Al-Ghat,_Saudi_Arabia_(2).jpg"
+  },
+  {
+   "src": "assets/photos/al-ghat/d1.jpg",
+   "thumb": "assets/photos/al-ghat/d1-sm.jpg",
+   "credit": "Mohammad AL yakoub",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_ghatt-%D8%A7%D9%84%D8%BA%D8%A7%D8%B7_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/al-ghat/d2.jpg",
+   "thumb": "assets/photos/al-ghat/d2-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Awshaza_Mosque_in_the_old_town_of_Al-Ghat,_Saudi_Arabia,_15th_century_(2).jpg"
+  },
+  {
+   "src": "assets/photos/al-ghat/d3.jpg",
+   "thumb": "assets/photos/al-ghat/d3-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Awshaza_Mosque_in_the_old_town_of_Al-Ghat,_Saudi_Arabia,_15th_century_(1).jpg"
+  },
+  {
+   "src": "assets/photos/al-ghat/d5.jpg",
+   "thumb": "assets/photos/al-ghat/d5-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B1%D9%8A%D8%A9_%D8%A7%D9%84%D8%BA%D8%A7%D8%B7.jpg"
+  }
+ ],
+ "qaisariya-souq": [],
+ "fanateer-beach": [
+  {
+   "src": "assets/photos/fanateer-beach/d1.jpg",
+   "thumb": "assets/photos/fanateer-beach/d1-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jubail,_Saudi_Arabia,_March_2013_02.jpg"
+  },
+  {
+   "src": "assets/photos/fanateer-beach/d2.jpg",
+   "thumb": "assets/photos/fanateer-beach/d2-sm.jpg",
+   "credit": "Ahmed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jubail,_Saudi_Arabia,_March_2013_01.jpg"
+  },
+  {
+   "src": "assets/photos/fanateer-beach/d3.jpg",
+   "thumb": "assets/photos/fanateer-beach/d3-sm.jpg",
+   "credit": "Suresh Babunair",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Persian_gulf_at_Al_Jubail,Kingdom_of_saudi_Arabia_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/fanateer-beach/d4.jpg",
+   "thumb": "assets/photos/fanateer-beach/d4-sm.jpg",
+   "credit": "Suresh Babunair",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Persian_gulf_on_the_saudi_arabian_side_at_jubail_city_-_panoramio.jpg"
+  },
+  {
+   "src": "assets/photos/fanateer-beach/d5.jpg",
+   "thumb": "assets/photos/fanateer-beach/d5-sm.jpg",
+   "credit": "Suresh Babunair",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Persian_Gulf_on_the_Saudi_arabian_side_in_jubail_city_-_panoramio.jpg"
+  }
+ ],
+ "al-namas": [
+  {
+   "src": "assets/photos/al-namas/e1.jpg",
+   "thumb": "assets/photos/al-namas/e1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Namas_old_town,_Asir_Region,_Saudi_Arabia.jpg"
+  },
+  {
+   "src": "assets/photos/al-namas/e2.jpg",
+   "thumb": "assets/photos/al-namas/e2-sm.jpg",
+   "credit": "Apurv013",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Namas,_Soudi_Arabia.jpg"
+  },
+  {
+   "src": "assets/photos/al-namas/e3.jpg",
+   "thumb": "assets/photos/al-namas/e3-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%AB%D8%B1%D8%A8%D8%A7%D9%861.jpg"
+  },
+  {
+   "src": "assets/photos/al-namas/e4.jpg",
+   "thumb": "assets/photos/al-namas/e4-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%AB%D8%B1%D8%A8%D8%A7%D9%862.jpg"
+  }
+ ],
+ "shada-palace": [
+  {
+   "src": "assets/photos/shada-palace/e1.jpg",
+   "thumb": "assets/photos/shada-palace/e1-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%B4%D8%AF%D8%A7.jpg"
+  },
+  {
+   "src": "assets/photos/shada-palace/e2.jpg",
+   "thumb": "assets/photos/shada-palace/e2-sm.jpg",
+   "credit": "Heritage Commission",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B5%D8%B1_%D8%B4%D8%AF%D8%A71.jpg"
+  }
+ ],
+ "wadi-lajab": [
+  {
+   "src": "assets/photos/wadi-lajab/d1.jpg",
+   "thumb": "assets/photos/wadi-lajab/d1-sm.jpg",
+   "credit": "Saif Arash",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_canyon_of_Wadi_Lajab,_Saudi_Arabia_IMG_1888.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-lajab/d2.jpg",
+   "thumb": "assets/photos/wadi-lajab/d2-sm.jpg",
+   "credit": "Cultue Vulture 07",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jazan-Alkhishl.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-lajab/d3.jpg",
+   "thumb": "assets/photos/wadi-lajab/d3-sm.jpg",
+   "credit": "MrJoker07",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jazan_-_al-harth.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-lajab/d4.jpg",
+   "thumb": "assets/photos/wadi-lajab/d4-sm.jpg",
+   "credit": "Saif Arash",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_Lajab_Canyon_in_Saudi_Arabia_IMG_1867.jpg"
+  },
+  {
+   "src": "assets/photos/wadi-lajab/d5.jpg",
+   "thumb": "assets/photos/wadi-lajab/d5-sm.jpg",
+   "credit": "Saif Arash",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:At_Wadi_Lajab_in_Al_Reeth,_Saudi_Arabia.jpg"
+  }
+ ],
+ "shada-al-ala": [
+  {
+   "src": "assets/photos/shada-al-ala/e1.jpg",
+   "thumb": "assets/photos/shada-al-ala/e1-sm.jpg",
+   "credit": "أسامة الكاشف",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A8%D9%84_%D8%B4%D8%AF%D8%A7.jpg"
+  },
+  {
+   "src": "assets/photos/shada-al-ala/e2.jpg",
+   "thumb": "assets/photos/shada-al-ala/e2-sm.jpg",
+   "credit": "أسامة الكاشف",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A8%D9%84_%D8%B4%D8%AF%D8%A71.jpg"
+  }
+ ],
+ "maghaer-shuaib": [],
+ "red-sea-global": [],
+ "dumat-lake": []
 } });
