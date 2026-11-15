@@ -3533,7 +3533,43 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "umm-jarsan": [],
+ "umm-jarsan": [
+  {
+   "src": "assets/photos/umm-jarsan/u1.jpg",
+   "thumb": "assets/photos/umm-jarsan/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/umm-jarsan/u2.jpg",
+   "thumb": "assets/photos/umm-jarsan/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/umm-jarsan/u3.jpg",
+   "thumb": "assets/photos/umm-jarsan/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/umm-jarsan/u4.jpg",
+   "thumb": "assets/photos/umm-jarsan/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/umm-jarsan/u5.jpg",
+   "thumb": "assets/photos/umm-jarsan/u5-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "murabba-palace": [
   {
    "src": "assets/photos/murabba-palace/f1.jpg",

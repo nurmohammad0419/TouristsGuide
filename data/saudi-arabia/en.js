@@ -2388,17 +2388,40 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'umm-jarsan', name: 'Umm Jirsan Lava Tube', nativeName: 'كهف أم جرسان',
-      region: 'madinah', city: 'Khaybar', categories: ['nature'],
-      coords: [25.1817, 39.9614], 
-      tagline: 'The longest known lava tube in Arabia.',
-      overview: ['Umm Jirsan is a lava cave about 1.5 km long in the Harrat Khaybar volcanic field. Its dark tunnels have yielded thousands of animal bones collected over millennia by striped hyenas, and evidence of human use going back about 7,000 years.'],
-      history: ['Research by Saudi and international teams has shown the cave was used by pastoralists in the Neolithic and Bronze Age.'],
+      region: 'madinah', city: 'Khaybar', categories: ['nature', 'archaeology'], featured: true,
+      coords: [25.1817, 39.9614], wiki: 'https://en.wikipedia.org/wiki/Harrat_Khaybar',
+      tagline: 'Arabia\'s longest lava cave — 1.5 km of tunnels with 10,000 years of human history.',
+      overview: [
+        'Umm Jirsan is the longest known lava-tube cave in Saudi Arabia and the Arabian Peninsula, stretching about 1,481 m beneath the Harrat Khaybar volcanic field, roughly 125–150 km north of Madinah.',
+        'The system has three main underground passages separated by two large roof collapses, which act as natural skylight entrances. Passages reach up to about 45 m wide and 8–12 m high, making it the largest surveyed cave system in the Kingdom.',
+        'Inside, the temperature stays moderate all year — cool in summer and mild in winter — which drew both animals and people away from the harsh basalt desert above.'
+      ],
+      history: [
+        'The tube formed when molten basalt kept flowing beneath a cooled crust of lava and then drained away, leaving a hollow tunnel.',
+        'Excavations by the Saudi Heritage Commission with King Saud University and the Max Planck Institute of Geoanthropology show that people used the cave repeatedly between about 10,000 and 7,000 years ago. Stone tools, charcoal, textile fragments and carved wood suggest pastoralists sheltered here while herding livestock, with later use in the Bronze Age.',
+        'Rock-art engravings nearby show cattle, sheep, goats and hunting scenes with dogs.',
+        'Researchers also found hundreds of thousands of bones from at least 14 animal species — including striped hyenas, horses, wild asses, camels and ibex, and some human remains — collected over millennia by striped hyenas that used parts of the cave as a den.'
+      ],
       religious: null,
-      highlights: ['Lava tunnels', 'Volcanic landscape of Harrat Khaybar'],
-      hours: { summary: 'Access only with authorised guides/permits', details: [], note: 'Do not enter without an experienced guide.' },
-      tickets: { required: true, price: 'Guided tour', how: ['Arrange through licensed tour operators in Madinah or Khaybar.'], links: [] },
-      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'Remote volcanic field north-east of Madinah.', transport: '4x4 with guide.' },
-      bestTime: 'November – March', duration: 'Full day', dress: 'Helmet, torch, sturdy shoes.', tips: ['Never go caving alone.']
+      highlights: [
+        '~1.5 km lava tube with three passages',
+        'Skylight entrances from roof collapses',
+        'Huge chambers up to ~45 m wide',
+        'Prehistoric rock art of cattle, goats and hunting dogs',
+        'Hyena-den bone deposits studied by scientists',
+        'Black lava landscape of Harrat Khaybar'
+      ],
+      hours: { summary: 'Open site; visit in daylight only', details: [], note: 'Very remote, with minimal facilities and signage.' },
+      tickets: { required: false, price: 'Free (guided trips paid)', how: ['No ticket required.', 'A local guide familiar with the lava field is strongly recommended.'], links: [] },
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED), Madinah', road: 'About 2–2.5 hours north of Madinah towards Khaybar, then more than 20 km of rough dirt tracks over jagged volcanic rock. A protective wall and staircase lead down at the main entrance.', transport: '4x4 vehicle and GPS navigation essential; no public transport.' },
+      bestTime: 'October – March', duration: 'Full day (including the drive)',
+      dress: 'Sturdy hiking boots, long trousers, gloves; headlamp and helmet recommended.',
+      tips: [
+        'Bring powerful headlamps and spare batteries — the passages are completely dark.',
+        'Carry plenty of water and food; there are no services.',
+        'Do not disturb bones, tools or rock art — the site is protected.',
+        'Never explore deep passages alone.'
+      ]
     },
 
     /* ======================= ROUND 4: RIYADH PROVINCE ======================= */
