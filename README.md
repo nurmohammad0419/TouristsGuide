@@ -6,7 +6,7 @@ A travel guide website that covers a country spot by spot. Each country page has
 2. **Administrative divisions**: every province (region), with its capital, area, population and governorate list.
 3. **Tourist spots**: each spot has its province, history, religious significance, highlights, a photo gallery with a full-screen viewer, opening hours, ticket and booking details with official links, how to get there, an interactive map and travel tips.
 
-The first country is **Saudi Arabia**. It has 85 spots across all 13 provinces and lists 139 governorates.
+The first country is **Saudi Arabia**. It has 107 spots across all 13 provinces and lists 139 governorates.
 
 ## Features
 - Dark and light themes, glass styling, parallax heroes, scroll reveal effects and animated counters
