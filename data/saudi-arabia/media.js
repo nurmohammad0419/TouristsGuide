@@ -2273,7 +2273,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "raghadan-forest": [],
+ "raghadan-forest": [
+  {
+   "src": "assets/photos/raghadan-forest/u1.jpg",
+   "thumb": "assets/photos/raghadan-forest/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/raghadan-forest/u2.jpg",
+   "thumb": "assets/photos/raghadan-forest/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/raghadan-forest/u3.jpg",
+   "thumb": "assets/photos/raghadan-forest/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/raghadan-forest/u4.jpg",
+   "thumb": "assets/photos/raghadan-forest/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "fayfa": [
   {
    "src": "assets/photos/fayfa/1.jpg",

@@ -1271,17 +1271,39 @@ TG.registerCountry('saudi-arabia', 'en', {
     /* ======================= MORE: AL-BAHAH ======================= */
     {
       id: 'raghadan-forest', name: 'Raghadan Forest Park', nativeName: 'غابة رغدان',
-      region: 'bahah', city: 'Al-Bahah', categories: ['nature'],
-      coords: [20.0200, 41.4400], wiki: 'https://en.wikipedia.org/wiki/Al-Bahah',
-      tagline: 'Juniper forest with views over the Tihama lowlands.',
-      overview: ['A popular forest park just outside Al-Bahah with juniper and olive trees, walking paths, picnic areas and a cliff-edge viewpoint over the plains below.'],
-      history: ['Al-Bahah province contains more than 50 forests; Raghadan is one of the best known.'],
+      region: 'bahah', city: 'Al-Bahah', categories: ['nature'], featured: true,
+      coords: [20.0200, 41.4400],
+      tagline: 'A misty juniper forest on a cliff edge at about 1,700 m, with a suspension bridge and zipline.',
+      overview: [
+        'Raghadan Forest Park is a large high-altitude mountain park about 1,700 m above sea level on the Sarawat Mountains, just outside Al-Bahah city. It is covered with dense, ancient evergreen juniper trees and native plants.',
+        'The park is often wrapped in low clouds, cool fog and fresh mountain breezes, making it one of the most popular summer escapes from the desert heat in Saudi Arabia.',
+        'From its rocky cliffside, viewpoints look down over the winding King Fahd Road (Aqabat Al-Bahah) and the Tihama plains far below. Wild baboons live on the natural slopes beneath the main overlooks.'
+      ],
+      history: [
+        'Al-Bahah Province has more than 50 forests; Raghadan is the best known and has been developed by the local municipality into a family park.',
+        'Recent upgrades added the Al-Sahab ("Clouds") Promenade, a suspension bridge, a zipline, lit waterfalls and new walking and cycling paths.'
+      ],
       religious: null,
-      highlights: ['Cliff viewpoint', 'Picnic areas', 'Walking paths'],
-      hours: { summary: 'Open at all times', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Al-Bahah (ABT)', road: 'About 10 minutes from Al-Bahah city.', transport: 'Car.' },
-      bestTime: 'June – September', duration: '2 hours', dress: 'Light jacket.', tips: ['Weekend evenings are crowded.']
+      highlights: [
+        'Al-Sahab Promenade with a ~100 m suspension bridge hanging about 13–15 m above the ground',
+        'Dual-track zipline about 957 m long',
+        'Paved and stone walking trails and cycling lanes',
+        'Lavender garden, valley streams and illuminated evening waterfalls with wooden bridges',
+        'Cliff-edge views over King Fahd Road and the Tihama plains',
+        'Picnic and barbecue areas, children\'s playgrounds and an open-air theatre',
+        'Food trucks, tea stalls and casual cafés'
+      ],
+      hours: { summary: 'Park open daily; most activities from afternoon to late evening', details: ['Zipline and some attractions have their own operating hours'], note: 'Very busy on summer weekends and public holidays — expect traffic on access roads.' },
+      tickets: { required: 'partial', price: 'Park entry free; zipline and some activities paid', how: ['No ticket is needed to enter the park.', 'Buy zipline and activity tickets on site at each attraction.', 'Check VisitSaudi for seasonal events and opening times.'], links: [{ label: 'VisitSaudi – Raghadan Forest', url: 'https://www.visitsaudi.com/en/al-baha/attractions/raghadan-forest-in-al-baha' }] },
+      gettingThere: { airport: 'King Saud bin Abdulaziz Airport, Al-Bahah (ABT)', road: 'About 10 minutes from Al-Bahah city centre; signposted from the main roads.', transport: 'Car or taxi; no public transport.' },
+      bestTime: 'June – September (summer festival season); spring for flowers', duration: 'Half a day',
+      dress: 'Light jacket — it can be cool and foggy even in summer; comfortable walking shoes.',
+      tips: [
+        'Arrive before late afternoon on weekends to avoid traffic and find parking.',
+        'Do not feed the baboons and keep food out of sight.',
+        'The fog can roll in quickly — visit the viewpoints early for clearer views.',
+        'Nearby you can also visit Khairah Forest Park and Al-Atawlah Heritage Village.'
+      ]
     },
 
     /* ======================= MORE: JAZAN ======================= */

@@ -67,7 +67,7 @@
     return `<img class="${cls}" src="${esc(small)}" ${small !== src ? `data-full="${esc(src)}"` : ''} alt="${esc(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="TG_imgErr(this)" ${attrs}>`;
   }
   const mapsUrl = (c) => `https://www.google.com/maps/search/?api=1&query=${c[0]},${c[1]}`;
-  const ticketLabel = (r) => r === true ? t('common.required') : r === 'partial' ? t('common.required') + '*' : t('common.notRequired');
+  const ticketLabel = (r) => r === true ? t('common.required') : r === 'partial' ? t('common.partly') : t('common.notRequired');
   const ticketClass = (r) => r === true ? 'warn' : r === 'partial' ? 'info' : 'ok';
   const icon = {
     clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
