@@ -2685,7 +2685,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Shinana_Tower,_near_al-Rass,_Qasim_region,_ca._1700_(5)_(49321186902).jpg"
   }
  ],
- "linah": [],
+ "linah": [
+  {
+   "src": "assets/photos/linah/u1.jpg",
+   "thumb": "assets/photos/linah/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/linah/u2.jpg",
+   "thumb": "assets/photos/linah/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/linah/u3.jpg",
+   "thumb": "assets/photos/linah/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/linah/u4.jpg",
+   "thumb": "assets/photos/linah/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "zaabal-castle": [
   {
    "src": "assets/photos/zaabal-castle/1.jpg",

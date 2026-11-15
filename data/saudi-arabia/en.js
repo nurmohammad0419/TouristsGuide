@@ -1632,18 +1632,42 @@ TG.registerCountry('saudi-arabia', 'en', {
 
     /* ======================= MORE: NORTHERN BORDERS ======================= */
     {
-      id: 'linah', name: 'Linah Historic Village', nativeName: 'قرية لينة التاريخية',
-      region: 'northern-borders', city: 'Rafha', categories: ['heritage'],
-      coords: [28.7600, 43.7700], 
-      tagline: 'A mud-and-stone village with ancient wells.',
-      overview: ['Linah is a historic village south of Rafha with restored mud houses, an old souq and hundreds of wells dug into the rock.'],
-      history: ['Linah lay on caravan and pilgrim routes, and its wells are said to be very ancient. King Abdulaziz ordered buildings here in the 1930s.'],
-      religious: null,
-      highlights: ['Rock-cut wells', 'Old souq', 'Mud houses'],
-      hours: { summary: 'Daytime', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Rafha (RAH)', road: 'About 100 km south of Rafha.', transport: 'Car.' },
-      bestTime: 'November – March', duration: '1–2 hours', dress: 'Modest clothes.', tips: ['Combine with a visit to Darb Zubaydah sites.']
+      id: 'linah', name: 'Linah (Laynah) Historic Village', nativeName: 'قرية لينة التاريخية',
+      region: 'northern-borders', city: 'Rafha', categories: ['heritage', 'archaeology'], featured: true,
+      coords: [28.7600, 43.7700],
+      tagline: 'Rock-cut wells, a 1930s royal palace and a mud-brick souq on the Darb Zubaydah route.',
+      overview: [
+        'Linah (also spelled Laynah) is one of the oldest settlements in the Arabian Peninsula, located in the Northern Borders Region about 100 km south of Rafha. It lies in the desert along the historic Darb Zubaydah pilgrimage and trade route.',
+        'For centuries the village was a commercial crossroads linking Najd, Iraq and the Levant. Today its old town preserves mud-and-stone houses arranged around inner courtyards designed to keep cool in the desert heat.',
+        'Recent heritage work has improved public squares, walkways, lighting and visitor facilities while protecting the historic buildings.'
+      ],
+      history: [
+        'Linah\'s ancient wells made it a vital stop for caravans and pilgrims crossing northern Arabia on Darb Zubaydah.',
+        'In 1932–1933 the historic Linah Market was established; it became one of northern Saudi Arabia\'s largest trading centres in the mid-20th century.',
+        'In 1935 (1354 AH) King Abdulaziz ordered the building of a palace in Linah to serve as the regional emirate headquarters. The old mosque nearby was built around 1951.'
+      ],
+      religious: [
+        'Linah lay on Darb Zubaydah, the road that carried Hajj pilgrims from Iraq to Makkah. The historic Linah Mosque — one of the oldest in the Northern Borders Province, built of mud brick, stone, athel wood and palm fronds — still hosts daily prayers.'
+      ],
+      highlights: [
+        'King Abdulaziz Palace (1935) — Najdi mud-brick palace with four round corner towers and a central courtyard',
+        'Historic Linah Market — 70–80 mud-and-stone shops (as-Sababit) shaded by palm-frond roofs',
+        'Ancient wells — originally more than 300 narrow wells carved into solid rock',
+        'Historic Linah Mosque (c. 1951)',
+        'Traditional old-town houses around courtyards',
+        'Folk performances and markets during Saudi National Day and other events'
+      ],
+      hours: { summary: 'Village open daily; palace and market hours vary', details: ['The market is busiest during events and seasonal festivals'], note: 'Check locally for palace and market opening times.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket needed to walk around the village.'], links: [] },
+      gettingThere: { airport: 'Rafha Domestic Airport (RAH)', road: 'About 100 km south of Rafha; from Hail about 3 hours north-east by road.', transport: 'Car; no public transport.' },
+      bestTime: 'November – March; September for National Day events', duration: '2–3 hours',
+      dress: 'Modest clothes, sun hat and comfortable shoes.',
+      tips: [
+        'Local legend says the rock-cut wells were dug by the army of Prophet Sulaiman (Solomon) on its way between Jerusalem and Yemen — a popular story, not a historical fact.',
+        'Visit during Saudi National Day (23 September) for folk shows and camel and horse displays.',
+        'Do not lean over or throw anything into the old wells.',
+        'Combine with Darb Zubaydah sites around Rafha.'
+      ]
     },
 
     /* ======================= MORE: AL-JAWF ======================= */
