@@ -237,7 +237,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'taif-al-hada', name: 'Taif — Al-Hada Mountains & Rose Farms', nativeName: 'الطائف — الهدا',
       region: 'makkah', city: 'Taif', categories: ['nature', 'heritage'],
-      approx: true, coords: [21.3667, 40.2833], wiki: 'https://en.wikipedia.org/wiki/Taif',
+      coords: [21.3686, 40.2847], wiki: 'https://en.wikipedia.org/wiki/Taif',
       tagline: 'The cool "City of Roses" above the Hijaz escarpment.',
       overview: [
         'Taif sits at about 1,800 m in the Sarawat mountains, making it the traditional summer retreat for people from Makkah and Jeddah. The spectacular Al-Hada road winds up the escarpment through dozens of hairpin bends.',
@@ -984,7 +984,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'dadan-jabal-ikmah', name: 'Dadan & Jabal Ikmah', nativeName: 'دادان وجبل عكمة',
       region: 'madinah', city: 'AlUla', categories: ['archaeology'],
-      approx: true, coords: [26.6450, 37.9180], 
+      coords: [26.6471, 37.9137], 
       tagline: 'Capital of the Dadanite and Lihyanite kingdoms and an "open library" of inscriptions.',
       overview: ['Dadan is the excavated capital of an ancient Arabian kingdom, famous for its "Lion Tombs" carved high in the cliff. Nearby Jabal Ikmah is a canyon whose walls carry hundreds of inscriptions — often called an open-air library.'],
       history: ['Dadan flourished from around the 9th to the 1st century BCE, controlling the incense route before the Nabataeans. The Ikmah inscriptions, in Dadanitic and other ancient scripts, record prayers, laws and offerings.'],
@@ -1738,7 +1738,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'kiswa-complex', name: 'Kiswa Complex & Two Holy Mosques Architecture Exhibition', nativeName: 'مجمع الملك عبدالعزيز لكسوة الكعبة المشرفة ومعرض عمارة الحرمين',
       region: 'makkah', city: 'Makkah', categories: ['religious', 'heritage'], muslimsOnly: true, featured: true,
-      approx: true, coords: [21.4330, 39.7720], wiki: 'https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition',
+      coords: [21.4338, 39.7544], wiki: 'https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition',
       tagline: 'Watch the Kaaba\'s black-and-gold Kiswah being made, and see historic relics of the two holy mosques.',
       overview: [
         'The King Abdulaziz Complex for the Holy Kaaba Kiswa and the Exhibition of the Two Holy Mosques Architecture are two neighbouring cultural landmarks in the Al-Hamra / Umm Al-Jud district of Makkah, on the Old Makkah–Jeddah Road about 10 km from Masjid al-Haram.',
