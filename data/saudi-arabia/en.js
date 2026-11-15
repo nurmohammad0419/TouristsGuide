@@ -2136,18 +2136,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       tips: ['Do not touch or climb on the carved façades.', 'Combine with Moses\' Wells (Maqna) and the Tayeb Ism canyon on the coast.', 'Bring water — there are few facilities nearby.', 'Read Surah Al-A\'raf (7:85–93) and Al-Qasas (28:22–28) before visiting for context.']
     },
     {
-      id: 'red-sea-global', name: 'The Red Sea — Shura Island Resorts', nativeName: 'البحر الأحمر — جزيرة شورى',
-      region: 'tabuk', city: 'Umluj / Al-Wajh', categories: ['coast', 'modern'],
+      id: 'red-sea-global', name: 'Shura Island — The Red Sea', nativeName: 'جزيرة شورى — البحر الأحمر',
+      region: 'tabuk', city: 'Umluj / Al-Wajh', categories: ['coast', 'modern'], featured: true,
       coords: [25.5500, 36.8800], wiki: 'https://en.wikipedia.org/wiki/Red_Sea_Global',
-      tagline: 'A luxury island destination on one of the world\'s largest lagoons.',
-      overview: ['The Red Sea destination spans a vast lagoon with more than 90 islands between Umluj and Al-Wajh. Luxury resorts on Shura Island and nearby islands offer diving, snorkelling, yachting and desert-and-mountain excursions.'],
-      history: ['Developed by Red Sea Global as part of Vision 2030; the first resorts and Red Sea International Airport opened from 2023.'],
+      tagline: 'A dolphin-shaped luxury island of beach resorts, coral lagoons and an island golf course.',
+      overview: [
+        'Shura Island is the central hub of The Red Sea destination, a vast luxury tourism project on Saudi Arabia\'s west coast. The island is planned to host 11 luxury resorts, more than 300 branded residences, a marina and Shura Links — the country\'s first 18-hole island golf course.',
+        'Designed by Foster + Partners around a regenerative "Coral Bloom" concept, the dolphin-shaped island runs on 100% renewable energy. It is linked to the mainland by a 3.3 km bridge across the lagoon, about 25 minutes from Red Sea International Airport.',
+        'White-sand beaches, turquoise lagoons, coral reefs and mangroves surround the resorts, which offer diving, snorkelling, yachting and desert and mountain excursions.'
+      ],
+      history: [
+        'The Red Sea project is being developed by Red Sea Global as part of Saudi Vision 2030, with a strong focus on protecting and restoring the marine environment.',
+        'The first resorts in the wider destination and Red Sea International Airport opened from 2023; Shura Island\'s first hotel opened in late 2025, and more resorts have been opening in phases since.'
+      ],
       religious: null,
-      highlights: ['Coral reefs', 'Overwater villas', 'Desert and volcano excursions'],
-      hours: { summary: 'Resort stays (booking required)', details: [], note: '' },
-      tickets: { required: true, price: 'Luxury resort pricing', how: ['Book directly with the resorts or through the official destination website.'], links: [{ label: 'VisitSaudi – The Red Sea', url: 'https://www.visitsaudi.com' }] },
-      gettingThere: { airport: 'Red Sea International (RSI)', road: 'Resort transfers by car, boat or seaplane.', transport: 'Resort transfers.' },
-      bestTime: 'October – May', duration: '2–5 days', dress: 'Resort wear; modest outside resorts.', tips: ['Book transfers with your resort in advance.']
+      highlights: [
+        'Open resorts include The Red Sea EDITION, Four Seasons, InterContinental, SLS, Miraval (wellness) and Raffles',
+        'Upcoming: Rosewood, Faena, Fairmont, Grand Hyatt and Jumeirah',
+        'Shura Links 18-hole island golf course',
+        'Coral reefs, lagoons and mangroves — diving and snorkelling',
+        '3.3 km bridge over the lagoon',
+        'Beach clubs, spas, kids\' clubs and fine dining'
+      ],
+      hours: { summary: 'Resort stays — open year-round', details: ['Day access to the island is generally for resort guests and booked experiences'], note: 'Resorts are opening in phases — check which are currently open.' },
+      tickets: { required: true, price: 'Luxury resort pricing — roughly SAR 2,300 – 5,500+ per night (varies by resort and season)', how: ['Book directly with each resort (e.g. Marriott, Four Seasons, IHG, Accor websites) or through the official destination site.', 'Arrange airport transfers with your resort when booking.', 'Golf, diving and excursions can be added through the resort concierge.'], links: [{ label: 'Red Sea Global – Shura Island', url: 'https://www.redseaglobal.com/en/portfolio/projects/shura-island/' }, { label: 'VisitSaudi – Shura Island', url: 'https://www.visitsaudi.com/en/the-red-sea/attraction/shura-island' }] },
+      gettingThere: { airport: 'Red Sea International Airport (RSI) — about 25 minutes', road: 'Resort transfers by car across the 3.3 km Shura bridge.', transport: 'Resort transfers only; no public transport.' },
+      bestTime: 'October – May', duration: '2–5 days',
+      dress: 'Resort wear; modest clothing outside resort areas.',
+      tips: [
+        'Room prices change quickly with season and availability — compare on the official resort websites.',
+        'Use reef-safe sunscreen to help protect the coral.',
+        'Combine with Umluj islands and AlUla for a longer west-coast trip.'
+      ]
     },
     {
       id: 'dumat-lake', name: 'Dumat al-Jandal Lake', nativeName: 'بحيرة دومة الجندل',

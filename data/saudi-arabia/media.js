@@ -3319,7 +3319,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "red-sea-global": [],
+ "red-sea-global": [
+  {
+   "src": "assets/photos/red-sea-global/u1.jpg",
+   "thumb": "assets/photos/red-sea-global/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/red-sea-global/u2.jpg",
+   "thumb": "assets/photos/red-sea-global/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/red-sea-global/u3.jpg",
+   "thumb": "assets/photos/red-sea-global/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "dumat-lake": [],
  "al-rudaf-park": [],
  "masjid-jiranah": [
