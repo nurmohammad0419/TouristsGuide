@@ -1322,18 +1322,39 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: 'Full day', dress: 'Comfortable clothes.', tips: ['Taste fresh Khawlani coffee from the farms.']
     },
     {
-      id: 'dosariyah-fort', name: 'Al-Dosariyah Fort, Jazan', nativeName: 'قلعة الدوسرية',
+      id: 'dosariyah-fort', name: 'Al-Dosariyah (Adosareyah) Castle, Jazan', nativeName: 'قلعة الدوسرية',
       region: 'jazan', city: 'Jazan', categories: ['heritage'],
-      coords: [16.8930, 42.5530], wiki: 'https://en.wikipedia.org/wiki/Jizan',
-      tagline: 'An Ottoman hilltop fort overlooking Jazan port.',
-      overview: ['Al-Dosariyah Fort crowns a hill in Jazan city with views over the harbour and the Red Sea.'],
-      history: ['Built during the Ottoman era to guard the port of Jazan.'],
+      coords: [16.8880, 42.5456],
+      tagline: 'An Ottoman-era hilltop fortress with four round towers overlooking Jazan port and the Red Sea.',
+      overview: [
+        'Al-Dosariyah Castle — also spelled Adosareyah and known locally as the "Turks\' Fortress" — is a historic military fortress in the Al-Qal\'a district of Jazan. It stands on Jazan Mountain, roughly 150–250 m above sea level, with panoramic views over Jazan city, the seaport and the Red Sea.',
+        'Built of stone and plaster, the castle forms a square of about 900 m² anchored by four massive cylindrical corner towers. Thick walls are pierced with gun slits and lookout openings, with battlements on the southern and western sides.',
+        'Inside, a two-storey structure surrounds an open courtyard lined with arched walls, with rooms used for different purposes and an upper-floor observation post.'
+      ],
+      history: [
+        'The fortress was originally built around 1810 during the Ottoman era and served as a military headquarters. Its name is linked to the Dawasir troops — the "Dosar" military unit led by Prince Hamad bin Abdullah Al-Shuwaier.',
+        'Over the following century it changed hands several times. It was used during Idrisid rule, and later the scholar Sheikh Abdullah Al-Qar\'awi turned it into a regional centre for education and learning.',
+        'In 1932–1933 King Abdulaziz ordered the castle\'s restoration, and it became the first Saudi military garrison and headquarters in the region. It has since been restored again as a heritage site.'
+      ],
       religious: null,
-      highlights: ['Harbour view', 'Fort walls'],
-      hours: { summary: 'Daytime', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Jazan (GIZ)', road: 'Jazan city.', transport: 'Taxi.' },
-      bestTime: 'November – March', duration: '1 hour', dress: 'Modest clothes.', tips: ['Visit before taking the ferry to Farasan.']
+      highlights: [
+        'Four massive cylindrical corner towers',
+        'Arched inner courtyard',
+        'Gun slits and southern/western battlements',
+        'Upper-floor observation post',
+        'Panoramic views over Jazan city, port and the Red Sea',
+        'Sunset from the hilltop viewpoint'
+      ],
+      hours: { summary: 'Check before visiting — recently listed as closed (temporarily / maintenance)', details: ['The surrounding hilltop viewpoint is popular at sunset'], note: 'VisitSaudi and map listings have recently shown the castle as closed; confirm the current status before planning to go inside.' },
+      tickets: { required: false, price: 'Free (when open)', how: ['No ticket was needed when the castle was open.', 'Check VisitSaudi for the current opening status.'], links: [{ label: 'VisitSaudi – Al-Dosariyah Castle', url: 'https://www.visitsaudi.com/en/jazan/attraction/al-dosariyah-castle' }] },
+      gettingThere: { airport: 'King Abdullah bin Abdulaziz Airport, Jazan (GIZ)', road: 'In the Al-Qal\'a district of Jazan city, on the hill overlooking the port; parking at the hilltop.', transport: 'Taxi or ride-hailing from anywhere in Jazan city.' },
+      bestTime: 'November – March, late afternoon for sunset', duration: '1 hour',
+      dress: 'Modest clothes and a hat — the hilltop is very sunny.',
+      tips: [
+        'Go at sunset for the best light over the Red Sea.',
+        'Combine with Jazan Corniche and the ferry to the Farasan Islands.',
+        'Even if the castle is closed, the viewpoint outside is worth the visit.'
+      ]
     },
 
     /* ======================= MORE: NAJRAN ======================= */

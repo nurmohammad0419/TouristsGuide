@@ -2319,7 +2319,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Jazan%27s_Fayfa_Mountains_(2025).jpg"
   }
  ],
- "dosariyah-fort": [],
+ "dosariyah-fort": [
+  {
+   "src": "assets/photos/dosariyah-fort/u1.jpg",
+   "thumb": "assets/photos/dosariyah-fort/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dosariyah-fort/u2.jpg",
+   "thumb": "assets/photos/dosariyah-fort/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/dosariyah-fort/u3.jpg",
+   "thumb": "assets/photos/dosariyah-fort/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "emara-palace": [
   {
    "src": "assets/photos/emara-palace/1.jpg",
