@@ -1716,22 +1716,42 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'After Fajr', duration: '30 minutes', dress: 'Modest clothes.', tips: ['Keep quiet and respectful; photography is discouraged.']
     },
     {
-      id: 'kiswa-complex', name: 'Kiswa Complex & Two Holy Mosques Architecture Exhibition', nativeName: 'مجمع كسوة الكعبة ومعرض عمارة الحرمين',
-      region: 'makkah', city: 'Makkah', categories: ['religious', 'heritage'], muslimsOnly: true,
-      coords: [21.4330, 39.7720], wiki: 'https://en.wikipedia.org/wiki/Kiswah',
-      tagline: 'Where the Kaaba\'s black-and-gold cover is woven, plus a museum of the two holy mosques.',
+      id: 'kiswa-complex', name: 'Kiswa Complex & Two Holy Mosques Architecture Exhibition', nativeName: 'مجمع الملك عبدالعزيز لكسوة الكعبة المشرفة ومعرض عمارة الحرمين',
+      region: 'makkah', city: 'Makkah', categories: ['religious', 'heritage'], muslimsOnly: true, featured: true,
+      coords: [21.4330, 39.7720], wiki: 'https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition',
+      tagline: 'Watch the Kaaba\'s black-and-gold Kiswah being made, and see historic relics of the two holy mosques.',
       overview: [
-        'The King Abdulaziz Complex for the Holy Kaaba Kiswa in Umm al-Joud weaves, dyes and embroiders the Kiswah — the silk covering of the Kaaba — with gold and silver thread. Visitors can watch master craftsmen at work.',
-        'Next door, the Exhibition of the Two Holy Mosques Architecture displays historic doors, columns, the old wooden Maqam Ibrahim cover, Kiswah pieces and models of both mosques.'
+        'The King Abdulaziz Complex for the Holy Kaaba Kiswa and the Exhibition of the Two Holy Mosques Architecture are two neighbouring cultural landmarks in the Al-Hamra / Umm Al-Jud district of Makkah, on the Old Makkah–Jeddah Road about 10 km from Masjid al-Haram.',
+        'At the Kiswa Complex, visitors can watch every stage of making the Kiswah — the black silk covering of the Kaaba — including weaving, dyeing, printing and hand embroidery of Qur\'anic verses in gold- and silver-plated thread. Demonstration displays and videos explain the annual process.',
+        'Next door, the Exhibition of the Two Holy Mosques Architecture traces the architectural history and expansions of Masjid al-Haram and Al-Masjid an-Nabawi across seven galleries, with original relics and detailed scale models.'
       ],
-      history: ['The Kiswah was traditionally made in Egypt and sent with the annual pilgrim caravan. Saudi Arabia has produced it locally since 1927; the current complex opened in 1977. A new Kiswah is placed on the Kaaba every year, now on the first of Muharram.'],
-      religious: ['Covering the Kaaba is an ancient tradition honoured in Islam; the embroidered bands carry verses of the Qur\'an. Seeing the Kiswah being made is a moving experience for many pilgrims.'],
-      highlights: ['Kiswah weaving and gold embroidery', 'Historic door of the Kaaba', 'Old Zamzam well equipment', 'Architectural models'],
-      hours: { summary: 'Typically Sun – Thu daytime; exhibition also some evenings', details: [], note: 'Group visits to the Kiswa complex may require prior arrangement.' },
-      tickets: { required: 'partial', price: 'Free', how: ['The exhibition is usually walk-in.', 'For the Kiswa factory, visits are often arranged through Umrah/Hajj operators or on site.'], links: [] },
-      access: 'Located in Makkah — Muslims only.',
-      gettingThere: { airport: 'King Abdulaziz International (JED)', road: 'Umm al-Joud, about 10 km west of the Haram on the old Jeddah road.', transport: 'Taxi or ziyarat tour.' },
-      bestTime: 'Weekday mornings', duration: '2 hours', dress: 'Modest clothes.', tips: ['Ask your Umrah agent to include it in the ziyarat tour.']
+      history: [
+        'For centuries the Kiswah was made in Egypt and sent to Makkah with the annual pilgrim caravan. Saudi Arabia began producing it locally in 1927, and the current complex opened in 1977.',
+        'A new Kiswah is made every year and placed on the Kaaba; the embroidered bands carry verses of the Qur\'an.',
+        'The Architecture Exhibition displays rare relics such as a Kaaba door from 1944 (1363 AH), an 1825 teakwood staircase of the Kaaba, an internal wooden pillar of the Kaaba dating to 65 AH, and historic fixtures from the Zamzam well.'
+      ],
+      religious: [
+        'Covering the Kaaba is an ancient tradition honoured in Islam. Seeing the craftsmen embroider the verses of the Qur\'an onto the Kiswah — and seeing historic parts of the Kaaba and the Prophet\'s Mosque — is a moving experience for many pilgrims and helps them appreciate the care given to the House of Allah.'
+      ],
+      highlights: [
+        'Live Kiswah weaving, dyeing and gold-thread embroidery',
+        'Kaaba door from 1944 and 1825 teakwood Kaaba staircase',
+        'Wooden Kaaba pillar from 65 AH',
+        'Historic Zamzam well fixtures',
+        'Seven galleries with scale models of both holy mosques',
+        'Free multilingual guides (often available on site)'
+      ],
+      hours: { summary: 'Typically Sun – Thu; Kiswa general visits around 8:00 – 11:00 AM; Exhibition about 8:00 AM – 8:00 PM', details: ['Saturday access is sometimes listed on the official visits portal', 'Times change in Ramadan and Hajj season'], note: 'Book a time slot in advance and confirm current hours on the official portal.' },
+      tickets: { required: true, price: 'Free (Muslim visitors)', how: ['Book a free time-slot permit in advance on the official Haramain Visits Portal.', 'Choose the Kiswa Complex and/or the Two Holy Mosques Architecture Exhibition, pick a date and time, and keep the confirmation.', 'Show your permit and ID at the entrance; free guides are often available inside.', 'Private tours with hotel pick-up are also offered by tour platforms.'], links: [{ label: 'Haramain Visits Portal (official)', url: 'https://visits.alharamain.gov.sa/' }, { label: 'VisitSaudi – Kiswa Factory', url: 'https://www.visitsaudi.com/en/makkah/attractions/the-kiswa-factory-of-the-holy-kaaba-in-makkah' }, { label: 'VisitSaudi – Architecture Exhibition', url: 'https://www.visitsaudi.com/en/makkah/attractions/exhibition-of-the-two-holy-mosques-architecture' }] },
+      access: 'Located inside the sacred area of Makkah — open to Muslim visitors only.',
+      gettingThere: { airport: 'King Abdulaziz International (JED), Jeddah', road: 'Old Makkah–Jeddah Road, Al-Hamra / Umm Al-Jud district, about 10 km (≈15–20 minutes) west of Masjid al-Haram.', transport: 'Taxi or ride-hailing; arrange your return ride in advance, as taxis can be scarce. Many Umrah agents include it in ziyarat tours.' },
+      bestTime: 'Weekday mornings', duration: '2–3 hours for both',
+      dress: 'Modest clothes; women cover their hair.',
+      tips: [
+        'Book your permit a few days ahead, especially in Ramadan.',
+        'Visit the Kiswa Complex in the morning slot, then the Exhibition next door.',
+        'Photography rules vary by hall — ask staff before taking photos.'
+      ]
     },
     {
       id: 'tayebat-museum', name: 'Tayebat City Museum, Jeddah', nativeName: 'مدينة الطيبات العالمية',

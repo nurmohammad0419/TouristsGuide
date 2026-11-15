@@ -2812,7 +2812,50 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Al_Jummayzah,_Mecca_Saudi_Arabia_-_panoramio_-_Mohammed_Shakil_Shai%E2%80%A6_(10).jpg"
   }
  ],
- "kiswa-complex": [],
+ "kiswa-complex": [
+  {
+   "src": "assets/photos/kiswa-complex/u1.jpg",
+   "thumb": "assets/photos/kiswa-complex/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/kiswa-complex/u2.jpg",
+   "thumb": "assets/photos/kiswa-complex/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/kiswa-complex/u3.jpg",
+   "thumb": "assets/photos/kiswa-complex/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/kiswa-complex/u4.jpg",
+   "thumb": "assets/photos/kiswa-complex/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/kiswa-complex/u5.jpg",
+   "thumb": "assets/photos/kiswa-complex/u5-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/kiswa-complex/u6.jpg",
+   "thumb": "assets/photos/kiswa-complex/u6-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "tayebat-museum": [],
  "obhur": [
   {
