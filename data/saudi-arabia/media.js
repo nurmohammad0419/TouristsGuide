@@ -3015,7 +3015,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Landscape_at_al-Ula,_Saudi_Arabia_(9).jpg"
   }
  ],
- "gharameel": [],
+ "gharameel": [
+  {
+   "src": "assets/photos/gharameel/u1.jpg",
+   "thumb": "assets/photos/gharameel/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/gharameel/u2.jpg",
+   "thumb": "assets/photos/gharameel/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/gharameel/u3.jpg",
+   "thumb": "assets/photos/gharameel/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "al-faisaliah": [
   {
    "src": "assets/photos/al-faisaliah/d2.jpg",

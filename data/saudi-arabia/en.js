@@ -1905,18 +1905,39 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – March', duration: 'Half a day', dress: 'Hiking gear.', tips: ['Morning tours give the best chance to see wildlife.']
     },
     {
-      id: 'gharameel', name: 'Gharameel Rock Formations', nativeName: 'الغراميل',
-      region: 'madinah', city: 'AlUla', categories: ['nature'],
-      coords: [26.7300, 38.0800],
-      tagline: 'Hundreds of tall sandstone spires — superb for stargazing.',
-      overview: ['Gharameel is a field of dramatic sandstone pinnacles north-east of AlUla. In the evening, it is a favourite for sunset and stargazing experiences under very dark skies.'],
-      history: ['The spires were carved by wind and water erosion over millions of years.'],
+      id: 'gharameel', name: 'Gharameel Nature Reserve (Rock Pillars & Stargazing)', nativeName: 'محمية الغراميل',
+      region: 'madinah', city: 'AlUla', categories: ['nature'], featured: true,
+      coords: [27.1500, 37.9800],
+      tagline: 'Surreal sandstone pillars and one of the darkest night skies in the Middle East.',
+      overview: [
+        'Gharameel (Al-Gharameel) is a field of dramatic sandstone rock pillars about 60 km — roughly a 1 to 1.5-hour drive — north of AlUla, inside the Gharameel Nature Reserve.',
+        'Some spires rise up to about 40 m, in colours from golden yellow to deep red. At sunset the pillars cast long shadows across the sand, and after dark the reserve becomes one of the region\'s best places for stargazing.'
+      ],
+      history: [
+        'The pillars are remnants of a vast ancient sandstone plateau that once covered north-west Arabia. Over millions of years wind, rain and flash floods eroded the softer rock around them, leaving isolated narrow columns.',
+        'Some rocks bear ancient petroglyphs and inscriptions, and there are small natural caves among the formations.',
+        'In 2024 DarkSky International certified Gharameel Nature Reserve (together with AlUla Manara) among the first Dark Sky Places in Saudi Arabia and the Gulf. Light pollution here is extremely low (around Bortle class 1–2), giving clear views of the Milky Way.'
+      ],
       religious: null,
-      highlights: ['Sunset', 'Stargazing', 'Photography'],
-      hours: { summary: 'Mainly evening experiences (sunset & stargazing)', details: [], note: '' },
-      tickets: { required: true, price: 'Experience price varies', how: ['Book stargazing on Experience AlUla.'], links: [{ label: 'Experience AlUla', url: 'https://www.experiencealula.com' }] },
-      gettingThere: { airport: 'AlUla International (ULH)', road: 'North-east of AlUla.', transport: 'Tour transport.' },
-      bestTime: 'October – March, moonless nights', duration: '2–3 hours', dress: 'Warm layers for the night.', tips: ['Bring a camera with a tripod for night shots.']
+      highlights: [
+        'Sandstone pillars up to ~40 m tall',
+        'Sunset among the rock columns',
+        'Certified Dark Sky stargazing — Milky Way views',
+        'Guided astronomy storytelling',
+        'Bedouin-style campfire dinner',
+        'Ancient petroglyphs and inscriptions'
+      ],
+      hours: { summary: 'Guided evening tours: daily Oct – Mar; Thu – Sun Apr – Sep', details: ['Tours usually start in the late afternoon to catch sunset'], note: 'Schedules can change — check when booking.' },
+      tickets: { required: true, price: 'Guided tour (price varies by operator and package)', how: ['Self-driving into the reserve is not allowed, to protect the desert ecosystem.', 'Book an authorised 4x4 tour — options are listed on VisitSaudi and Experience AlUla.', 'Most tours include pick-up, sunset, dinner and guided stargazing.'], links: [{ label: 'VisitSaudi – Gharameel', url: 'https://www.visitsaudi.com/en/alula/attractions/algharameel-in-alula' }, { label: 'Experience AlUla', url: 'https://www.experiencealula.com' }] },
+      gettingThere: { airport: 'AlUla International (ULH)', road: 'About 60 km north of AlUla; access only with authorised 4x4 tours.', transport: 'Tour transport from AlUla.' },
+      bestTime: 'October – March; moonless nights for the best stars', duration: '4–5 hours (evening tour)',
+      dress: 'Warm layers — desert nights get very cold, especially in winter — and closed walking shoes.',
+      tips: [
+        'Check the moon phase: new-moon nights give the darkest skies.',
+        'Bring a camera with a tripod for night photography.',
+        'Do not climb on the pillars or touch the inscriptions.',
+        'Combine with Hegra and Elephant Rock during your AlUla stay.'
+      ]
     },
 
     /* ======================= ROUND 3: RIYADH PROVINCE ======================= */
