@@ -3841,5 +3841,27 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:%D9%82%D9%84%D8%B9%D8%A9_%D9%83%D8%A7%D9%81.jpg"
   }
  ],
- "jouf-olive-festival": []
+ "jouf-olive-festival": [
+  {
+   "src": "assets/photos/jouf-olive-festival/u1.jpg",
+   "thumb": "assets/photos/jouf-olive-festival/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/jouf-olive-festival/u2.jpg",
+   "thumb": "assets/photos/jouf-olive-festival/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/jouf-olive-festival/u3.jpg",
+   "thumb": "assets/photos/jouf-olive-festival/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ]
 } });

@@ -2698,18 +2698,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'November – March', duration: '1 hour', dress: 'Modest clothes.', tips: ['Nearby salt flats are beautiful at sunset.']
     },
     {
-      id: 'jouf-olive-festival', name: 'Al-Jouf Olive Farms & Festival', nativeName: 'مهرجان زيتون الجوف',
-      region: 'jawf', city: 'Sakaka', categories: ['heritage', 'nature'],
+      id: 'jouf-olive-festival', name: 'Al-Jouf Olive Farms & International Olive Festival', nativeName: 'مزارع ومهرجان زيتون الجوف الدولي',
+      region: 'jawf', city: 'Sakaka', categories: ['heritage', 'nature'], featured: true,
       coords: [29.9700, 40.2000],
-      tagline: 'Millions of olive trees and one of the region\'s largest olive festivals.',
-      overview: ['Al-Jouf is home to millions of olive trees. Each winter, the Al-Jouf Olive Festival in Sakaka brings together farmers selling olive oil, olives and local products.'],
-      history: ['Large-scale olive farming has grown in Al-Jouf since the 2000s thanks to its climate and groundwater.'],
-      religious: ['The olive tree is honoured in the Qur\'an as a "blessed tree" (An-Nur 24:35).'],
-      highlights: ['Olive oil tasting', 'Farm visits', 'Local products'],
-      hours: { summary: 'Festival usually in winter (dates vary)', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['Check local announcements for festival dates.'], links: [] },
-      gettingThere: { airport: 'Al-Jouf (AJF)', road: 'Sakaka and surrounding farms.', transport: 'Car.' },
-      bestTime: 'Winter (festival season)', duration: 'Half a day', dress: 'Casual.', tips: ['Buy oil directly from farmers.']
+      tagline: 'The olive capital of Saudi Arabia — millions of trees and a winter festival in Sakaka.',
+      overview: [
+        'Al-Jouf is known as the olive capital of Saudi Arabia, with more than 20 million olive trees on thousands of farms. Most commercial groves lie in the fertile Busayta agricultural area south-west of Sakaka.',
+        'Every January the Al-Jouf International Olive Festival is held in Sakaka for about ten days, celebrating the winter harvest and pressing season with olive-oil exhibitions, folk shows and food and craft markets.',
+        'Large estates such as the Al-Jouf Agricultural Development Company (JADCO) — recognised by Guinness World Records as the largest modern olive farm in the world — and NADEC\'s olive project use high-density planting and smart irrigation, producing organic extra-virgin olive oil.'
+      ],
+      history: [
+        'Large-scale olive farming grew rapidly in Al-Jouf from the 2000s, thanks to its climate, fertile soil and groundwater.',
+        'The olive festival has grown into an international event, with producers from Saudi Arabia and countries such as Spain, Italy, Jordan and Türkiye.'
+      ],
+      religious: ['The olive tree is honoured in the Qur\'an as "a blessed tree" whose oil gives light (An-Nur 24:35), and the Prophet ﷺ encouraged eating olive oil and anointing with it.'],
+      highlights: [
+        'Al-Jouf International Olive Festival (every January, Sakaka)',
+        'Fresh extra-virgin olive oil tastings',
+        'Pickled olives, olive-based cosmetics and local products',
+        'Traditional Ardah dances, folk music and parades',
+        'Sadu weaving and handicraft markets',
+        'Guided agri-tours of large olive estates (by arrangement)'
+      ],
+      hours: { summary: 'Festival: about 10 days each January; farm tours by arrangement', details: ['The 19th festival ran 8–17 January 2026; the next is expected in January 2027', 'Retail olive-oil showrooms in Sakaka are open most mornings and evenings'], note: 'Festival dates are announced each year — check before travelling.' },
+      tickets: { required: 'partial', price: 'Festival entry free; farm tours paid', how: ['Entry to the festival grounds is free.', 'Large commercial farms require advance booking — arrange through local tour operators or agri-tourism platforms rather than turning up unannounced.', 'Saudi Arabia Railways often offers seasonal discounts to Al-Jouf during the festival.'], links: [{ label: 'VisitSaudi', url: 'https://www.visitsaudi.com' }] },
+      gettingThere: { airport: 'Al-Jouf Airport (AJF), Sakaka', road: 'Festival at the Prince Abdulilah Cultural Centre in Sakaka; farms mainly in the Busayta area south-west of the city.', transport: 'Train from Riyadh to Al-Jouf station, then taxi; car needed for farms.' },
+      bestTime: 'Mid-January (festival); November – March for mild weather', duration: 'Half a day to 1 day',
+      dress: 'Warm clothes — northern winters are cold.',
+      tips: [
+        'Buy freshly pressed winter oil directly from producers at the festival.',
+        'Ask about acidity — good extra-virgin oil is below 0.8–1%.',
+        'Combine with Za\'abal Castle, the Rajajil standing stones and Dumat al-Jandal.'
+      ]
     }
   ]
 });
