@@ -2983,7 +2983,15 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Madinah_Museum.JPG"
   }
  ],
- "wadi-al-jinn": [],
+ "wadi-al-jinn": [
+  {
+   "src": "assets/photos/wadi-al-jinn/u1.jpg",
+   "thumb": "assets/photos/wadi-al-jinn/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "sharaan": [
   {
    "src": "assets/photos/sharaan/d1.jpg",

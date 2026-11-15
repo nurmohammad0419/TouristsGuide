@@ -1858,18 +1858,37 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'Any time', duration: '1–2 hours', dress: 'Modest clothes.', tips: ['Great introduction before visiting Madinah\'s historic sites.']
     },
     {
-      id: 'wadi-al-jinn', name: 'Wadi al-Jinn (Al-Baida "Magnetic Hill")', nativeName: 'وادي الجن (البيضاء)',
+      id: 'wadi-al-jinn', name: 'Wadi al-Jinn (Wadi al-Baida "Gravity Hill")', nativeName: 'وادي الجن (وادي البيضاء)',
       region: 'madinah', city: 'Madinah', categories: ['nature'],
-      coords: [24.6700, 39.3700], 
-      tagline: 'A desert road where cars seem to roll uphill.',
-      overview: ['About 40 km north-west of Madinah, a straight road through dark volcanic hills creates an optical illusion: cars in neutral appear to roll "uphill" and gain speed. It is a popular stop for visitors to Madinah.'],
-      history: ['Local legend says the effect is caused by jinn, giving the valley its name; scientifically it is a "gravity hill" illusion caused by the surrounding slopes.'],
-      religious: null,
-      highlights: ['"Uphill" rolling illusion', 'Black volcanic landscape'],
-      hours: { summary: 'Open at all times (daylight recommended)', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'About 40 minutes north-west of Madinah.', transport: 'Car or tour.' },
-      bestTime: 'Morning or late afternoon', duration: '1 hour', dress: 'Casual.', tips: ['Only test the effect when the road is empty.']
+      coords: [24.6700, 39.3700], wiki: 'https://en.wikipedia.org/wiki/Wadi_Al_Baida',
+      tagline: 'A desert valley where cars in neutral seem to roll uphill.',
+      overview: [
+        'Wadi al-Jinn — officially Wadi al-Baida — is a desert valley about 30 km north-west of Madinah, inside Al-Baida Park. It is famous as a "gravity hill", where vehicles left in neutral appear to roll uphill by themselves and even pick up speed.',
+        'Beyond the illusion, the valley\'s rugged mountains and open desert make it a popular weekend picnic spot, with quad-bike rentals and camel rides.'
+      ],
+      history: [
+        'The name "Valley of the Jinn" comes from Arabian folklore, which blamed supernatural spirits for the strange movement of cars and the echoing desert winds.',
+        'Another popular myth says the volcanic mountains are magnetic and pull metal cars upward. Scientific assessments have found no magnetic anomaly: the effect is a classic gravity-hill optical illusion. The surrounding mountains hide the true horizon, so a gentle downhill slope looks like an uphill one.'
+      ],
+      religious: [
+        'Local authorities and religious scholars clarify that the site has no supernatural activity and no special religious status — it is a natural optical illusion, not a place of worship or ziyarat.'
+      ],
+      highlights: [
+        'Car "rolling uphill" optical illusion',
+        'Rugged mountain and desert scenery',
+        'Quad bikes and camel rides',
+        'Family picnic areas in Al-Baida Park'
+      ],
+      hours: { summary: 'Open at all times; best in daylight', details: ['Very busy on weekends'], note: '' },
+      tickets: { required: false, price: 'Free entry (quad bikes and camel rides paid)', how: ['No ticket needed.'], links: [] },
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'Paved road about 30–40 minutes north-west of central Madinah.', transport: 'Car, taxi or ziyarat tour.' },
+      bestTime: 'Early morning or late afternoon, November – January', duration: '1–2 hours',
+      dress: 'Casual modest clothes, sun hat.',
+      tips: [
+        'Only test the illusion when the road is clear — cars in neutral can gain real speed.',
+        'Never stop in the middle of active traffic lanes.',
+        'Avoid midday heat and weekend crowds.'
+      ]
     },
     {
       id: 'sharaan', name: 'Sharaan Nature Reserve', nativeName: 'محمية شرعان الطبيعية',
