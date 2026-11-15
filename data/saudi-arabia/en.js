@@ -1234,18 +1234,38 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'Summer', duration: '2–3 hours', dress: 'Comfortable shoes.', tips: ['Not for those afraid of heights.']
     },
     {
-      id: 'tanomah', name: 'Tanomah Mountains', nativeName: 'تنومة',
-      region: 'asir', city: 'Tanomah', categories: ['nature'],
+      id: 'tanomah', name: 'Tanomah Mountains', nativeName: 'جبال تنومة',
+      region: 'asir', city: 'Tanomah', categories: ['nature'], featured: true,
       coords: [18.9300, 42.1700], wiki: 'https://en.wikipedia.org/wiki/Tanomah',
-      tagline: 'Granite peaks, waterfalls in the rain season and fog.',
-      overview: ['Tanomah is known for unusual granite rock formations, green terraces, seasonal waterfalls and mist that rolls through the valleys.'],
-      history: ['A traditional farming area of northern Asir with old stone villages.'],
+      tagline: 'Misty granite peaks, forests and seasonal waterfalls high in the Sarawat range.',
+      overview: [
+        'The Tanomah Mountains are a high-altitude mountain area in Asir Province, south-western Saudi Arabia, about 120 km north of Abha by road along the Sarawat range. Rising roughly 2,000–3,000 m above sea level, they stand out from most of the Arabian Peninsula for their cool climate, juniper forests and misty green peaks.',
+        'Huge rounded granite boulders and rocky summits give Tanomah a unique landscape that is popular with hikers, climbers and photographers. Fog often rolls through the valleys in the afternoon, especially in summer.'
+      ],
+      history: [
+        'Tanomah is a traditional farming area of northern Asir, with old stone villages and terraced fields built on the mountain slopes.',
+        'In recent years the area has been developed for eco-tourism, with parks, viewpoints, trails and licensed adventure operators.'
+      ],
       religious: null,
-      highlights: ['Rock formations', 'Seasonal waterfalls', 'Mountain hikes'],
-      hours: { summary: 'Open at all times', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Abha (AHB) or Al-Bahah (ABT)', road: 'Between Abha and Al-Bahah on the mountain road.', transport: 'Car.' },
-      bestTime: 'Summer and after rains', duration: 'Half a day', dress: 'Layers, rain jacket.', tips: ['Fog can reduce visibility suddenly.']
+      highlights: [
+        'Mount Manaa (Jabal Manaa) — one of the highest and most iconic peaks in the area, with dramatic drops and climbing routes',
+        'Moomah (Moma) ridge hike with wide views over the escarpment',
+        'Seasonal waterfalls after the rains',
+        'Alsharaf Park — trails, viewpoints and camping areas',
+        'Juniper, acacia and wild-plant woodland',
+        'Rock hiking, climbing and mountain biking with local guides'
+      ],
+      hours: { summary: 'Open at all times; trails best in daylight', details: ['Fog is common in summer afternoons — start hikes early'], note: 'Waterfalls flow mainly after rain (spring and late summer).' },
+      tickets: { required: false, price: 'Free (guided adventures paid)', how: ['No ticket is needed for viewpoints and parks.', 'Guided hikes, rock-hiking and biking can be booked with licensed local operators such as Husaak Adventures Tanoma (listed on VisitSaudi).'], links: [{ label: 'Guided adventures (VisitSaudi)', url: 'https://www.visitsaudi.com/en/aseer/attractions/husaak-adventures-tanoma' }] },
+      gettingThere: { airport: 'Abha International (AHB) or Al-Bahah (ABT)', road: 'About 120 km (≈2 hours) north of Abha on the mountain road towards Al-Namas and Al-Bahah.', transport: 'Car; no public transport.' },
+      bestTime: 'June – September for cool, misty weather; winter for crisp clear days', duration: 'Half to full day',
+      dress: 'Layers and a rain jacket in summer; warm clothes in winter (around 5 °C at night, occasional frost on the highest crests); good hiking shoes.',
+      tips: [
+        'Summers rarely exceed about 30 °C, making Tanomah a favourite escape from the heat.',
+        'Fog can reduce visibility suddenly — drive slowly on mountain roads.',
+        'Hire a local guide for Mount Manaa and climbing routes.',
+        'Combine with Al-Namas and Habala for a mountain road trip.'
+      ]
     },
 
     /* ======================= MORE: AL-BAHAH ======================= */

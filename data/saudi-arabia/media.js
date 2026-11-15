@@ -2250,7 +2250,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:The_Ridges_of_Sarawat_Mountains.jpg"
   }
  ],
- "tanomah": [],
+ "tanomah": [
+  {
+   "src": "assets/photos/tanomah/u2.jpg",
+   "thumb": "assets/photos/tanomah/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tanomah/u3.jpg",
+   "thumb": "assets/photos/tanomah/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tanomah/u1.jpg",
+   "thumb": "assets/photos/tanomah/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "raghadan-forest": [],
  "fayfa": [
   {
