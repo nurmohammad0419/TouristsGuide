@@ -2001,17 +2001,36 @@ TG.registerCountry('saudi-arabia', 'en', {
     /* ======================= ROUND 3: EASTERN PROVINCE ======================= */
     {
       id: 'qaisariya-souq', name: 'Al-Qaisariya Souq, Hofuf', nativeName: 'سوق القيصرية',
-      region: 'eastern', city: 'Hofuf', categories: ['heritage'], unesco: true,
-      coords: [25.3797, 49.5867], 
-      tagline: 'One of the oldest covered markets in Arabia.',
-      overview: ['Al-Qaisariya is a covered traditional market of more than 400 shops selling bishts (cloaks), spices, dates, perfumes and crafts. It is part of the Al-Ahsa Oasis UNESCO site.'],
-      history: ['The souq dates back to the 1820s; it was restored after a fire in 2001.'],
+      region: 'eastern', city: 'Hofuf', categories: ['heritage'], unesco: true, featured: true,
+      coords: [25.3797, 49.5867],
+      tagline: 'One of the oldest covered markets in the Gulf — bishts, dates, spices and oud.',
+      overview: [
+        'Al-Qaisariya Souq is a historic covered marketplace in the heart of Al-Hofuf, established in 1822. It is one of the oldest traditional markets in the Arabian Gulf and part of the Al-Ahsa Oasis UNESCO World Heritage Site.',
+        'The market covers several thousand square metres, with around 14 gates leading into narrow, shaded corridors. Raised, roofed alleyways keep the air moving naturally and house more than 400 small shops behind classic wooden doors and shutters.',
+        'It is quiet in the mornings but comes alive after sunset, when the lit gateways glow and the scents of oud, incense and spices fill the passages.'
+      ],
+      history: [
+        'The souq was built in 1822 as the commercial heart of Hofuf, the main town of the Al-Ahsa oasis, serving traders from across eastern Arabia and the Gulf.',
+        'After a major fire in 2001 it was carefully restored in its traditional style, and it is now protected as part of the Al-Ahsa Oasis World Heritage Site (inscribed 2018).'
+      ],
       religious: null,
-      highlights: ['Hand-made bisht cloaks', 'Spices and dates', 'Traditional architecture'],
-      hours: { summary: 'Typically morning and evening, closed in the afternoon', details: [], note: 'Shops close during prayer times.' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Al-Ahsa (HOF)', road: 'Central Hofuf, near Ibrahim Palace.', transport: 'Taxi.' },
-      bestTime: 'Evening', duration: '1–2 hours', dress: 'Modest clothes.', tips: ['Al-Ahsa\'s bishts are famous across the Gulf.']
+      highlights: [
+        'Hand-woven Hasawi bisht cloaks made by local artisans',
+        'Al-Ahsa dates, herbs and traditional spices',
+        'Oud, incense and perfumes',
+        'Traditional clothing, brassware, pottery and jewellery',
+        'Lit gateways and lively evening atmosphere'
+      ],
+      hours: { summary: 'Sat – Thu 8:00 – 11:30 AM and 4:00 – 11:00 PM; Fri 4:00 – 11:00 PM', details: ['Busiest on Friday evenings; quietest on weekday mornings', 'Shops close briefly at prayer times'], note: 'Hours can change in Ramadan.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket needed.'], links: [{ label: 'VisitSaudi', url: 'https://www.visitsaudi.com' }] },
+      gettingThere: { airport: 'Al-Ahsa (HOF) or King Fahd International, Dammam (DMM)', road: 'King Abdulaziz Road, Al-Rafa\'a North, central Hofuf — next to Ibrahim Palace. Parking nearby, including wheelchair-accessible spaces.', transport: 'Taxi; train from Riyadh or Dammam to Hofuf station, then a short taxi ride.' },
+      bestTime: 'Evenings, November – March', duration: '1–2 hours',
+      dress: 'Modest clothes.',
+      tips: [
+        'Bargaining is expected — start lower than the asking price.',
+        'Visit Ibrahim Palace next door before the evening market opens.',
+        'Wheelchair-accessible entrances, restrooms, cafés and small restaurants are available.'
+      ]
     },
     {
       id: 'fanateer-beach', name: 'Al-Fanateer Beach, Jubail', nativeName: 'شاطئ الفناتير',
