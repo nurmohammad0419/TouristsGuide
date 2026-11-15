@@ -2284,18 +2284,43 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'Morning or evening', duration: '20 minutes', dress: 'Modest clothes.', tips: ['Nearby are the small mosques of Abu Bakr and Ali.']
     },
     {
-      id: 'madinah-dates-market', name: 'Madinah Dates Market & Ajwa Farms', nativeName: 'سوق التمور بالمدينة',
-      region: 'madinah', city: 'Madinah', categories: ['heritage', 'religious'],
+      id: 'madinah-dates-market', name: 'Madinah Dates Markets & Ajwa Farms', nativeName: 'أسواق التمور ومزارع العجوة بالمدينة',
+      region: 'madinah', city: 'Madinah', categories: ['heritage', 'religious'], featured: true,
       coords: [24.4420, 39.6150],
-      tagline: 'Buy the famous Ajwa dates straight from Madinah\'s markets and farms.',
-      overview: ['Madinah is famous for its dates, above all Ajwa — small, dark and soft. Dates markets near Quba and around the city sell dozens of varieties, and some farms welcome visitors to see the palms and buy directly.'],
-      history: ['The oasis of Madinah (Yathrib) has been known for its palm groves since long before Islam.'],
-      religious: ['The Prophet ﷺ said: "Whoever eats seven Ajwa dates in the morning, neither poison nor magic will harm him that day" (Sahih al-Bukhari). Many pilgrims take Ajwa dates home as a blessed gift.'],
-      highlights: ['Ajwa, Safawi, Sukkari and Mabroom dates', 'Tasting before buying', 'Palm farms'],
-      hours: { summary: 'Markets typically morning and evening', details: [], note: 'Harvest season roughly July – September.' },
-      tickets: { required: false, price: 'Free entry', how: ['No booking.'], links: [] },
-      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'Around the Quba area and on the city\'s main roads.', transport: 'Taxi.' },
-      bestTime: 'Harvest season', duration: '1 hour', dress: 'Modest clothes.', tips: ['Ask to taste before buying; prices vary by grade.']
+      tagline: 'Taste and buy the famous Ajwa dates straight from Madinah\'s markets and palm orchards.',
+      overview: [
+        'Madinah is world-famous for its dates, above all Ajwa — small, dark brown to near-black, softly wrinkled and gently sweet. Visitors can shop in busy wholesale markets for bulk bargains, or visit orchards in the fertile Al-Aliya area near Quba to taste fresh dates at the source.',
+        'The Madinah Central Dates Market has organised stalls of local producers selling well over 100 varieties, including Ajwa, Safawi, Anbara, Sukkari and Medjool, with seasonal auctions during the summer harvest. A large wholesale dates section in the city\'s central produce market offers some of the most competitive prices.',
+        'Many farm shops in Al-Aliya and around Quba and Sayyid al-Shuhada (Uhud) offer generous tastings, gift boxes, date chocolates and nuts, and are a popular stop on ziyarat tours.'
+      ],
+      history: [
+        'The oasis of Madinah (Yathrib) has been famous for its palm groves since long before Islam, and dates were a staple food of the early Muslim community.',
+        'Ajwa from the Al-Aliya highlands, south of the city near Quba, is traditionally considered the finest grade.'
+      ],
+      religious: [
+        'The Prophet ﷺ said: "Whoever eats seven Ajwa dates in the morning, neither poison nor magic will harm him that day" (Sahih al-Bukhari). Many pilgrims therefore take Ajwa dates home as a blessed gift.',
+        'Muslims also break their fast with dates in Ramadan, following the Sunnah of the Prophet ﷺ.'
+      ],
+      highlights: [
+        'Ajwa, Safawi, Anbara, Sukkari, Mabroom and Medjool dates',
+        'Free tasting before buying',
+        'Madinah Central Dates Market (stalls and summer auctions)',
+        'Wholesale dates market for bulk prices',
+        'Ajwa orchards and farm shops in Al-Aliya near Quba',
+        'Gift boxes, date chocolates and nuts'
+      ],
+      hours: { summary: 'Central Dates Market about 6:00 AM – 11:00 PM; many farm shops morning to late evening', details: ['Harvest season roughly July – September', 'Some farm shops close at Friday midday prayer'], note: 'Opening hours vary by shop.' },
+      tickets: { required: false, price: 'Free entry', how: ['No ticket needed — just walk in and taste.'], links: [] },
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'Central market in the city; orchards mainly in Al-Aliya near Quba Mosque and around Uhud.', transport: 'Taxi or ziyarat tour (many tours include a date-farm stop).' },
+      bestTime: 'Harvest season (July – September) for fresh dates; any time for dried', duration: '1 hour',
+      dress: 'Modest clothes.',
+      tips: [
+        'Authentic Madinah Ajwa is dark brown to near-black with fine wrinkles and soft flesh.',
+        'Ask the seller to open a large box so you can check the bottom layer matches the top.',
+        'Look for "Ajwa Al-Aliya" — dates from the farms near Quba are considered the best grade.',
+        'Prefer shops that keep dates in cold storage for freshness.',
+        'Bargaining is normal, especially when buying in bulk.'
+      ]
     },
     {
       id: 'harrat-viewpoint', name: 'Harrat Viewpoint, AlUla', nativeName: 'إطلالة الحرة',

@@ -3471,7 +3471,22 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:Mosque_of_Al-Ghamama_Interior_4.jpg"
   }
  ],
- "madinah-dates-market": [],
+ "madinah-dates-market": [
+  {
+   "src": "assets/photos/madinah-dates-market/u1.jpg",
+   "thumb": "assets/photos/madinah-dates-market/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/madinah-dates-market/u2.jpg",
+   "thumb": "assets/photos/madinah-dates-market/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "harrat-viewpoint": [],
  "rainbow-rock": [],
  "umm-jarsan": [],
