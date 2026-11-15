@@ -3487,7 +3487,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": ""
   }
  ],
- "harrat-viewpoint": [],
+ "harrat-viewpoint": [
+  {
+   "src": "assets/photos/harrat-viewpoint/u1.jpg",
+   "thumb": "assets/photos/harrat-viewpoint/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/harrat-viewpoint/u2.jpg",
+   "thumb": "assets/photos/harrat-viewpoint/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/harrat-viewpoint/u3.jpg",
+   "thumb": "assets/photos/harrat-viewpoint/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "rainbow-rock": [],
  "umm-jarsan": [],
  "murabba-palace": [

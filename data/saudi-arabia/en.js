@@ -2324,17 +2324,35 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'harrat-viewpoint', name: 'Harrat Viewpoint, AlUla', nativeName: 'إطلالة الحرة',
-      region: 'madinah', city: 'AlUla', categories: ['nature'],
+      region: 'madinah', city: 'AlUla', categories: ['nature'], featured: true,
       coords: [26.6200, 37.8600],
-      tagline: 'Sunset over AlUla from the edge of a volcanic plateau.',
-      overview: ['On the edge of the Harrat Uwayrid lava plateau, this viewpoint looks down over the AlUla valley, its palm oasis and sandstone mountains. A restaurant and seating area make it a favourite sunset spot.'],
-      history: ['Harrat Uwayrid is a vast volcanic field of black basalt that once flowed over the sandstone landscape.'],
+      tagline: 'A 1,219 m volcanic lookout with sweeping sunset views over the AlUla oasis.',
+      overview: [
+        'Harrat Viewpoint is a panoramic lookout on top of Harrat Uwayrid, a volcanic mountain in a field of black lava above AlUla. At about 1,219 m (4,000 ft) above sea level, it gives sweeping views over the AlUla oasis, AlUla Old Town, Dadan and the surrounding sandstone canyons.',
+        'Sunken circular sofas are built into the hillside around fire pits that are lit as the evening cools, making it one of AlUla\'s favourite places to watch the sunset and, after dark, the stars.'
+      ],
+      history: [
+        'Harrat Uwayrid is part of a vast volcanic field of black basalt that once flowed over the sandstone landscape of north-west Arabia.',
+        'The viewpoint was developed as a visitor attraction as AlUla opened to tourism, with a paved path, seating, lighting and seasonal dining.'
+      ],
       religious: null,
-      highlights: ['Sunset panorama', 'Volcanic landscape', 'Dining with a view'],
-      hours: { summary: 'Typically afternoon to evening', details: [], note: 'Opening times vary by season.' },
-      tickets: { required: 'partial', price: 'Access/dining may require booking', how: ['Check Experience AlUla for current access.'], links: [{ label: 'Experience AlUla', url: 'https://www.experiencealula.com' }] },
-      gettingThere: { airport: 'AlUla International (ULH)', road: 'Up the mountain road west of AlUla town.', transport: 'Car.' },
-      bestTime: 'Sunset, October – March', duration: '1–2 hours', dress: 'Warm layer for the evening.', tips: ['Arrive 45 minutes before sunset.']
+      highlights: [
+        'Wide views over the green palm oasis, Old Town and canyons',
+        'Golden-hour sunsets as the valley turns gold and pink',
+        'Stargazing with little light pollution',
+        'Sunken lounge seating with fire pits',
+        'Seasonal dining with valley views'
+      ],
+      hours: { summary: 'Typically daily 2:00 PM – 10:00 PM', details: ['Arrive about 45 minutes before sunset for a good seat'], note: 'Hours and dining options change by season.' },
+      tickets: { required: false, price: 'Free — no advance booking needed', how: ['Just drive up; free parking near the top.'], links: [{ label: 'Experience AlUla – Harrat Viewpoint', url: 'https://www.experiencealula.com/en/places-to-go/harrat-viewpoint' }] },
+      gettingThere: { airport: 'AlUla International (ULH)', road: 'About 30 minutes from AlUla Old Town up a steep, winding road with hairpin bends through volcanic terrain. Free parking near the summit.', transport: 'Car or taxi.' },
+      bestTime: 'Sunset, October – March', duration: '1–2 hours',
+      dress: 'A jacket or extra layer — it gets cool and windy at this height in the evening.',
+      tips: [
+        'Drive the hairpin road carefully, especially after dark.',
+        'Stay for the stars after sunset.',
+        'Combine with AlUla Old Town and Dadan in the same day.'
+      ]
     },
     {
       id: 'rainbow-rock', name: 'Rainbow Rock, AlUla', nativeName: 'صخرة قوس قزح',
