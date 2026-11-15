@@ -2930,7 +2930,36 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront_Jeddah_Saudi_Arabia_096.jpg"
   }
  ],
- "masjid-al-jumuah": [],
+ "masjid-al-jumuah": [
+  {
+   "src": "assets/photos/masjid-al-jumuah/u1.jpg",
+   "thumb": "assets/photos/masjid-al-jumuah/u1-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/masjid-al-jumuah/u2.jpg",
+   "thumb": "assets/photos/masjid-al-jumuah/u2-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/masjid-al-jumuah/u3.jpg",
+   "thumb": "assets/photos/masjid-al-jumuah/u3-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/masjid-al-jumuah/u4.jpg",
+   "thumb": "assets/photos/masjid-al-jumuah/u4-sm.jpg",
+   "credit": "Shared by site owner",
+   "license": "",
+   "page": ""
+  }
+ ],
  "dar-al-madinah": [
   {
    "src": "assets/photos/dar-al-madinah/d1.jpg",

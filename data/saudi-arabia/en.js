@@ -1807,19 +1807,41 @@ TG.registerCountry('saudi-arabia', 'en', {
 
     /* ======================= ROUND 3: MADINAH PROVINCE ======================= */
     {
-      id: 'masjid-al-jumuah', name: 'Masjid al-Jumu\'ah', nativeName: 'مسجد الجمعة',
-      region: 'madinah', city: 'Madinah', categories: ['religious'],
-      coords: [24.4530, 39.6040], 
-      tagline: 'Where the Prophet ﷺ led the first Friday prayer.',
-      overview: ['A white-domed mosque in the Ranuna valley between Quba and the Prophet\'s Mosque.'],
-      history: ['On his way from Quba to the centre of Madinah during the Hijrah in 622 CE, the Prophet ﷺ stopped here with the Banu Salim ibn Awf and led the first Jumu\'ah prayer and sermon. The mosque has been rebuilt several times, most recently in the 1990s.'],
-      religious: ['It marks the first Friday congregational prayer led by the Prophet ﷺ, a weekly obligation for Muslim men.'],
-      highlights: ['First Jumu\'ah site', 'Quiet prayer hall'],
-      hours: { summary: 'Open for the five daily prayers', details: [], note: '' },
-      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
-      access: 'Muslims may enter for prayer; others may view the exterior.',
-      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'About 1 km north of Quba Mosque.', transport: 'Taxi or walk along Quba Avenue.' },
-      bestTime: 'Morning', duration: '30 minutes', dress: 'Modest clothes.', tips: ['Visit on the way between Quba and the Prophet\'s Mosque.']
+      id: 'masjid-al-jumuah', name: 'Masjid al-Jumu\'ah (Friday Mosque)', nativeName: 'مسجد الجمعة',
+      region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'], featured: true,
+      coords: [24.4470, 39.6150], wiki: 'https://en.wikipedia.org/wiki/Al_Jum%27ah_Mosque',
+      tagline: 'Where the Prophet ﷺ led the first Friday prayer in Islam.',
+      overview: [
+        'Masjid al-Jumu\'ah is the historic mosque in Madinah marking the site where Prophet Muhammad ﷺ led the first Friday (Jumu\'ah) congregational prayer in Islamic history. It stands on Tariq As-Salam in the Quba area, about 900 m north of Masjid Quba.',
+        'Much smaller and quieter than the city\'s main mosques, it offers a peaceful setting for prayer and reflection, and many visitors stop here while walking the Quba Walkway between Masjid Quba and Al-Masjid an-Nabawi.'
+      ],
+      history: [
+        'During the Hijrah from Makkah to Madinah in 1 AH (622 CE), the Prophet ﷺ stayed in Quba for several days and then continued towards the city on a Friday.',
+        'When he reached the valley of Wadi Ranuna, in the area of the Banu Salim ibn \'Awf, the people asked him to stop. There he delivered the first Jumu\'ah sermon (khutbah) and led around 100 companions in prayer.',
+        'Over the centuries the mosque has also been known as Masjid Bani Salim, Masjid al-Wadi, Masjid al-Qubayb and Masjid \'Atikah. First built of stone, it was renovated many times; the current white building was expanded and reopened in 1991.',
+        'Archaeological work in front of the mosque has uncovered ancient remains and stone inscriptions, which local sources associate with a companion of the Prophet ﷺ from the Banu Salim.'
+      ],
+      religious: [
+        'Jumu\'ah is a weekly obligation for Muslim men, and this mosque marks the very first one led by the Prophet ﷺ — a moment that established the Friday congregation and sermon as a pillar of Muslim community life.',
+        'Visiting it is a meaningful stop on the Hijrah route, often combined with Masjid Quba, about which the Prophet ﷺ said praying two rak\'ahs there brings the reward of an Umrah.'
+      ],
+      highlights: [
+        'Site of the first Jumu\'ah prayer and sermon',
+        'White mosque with one main dome, four smaller domes and a tall minaret',
+        'Capacity of about 650 worshippers',
+        'Women\'s prayer hall, library and Qur\'an memorisation school',
+        'On the Quba Walkway between Quba and the Prophet\'s Mosque'
+      ],
+      hours: { summary: 'Open 24 hours, daily', details: ['Quietest outside the five prayer times'], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking needed.'], links: [] },
+      access: 'The interior is for Muslim visitors; others may view the exterior.',
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz (MED)', road: 'Tariq As-Salam, Al-Jumu\'ah district, about 900 m north of Masjid Quba; wheelchair-accessible parking.', transport: 'Taxi, Madinah buses, or walk along the Quba Walkway from Quba Mosque (about 10–15 minutes).' },
+      bestTime: 'Morning, or on the walk between Quba and the Prophet\'s Mosque', duration: '30 minutes',
+      dress: 'Modest clothing; women cover their hair. Remove shoes before entering.',
+      tips: [
+        'Combine with Masjid Quba and the Prophet\'s Mosque on a walking ziyarat.',
+        'Wheelchair-accessible entrances and restrooms are available.'
+      ]
     },
     {
       id: 'dar-al-madinah', name: 'Dar Al Madinah Museum', nativeName: 'متحف دار المدينة',
