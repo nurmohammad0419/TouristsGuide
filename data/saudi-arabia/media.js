@@ -770,39 +770,39 @@ TG.registerMedia('saudi-arabia', { spots: {
  ],
  "ithra": [
   {
-   "src": "assets/photos/ithra/1.jpg",
-   "thumb": "assets/photos/ithra/1-sm.jpg",
-   "credit": "Kristof Zyskowski &amp; Yulia Bereshpolova",
-   "license": "CC BY 2.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ortilia_ithra_-_23709618350.jpg"
+   "src": "assets/photos/ithra/g1.jpg",
+   "thumb": "assets/photos/ithra/g1-sm.jpg",
+   "credit": "Ashashyou",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdulaziz_Center_for_World_Culture_13.jpg"
   },
   {
-   "src": "assets/photos/ithra/2.jpg",
-   "thumb": "assets/photos/ithra/2-sm.jpg",
-   "credit": "Romi Galeota Lencina",
-   "license": "CC BY 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ortilia_ithra_44636818.jpg"
+   "src": "assets/photos/ithra/g2.jpg",
+   "thumb": "assets/photos/ithra/g2-sm.jpg",
+   "credit": "Ashashyou",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdulaziz_Center_for_World_Culture_child_museum_10.jpg"
   },
   {
-   "src": "assets/photos/ithra/3.jpg",
-   "thumb": "assets/photos/ithra/3-sm.jpg",
-   "credit": "Romi Galeota Lencina",
-   "license": "CC BY 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ortilia_ithra_63603915.jpg"
+   "src": "assets/photos/ithra/g3.jpg",
+   "thumb": "assets/photos/ithra/g3-sm.jpg",
+   "credit": "Ashashyou",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdulaziz_Center_for_World_Culture_child_museum_9.jpg"
   },
   {
-   "src": "assets/photos/ithra/4.jpg",
-   "thumb": "assets/photos/ithra/4-sm.jpg",
-   "credit": "Romi Galeota Lencina",
-   "license": "CC BY 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ortilia_ithra_66415373.jpg"
+   "src": "assets/photos/ithra/g4.jpg",
+   "thumb": "assets/photos/ithra/g4-sm.jpg",
+   "credit": "AhmadElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdulaziz_Center_for_World_Culture,_Fountain.jpg"
   },
   {
-   "src": "assets/photos/ithra/5.jpg",
-   "thumb": "assets/photos/ithra/5-sm.jpg",
-   "credit": "Kristof Zyskowski &amp; Yulia Bereshpolova",
-   "license": "CC BY 2.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Ortilia_ithra.jpg"
+   "src": "assets/photos/ithra/g5.jpg",
+   "thumb": "assets/photos/ithra/g5-sm.jpg",
+   "credit": "AhmadElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:King_Abdulaziz_Center_for_World_Culture,_3d_model.jpg"
   }
  ],
  "rijal-almaa": [

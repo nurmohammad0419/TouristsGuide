@@ -13,6 +13,7 @@ The first country is **Saudi Arabia**. It has 129 spots across all 13 provinces 
 - Instant search (press `/` or `Ctrl+K`), filters by province and category, and sorting
 - Interactive Leaflet/OpenStreetMap maps for each country and spot
 - Layouts for phone, tablet and desktop, with RTL support ready for Arabic or Urdu
+- **Tour Plan** wizard (`#/c/<country>/plan`): visa check by nationality/residence, Muslim / non-Muslim routing, dates, group type, transport and arrival airport → a day-by-day itinerary with bookings, documents and tips. Logic in `js/planner.js`, country rules in `data/<country>/plan.js`.
 - Plain HTML, CSS and JS with no build step. It runs from any static host (GitHub Pages, Netlify) or straight from `index.html`.
 
 ## Run locally

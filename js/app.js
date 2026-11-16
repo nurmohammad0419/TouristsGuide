@@ -3,7 +3,7 @@
   'use strict';
 
   const CFG = window.TG_CONFIG;
-  const store = { countries: {}, media: {}, loading: {} };
+  const store = { countries: {}, media: {}, planner: {}, loading: {} };
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -25,7 +25,8 @@
   /* ---------------- Public registration API (used by data files) ---------------- */
   window.TG = {
     registerCountry(id, lang, data) { store.countries[id + ':' + lang] = data; },
-    registerMedia(id, data) { store.media[id] = data; }
+    registerMedia(id, data) { store.media[id] = data; },
+    registerPlanner(id, data) { store.planner[id] = data; }
   };
 
   function loadScript(src) {
@@ -43,6 +44,7 @@
       store.loading[key] = (async () => {
         const jobs = [loadScript(`data/${id}/${state.lang}.js`)];
         if (!store.media[id]) jobs.push(loadScript(`data/${id}/media.js`));
+        if (!store.planner[id]) jobs.push(loadScript(`data/${id}/plan.js`));
         await Promise.all(jobs);
         if (!store.countries[key] && state.lang !== 'en') await loadScript(`data/${id}/en.js`);
       })();
@@ -90,6 +92,7 @@
     if (country) {
       links.push(`<a href="#/c/${country}" data-jump="spots">${t('nav.spots')}</a>`);
       links.push(`<a href="#/c/${country}" data-jump="map">${t('nav.map')}</a>`);
+      links.push(`<a href="#/c/${country}/plan" class="nav__cta">🗓️ ${t('nav.plan')}</a>`);
     }
     $('#navLinks').innerHTML = links.join('');
 
@@ -127,6 +130,7 @@
           <p class="hero__sub reveal">${esc(t('home.subtitle'))}</p>
           <div class="hero__cta reveal">
             <a class="btn btn--primary" href="#/c/${live.id}">${live.flag} ${esc(t('home.cta'))} ${icon.arrow}</a>
+            <a class="btn btn--glass" href="#/c/${live.id}/plan">🗓️ ${t('nav.plan')}</a>
             <button class="btn btn--glass" data-open-search>${t('common.searchPlaceholder')}</button>
           </div>
         </div>
@@ -212,6 +216,7 @@
           <div class="hero__cta reveal">
             <button class="btn btn--primary" data-jump="spots">${data.spots.length} ${t('nav.spots')} ${icon.arrow}</button>
             <button class="btn btn--glass" data-jump="map">${t('nav.map')}</button>
+            <a class="btn btn--glass" href="#/c/${cid}/plan">🗓️ ${t('nav.plan')}</a>
           </div>
         </div>
         <div class="stats container">
@@ -513,6 +518,34 @@
     cleanup.push(() => io.disconnect());
   }
 
+  /* ---------------- Tour planner page ---------------- */
+  function plannerCtx(cid, data) {
+    return { cid, data, P: store.planner[cid], t, esc, cover, img, icon, toast };
+  }
+  function renderPlanPage(cid, data) {
+    document.title = `${t('nav.plan')} — ${data.name} — TouristsGuide`;
+    const P = store.planner[cid];
+    if (!P) return `<section class="section notfound"><div class="container"><h1>…</h1><p>Planner data not available for this country yet.</p></div></section>`;
+    return `
+      <section class="hero hero--plan">
+        <div class="hero__bg">${img(data.heroImage || cover(cid, data.spots[0].id), data.name, 'hero__img', 'loading="eager" fetchpriority="high"')}</div>
+        <div class="hero__shade"></div>
+        <div class="container hero__content">
+          <nav class="crumbs reveal"><a href="#/">${t('nav.home')}</a><span>/</span><a href="#/c/${cid}">${esc(data.name)}</a><span>/</span><span>${t('nav.plan')}</span></nav>
+          <span class="eyebrow reveal">${data.flag} ${esc(data.name)}</span>
+          <h1 class="hero__title reveal">${t('plan.title')}</h1>
+          <p class="hero__sub reveal">${t('plan.subtitle')}</p>
+        </div>
+      </section>
+      <section class="section"><div class="container" id="plannerRoot"></div></section>`;
+  }
+  function bindPlanPage(cid, data) {
+    const root = document.getElementById('plannerRoot'); if (!root || !window.TG_PLANNER) return;
+    const ctx = plannerCtx(cid, data);
+    ctx.onRender = observeReveal;
+    root.innerHTML = TG_PLANNER.render(ctx); TG_PLANNER.bind(ctx, root); observeReveal();
+  }
+
   /* ---------------- Map (Leaflet) ---------------- */
   let maps = [];
   function initMap(elId, cid, data, spots, zoom) {
@@ -694,7 +727,7 @@
     cleanup.forEach((f) => f()); cleanup = [];
     maps.forEach((m) => m.remove()); maps = [];
     const app = $('#app');
-    const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+    const parts = location.hash.replace(/^#\/?/, '').split('?')[0].split('/').filter(Boolean);
     try {
       if (parts[0] === 'c' && parts[1]) {
         const cid = parts[1];
@@ -706,7 +739,9 @@
         if (!data) throw new Error('notfound');
         if (cid !== lastCountry && !pendingJump) state.filters = { q: '', region: 'all', cat: 'all', sort: 'featured', view: 'grid' };
         lastCountry = cid;
-        if (parts[2] === 'spot' && parts[3]) {
+        if (parts[2] === 'plan') {
+          app.innerHTML = renderPlanPage(cid, data); window.scrollTo(0, 0); bindPlanPage(cid, data);
+        } else if (parts[2] === 'spot' && parts[3]) {
           const s = data.spots.find((x) => x.id === parts[3]); if (!s) throw new Error('notfound');
           app.innerHTML = renderSpot(cid, data, s); window.scrollTo(0, 0); bindSpot(cid, data, s);
         } else {

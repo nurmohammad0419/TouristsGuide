@@ -1,7 +1,7 @@
 /* UI strings — English. Copy this file to add a new language. */
 window.TG_I18N = window.TG_I18N || {};
 window.TG_I18N.en = {
-  nav: { home: 'Home', countries: 'Countries', overview: 'Overview', divisions: 'Provinces', spots: 'Tourist Spots', map: 'Map', travel: 'Travel Info' },
+  nav: { home: 'Home', countries: 'Countries', overview: 'Overview', divisions: 'Provinces', spots: 'Tourist Spots', map: 'Map', travel: 'Travel Info', plan: 'Tour Plan' },
   common: {
     explore: 'Explore', exploreCountry: 'Explore the country', comingSoon: 'Coming soon', readMore: 'Read more',
     viewDetails: 'View details', back: 'Back', allRegions: 'All provinces', allCategories: 'All categories',
@@ -45,6 +45,37 @@ window.TG_I18N.en = {
     bestTime: 'Best time to visit', duration: 'Time needed', dressCode: 'Dress code & etiquette', location: 'Location',
     morePlaces: 'More places in', related: 'You may also like', quickInfo: 'Quick info', links: 'Useful links',
     nonMuslimNote: 'Access note', noticeTitle: 'Important notice', approxLocation: 'Map pin shows the approximate area'
+  },
+  plan: {
+    title: 'Plan your trip, step by step',
+    subtitle: 'Answer a few questions and get a complete day-by-day itinerary: visa check, where to land, how to move around, what to book in advance and which spots fit your dates.',
+    q: { origin: 'Where will your trip start?', visa: 'Nationality & residence (visa check)', religion: 'Religious status', current: 'Where are you now?', dest: 'Which province(s) do you want to visit?', dates: 'Travel dates', group: 'Who is travelling?', transport: 'How will you get around?', airport: 'Arrival airport', extras: 'Also include', car: 'Do you have a car?' },
+    outside: 'Coming from outside Saudi Arabia', outsideSub: 'Visa check, arrival airport and a full itinerary',
+    inside: 'Already inside Saudi Arabia', insideSub: 'Plan a trip from your province to another',
+    nationality: 'Nationality (passport)', residence: 'Country of residence', sameAsNat: 'Same as nationality',
+    visaHolder: 'I hold a valid, used US, UK or Schengen visa', applyEvisa: 'Apply for the eVisa', nusukUmrah: 'Nusuk (Umrah visa)', checkPortal: 'Check visa portal',
+    visaDisclaimer: 'Visa rules change — always confirm on the official portal before booking. Last reviewed',
+    muslim: 'Muslim', muslimSub: 'Umrah first, then Makkah & Madinah ziyarat', nonMuslim: 'Not Muslim', nonMuslimSub: 'Makkah is closed to non-Muslims; the rest of the country is open',
+    currentProv: 'Current province', destHint: 'Choose 1–3 provinces. They will be visited in the order you select.',
+    from: 'Arrival date', to: 'Return date', daysTrip: 'day trip', maxDays: 'planner covers up to 30 days', dateError: 'Return date must be after the arrival date.',
+    solo: 'Solo', couple: 'Couple', family: 'Family with children', familySub: 'Slower pace, easier spots', friends: 'Friends group',
+    taxi: 'Taxi & ride-hailing', taxiSub: 'Uber / Careem everywhere; no licence needed', train: 'Trains & taxis', trainSub: 'Haramain & SAR trains between cities', rentCar: 'Rental car', rentCarSub: 'Freedom for desert & mountain spots',
+    idp: 'I have an International Driving Permit (IDP) with my national licence', idpWarn: 'Visitors need an IDP (or a GCC / recognised licence) to rent a car. Without it, the plan will use taxis and trains.',
+    recommended: 'Recommended for your plan', medAlt: 'Start in Madinah instead',
+    extrasHint: 'Based on your dates we pre-selected the ★ options.', extrasCoreMuslim: 'Makkah and Madinah are always included.', extrasCoreOther: 'Your arrival city is always included.',
+    ownCar: 'Yes, own car', ownCarSub: 'Self-drive routes and desert spots', noCar: 'No car', noCarSub: 'Trains, flights, buses and taxis',
+    yourPlan: 'Your tour plan', daysIn: 'days in', day: 'Day', arrival: 'Arrival', travelDay: 'Travel day', freeDay: 'Free day', print: 'Print / Save PDF',
+    bookTransport: 'Book transport', alternatives: 'Alternatives', visaStatus: 'Visa status', bookings: 'Book in advance', noBookings: 'Nothing needs advance booking.', documents: 'Documents & packing', tips: 'Tips for your trip',
+    tip: {
+      umrahFirst: 'Enter ihram before the miqat (on the plane or at the airport) so you can perform Umrah on arrival; book the free Umrah permit in Nusuk first.',
+      nonMuslim: 'The city of Makkah is closed to non-Muslims; highway checkpoints divert traffic around it. Madinah city is open, but not the prayer halls of the Prophet\'s Mosque.',
+      family: 'We planned 2 spots per day with buffer time. Many sites have strollers-friendly paths; carry water, hats and snacks.',
+      rentCar: 'Driving is on the right; speed cameras are everywhere. Non-Muslims cannot drive into Makkah. Fuel is cheap and petrol stations are frequent on highways.',
+      taxi: 'Uber and Careem work in all major cities. Agree the fare before using a street taxi outside the apps.',
+      noCar: 'Book SAR / Haramain train tickets a few days ahead on weekends and holidays. SAPTCO buses reach most towns.',
+      prayer: 'Shops and attractions pause briefly at prayer times; plan meals and museum visits around them.',
+      weather: 'October – March is the best season. In summer, visit outdoor spots early morning or after sunset.'
+    }
   },
   footer: {
     about: 'TouristsGuide is an independent travel guide. Content is for planning purposes; always check official sources.',
