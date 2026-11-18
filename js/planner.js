@@ -23,7 +23,8 @@
     const s = {
       origin: p.get('o') || '', nat: p.get('n') || '', res: p.get('r') || '', visaHolder: p.get('vh') === '1',
       religion: p.get('f') || '', from: p.get('from') || '', to: p.get('to') || '', group: p.get('g') || '',
-      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '', ex: (p.get('ex') || '').split(',').filter(Boolean), ad: (p.get('ad') || '').split(',').filter(Boolean),
+      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '', ex: (p.get('ex') || '').split(',').filter(Boolean), bl: p.get('bl') || '', ppl: p.get('ppl') || '', ord: (p.get('ord') || '').split(',').filter(Boolean),
+      mv: Object.fromEntries((p.get('mv') || '').split(',').filter(Boolean).map((x) => { const i = x.lastIndexOf(':'); return [x.slice(0, i), parseInt(x.slice(i + 1), 10)]; })), ad: (p.get('ad') || '').split(',').filter(Boolean),
       extras: (p.get('x') || '').split(',').filter(Boolean),
       curProv: p.get('cp') || '', dest: (p.get('dp') || '').split(',').filter(Boolean), car: p.get('car') || ''
     };
@@ -34,7 +35,7 @@
     const put = (k, v) => { if (v) p.set(k, v); };
     put('o', s.origin); put('n', s.nat); put('r', s.res); if (s.visaHolder) p.set('vh', '1');
     put('f', s.religion); put('from', s.from); put('to', s.to); put('g', s.group); put('tr', s.transport); if (s.idp) p.set('idp', '1');
-    put('a', s.airport); put('st', s.style); put('ex', s.ex.join(',')); put('ad', s.ad.join(',')); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
+    put('a', s.airport); put('st', s.style); put('ex', s.ex.join(',')); put('bl', s.bl); put('ppl', s.ppl); put('ord', s.ord.join(',')); put('mv', Object.entries(s.mv).map(([k, v]) => k + ':' + v).join(',')); put('ad', s.ad.join(',')); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
     const base = location.hash.split('?')[0];
     history.replaceState(null, '', base + '?' + p.toString());
   }
@@ -233,6 +234,81 @@
     return { days, placed };
   }
 
+  // Apply the traveller's manual moves: a spot pinned to another day, and a custom order inside a day
+  function applyEdits(days, s) {
+    const hasSpot = (d) => d.items.some((i) => i.type === 'spot');
+    Object.entries(s.mv).forEach(([id, n]) => {
+      const src = days.find((d) => d.items.some((i) => i.type === 'spot' && i.id === id));
+      const dst = days[n - 1];
+      if (!src || !dst || src === dst) return;
+      const item = src.items.splice(src.items.findIndex((i) => i.type === 'spot' && i.id === id), 1)[0];
+      dst.items = dst.items.filter((i) => i.type !== 'free');
+      if (dst.note === 'free') { dst.note = undefined; }
+      let at = -1; dst.items.forEach((i, k) => { if (i.type === 'spot') at = k; });
+      if (at < 0) { dst.items.forEach((i, k) => { if (i.type === 'travel' && k === 0) at = k; }); }
+      dst.items.splice(at + 1, 0, item);
+      if (!hasSpot(src) && !src.items.some((i) => i.type === 'free') && src.note !== 'arrival' && src.note !== 'travel') { src.items.unshift({ type: 'free', text: 'Free day — rest, shopping, or repeat a favourite spot.' }); src.note = 'free'; }
+    });
+    if (s.ord.length) days.forEach((d) => {
+      const idx = []; d.items.forEach((i, k) => { if (i.type === 'spot') idx.push(k); });
+      const spots = idx.map((k) => d.items[k]);
+      if (spots.length < 2 || !spots.every((x) => s.ord.includes(x.id))) return;
+      spots.sort((a, b) => s.ord.indexOf(a.id) - s.ord.indexOf(b.id));
+      idx.forEach((k, j) => { d.items[k] = spots[j]; });
+    });
+    return days;
+  }
+
+  /* ---------------- Budget & lodging ---------------- */
+  function people(s) { return Math.max(1, Math.min(12, parseInt(s.ppl, 10) || ({ solo: 1, couple: 2, family: 4, friends: 3 }[s.group] || 2))); }
+  function tierIdx(s) { return { eco: 0, comfort: 1, lux: 2 }[s.bl || 'comfort']; }
+  function lodgingRate(P, city, tier) { const L = P.costs.lodging; return (L[city] || L.default)[tier]; }
+  function stays(P, s, days) {
+    // consecutive nights per city (the last day has no night)
+    const out = [];
+    days.slice(0, -1).forEach((d) => {
+      const last = out[out.length - 1];
+      if (last && last.city === d.city) last.nights++; else out.push({ city: d.city, nights: 1, from: d.date });
+    });
+    const ppl = people(s);
+    const rooms = s.group === 'family' ? Math.ceil(ppl / 4) : Math.ceil(ppl / 2);
+    out.forEach((st) => { st.rooms = rooms; const r = lodgingRate(P, st.city, tierIdx(s)); st.lo = r[0] * st.nights * rooms; st.hi = r[1] * st.nights * rooms; st.rate = r; st.to = new Date(st.from.getTime() + st.nights * DAY); });
+    return out;
+  }
+  function budget(P, data, s, days, stayList) {
+    const C = P.costs, ti = tierIdx(s), ppl = people(s), rows = [];
+    const add = (label, lo, hi, note) => rows.push({ label, lo: Math.round(lo), hi: Math.round(hi), note });
+    add('Accommodation', stayList.reduce((a, x) => a + x.lo, 0), stayList.reduce((a, x) => a + x.hi, 0), `${stayList.reduce((a, x) => a + x.nights, 0)} nights · ${stayList[0] ? stayList[0].rooms : 1} room(s)`);
+    add('Food & drinks', C.food[ti][0] * ppl * s.days, C.food[ti][1] * ppl * s.days, `${ppl} traveller(s) × ${s.days} days`);
+    // intercity legs (city to city; same-province hops over 40 km count too)
+    const seq = []; if (s.origin === 'inside' && s.curProv && P.hubs[s.curProv]) seq.push({ city: P.hubs[s.curProv].city, prov: s.curProv, home: true });
+    days.forEach((d) => { if (!seq.length || seq[seq.length - 1].city !== d.city) seq.push({ city: d.city, prov: d.prov }); });
+    if (s.origin === 'inside' && s.curProv && P.hubs[s.curProv]) seq.push({ city: P.hubs[s.curProv].city, prov: s.curProv, home: true });
+    const ownCar = s.origin === 'inside' ? s.car === 'yes' : (s.transport === 'car' && s.idp);
+    let lo = 0, hi = 0, n = 0, km = 0;
+    for (let i = 0; i < seq.length - 1; i++) {
+      const A = seq[i], B = seq[i + 1];
+      if (A.prov !== B.prov && P.hubs[A.prov] && P.hubs[B.prov]) {
+        const cor = corridor(P, A.prov, B.prov); const m = pickTransport(cor, s)[0]; n++;
+        if (m.type === 'drive') km += cor.km; else { const r = C.legs[m.type] || C.legs.bus; lo += r[0] * ppl; hi += r[1] * ppl; }
+      } else if (A.prov === B.prov && A.city !== B.city) {
+        const dKm = cityDistance(data, A.city, B.city) * 1.25;
+        if (dKm > 40) { km += dKm; n++; }
+      }
+    }
+    const fuelLo = km * C.fuelPerKm[0], fuelHi = km * C.fuelPerKm[1];
+    if (n) add('Travel between cities', lo + (ownCar ? fuelLo : km * 0.9), hi + (ownCar ? fuelHi : km * 1.6), `${n} transfer(s) between cities — ${ownCar ? 'own car / ' : ''}train, flight, bus or taxi`);
+    // local transport
+    if (ownCar) add('Car hire & fuel in cities', s.origin === 'outside' ? C.rentalPerDay[ti][0] * s.days : 40 * s.days, s.origin === 'outside' ? C.rentalPerDay[ti][1] * s.days : 110 * s.days, s.origin === 'outside' ? 'Rental car (IDP needed) + fuel' : 'Fuel & parking');
+    else add('Taxis & ride-hailing', C.taxiPerDay[0] * s.days * Math.ceil(ppl / 4), C.taxiPerDay[1] * s.days * Math.ceil(ppl / 4), 'Uber / Careem / taxis');
+    // tickets
+    const sp = days.flatMap((d) => d.items.filter((i) => i.type === 'spot').map((i) => data.spots.find((x) => x.id === i.id))).filter(Boolean);
+    const req = sp.filter((x) => x.tickets && x.tickets.required === true).length, par = sp.filter((x) => x.tickets && x.tickets.required === 'partial').length;
+    add('Tickets & activities', (req * C.tickets.required[0] + par * C.tickets.partial[0]) * ppl, (req * C.tickets.required[1] + par * C.tickets.partial[1]) * ppl, `${req} ticketed + ${par} partly ticketed spots`);
+    const totLo = rows.reduce((a, r) => a + r.lo, 0), totHi = rows.reduce((a, r) => a + r.hi, 0);
+    return { rows, totLo, totHi, ppl };
+  }
+
   function cityDistance(data, a, b) {
     const ca = data.spots.find((x) => x.city === a), cb = data.spots.find((x) => x.city === b);
     return ca && cb ? haversine(ca.coords, cb.coords) : 0;
@@ -319,6 +395,14 @@
         ${choice('style', 'packed', t('plan.packed'), '⚡', s.style, t('plan.packedSub'))}</div>`, !!s.style));
     }
     if (ready1 && s.days && s.group && s.style) {
+      const bl = s.bl || 'comfort';
+      out.push(step(n++, t('plan.q.budget'), `<div class="choices">
+        ${choice('bl', 'eco', t('plan.eco'), '🎒', bl, t('plan.ecoSub'))}
+        ${choice('bl', 'comfort', t('plan.comfort'), '🛏️', bl, t('plan.comfortSub'))}
+        ${choice('bl', 'lux', t('plan.lux'), '💎', bl, t('plan.luxSub'))}</div>
+        <label class="field field--sel field--narrow"><span>${t('plan.travellers')}</span><input type="number" name="ppl" min="1" max="12" value="${people(s)}"></label>`, true));
+    }
+    if (ready1 && s.days && s.group && s.style) {
       if (s.origin === 'outside') {
         out.push(step(n++, t('plan.q.transport'), `<div class="choices">
           ${choice('transport', 'taxi', t('plan.taxi'), '🚕', s.transport, t('plan.taxiSub'))}
@@ -351,10 +435,11 @@
       s.umrah = blocks.some((b) => b.key === 'makkah_umrah');
       s.pins = new Set(s.ad);
       const days = allocate(P, data, s, blocks);
+      applyEdits(days, s);
       ctx.days = days;
       result = renderResult(ctx, s, days, visaVerdict(P, s));
     }
-    const total = s.origin === 'outside' ? 9 : s.origin === 'inside' ? 8 : 1;
+    const total = s.origin === 'outside' ? 10 : s.origin === 'inside' ? 9 : 1;
     const pct = Math.min(100, Math.round((doneCount / total) * 100));
     const prog = s.origin ? `<div class="pprog"><div class="pprog__bar"><i style="width:${pct}%"></i></div><span>${pct >= 100 ? '🎉 ' + t('plan.planReady') : Math.min(doneCount, total) + ' / ' + total}</span></div>` : '';
     return `<div class="planner">${prog}${out.join('')}</div>${result}`;
@@ -390,6 +475,15 @@
     if (muslim && umrah) docs.push('Ihram clothing for Umrah (men: two unstitched white cloths) / loose modest clothing (women)');
     if (s.group === 'family') docs.push('Children\'s passports / IDs, stroller, snacks and sun protection');
 
+    const stayList = stays(P, s, days);
+    const bud = budget(P, data, s, days, stayList);
+    const sar = (n) => 'SAR ' + n.toLocaleString('en-US');
+    const range = (lo, hi) => `${sar(lo)} – ${sar(hi)}`;
+    const ctrl = (id, d) => {
+      const ids = d.items.filter((i) => i.type === 'spot').map((i) => i.id); const k = ids.indexOf(id);
+      return `<div class="pitem__ctrl"><button data-up="${id}" ${k === 0 ? 'disabled' : ''} aria-label="${esc(t('plan.moveUp'))}" title="${esc(t('plan.moveUp'))}">↑</button><button data-down="${id}" ${k === ids.length - 1 ? 'disabled' : ''} aria-label="${esc(t('plan.moveDown'))}" title="${esc(t('plan.moveDown'))}">↓</button>
+        <select class="pitem__mv" data-mv="${id}" aria-label="${esc(t('plan.moveToDay'))}"><option value="">⇄ ${t('plan.moveToDay')}</option>${days.map((dd) => `<option value="${dd.n}" ${dd.n === d.n ? 'disabled' : ''}>${t('plan.day')} ${dd.n} · ${esc(dd.city)}</option>`).join('')}</select></div>`;
+    };
     const thumbOf = (id) => (ctx.coverThumb ? ctx.coverThumb(cid, id) : cover(cid, id));
     const cities = []; days.forEach((d) => { if (!cities.length || cities[cities.length - 1] !== d.city) cities.push(d.city); });
     const travelDays = days.filter((d) => d.items.some((i) => i.type === 'travel' && d.note === 'travel')).length;
@@ -414,12 +508,30 @@
               <small>${esc(x.city)} · ${esc(r.name || '')}</small>
               <div class="tags">${x.muslimsOnly ? `<span class="tag tag--g">☪️ ${t('common.muslimsOnly')}</span>` : ''}${x.unesco ? `<span class="tag tag--b">🏛️ ${t('common.unesco')}</span>` : ''}${x.status === 'check' ? `<span class="tag tag--o">⚠️ ${t('common.checkStatus')}</span>` : ''}${s.ad.includes(x.id) ? `<span class="tag tag--p">➕ ${t('plan.addedByYou')}</span>` : ''}</div>
               <div class="pitem__meta"><span>${icon.clock} ${esc((x.hours && x.hours.summary) || '')}</span></div>
-              <div class="pitem__meta"><span class="pill pill--${cls}">${icon.ticket} ${tk.required === true ? t('common.required') : tk.required === 'partial' ? t('common.partly') : t('common.notRequired')}${tk.price ? ' · ' + esc(tk.price.split('(')[0].trim().slice(0, 40)) : ''}</span>${tk.links && tk.links[0] && tk.required ? `<a class="link" href="${esc(tk.links[0].url)}" target="_blank" rel="noopener">${t('common.bookNow')} ${icon.ext}</a>` : ''}${x.duration ? `<span>⏱ ${esc(x.duration)}</span>` : ''}</div></div></li>`;
+              <div class="pitem__meta"><span class="pill pill--${cls}">${icon.ticket} ${tk.required === true ? t('common.required') : tk.required === 'partial' ? t('common.partly') : t('common.notRequired')}${tk.price ? ' · ' + esc(tk.price.split('(')[0].trim().slice(0, 40)) : ''}</span>${tk.links && tk.links[0] && tk.required ? `<a class="link" href="${esc(tk.links[0].url)}" target="_blank" rel="noopener">${t('common.bookNow')} ${icon.ext}</a>` : ''}${x.duration ? `<span>⏱ ${esc(x.duration)}</span>` : ''}</div>${ctrl(x.id, d)}</div></li>`;
           }
           return `<li class="pitem pitem--${it.type}"><span class="pitem__icon">${it.type === 'free' ? '🌴' : '🧭'}</span><div><p>${esc(it.text)}</p>${it.url ? `<a class="link" href="${esc(it.url)}" target="_blank" rel="noopener">${t('plan.bookTransport')} ${icon.ext}</a>` : ''}${it.alt && it.alt.length ? `<small class="muted">${t('plan.alternatives')}: ${it.alt.map(esc).join(' · ')}</small>` : ''}</div></li>`;
         }).join('')}</ol>
       </article>`;
     }).join('');
+
+    const fmtShort = (d) => d.toISOString().slice(0, 10);
+    const stayHtml = stayList.length ? `
+      <section class="pstay glass-card reveal">
+        <h3>🏨 ${t('plan.stayTitle')}</h3><p class="muted small">${t('plan.staySub')}</p>
+        ${stayList.map((st) => `<div class="pstay__row"><div class="pstay__head"><b>${esc(st.city)}</b><span>${st.nights} ${t('plan.nights')} · ${fmtDate(st.from)} → ${fmtDate(st.to)}</span></div>
+          <p>${esc(P.stay[st.city] || P.stay.default)}</p>
+          <div class="pstay__foot"><span class="pill pill--info">≈ ${sar(st.rate[0])} – ${sar(st.rate[1])} ${t('plan.perRoomNight')}</span>
+          <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', Saudi Arabia')}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
+          <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' Saudi Arabia')}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
+      </section>` : '';
+    const budgetHtml = `
+      <div class="glass-card pbudget"><h3>💰 ${t('plan.budgetTitle')}</h3>
+        <div class="pbudget__total"><b>${range(bud.totLo, bud.totHi)}</b><small>≈ $${Math.round(bud.totLo / P.costs.usd).toLocaleString('en-US')} – $${Math.round(bud.totHi / P.costs.usd).toLocaleString('en-US')} · ${bud.ppl} ${t('plan.travellersLower')}</small>
+          <small>${t('plan.perPerson')}: ${range(Math.round(bud.totLo / bud.ppl), Math.round(bud.totHi / bud.ppl))}</small></div>
+        <ul class="pbudget__rows">${bud.rows.map((r) => `<li><span><b>${esc(r.label)}</b><small>${esc(r.note)}</small></span><em>${range(r.lo, r.hi)}</em></li>`).join('')}</ul>
+        <small class="muted">${t('plan.budgetNote')}</small>
+      </div>`;
 
     // "Add a spot" panel + removed list
     const inPlan = new Set(allSpots.map((x) => x.id));
@@ -460,9 +572,10 @@
         <div class="proute reveal">${cities.map((c, i) => `<span class="proute__stop"><i>${i + 1}</i>${esc(c)}</span>`).join('<span class="proute__arrow">→</span>')}</div>
         <p class="pnote reveal">💡 ${t('plan.editHint')}</p>
         <div class="presult__grid">
-          <div class="presult__days">${dayHtml}${addPanel}</div>
+          <div class="presult__days">${dayHtml}${stayHtml}${addPanel}</div>
           <aside class="presult__side">
             ${verdict ? `<div class="glass-card verdict verdict--${verdict.level}"><h3>${t('plan.visaStatus')}</h3><b>${verdict.level === 'ok' ? '✅' : '⚠️'} ${esc(verdict.title)}</b></div>` : ''}
+            ${budgetHtml}
             <div class="glass-card"><h3>📋 ${t('plan.bookings')}</h3>${bookings.length ? `<ul class="plist">${bookings.map((b) => `<li><a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.label)} ${icon.ext}</a></li>`).join('')}</ul>` : `<p class="muted">${t('plan.noBookings')}</p>`}</div>
             <div class="glass-card"><h3>🧳 ${t('plan.documents')}</h3><ul class="plist plist--check">${docs.map((d) => `<li>${esc(d)}</li>`).join('')}</ul></div>
             <div class="glass-card"><h3>💡 ${t('plan.tips')}</h3><ul class="plist">${tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
@@ -477,13 +590,13 @@
     const rerender = () => { writeState(s); root.innerHTML = render(ctx); bind(ctx, root); if (ctx.onRender) ctx.onRender(); };
     root.querySelectorAll('input[type=radio]').forEach((el) => el.addEventListener('change', () => {
       const k = el.name; s[k] = el.value;
-      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; s.ex = []; s.ad = []; }
+      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; s.ex = []; s.ad = []; s.mv = {}; s.ord = []; s.bl = s.ppl = ''; }
       if (k === 'religion' && s.origin === 'outside') { s.airport = ''; s.extras = []; }
       if (k === 'airport') s.extras = suggestExtras(s, s.religion === 'muslim');
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
       if (k !== 'origin') { const r = document.getElementById('planResult'); if (r) setTimeout(() => r.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }
     }));
-    root.querySelectorAll('select[name], input[type=date]').forEach((el) => el.addEventListener('change', () => {
+    root.querySelectorAll('select[name], input[type=date], input[type=number]').forEach((el) => el.addEventListener('change', () => {
       s[el.name] = el.value;
       if (el.name === 'from' && s.to && s.to < s.from) s.to = '';
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
@@ -495,9 +608,20 @@
     }));
     // Skip / add / restore a spot (the itinerary re-arranges itself)
     const act = (fn, msg) => { fn(); const keepY = scrollY; rerender(); scrollTo(0, keepY); if (msg) ctx.toast(msg); };
-    root.querySelectorAll('[data-rm]').forEach((el) => el.addEventListener('click', () => act(() => { const id = el.dataset.rm; if (!s.ex.includes(id)) s.ex.push(id); s.ad = s.ad.filter((x) => x !== id); }, ctx.t('plan.removedToast'))));
+    root.querySelectorAll('[data-rm]').forEach((el) => el.addEventListener('click', () => act(() => { const id = el.dataset.rm; if (!s.ex.includes(id)) s.ex.push(id); s.ad = s.ad.filter((x) => x !== id); s.mv = Object.fromEntries(Object.entries(s.mv).filter(([k]) => k !== id)); s.ord = s.ord.filter((x) => x !== id); }, ctx.t('plan.removedToast'))));
     root.querySelectorAll('[data-add]').forEach((el) => el.addEventListener('click', () => act(() => { const id = el.dataset.add; if (!s.ad.includes(id)) s.ad.push(id); s.ex = s.ex.filter((x) => x !== id); }, ctx.t('plan.addedToast'))));
     root.querySelectorAll('[data-restore]').forEach((el) => el.addEventListener('click', () => act(() => { s.ex = s.ex.filter((x) => x !== el.dataset.restore); }, ctx.t('plan.restoredToast'))));
+    const dayOf = (id) => (ctx.days || []).find((d) => d.items.some((i) => i.type === 'spot' && i.id === id));
+    const swap = (id, dir) => act(() => {
+      const d = dayOf(id); if (!d) return;
+      const ids = d.items.filter((i) => i.type === 'spot').map((i) => i.id); const k = ids.indexOf(id), j = k + dir;
+      if (j < 0 || j >= ids.length) return;
+      [ids[k], ids[j]] = [ids[j], ids[k]];
+      s.ord = s.ord.filter((x) => !ids.includes(x)).concat(ids);
+    });
+    root.querySelectorAll('[data-up]').forEach((el) => el.addEventListener('click', () => swap(el.dataset.up, -1)));
+    root.querySelectorAll('[data-down]').forEach((el) => el.addEventListener('click', () => swap(el.dataset.down, 1)));
+    root.querySelectorAll('[data-mv]').forEach((el) => el.addEventListener('change', () => { if (!el.value) return; act(() => { s.mv[el.dataset.mv] = parseInt(el.value, 10); s.ord = s.ord.filter((x) => x !== el.dataset.mv); }, ctx.t('plan.movedToast')); }));
     const q = root.querySelector('#padSearch'), pv = root.querySelector('#padProv');
     const filt = () => {
       const v = (q ? q.value : '').trim().toLowerCase(), r = pv ? pv.value : ''; let n = 0;

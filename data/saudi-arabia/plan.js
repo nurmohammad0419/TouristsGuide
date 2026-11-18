@@ -117,6 +117,45 @@ TG.registerPlanner('saudi-arabia', {
     north: { title: 'Northern Borders', city: 'Rafha', spots: ['linah', 'darb-zubaydah'] }
   },
 
+  // Rough planning costs in SAR (estimates only — prices swing a lot with Ramadan, Hajj, school holidays and events)
+  costs: {
+    usd: 3.75,
+    // per room per night: [economy, comfort, luxury] each as [low, high]
+    lodging: {
+      Makkah: [[200, 380], [450, 900], [1300, 4000]],
+      Madinah: [[180, 320], [380, 750], [1000, 3000]],
+      Jeddah: [[180, 320], [380, 700], [1000, 2500]],
+      Riyadh: [[200, 350], [420, 850], [1100, 2800]],
+      AlUla: [[350, 650], [800, 1600], [2200, 7000]],
+      Taif: [[150, 300], [320, 650], [800, 2000]],
+      Khobar: [[200, 350], [420, 750], [950, 2000]],
+      Abha: [[180, 320], [360, 700], [850, 2000]],
+      Umluj: [[300, 600], [700, 1400], [2300, 5500]],
+      default: [[150, 280], [300, 600], [750, 1600]]
+    },
+    food: [[60, 110], [120, 240], [320, 650]],          // per person per day
+    taxiPerDay: [40, 130],                              // per vehicle (up to 4 people)
+    rentalPerDay: [[130, 220], [200, 380], [450, 900]], // car hire per day by tier (excl. fuel)
+    legs: { train: [120, 320], flight: [250, 750], bus: [80, 190] }, // per person per leg
+    fuelPerKm: [0.2, 0.3],
+    tickets: { required: [60, 260], partial: [0, 110] } // per person per spot
+  },
+
+  // Where to stay: general area advice per city (no individual hotels are endorsed)
+  stay: {
+    Makkah: 'Hotels around the Haram (Ajyad, Clock Tower area) are closest but most expensive; Aziziyah and nearby districts are cheaper with a short taxi or bus ride to the Haram. Book early for Ramadan and Hajj season.',
+    Madinah: 'The Markazia (central area) around the Prophet\'s Mosque is walkable; Quba and Al-Aliya are quieter and usually cheaper. Prices rise sharply in Ramadan.',
+    Jeddah: 'Al-Balad suits heritage lovers; the Corniche / Al-Hamra area has sea views and restaurants; North Jeddah near Obhur has beach resorts.',
+    Riyadh: 'Olaya and Al-Wurud are central; Diriyah has boutique stays beside At-Turaif; KAFD is modern and business-oriented.',
+    AlUla: 'Stay in the oasis / AlUla town area or a desert resort; book months ahead for December – February.',
+    Taif: 'Al-Hada and Al-Shafa mountain areas stay cool in summer; central Taif near Shubra Palace is convenient for sights.',
+    Khobar: 'The Khobar Corniche area is lively with restaurants; Dhahran is close to Ithra.',
+    Hofuf: 'Stay in central Hofuf near Qaisariya Souq, or in an oasis guesthouse for a quieter feel.',
+    Abha: 'Near Abha Dam Lake or Al-Soudah for scenery; the city centre for convenience. Summer is the peak season.',
+    Umluj: 'Beachfront resorts and guesthouses face the islands; luxury resorts on Shura Island are booked directly.',
+    default: 'Choose a hotel near the main sights you will visit most, and check reviews and free-cancellation terms on the booking site.'
+  },
+
   // Which clusters belong to which province (for domestic planning)
   provinceClusters: {
     makkah: ['makkah_umrah', 'makkah_ziyarat', 'jeddah', 'taif'],
