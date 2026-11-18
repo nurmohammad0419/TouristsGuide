@@ -49,7 +49,7 @@ window.TG_I18N.en = {
   plan: {
     title: 'Plan your trip, step by step',
     subtitle: 'Answer a few questions and get a complete day-by-day itinerary: visa check, where to land, how to move around, what to book in advance and which spots fit your dates.',
-    q: { origin: 'Where will your trip start?', visa: 'Nationality & residence (visa check)', religion: 'Religious status', current: 'Where are you now?', dest: 'Which province(s) do you want to visit?', dates: 'Travel dates', group: 'Who is travelling?', transport: 'How will you get around?', airport: 'Arrival airport', extras: 'Also include', car: 'Do you have a car?' },
+    q: { origin: 'Where will your trip start?', visa: 'Nationality & residence (visa check)', religion: 'Religious status', current: 'Where are you now?', dest: 'Which province(s) do you want to visit?', dates: 'Travel dates', group: 'Who is travelling?', style: 'Choose your plan style', transport: 'How will you get around?', airport: 'Arrival airport', extras: 'Also include', car: 'Do you have a car?' },
     outside: 'Coming from outside Saudi Arabia', outsideSub: 'Visa check, arrival airport and a full itinerary',
     inside: 'Already inside Saudi Arabia', insideSub: 'Plan a trip from your province to another',
     nationality: 'Nationality (passport)', residence: 'Country of residence', sameAsNat: 'Same as nationality',
@@ -58,6 +58,7 @@ window.TG_I18N.en = {
     muslim: 'Muslim', muslimSub: 'Umrah first, then Makkah & Madinah ziyarat', nonMuslim: 'Not Muslim', nonMuslimSub: 'Makkah is closed to non-Muslims; the rest of the country is open',
     currentProv: 'Current province', destHint: 'Choose 1–3 provinces. They will be visited in the order you select.',
     from: 'Arrival date', to: 'Return date', daysTrip: 'day trip', maxDays: 'planner covers up to 30 days', dateError: 'Return date must be after the arrival date.',
+    relaxed: 'Relaxed plan', relaxedSub: 'Fewer spots a day, more rest', balanced: 'Balanced plan', balancedSub: 'The recommended pace', packed: 'Packed plan', packedSub: 'See as much as possible',
     solo: 'Solo', couple: 'Couple', family: 'Family with children', familySub: 'Slower pace, easier spots', friends: 'Friends group',
     taxi: 'Taxi & ride-hailing', taxiSub: 'Uber / Careem everywhere; no licence needed', train: 'Trains & taxis', trainSub: 'Haramain & SAR trains between cities', rentCar: 'Rental car', rentCarSub: 'Freedom for desert & mountain spots',
     idp: 'I have an International Driving Permit (IDP) with my national licence', idpWarn: 'Visitors need an IDP (or a GCC / recognised licence) to rent a car. Without it, the plan will use taxis and trains.',
@@ -67,7 +68,7 @@ window.TG_I18N.en = {
     yourPlan: 'Your tour plan', daysIn: 'days in', day: 'Day', arrival: 'Arrival', travelDay: 'Travel day', freeDay: 'Free day', print: 'Print / Save PDF',
     bookTransport: 'Book transport', alternatives: 'Alternatives', visaStatus: 'Visa status', bookings: 'Book in advance', noBookings: 'Nothing needs advance booking.', documents: 'Documents & packing', tips: 'Tips for your trip',
     tip: {
-      umrahFirst: 'Enter ihram before the miqat (on the plane or at the airport) so you can perform Umrah on arrival; book the free Umrah permit in Nusuk first.',
+      umrahFirst: 'For Umrah, book your free permit in Nusuk first and enter ihram before the miqat. Ihram is only for Umrah or Hajj in Makkah — not for visiting other places.',
       nonMuslim: 'The city of Makkah is closed to non-Muslims; highway checkpoints divert traffic around it. Madinah city is open, but not the prayer halls of the Prophet\'s Mosque.',
       family: 'We planned 2 spots per day with buffer time. Many sites have strollers-friendly paths; carry water, hats and snacks.',
       rentCar: 'Driving is on the right; speed cameras are everywhere. Non-Muslims cannot drive into Makkah. Fuel is cheap and petrol stations are frequent on highways.',
