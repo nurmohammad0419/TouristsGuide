@@ -1124,6 +1124,106 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'November – March', duration: '2 hours', dress: 'Modest clothes.', tips: ['Visit with Ushaiger on the same day.']
     },
 
+    /* ======================= NORTHERN ROUTE (Riyadh–Qassim–Hail) ======================= */
+    {
+      id: 'thadiq-ghamra', name: 'Thadiq & Ghamra Tourist Village', nativeName: 'ثادق وقرية غمرة السياحية',
+      region: 'riyadh', city: 'Thadiq', categories: ['heritage'], approx: true,
+      coords: [25.2830, 45.8670],
+      tagline: 'A Najdi-style tourist village on the Northern Route.',
+      overview: ['Thadiq is a town north-west of Riyadh. The Ghamra tourist village there is built in traditional Najdi style with mud-style buildings, and it is one of the stops on the Northern Route.'],
+      history: ['Thadiq lies in the Al-Washm area of Najd. It was named among the 16 stops of the Northern Route announced in Saudi Winter 2026.'],
+      religious: null,
+      highlights: ['Ghamra tourist village', 'Najdi-style buildings', 'Northern Route stop'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'North-west of Riyadh, in the Al-Washm area.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '2 hours', dress: 'Modest, comfortable clothes.', tips: ['Combine with Shaqra and Ushaiger in one day trip.', 'Exact visiting hours not confirmed — ask locally.']
+    },
+    {
+      id: 'al-qasab', name: 'Al-Qasab Historic Village', nativeName: 'قرية القصب التاريخية',
+      region: 'riyadh', city: 'Al-Qasab', categories: ['heritage'], approx: true,
+      coords: [25.3500, 45.6000],
+      tagline: 'A historic Najdi village about 150 km from Riyadh.',
+      overview: ['Al-Qasab is a historic village roughly 150 km from Riyadh and one of the 16 stops of the Northern Route.'],
+      history: ['The village is part of the string of old Najdi settlements of the Al-Washm area. Detailed history is not yet added.'],
+      religious: null,
+      highlights: ['Historic village', 'Najdi architecture', 'Northern Route stop'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 150 km from Riyadh.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '1–2 hours', dress: 'Modest, comfortable clothes.', tips: ['Location on the map is approximate.', 'Pair with Shaqra and Ushaiger.']
+    },
+    {
+      id: 'al-majmaah-marqab', name: "Al-Majma'ah: Al-Marqab (Munaikh) Fort", nativeName: 'قلعة المرقب (المنيخ) بالمجمعة',
+      region: 'riyadh', city: "Al-Majma'ah", categories: ['heritage'], approx: true,
+      coords: [25.9040, 45.3500],
+      tagline: "A restored hilltop fort overlooking Al-Majma'ah.",
+      overview: ["Al-Marqab (also written Munikh or Munaikh) is a circular fort on Mount Munaikh, on the western side of Al-Majma'ah, with panoramic views over the town and farms. It now serves as the Al-Munikh Visitor Center, and the town also has a restored heritage village."],
+      history: ['The fort saw sieges and visits by Saudi rulers in the 13th Hijri century. After unification it was used to watch floods and caravans, and it was restored in 1417 AH.'],
+      religious: null,
+      highlights: ['Hilltop fort', 'Panoramic views', 'Visitor Center', 'Heritage village'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: "In Al-Majma'ah, about 180 km north-west of Riyadh.", transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '1–2 hours', dress: 'Modest, comfortable clothes.', tips: ['Climb at sunset for the best views.', 'Entry has been reported as free.']
+    },
+    {
+      id: 'az-zulfi', name: 'Az Zulfi & Ghayfa Heritage Village', nativeName: 'الزلفي وقرية غيفة التراثية',
+      region: 'riyadh', city: 'Az Zulfi', categories: ['heritage','nature'], approx: true,
+      coords: [26.2990, 44.8070],
+      tagline: 'An oasis town with old Najdi quarters and nearby dunes.',
+      overview: ['Az Zulfi, in Riyadh Province about 260 km north-west of the capital, has an old town of Najdi mud-brick houses, a souq and nearby natural spots such as Wadi Samnan, Rawdat Al-Sabla and Ghayfa Heritage Village at the edge of the Nafud dunes.'],
+      history: ['Az Zulfi is a long-established Najdi oasis town and a stop on the Northern Route.'],
+      religious: null,
+      highlights: ['Old town', 'Ghayfa Heritage Village', 'Wadi Samnan', 'Dune trips'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 260 km north-west of Riyadh.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '2–3 hours', dress: 'Modest, comfortable clothes.', tips: ['Details from travel guides; confirm opening times locally.']
+    },
+    {
+      id: 'al-mithnab', name: 'Al-Mithnab Old Town', nativeName: 'المذنب التراثية',
+      region: 'qassim', city: 'Al-Mithnab', categories: ['heritage'], approx: true,
+      coords: [25.8600, 44.2200],
+      tagline: 'Traditional Najdi architecture in a Qassim town.',
+      overview: ['Al-Mithnab is a Qassim town known for its traditional Najdi architecture and is a stop on the Northern Route.'],
+      history: ['Detailed history has not yet been added.'],
+      religious: null,
+      highlights: ['Najdi architecture', 'Northern Route stop'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'Prince Naif bin Abdulaziz (ELQ)', road: 'In Al-Qassim, west of Buraidah.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '1–2 hours', dress: 'Modest, comfortable clothes.', tips: ['Location on the map is approximate.']
+    },
+    {
+      id: 'al-bukayriyah', name: 'Al-Bukayriyah Farms & Heritage', nativeName: 'البكيرية',
+      region: 'qassim', city: 'Al-Bukayriyah', categories: ['heritage','nature'], approx: true,
+      coords: [26.1400, 43.6600],
+      tagline: 'Farm experiences and heritage in a Qassim town.',
+      overview: ['Al-Bukayriyah, in Al-Qassim, is on the Northern Route and is known for its farms and for the Al-Suwailem Maqsoura heritage building.'],
+      history: ['Detailed history has not yet been added.'],
+      religious: null,
+      highlights: ['Farm visits', 'Al-Suwailem Maqsoura', 'Northern Route stop'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'Prince Naif bin Abdulaziz (ELQ)', road: 'South-west of Buraidah, in Al-Qassim.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '1–2 hours', dress: 'Modest, comfortable clothes.', tips: ['Location on the map is approximate.']
+    },
+    {
+      id: 'uyun-al-jiwa', name: 'Uyun Al-Jiwa Heritage Town', nativeName: 'عيون الجواء التراثية',
+      region: 'qassim', city: 'Uyun Al-Jiwa', categories: ['heritage','archaeology'], approx: true,
+      coords: [26.3300, 43.5800],
+      tagline: 'A Najdi heritage town with an old Monday market.',
+      overview: ['Uyun Al-Jiwa is a heritage town about 50 km north-west of Buraidah. Its many old buildings follow traditional Najdi design, the town mosque was renovated in 1913 and restored in 1952, and its Monday market is one of the oldest traditional weekly markets. Thamudic inscriptions can be seen on rocks nearby.'],
+      history: ['The town served the north-western parts of Al-Qassim and represents the large markets typical of major Najdi villages. The municipality has illuminated its heritage village and plans to develop Al-Marqab mountain as a visitor spot.'],
+      religious: null,
+      highlights: ['Heritage village', 'Monday market', 'Thamudic inscriptions'],
+      hours: { summary: 'Check locally — hours vary', details: [], note: 'Opening times were not confirmed; confirm with the local municipality or VisitSaudi before travelling.' },
+      tickets: { required: false, price: 'Usually free', how: ['No booking is normally needed. Confirm locally.'], links: [] },
+      gettingThere: { airport: 'Prince Naif bin Abdulaziz (ELQ)', road: 'About 50 km north-west of Buraidah.', transport: 'Car (rental or taxi). Part of the Northern Route.' },
+      bestTime: 'November – March', duration: '2 hours', dress: 'Modest, comfortable clothes.', tips: ['Visit on Monday for the traditional market.']
+    },
+
     /* ======================= MORE: EASTERN PROVINCE ======================= */
     {
       id: 'half-moon-bay', name: 'Half Moon Bay', nativeName: 'شاطئ نصف القمر',

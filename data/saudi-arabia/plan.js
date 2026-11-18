@@ -114,7 +114,7 @@ TG.registerPlanner('saudi-arabia', {
     jeddah: { title: 'Jeddah', city: 'Jeddah', spots: ['historic-jeddah', 'king-fahd-fountain', 'tayebat-museum', 'obhur', 'fakieh-aquarium'] },
     taif: { title: 'Taif', city: 'Taif', spots: ['taif-al-hada', 'al-rudaf-park', 'shubra-palace', 'souq-okaz', 'al-wahbah-crater'] },
     riyadh: { title: 'Riyadh', city: 'Riyadh', spots: ['at-turaif', 'masmak-fort', 'souq-al-zal', 'national-museum', 'murabba-palace', 'kingdom-centre', 'al-faisaliah', 'kafd', 'boulevard-city', 'wadi-hanifa', 'wadi-namar', 'edge-of-the-world', 'red-sands', 'thumamah', 'dahl-heet'] },
-    riyadh_day: { dayTrip: true, title: 'Day trips from Riyadh', city: 'Riyadh', spots: ['ushaiger', 'shaqra', 'al-ghat', 'al-faw', 'uruq-bani-maarid'] },
+    riyadh_day: { dayTrip: true, title: 'Day trips from Riyadh', city: 'Riyadh', spots: ['ushaiger', 'shaqra', 'thadiq-ghamra', 'al-qasab', 'al-ghat', 'al-majmaah-marqab', 'az-zulfi', 'al-faw', 'uruq-bani-maarid'] },
     alula: { title: 'AlUla', city: 'AlUla', spots: ['hegra', 'elephant-rock', 'alula-old-town', 'dadan-jabal-ikmah', 'harrat-viewpoint', 'maraya', 'gharameel', 'rainbow-rock', 'sharaan'] },
     madinah_region: { dayTrip: true, title: 'Madinah Province — further afield', city: 'Madinah', spots: ['khaybar', 'umm-jarsan', 'badr', 'yanbu-historic'] },
     eastern_metro: { title: 'Dammam – Khobar – Dhahran', city: 'Khobar', spots: ['ithra', 'khobar-corniche', 'dammam-corniche', 'king-fahd-causeway', 'half-moon-bay', 'tarout-castle', 'fanateer-beach'] },
@@ -127,7 +127,7 @@ TG.registerPlanner('saudi-arabia', {
     tabuk_coast: { dayTrip: true, title: 'Gulf of Aqaba coast', city: 'Al-Bad\'', spots: ['maghaer-shuaib', 'maqna', 'tayeb-ism', 'ras-alsheikh-hamid', 'georgios-shipwreck'] },
     red_sea: { title: 'Red Sea coast', city: 'Umluj', spots: ['umluj', 'red-sea-global'] },
     hail: { title: 'Hail', city: 'Hail', spots: ['hail-rock-art', 'qishlah-palace', 'aarif-fort', 'barzan-palace', 'jabal-aja', 'fayd'] },
-    qassim: { title: 'Al-Qassim', city: 'Buraidah', spots: ['buraidah', 'buraidah-camel-market', 'unaizah', 'al-shinanah'] },
+    qassim: { title: 'Al-Qassim', city: 'Buraidah', spots: ['buraidah', 'buraidah-camel-market', 'unaizah', 'al-shinanah', 'al-mithnab', 'al-bukayriyah', 'uyun-al-jiwa'] },
     jawf: { title: 'Al-Jawf', city: 'Sakaka', spots: ['zaabal-castle', 'al-rajajil', 'jouf-olive-festival', 'marid-castle', 'dumat-lake', 'qasr-kaf'] },
     north: { title: 'Northern Borders', city: 'Rafha', spots: ['linah', 'darb-zubaydah'] }
   },
