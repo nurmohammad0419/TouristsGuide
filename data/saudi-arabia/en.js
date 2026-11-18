@@ -262,7 +262,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masjid-an-nabawi', name: 'Al-Masjid an-Nabawi (The Prophet\'s Mosque)', nativeName: 'المسجد النبوي',
       region: 'madinah', city: 'Madinah', categories: ['religious'], featured: true,
-      coords: [24.4672, 39.6111], wiki: 'https://en.wikipedia.org/wiki/Prophet%27s_Mosque',
+      muslimSite: true, coords: [24.4672, 39.6111], wiki: 'https://en.wikipedia.org/wiki/Prophet%27s_Mosque',
       tagline: 'The mosque built by the Prophet ﷺ, home to the Green Dome.',
       overview: [
         'Al-Masjid an-Nabawi is the second holiest mosque in Islam. Its famous Green Dome rises above the resting place of Prophet Muhammad ﷺ and his companions Abu Bakr and Umar.',
@@ -289,7 +289,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'quba-mosque', name: 'Quba Mosque', nativeName: 'مسجد قباء',
       region: 'madinah', city: 'Madinah', categories: ['religious'],
-      coords: [24.4393, 39.6173], wiki: 'https://en.wikipedia.org/wiki/Quba_Mosque',
+      muslimSite: true, coords: [24.4393, 39.6173], wiki: 'https://en.wikipedia.org/wiki/Quba_Mosque',
       tagline: 'The first mosque built in Islam.',
       overview: [
         'Quba Mosque lies about 3.5 km south of the Prophet\'s Mosque. With its four minarets and white domes, it is an elegant modern building on the site of Islam\'s very first mosque.',
@@ -313,7 +313,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'mount-uhud', name: 'Mount Uhud & the Martyrs\' Cemetery', nativeName: 'جبل أحد',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage', 'nature'],
-      coords: [24.5227, 39.6183], wiki: 'https://en.wikipedia.org/wiki/Mount_Uhud',
+      muslimSite: true, coords: [24.5227, 39.6183], wiki: 'https://en.wikipedia.org/wiki/Mount_Uhud',
       tagline: 'The mountain of the Battle of Uhud, "a mountain that loves us".',
       overview: [
         'Mount Uhud is a 1,077 m red granite ridge about 5 km north of the Prophet\'s Mosque. At its foot lies the cemetery of the martyrs of the Battle of Uhud and Jabal al-Rumat (the Archers\' Hill).',
@@ -927,7 +927,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masjid-qiblatain', name: 'Masjid al-Qiblatain', nativeName: 'مسجد القبلتين',
       region: 'madinah', city: 'Madinah', categories: ['religious'],
-      coords: [24.4842, 39.5789], wiki: 'https://en.wikipedia.org/wiki/Masjid_al-Qiblatayn',
+      muslimSite: true, coords: [24.4842, 39.5789], wiki: 'https://en.wikipedia.org/wiki/Masjid_al-Qiblatayn',
       tagline: 'The "Mosque of the Two Qiblas".',
       overview: ['A white mosque with twin minarets and domes in north-west Madinah, famous as the place where the direction of prayer changed.'],
       history: ['In 624 CE (2 AH), during a prayer here, revelation came to change the Qibla from Jerusalem (Al-Aqsa) to the Kaaba in Makkah, and the congregation turned mid-prayer. The current building dates from a 1987 reconstruction.'],
@@ -942,7 +942,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-baqi', name: 'Jannat al-Baqi Cemetery', nativeName: 'بقيع الغرقد',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
-      coords: [24.4672, 39.6158], 
+      muslimSite: true, coords: [24.4672, 39.6158], 
       tagline: 'The resting place of many of the Prophet\'s ﷺ family and companions.',
       overview: ['Al-Baqi is the main cemetery of Madinah, directly south-east of the Prophet\'s Mosque. Graves are simple and unmarked, in keeping with local practice.'],
       history: ['Used since the time of the Prophet ﷺ, it contains the graves of many of his wives, his daughter Fatimah (according to many accounts), his son Ibrahim, his uncle Abbas, Caliph Uthman ibn Affan and thousands of companions.'],
@@ -956,7 +956,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'seven-mosques', name: 'The Seven Mosques & Battle of the Trench Site', nativeName: 'المساجد السبعة',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
-      coords: [24.4767, 39.5970], 
+      muslimSite: true, coords: [24.4767, 39.5970], 
       tagline: 'Small historic mosques at the site of the Battle of the Trench.',
       overview: ['A group of small mosques on the western slopes of Mount Sal\'a, beside the large modern Al-Khandaq Mosque. The area marks where the Muslims dug a trench to defend Madinah.'],
       history: ['In 627 CE (5 AH) a confederate army besieged Madinah. On the advice of Salman al-Farsi, the Muslims dug a trench (khandaq) across the open northern approach. After weeks of siege and a fierce storm, the attackers withdrew.'],
@@ -1026,7 +1026,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'badr', name: 'Badr Battlefield', nativeName: 'بدر',
       region: 'madinah', city: 'Badr', categories: ['religious', 'heritage'],
-      coords: [23.7800, 38.7900], wiki: 'https://en.wikipedia.org/wiki/Battle_of_Badr',
+      muslimSite: true, coords: [23.7800, 38.7900], wiki: 'https://en.wikipedia.org/wiki/Battle_of_Badr',
       tagline: 'Site of the first major battle in Islamic history.',
       overview: ['The town of Badr lies about 150 km south-west of Madinah. Visitors can see the battlefield plain, the Martyrs of Badr cemetery and Al-Areesh Mosque.'],
       history: ['In 624 CE (17 Ramadan, 2 AH) about 313 Muslims defeated a much larger Quraysh army here, a turning point for the young Muslim community.'],
@@ -1184,7 +1184,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jawatha-mosque', name: 'Jawatha Mosque', nativeName: 'مسجد جواثا',
       region: 'eastern', city: 'Al-Ahsa', categories: ['religious', 'heritage'],
-      coords: [25.4698, 49.6785], wiki: 'https://en.wikipedia.org/wiki/Jawatha_Mosque',
+      muslimSite: true, coords: [25.4698, 49.6785], wiki: 'https://en.wikipedia.org/wiki/Jawatha_Mosque',
       tagline: 'One of the earliest mosques in Islam.',
       overview: ['Jawatha Mosque is a small restored mosque in a palm-ringed area north-east of Hofuf, marking one of the oldest places of Islamic worship.'],
       history: ['Built in the 7th century (around 629 CE) by the Banu Abd al-Qays tribe, who embraced Islam during the Prophet\'s ﷺ lifetime.'],
@@ -1829,7 +1829,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masjid-al-jumuah', name: 'Masjid al-Jumu\'ah (Friday Mosque)', nativeName: 'مسجد الجمعة',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'], featured: true,
-      coords: [24.4470, 39.6150], wiki: 'https://en.wikipedia.org/wiki/Al_Jum%27ah_Mosque',
+      muslimSite: true, coords: [24.4470, 39.6150], wiki: 'https://en.wikipedia.org/wiki/Al_Jum%27ah_Mosque',
       tagline: 'Where the Prophet ﷺ led the first Friday prayer in Islam.',
       overview: [
         'Masjid al-Jumu\'ah is the historic mosque in Madinah marking the site where Prophet Muhammad ﷺ led the first Friday (Jumu\'ah) congregational prayer in Islamic history. It stands on Tariq As-Salam in the Quba area, about 900 m north of Masjid Quba.',
@@ -2292,7 +2292,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'masjid-ghamama', name: 'Masjid al-Ghamama', nativeName: 'مسجد الغمامة',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
-      coords: [24.4660, 39.6072], 
+      muslimSite: true, coords: [24.4660, 39.6072], 
       tagline: 'The "Mosque of the Cloud", where the Prophet ﷺ prayed for rain.',
       overview: ['A small, elegant Ottoman-era mosque with grey basalt domes about 500 m south-west of the Prophet\'s Mosque.'],
       history: ['It stands on the open prayer ground (musalla) where the Prophet ﷺ prayed the Eid prayers and the prayer for rain (istisqa). The present building dates mainly from the Ottoman period and was restored in the 20th century.'],

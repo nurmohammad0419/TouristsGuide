@@ -700,3 +700,8 @@ kbd { font: inherit; font-size: .72rem; padding: 3px 7px; border-radius: 6px; bo
 .pstay__row p { margin: 8px 0 10px; color: var(--text-2); font-size: .92rem; }
 .pstay__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 @media print { .pitem__ctrl { display: none !important; } }
+
+/* Muslim sacred site badge (open to visit; prayer areas are for Muslims) */
+.badge--site { background: rgba(14, 116, 144, .88); }
+.tag--s { background: rgba(14, 116, 144, .16); color: #0e7490; }
+:root[data-theme="dark"] .tag--s { color: #67d4ea; }

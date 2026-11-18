@@ -179,6 +179,7 @@
           <div class="spot-card__badges">
             ${s.unesco ? `<span class="badge badge--unesco">${t('common.unesco')}</span>` : ''}
             ${s.muslimsOnly ? `<span class="badge badge--muslim">${t('common.muslimsOnly')}</span>` : ''}
+            ${s.muslimSite && !s.muslimsOnly ? `<span class="badge badge--site">🕌 ${t('common.muslimSite')}</span>` : ''}
             ${s.status === 'closed' ? `<span class="badge badge--closed">⛔ ${t('common.closed')}</span>` : ''}
             ${s.status === 'check' ? `<span class="badge badge--check">⚠️ ${t('common.checkStatus')}</span>` : ''}
           </div>
@@ -415,6 +416,7 @@
             ${s.categories.map((c) => data.categories[c] ? `<span class="badge">${data.categories[c].icon} ${esc(data.categories[c].label)}</span>` : '').join('')}
             ${s.unesco ? `<span class="badge badge--unesco">🏛️ ${t('common.unesco')}</span>` : ''}
             ${s.muslimsOnly ? `<span class="badge badge--muslim">☪️ ${t('common.muslimsOnly')}</span>` : ''}
+            ${s.muslimSite && !s.muslimsOnly ? `<span class="badge badge--site">🕌 ${t('common.muslimSite')}</span>` : ''}
             ${s.status === 'closed' ? `<span class="badge badge--closed">⛔ ${t('common.closed')}</span>` : ''}
             ${s.status === 'check' ? `<span class="badge badge--check">⚠️ ${t('common.checkStatus')}</span>` : ''}
           </div>
