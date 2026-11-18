@@ -810,7 +810,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       ],
       highlights: ['Jabal al-Rahmah (Mount of Mercy)', 'Masjid Namirah', 'Jamarat bridge', 'Mina tent city', 'Mashaaer Metro (Hajj season)'],
       hours: { summary: 'Open area — accessible outside Hajj at any time', details: ['During Hajj (8–13 Dhul-Hijjah) access is limited to permit-holding pilgrims'], note: '' },
-      tickets: { required: 'partial', price: 'Free (Hajj requires an official permit)', how: ['Visiting outside Hajj needs no ticket.', 'Hajj packages and permits are booked via Nusuk Hajj or approved agents.'], links: [{ label: 'Nusuk Hajj', url: 'https://hajj.nusuk.sa' }] },
+      tickets: { required: false, price: 'Free', how: ['Outside the Hajj season no ticket is needed to visit.', 'During Hajj (8–13 Dhul-Hijjah) only registered pilgrims with an official Hajj permit may enter the sites.'], links: [] },
       access: 'Within the Makkah sacred area — Muslims only.',
       gettingThere: { airport: 'King Abdulaziz International (JED), Jeddah', road: 'Mina is about 5 km and Arafat about 20 km east of Masjid al-Haram.', transport: 'Taxi or tour; Mashaaer Metro during Hajj only.' },
       bestTime: 'Outside Hajj: early morning in winter', duration: '2–3 hours (visit)',
@@ -826,7 +826,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       religious: ['People already staying in Makkah who wish to perform another Umrah go out to the edge of the Haram — most commonly here — to put on ihram and make the intention (niyyah).'],
       highlights: ['Miqat for Umrah', 'Ablution and changing facilities'],
       hours: { summary: 'Open 24 hours', details: [], note: '' },
-      tickets: { required: 'partial', price: 'Free', how: ['No ticket for the mosque; Umrah itself requires a Nusuk permit.'], links: [{ label: 'Nusuk', url: 'https://www.nusuk.sa' }] },
+      tickets: { required: false, price: 'Free', how: ['No ticket or booking is needed to visit the mosque.'], links: [] },
       access: 'Within Makkah — Muslims only.',
       gettingThere: { airport: 'King Abdulaziz International (JED)', road: 'About 15 minutes from the Haram.', transport: 'Taxis and Makkah buses run between the Haram and Masjid Aisha.' },
       bestTime: 'Late night or early morning', duration: '1 hour', dress: 'Ihram for men; modest dress for women.', tips: ['Bring your ihram in a bag and change there.']
@@ -2267,7 +2267,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       religious: ['Because the Prophet ﷺ himself entered ihram here, many scholars consider it one of the most virtuous places for Makkah residents to begin Umrah.'],
       highlights: ['Miqat for Umrah', 'Ablution and changing facilities'],
       hours: { summary: 'Open 24 hours', details: [], note: '' },
-      tickets: { required: 'partial', price: 'Free', how: ['No ticket for the mosque; Umrah requires a Nusuk permit.'], links: [{ label: 'Nusuk', url: 'https://www.nusuk.sa' }] },
+      tickets: { required: false, price: 'Free', how: ['No ticket or booking is needed to visit the mosque.'], links: [] },
       access: 'In the Makkah area near the Haram boundary — intended for Muslim pilgrims.',
       gettingThere: { airport: 'King Abdulaziz International (JED)', road: 'About 30–40 minutes by car from the Haram.', transport: 'Taxi.' },
       bestTime: 'Night or early morning', duration: '1 hour', dress: 'Ihram for men; modest dress for women.', tips: ['Less crowded than Masjid Aisha.']

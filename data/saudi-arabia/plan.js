@@ -12,6 +12,17 @@
 TG.registerPlanner('saudi-arabia', {
   reviewed: 'November 2026',
 
+  // Your own travel website (flight search + hotel booking). Leave empty to hide the buttons.
+  // URL templates — these {tokens} are replaced (and URL-encoded) automatically:
+  //   flights: {to} airport code of arrival, {depart} / {return} dates (YYYY-MM-DD), {adults}
+  //   hotels : {city}, {checkin}, {checkout}, {adults}, {rooms}
+  // Example:  flights: 'https://your-site.com/flights?to={to}&depart={depart}&return={return}&adults={adults}'
+  partner: {
+    name: '',
+    flights: '',
+    hotels: ''
+  },
+
   visa: {
     portal: 'https://visa.visitsaudi.com',
     nusuk: 'https://www.nusuk.sa',

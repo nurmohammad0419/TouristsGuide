@@ -111,7 +111,7 @@
         <p>${esc(t('footer.about'))}</p>
       </div>
       <div class="footer__col"><h4>${t('nav.countries')}</h4>${CFG.countries.map((c) => c.status === 'live' ? `<a href="#/c/${c.id}">${c.flag} ${esc(c.name)}</a>` : `<span class="muted">${c.flag} ${esc(c.name)} · ${t('common.comingSoon')}</span>`).join('')}</div>
-      <div class="footer__col"><h4>Useful</h4><a href="https://www.visitsaudi.com" target="_blank" rel="noopener">VisitSaudi</a><a href="https://www.nusuk.sa" target="_blank" rel="noopener">Nusuk</a><a href="https://visa.visitsaudi.com" target="_blank" rel="noopener">Saudi eVisa</a></div>
+      <div class="footer__col"><h4>Useful</h4><a href="https://www.visitsaudi.com" target="_blank" rel="noopener">VisitSaudi</a><a href="https://visa.visitsaudi.com" target="_blank" rel="noopener">Saudi eVisa</a></div>
       <div class="footer__bottom"><span>© ${new Date().getFullYear()} TouristsGuide · ${esc(t('footer.made'))}</span><span class="muted">${esc(t('common.photoCredit'))}</span></div>`;
   }
 

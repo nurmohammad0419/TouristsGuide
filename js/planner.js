@@ -49,7 +49,7 @@
     if (V.evisa.includes(s.nat)) return { level: 'ok', title: 'Eligible for the tourist eVisa / visa on arrival', text: 'Apply online before you fly (recommended) or get a visa on arrival at major airports. The tourist visa is valid for 1 year, multiple entry, up to 90 days per stay, and allows Umrah outside the Hajj season.', link: V.portal };
     if (s.res && s.res !== s.nat && V.residentOf.includes(s.res)) return { level: 'ok', title: 'Eligible for the tourist eVisa as a resident', text: 'Holders of a valid residence permit in your country of residence can apply for the Saudi tourist eVisa online. Carry your residence permit and passport (valid 6+ months).', link: V.portal };
     if (s.visaHolder) return { level: 'ok', title: 'Eligible for the eVisa / visa on arrival as a visa holder', text: 'Holders of ' + V.visaHolderOf + ' can apply for the tourist eVisa online or get a visa on arrival. Bring the passport containing that visa.', link: V.portal };
-    return { level: 'warn', title: 'Visa required in advance', text: 'Your nationality is not currently on the eVisa list. Apply for a visit visa through the Saudi embassy or an authorised agent before travelling. Muslims can apply for an Umrah visa through the Nusuk platform or a licensed Umrah agent, which also allows tourism in most of the Kingdom.', link: V.nusuk, link2: V.portal };
+    return { level: 'warn', title: 'Visa required in advance', text: 'Your nationality is not currently on the eVisa list. Apply for a visit visa through the Saudi embassy or an authorised agent before travelling.', link: V.portal, nusukLink: V.nusuk };
   }
 
   /* ---------------- Transport between provinces ---------------- */
@@ -260,6 +260,8 @@
   }
 
   /* ---------------- Budget & lodging ---------------- */
+  // Fill {tokens} in a partner URL template
+  function fillUrl(tpl, vars) { return String(tpl || '').replace(/\{(\w+)\}/g, (m, k) => encodeURIComponent(vars[k] == null ? '' : vars[k])); }
   function people(s) { return Math.max(1, Math.min(12, parseInt(s.ppl, 10) || ({ solo: 1, couple: 2, family: 4, friends: 3 }[s.group] || 2))); }
   function tierIdx(s) { return { eco: 0, comfort: 1, lux: 2 }[s.bl || 'comfort']; }
   function lodgingRate(P, city, tier) { const L = P.costs.lodging; return (L[city] || L.default)[tier]; }
@@ -360,8 +362,8 @@
         </div>
         <label class="choice choice--sm ${s.visaHolder ? 'on' : ''}"><input type="checkbox" name="visaHolder" ${s.visaHolder ? 'checked' : ''}><span><b>${t('plan.visaHolder')}</b></span></label>
         ${v ? `<div class="verdict verdict--${v.level}"><b>${v.level === 'ok' ? '✅' : '⚠️'} ${esc(v.title)}</b><p>${esc(v.text)}</p>
-          ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.level === 'ok' ? t('plan.applyEvisa') : t('plan.nusukUmrah')}</a>` : ''}
-          ${v.link2 ? `<a class="btn btn--sm btn--ghost" href="${v.link2}" target="_blank" rel="noopener">${t('plan.checkPortal')}</a>` : ''}
+          ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
+          ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${t('plan.nusukUmrah')}</a>` : ''}
           <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)})</small></div>` : ''}`, !!s.nat));
       if (s.nat) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
         ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, t('plan.muslimSub'))}
@@ -461,9 +463,10 @@
     const allSpots = days.flatMap((d) => d.items.filter((i) => i.type === 'spot').map((i) => spot(i.id)));
     const bookings = [];
     if (s.origin === 'outside' && verdict && verdict.level === 'ok' && s.nat !== 'SA' && !P.visa.gcc.includes(s.nat)) bookings.push({ label: 'Tourist eVisa (apply online before departure)', url: P.visa.portal });
-    if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push({ label: muslim ? 'Umrah / visit visa via Nusuk or an authorised agent' : 'Visit visa via the Saudi embassy', url: muslim ? P.visa.nusuk : P.visa.portal });
+    if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push(umrah ? { label: 'Umrah visa via the Nusuk platform or a licensed Umrah agent', url: P.visa.nusuk } : { label: 'Visit visa via the Saudi embassy or an authorised agent', url: P.visa.portal });
+    if (s.origin === 'outside' && P.partner && P.partner.flights) bookings.unshift({ label: `Flights to ${s.airport} (${s.from} → ${s.to}) — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
     if (muslim && allSpots.some((x) => x.id === 'masjid-al-haram')) bookings.push({ label: 'Free Umrah permit — book a time slot in the Nusuk app', url: P.visa.nusuk });
-    if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) bookings.push({ label: 'Free Al-Rawdah permit (Prophet\'s Mosque) — Nusuk app', url: P.visa.nusuk });
+    if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) bookings.push({ label: 'Al-Rawdah visit permit (only if you want to pray in the Rawdah) — Nusuk app', url: P.visa.nusuk });
     if (days.some((d) => d.items.some((i) => i.type === 'travel' && /Haramain/.test(i.text)))) bookings.push({ label: 'Haramain High Speed Railway tickets (book ahead on busy days)', url: 'https://sar.hhr.sa' });
     if (days.some((d) => d.items.some((i) => i.type === 'travel' && /SAR /.test(i.text)))) bookings.push({ label: 'SAR train tickets', url: 'https://www.sar.com.sa' });
     allSpots.forEach((x) => { if (x.tickets && (x.tickets.required === true || x.tickets.required === 'partial') && x.tickets.links && x.tickets.links[0] && !/nusuk\.sa/.test(x.tickets.links[0].url) && !bookings.some((b) => b.url === x.tickets.links[0].url && b.label.includes(x.name.split('(')[0].trim()))) bookings.push({ label: `${x.name.split(' — ')[0]} — ${x.tickets.required === true ? 'advance booking required' : 'some parts need booking'}`, url: x.tickets.links[0].url, spot: x.id }); });
@@ -471,7 +474,8 @@
     const docs = [];
     if (s.origin === 'outside') { docs.push('Passport valid for at least 6 months'); docs.push(verdict && verdict.level === 'ok' ? 'Printed / saved eVisa or visa-on-arrival eligibility proof' : 'Visa stamped in passport'); if (s.res && s.res !== s.nat) docs.push('Residence permit of your country of residence'); if (s.visaHolder) docs.push('Passport with the valid US / UK / Schengen visa'); docs.push('Travel insurance (included with the eVisa fee)'); if (s.transport === 'car') docs.push('National driving licence + International Driving Permit'); docs.push('Hotel booking confirmations'); }
     else { docs.push('National ID / Iqama'); if (s.car === 'yes') docs.push('Driving licence, vehicle registration and insurance'); }
-    if (muslim) docs.push('Nusuk app installed and account created');
+    if (umrah) docs.push('Nusuk app installed and account created (for the Umrah permit)');
+    else if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) docs.push('Nusuk app (only if you want a Rawdah visit permit)');
     if (muslim && umrah) docs.push('Ihram clothing for Umrah (men: two unstitched white cloths) / loose modest clothing (women)');
     if (s.group === 'family') docs.push('Children\'s passports / IDs, stroller, snacks and sun protection');
 
@@ -522,6 +526,7 @@
         ${stayList.map((st) => `<div class="pstay__row"><div class="pstay__head"><b>${esc(st.city)}</b><span>${st.nights} ${t('plan.nights')} · ${fmtDate(st.from)} → ${fmtDate(st.to)}</span></div>
           <p>${esc(P.stay[st.city] || P.stay.default)}</p>
           <div class="pstay__foot"><span class="pill pill--info">≈ ${sar(st.rate[0])} – ${sar(st.rate[1])} ${t('plan.perRoomNight')}</span>
+          ${P.partner && P.partner.hotels ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(P.partner.hotels, { city: st.city, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(P.partner.name)} ${icon.ext}</a>` : ''}
           <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', Saudi Arabia')}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
           <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' Saudi Arabia')}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
       </section>` : '';
