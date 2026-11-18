@@ -12,15 +12,19 @@
 TG.registerPlanner('saudi-arabia', {
   reviewed: 'November 2026',
 
-  // Your own travel website (flight search + hotel booking). Leave empty to hide the buttons.
-  // URL templates — these {tokens} are replaced (and URL-encoded) automatically:
-  //   flights: {to} airport code of arrival, {depart} / {return} dates (YYYY-MM-DD), {adults}
-  //   hotels : {city}, {checkin}, {checkout}, {adults}, {rooms}
-  // Example:  flights: 'https://your-site.com/flights?to={to}&depart={depart}&return={return}&adults={adults}'
+  // Travel partner: FeniTravels (flight search + hotel booking). Set name to '' to hide the buttons.
+  // URL templates — {tokens} are replaced and URL-encoded; empty parameters are dropped automatically.
+  //   flights: {from} {to} airport codes, {depart} {return} dates (YYYY-MM-DD), {adults}
+  //   hotels : {citycode} (airport-style city code), {checkin} {checkout}, {rooms}, {adults}
   partner: {
-    name: '',
-    flights: '',
-    hotels: ''
+    name: 'FeniTravels',
+    home: 'https://fenitravels.com',
+    flights: 'https://fenitravels.com/search/results?origin={from}&destination={to}&departureDate={depart}&returnDate={return}&cabinClass=economy&adults={adults}&children=0&infants=0',
+    hotels: 'https://fenitravels.com/search/hotels?city={citycode}&checkIn={checkin}&checkOut={checkout}&rooms={rooms}&adults={adults}&children=0',
+    // Planner city name -> FeniTravels city code
+    cityCodes: {"Makkah": "MAK", "Madinah": "MED", "Riyadh": "RUH", "Jeddah": "JED", "Dammam": "DMM", "Khobar": "DMM", "Dhahran": "DMM", "Abha": "AHB", "AlUla": "ULH", "Taif": "TIF", "Tabuk": "TUU", "Hail": "HAS", "Jazan": "GIZ", "Najran": "EAM", "Buraidah": "ELQ", "Unaizah": "ELQ", "Sakaka": "AJF", "Hofuf": "HOF", "Yanbu": "YNB", "Umluj": "ULH"},
+    // Airports FeniTravels can search: [code, city, ISO country]
+    airports: [["RUH","Riyadh","SA"],["JED","Jeddah","SA"],["DMM","Dammam","SA"],["MED","Madinah","SA"],["AHB","Abha","SA"],["TUU","Tabuk","SA"],["TIF","Taif","SA"],["ELQ","Qassim","SA"],["GIZ","Jazan","SA"],["HAS","Hail","SA"],["ULH","AlUla","SA"],["YNB","Yanbu","SA"],["HOF","Al-Ahsa","SA"],["EAM","Najran","SA"],["AJF","Al Jouf","SA"],["NUM","NEOM","SA"],["DXB","Dubai","AE"],["AUH","Abu Dhabi","AE"],["SHJ","Sharjah","AE"],["DOH","Doha","QA"],["BAH","Manama","BH"],["KWI","Kuwait City","KW"],["MCT","Muscat","OM"],["SLL","Salalah","OM"],["AMM","Amman","JO"],["BEY","Beirut","LB"],["DAM","Damascus","SY"],["BGW","Baghdad","IQ"],["BSR","Basra","IQ"],["EBL","Erbil","IQ"],["ADE","Aden","YE"],["SAH","Sana'a","YE"],["CAI","Cairo","EG"],["HBE","Alexandria","EG"],["SSH","Sharm El Sheikh","EG"],["HRG","Hurghada","EG"],["LXR","Luxor","EG"],["KRT","Khartoum","SD"],["PZU","Port Sudan","SD"],["ADD","Addis Ababa","ET"],["NBO","Nairobi","KE"],["DAR","Dar es Salaam","TZ"],["MGQ","Mogadishu","SO"],["JIB","Djibouti","DJ"],["CMN","Casablanca","MA"],["RAK","Marrakesh","MA"],["TUN","Tunis","TN"],["ALG","Algiers","DZ"],["LOS","Lagos","NG"],["JNB","Johannesburg","ZA"],["IST","Istanbul","TR"],["SAW","Istanbul","TR"],["AYT","Antalya","TR"],["ESB","Ankara","TR"],["TZX","Trabzon","TR"],["GYD","Baku","AZ"],["TBS","Tbilisi","GE"],["IKA","Tehran","IR"],["KHI","Karachi","PK"],["LHE","Lahore","PK"],["ISB","Islamabad","PK"],["PEW","Peshawar","PK"],["MUX","Multan","PK"],["SKT","Sialkot","PK"],["LYP","Faisalabad","PK"],["KBL","Kabul","AF"],["DEL","Delhi","IN"],["BOM","Mumbai","IN"],["HYD","Hyderabad","IN"],["COK","Kochi","IN"],["CCJ","Kozhikode","IN"],["TRV","Thiruvananthapuram","IN"],["MAA","Chennai","IN"],["BLR","Bengaluru","IN"],["LKO","Lucknow","IN"],["AMD","Ahmedabad","IN"],["CCU","Kolkata","IN"],["DAC","Dhaka","BD"],["CGP","Chattogram","BD"],["ZYL","Sylhet","BD"],["KTM","Kathmandu","NP"],["CMB","Colombo","LK"],["MLE","Mal\\xe9","MV"],["MNL","Manila","PH"],["CEB","Cebu","PH"],["CGK","Jakarta","ID"],["SUB","Surabaya","ID"],["DPS","Bali","ID"],["KUL","Kuala Lumpur","MY"],["PEN","Penang","MY"],["SIN","Singapore","SG"],["BKK","Bangkok","TH"],["HKT","Phuket","TH"],["SGN","Ho Chi Minh City","VN"],["HAN","Hanoi","VN"],["HKG","Hong Kong","HK"],["PEK","Beijing","CN"],["PVG","Shanghai","CN"],["CAN","Guangzhou","CN"],["NRT","Tokyo","JP"],["ICN","Seoul","KR"],["TAS","Tashkent","UZ"],["ALA","Almaty","KZ"],["LHR","London","GB"],["MAN","Manchester","GB"],["CDG","Paris","FR"],["FRA","Frankfurt","DE"],["MUC","Munich","DE"],["AMS","Amsterdam","NL"],["BRU","Brussels","BE"],["MAD","Madrid","ES"],["BCN","Barcelona","ES"],["FCO","Rome","IT"],["MXP","Milan","IT"],["VIE","Vienna","AT"],["ZRH","Zurich","CH"],["GVA","Geneva","CH"],["ATH","Athens","GR"],["CPH","Copenhagen","DK"],["ARN","Stockholm","SE"],["SJJ","Sarajevo","BA"],["SVO","Moscow","RU"],["JFK","New York","US"],["IAD","Washington","US"],["ORD","Chicago","US"],["IAH","Houston","US"],["LAX","Los Angeles","US"],["YYZ","Toronto","CA"],["SYD","Sydney","AU"],["MEL","Melbourne","AU"]]
   },
 
   visa: {

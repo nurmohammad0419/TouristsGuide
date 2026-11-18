@@ -49,7 +49,7 @@ window.TG_I18N.en = {
   plan: {
     title: 'Plan your trip, step by step',
     subtitle: 'Answer a few questions and get a complete day-by-day itinerary: visa check, where to land, how to move around, what to book in advance and which spots fit your dates.',
-    q: { origin: 'Where will your trip start?', visa: 'Nationality & residence (visa check)', religion: 'Religious status', current: 'Where are you now?', dest: 'Which province(s) do you want to visit?', dates: 'Travel dates', group: 'Who is travelling?', style: 'Choose your plan style', budget: 'Budget level & travellers', transport: 'How will you get around?', airport: 'Arrival airport', extras: 'Also include', car: 'Do you have a car?' },
+    q: { origin: 'Where will your trip start?', visa: 'Nationality & residence (visa check)', religion: 'Religious status', current: 'Where are you now?', dest: 'Which province(s) do you want to visit?', dates: 'Travel dates', group: 'Who is travelling?', style: 'Choose your plan style', from: 'Which airport will you fly from?', budget: 'Budget level & travellers', transport: 'How will you get around?', airport: 'Arrival airport', extras: 'Also include', car: 'Do you have a car?' },
     outside: 'Coming from outside Saudi Arabia', outsideSub: 'Visa check, arrival airport and a full itinerary',
     inside: 'Already inside Saudi Arabia', insideSub: 'Plan a trip from your province to another',
     nationality: 'Nationality (passport)', residence: 'Country of residence', sameAsNat: 'Same as nationality',
@@ -67,6 +67,8 @@ window.TG_I18N.en = {
     ownCar: 'Yes, own car', ownCarSub: 'Self-drive routes and desert spots', noCar: 'No car', noCarSub: 'Trains, flights, buses and taxis',
     planReady: 'Your plan is ready',
     bookOn: 'Book on',
+    flyingFrom: 'Departure airport', flyingFromHint: 'We pre-selected an airport in your country — change it if you fly from another city. Used for the flight search link.',
+    partnerNote: 'Flight and hotel searches open on {name}, our travel partner, with your dates and travellers already filled in. You book and pay on their site.',
     eco: 'Budget', ecoSub: 'Simple hotels, local food', comfort: 'Comfort', comfortSub: '3–4★ hotels, restaurants', lux: 'Luxury', luxSub: '5★ & resorts, fine dining', travellers: 'Number of travellers', travellersLower: 'traveller(s)', perPerson: 'Per person',
     moveUp: 'Move earlier', moveDown: 'Move later', moveToDay: 'Move to day…', movedToast: 'Moved — plan updated',
     stayTitle: 'Where to stay', staySub: 'Area advice per city, estimated room prices and a hotel search for your exact dates.', nights: 'night(s)', perRoomNight: 'per room / night', searchHotels: 'Search hotels',

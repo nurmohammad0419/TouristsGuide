@@ -23,7 +23,7 @@
     const s = {
       origin: p.get('o') || '', nat: p.get('n') || '', res: p.get('r') || '', visaHolder: p.get('vh') === '1',
       religion: p.get('f') || '', from: p.get('from') || '', to: p.get('to') || '', group: p.get('g') || '',
-      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '', ex: (p.get('ex') || '').split(',').filter(Boolean), bl: p.get('bl') || '', ppl: p.get('ppl') || '', ord: (p.get('ord') || '').split(',').filter(Boolean),
+      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '', ex: (p.get('ex') || '').split(',').filter(Boolean), bl: p.get('bl') || '', fr: p.get('fr') || '', ppl: p.get('ppl') || '', ord: (p.get('ord') || '').split(',').filter(Boolean),
       mv: Object.fromEntries((p.get('mv') || '').split(',').filter(Boolean).map((x) => { const i = x.lastIndexOf(':'); return [x.slice(0, i), parseInt(x.slice(i + 1), 10)]; })), ad: (p.get('ad') || '').split(',').filter(Boolean),
       extras: (p.get('x') || '').split(',').filter(Boolean),
       curProv: p.get('cp') || '', dest: (p.get('dp') || '').split(',').filter(Boolean), car: p.get('car') || ''
@@ -35,7 +35,7 @@
     const put = (k, v) => { if (v) p.set(k, v); };
     put('o', s.origin); put('n', s.nat); put('r', s.res); if (s.visaHolder) p.set('vh', '1');
     put('f', s.religion); put('from', s.from); put('to', s.to); put('g', s.group); put('tr', s.transport); if (s.idp) p.set('idp', '1');
-    put('a', s.airport); put('st', s.style); put('ex', s.ex.join(',')); put('bl', s.bl); put('ppl', s.ppl); put('ord', s.ord.join(',')); put('mv', Object.entries(s.mv).map(([k, v]) => k + ':' + v).join(',')); put('ad', s.ad.join(',')); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
+    put('a', s.airport); put('st', s.style); put('ex', s.ex.join(',')); put('bl', s.bl); put('fr', s.fr); put('ppl', s.ppl); put('ord', s.ord.join(',')); put('mv', Object.entries(s.mv).map(([k, v]) => k + ':' + v).join(',')); put('ad', s.ad.join(',')); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
     const base = location.hash.split('?')[0];
     history.replaceState(null, '', base + '?' + p.toString());
   }
@@ -188,7 +188,7 @@
       if (from !== to) {
         const c = corridor(P, from, to);
         const modes = pickTransport(c, s);
-        cur.items.push({ type: 'travel', text: `Travel from ${P.hubs[from].city} to ${P.hubs[to].city}: ${modes[0].label}.`, alt: modes.slice(1, 3).map((m) => m.label), url: modes[0].url });
+        cur.items.push({ type: 'travel', text: `Travel from ${P.hubs[from].city} to ${P.hubs[to].city}: ${modes[0].label}.`, alt: modes.slice(1, 3).map((m) => m.label), url: modes[0].url, flight: modes[0].type === 'flight' ? { from: P.hubs[from].airport, to: P.hubs[to].airport } : null });
         cur.capacity = c.driveH >= 4 ? 1 : 2;
       } else cur.capacity = pace;
     }
@@ -200,7 +200,7 @@
         const modes = pickTransport(c, s);
         cur = newDay(b.city, b.prov, 'travel');
         const ihramNote = (s.umrah && b.key === 'makkah_umrah' && lastProv === 'madinah') ? ' If you are performing Umrah, many pilgrims bathe and put on ihram at their Madinah hotel, then make the intention (niyyah) at or before the miqat of Dhul Hulayfah (Abyar Ali) — ask your Umrah agent or check the Nusuk app for the exact steps.' : '';
-        cur.items.push({ type: 'travel', text: `Travel from ${P.hubs[lastProv].city} area to ${b.city}: ${modes[0].label}.${ihramNote}`, alt: modes.slice(1, 3).map((m) => m.label), url: modes[0].url });
+        cur.items.push({ type: 'travel', text: `Travel from ${P.hubs[lastProv].city} area to ${b.city}: ${modes[0].label}.${ihramNote}`, alt: modes.slice(1, 3).map((m) => m.label), url: modes[0].url, flight: modes[0].type === 'flight' ? { from: P.hubs[lastProv].airport, to: P.hubs[b.prov].airport } : null });
         cur.capacity = c.driveH >= 4 ? 1 : Math.max(1, pace - 1);
       } else if (b.city !== lastCity) {
         const dKm = cityDistance(data, lastCity, b.city);
@@ -260,8 +260,20 @@
   }
 
   /* ---------------- Budget & lodging ---------------- */
-  // Fill {tokens} in a partner URL template
-  function fillUrl(tpl, vars) { return String(tpl || '').replace(/\{(\w+)\}/g, (m, k) => encodeURIComponent(vars[k] == null ? '' : vars[k])); }
+  // Fill {tokens} in a partner URL template and drop empty query parameters
+  function fillUrl(tpl, vars) {
+    const u = String(tpl || '').replace(/\{(\w+)\}/g, (m, k) => encodeURIComponent(vars[k] == null ? '' : vars[k]));
+    return u.replace(/([?&])[^=&]+=(?=&|$)/g, '$1').replace(/\?&+/g, '?').replace(/&&+/g, '&').replace(/[?&]$/, '');
+  }
+  const ymd = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  // Default departure airport: first airport in the traveller's country of residence (or nationality)
+  function defFrom(P, s) {
+    const list = (P.partner && P.partner.airports) || [];
+    const hit = list.find((a) => a[2] === (s.res || s.nat)) || list.find((a) => a[2] === s.nat);
+    return hit ? hit[0] : '';
+  }
+  function fromCode(P, s) { return s.fr || defFrom(P, s); }
+  function airportOk(P, code) { return !!code && ((P.partner && P.partner.airports) || []).some((a) => a[0] === code); }
   function people(s) { return Math.max(1, Math.min(12, parseInt(s.ppl, 10) || ({ solo: 1, couple: 2, family: 4, friends: 3 }[s.group] || 2))); }
   function tierIdx(s) { return { eco: 0, comfort: 1, lux: 2 }[s.bl || 'comfort']; }
   function lodgingRate(P, city, tier) { const L = P.costs.lodging; return (L[city] || L.default)[tier]; }
@@ -270,7 +282,7 @@
     const out = [];
     days.slice(0, -1).forEach((d) => {
       const last = out[out.length - 1];
-      if (last && last.city === d.city) last.nights++; else out.push({ city: d.city, nights: 1, from: d.date });
+      if (last && last.city === d.city) last.nights++; else out.push({ city: d.city, prov: d.prov, nights: 1, from: d.date });
     });
     const ppl = people(s);
     const rooms = s.group === 'family' ? Math.ceil(ppl / 4) : Math.ceil(ppl / 2);
@@ -416,7 +428,13 @@
           const rec = s.religion === 'muslim' ? 'JED' : 'RUH';
           out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === 'MED' && s.religion === 'muslim' ? t('plan.medAlt') : ''))).join('')}</div>`, !!s.airport));
         }
-        if (s.airport) {
+        if (s.airport && P.partner && P.partner.flights) {
+          const cur = fromCode(P, s);
+          const names = Object.fromEntries(P.countries);
+          const sorted = P.partner.airports.filter((a) => a[2] !== 'SA').slice().sort((a, b) => (names[a[2]] || a[2]).localeCompare(names[b[2]] || b[2]) || a[1].localeCompare(b[1]));
+          out.push(step(n++, t('plan.q.from'), `<label class="field field--sel"><span>${t('plan.flyingFrom')}</span><select name="fr">${sorted.map((a) => opt(a[0], `${a[1]} (${a[0]}) — ${names[a[2]] || a[2]}`, cur)).join('')}</select></label><p class="muted small">${t('plan.flyingFromHint')}</p>`, true));
+        }
+      if (s.airport) {
           const m = s.religion === 'muslim';
           const opts = m ? [['jeddah', 'Jeddah (Al-Balad, corniche)'], ['taif', 'Taif mountains & roses'], ['alula', 'AlUla & Hegra'], ['riyadh', 'Riyadh & Diriyah'], ['eastern', 'Eastern Province (Al-Ahsa, Khobar)'], ['asir', 'Asir mountains (Abha)']]
             : (s.airport === 'RUH' ? [['riyadh_day', 'Day trips from Riyadh'], ['alula', 'AlUla & Hegra'], ['jeddah', 'Jeddah (Al-Balad, Red Sea)'], ['eastern', 'Eastern Province'], ['asir', 'Asir mountains']] : [['taif', 'Taif mountains & roses'], ['alula', 'AlUla & Hegra'], ['riyadh', 'Riyadh & Diriyah'], ['eastern', 'Eastern Province'], ['asir', 'Asir mountains']]);
@@ -441,7 +459,7 @@
       ctx.days = days;
       result = renderResult(ctx, s, days, visaVerdict(P, s));
     }
-    const total = s.origin === 'outside' ? 10 : s.origin === 'inside' ? 9 : 1;
+    const total = s.origin === 'outside' ? 10 + (P.partner && P.partner.flights ? 1 : 0) : s.origin === 'inside' ? 9 : 1;
     const pct = Math.min(100, Math.round((doneCount / total) * 100));
     const prog = s.origin ? `<div class="pprog"><div class="pprog__bar"><i style="width:${pct}%"></i></div><span>${pct >= 100 ? '🎉 ' + t('plan.planReady') : Math.min(doneCount, total) + ' / ' + total}</span></div>` : '';
     return `<div class="planner">${prog}${out.join('')}</div>${result}`;
@@ -464,7 +482,12 @@
     const bookings = [];
     if (s.origin === 'outside' && verdict && verdict.level === 'ok' && s.nat !== 'SA' && !P.visa.gcc.includes(s.nat)) bookings.push({ label: 'Tourist eVisa (apply online before departure)', url: P.visa.portal });
     if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push(umrah ? { label: 'Umrah visa via the Nusuk platform or a licensed Umrah agent', url: P.visa.nusuk } : { label: 'Visit visa via the Saudi embassy or an authorised agent', url: P.visa.portal });
-    if (s.origin === 'outside' && P.partner && P.partner.flights) bookings.unshift({ label: `Flights to ${s.airport} (${s.from} → ${s.to}) — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
+    if (P.partner && P.partner.flights) {
+      const domestic = [];
+      days.forEach((d) => d.items.forEach((it) => { if (it.flight && airportOk(P, it.flight.from) && airportOk(P, it.flight.to)) domestic.push({ label: `Flight ${it.flight.from} → ${it.flight.to} on ${fmtDate(d.date)} — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: it.flight.from, to: it.flight.to, depart: ymd(d.date), adults: people(s) }) }); }));
+      bookings.unshift(...domestic);
+      if (s.origin === 'outside') bookings.unshift({ label: `Flights ${fromCode(P, s) || '…'} → ${s.airport} (${s.from} → ${s.to}) — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: fromCode(P, s), to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
+    }
     if (muslim && allSpots.some((x) => x.id === 'masjid-al-haram')) bookings.push({ label: 'Free Umrah permit — book a time slot in the Nusuk app', url: P.visa.nusuk });
     if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) bookings.push({ label: 'Al-Rawdah visit permit (only if you want to pray in the Rawdah) — Nusuk app', url: P.visa.nusuk });
     if (days.some((d) => d.items.some((i) => i.type === 'travel' && /Haramain/.test(i.text)))) bookings.push({ label: 'Haramain High Speed Railway tickets (book ahead on busy days)', url: 'https://sar.hhr.sa' });
@@ -519,16 +542,17 @@
       </article>`;
     }).join('');
 
-    const fmtShort = (d) => d.toISOString().slice(0, 10);
+    const fmtShort = ymd;
     const stayHtml = stayList.length ? `
       <section class="pstay glass-card reveal">
         <h3>🏨 ${t('plan.stayTitle')}</h3><p class="muted small">${t('plan.staySub')}</p>
         ${stayList.map((st) => `<div class="pstay__row"><div class="pstay__head"><b>${esc(st.city)}</b><span>${st.nights} ${t('plan.nights')} · ${fmtDate(st.from)} → ${fmtDate(st.to)}</span></div>
           <p>${esc(P.stay[st.city] || P.stay.default)}</p>
           <div class="pstay__foot"><span class="pill pill--info">≈ ${sar(st.rate[0])} – ${sar(st.rate[1])} ${t('plan.perRoomNight')}</span>
-          ${P.partner && P.partner.hotels ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(P.partner.hotels, { city: st.city, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(P.partner.name)} ${icon.ext}</a>` : ''}
+          ${(() => { const cc = (P.partner.cityCodes || {})[st.city] || (P.hubs[st.prov] || {}).airport || ''; return P.partner && P.partner.hotels && cc ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(P.partner.hotels, { citycode: cc, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(P.partner.name)} ${icon.ext}</a>` : ''; })()}
           <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', Saudi Arabia')}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
           <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' Saudi Arabia')}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
+        ${P.partner && P.partner.name ? `<p class="note">✈️ ${t('plan.partnerNote').replace('{name}', esc(P.partner.name))}</p>` : ''}
       </section>` : '';
     const budgetHtml = `
       <div class="glass-card pbudget"><h3>💰 ${t('plan.budgetTitle')}</h3>
@@ -595,7 +619,7 @@
     const rerender = () => { writeState(s); root.innerHTML = render(ctx); bind(ctx, root); if (ctx.onRender) ctx.onRender(); };
     root.querySelectorAll('input[type=radio]').forEach((el) => el.addEventListener('change', () => {
       const k = el.name; s[k] = el.value;
-      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; s.ex = []; s.ad = []; s.mv = {}; s.ord = []; s.bl = s.ppl = ''; }
+      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; s.ex = []; s.ad = []; s.mv = {}; s.ord = []; s.bl = s.ppl = s.fr = ''; }
       if (k === 'religion' && s.origin === 'outside') { s.airport = ''; s.extras = []; }
       if (k === 'airport') s.extras = suggestExtras(s, s.religion === 'muslim');
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
