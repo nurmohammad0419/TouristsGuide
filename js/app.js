@@ -32,7 +32,7 @@
   function loadScript(src) {
     return new Promise((resolve) => {
       const s = document.createElement('script');
-      s.src = src; s.onload = () => resolve(true); s.onerror = () => resolve(false);
+      s.src = src + '?v=202611182030'; s.onload = () => resolve(true); s.onerror = () => resolve(false);
       document.head.appendChild(s);
     });
   }
