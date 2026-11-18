@@ -23,7 +23,7 @@
     const s = {
       origin: p.get('o') || '', nat: p.get('n') || '', res: p.get('r') || '', visaHolder: p.get('vh') === '1',
       religion: p.get('f') || '', from: p.get('from') || '', to: p.get('to') || '', group: p.get('g') || '',
-      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '',
+      transport: p.get('tr') || '', idp: p.get('idp') === '1', airport: p.get('a') || '', style: p.get('st') || '', ex: (p.get('ex') || '').split(',').filter(Boolean), ad: (p.get('ad') || '').split(',').filter(Boolean),
       extras: (p.get('x') || '').split(',').filter(Boolean),
       curProv: p.get('cp') || '', dest: (p.get('dp') || '').split(',').filter(Boolean), car: p.get('car') || ''
     };
@@ -34,7 +34,7 @@
     const put = (k, v) => { if (v) p.set(k, v); };
     put('o', s.origin); put('n', s.nat); put('r', s.res); if (s.visaHolder) p.set('vh', '1');
     put('f', s.religion); put('from', s.from); put('to', s.to); put('g', s.group); put('tr', s.transport); if (s.idp) p.set('idp', '1');
-    put('a', s.airport); put('st', s.style); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
+    put('a', s.airport); put('st', s.style); put('ex', s.ex.join(',')); put('ad', s.ad.join(',')); put('x', s.extras.join(',')); put('cp', s.curProv); put('dp', s.dest.join(',')); put('car', s.car);
     const base = location.hash.split('?')[0];
     history.replaceState(null, '', base + '?' + p.toString());
   }
@@ -117,7 +117,24 @@
     } else {
       s.dest.forEach((prov) => (P.provinceClusters[prov] || []).forEach((k) => seq.push(block(k, prov))));
     }
-    return seq.filter(Boolean);
+    let result = seq.filter(Boolean).map((b) => ({ ...b, spots: b.spots.slice() }));
+    const ex = new Set(s.ex);
+    result.forEach((b) => { b.spots = b.spots.filter((id) => !ex.has(id)); });
+    result = result.filter((b) => b.spots.length);
+    // Spots the traveller added manually
+    s.ad.forEach((id) => {
+      if (ex.has(id) || !ok(id)) return;
+      if (result.some((b) => b.spots.includes(id))) return;
+      const key = Object.keys(clusters).find((k) => clusters[k].spots.includes(id) && !(clusters[k].muslimsOnly && !muslim));
+      if (!key) return;
+      const prov = Object.keys(P.provinceClusters).find((p) => P.provinceClusters[p].includes(key)) || (data.spots.find((x) => x.id === id) || {}).region;
+      const same = result.find((b) => b.key === key);
+      if (same) { same.spots.push(id); return; }
+      let at = -1; result.forEach((b, i) => { if (b.prov === prov) at = i; });
+      const nb = { key, title: clusters[key].title, city: clusters[key].city, prov, spots: [id] };
+      if (at >= 0) result.splice(at + 1, 0, nb); else result.push(nb);
+    });
+    return result;
   }
 
   // Simulate the itinerary; if it does not fit the trip, trim one spot (longest / most optional cluster first) and retry
@@ -126,14 +143,20 @@
     const minLen = (b) => (['makkah_umrah', 'madinah_core'].includes(b.key) ? 1 : 2);
     const want = () => blocks.reduce((n, b) => n + b.spots.length, 0);
     const trimmed = [];
+    const pins = new Set(s.ad);
     let guard = 400, res;
     while (guard--) {
       res = allocateRaw(P, data, s, blocks);
       if (res.placed >= want()) break;
       let best = -1, bestScore = -1;
-      blocks.forEach((b, i) => { if (b.spots.length > minLen(b)) { const sc = b.spots.length + i * 0.6; if (sc > bestScore) { bestScore = sc; best = i; } } });
-      if (best < 0) { if (blocks.length > 1) blocks.pop(); else break; continue; }
-      trimmed.push({ b: blocks[best], id: blocks[best].spots.pop() });
+      blocks.forEach((b, i) => { if (b.spots.some((id) => !pins.has(id)) && b.spots.length > minLen(b)) { const sc = b.spots.length + i * 0.6; if (sc > bestScore) { bestScore = sc; best = i; } } });
+      if (best < 0) {
+        if (blocks.length <= 1) break;
+        let drop = -1; blocks.forEach((b, i) => { if (!b.spots.some((id) => pins.has(id))) drop = i; });
+        blocks.splice(drop >= 0 ? drop : blocks.length - 1, 1); continue;
+      }
+      const bl = blocks[best]; let k = bl.spots.length - 1; while (k >= 0 && pins.has(bl.spots[k])) k--;
+      trimmed.push({ b: bl, id: bl.spots.splice(k, 1)[0] });
     }
     // Refill: put trimmed spots back (most recently trimmed first) wherever they still fit
     for (const tr of trimmed.reverse()) {
@@ -241,7 +264,8 @@
     const opt = (v, label, cur) => `<option value="${v}" ${cur === v ? 'selected' : ''}>${esc(label)}</option>`;
     const choice = (name, v, label, icon, cur, extra = '') => `<label class="choice ${cur === v ? 'on' : ''}"><input type="radio" name="${name}" value="${v}" ${cur === v ? 'checked' : ''}><span class="choice__icon">${icon}</span><span><b>${esc(label)}</b>${extra ? `<small>${esc(extra)}</small>` : ''}</span></label>`;
     const check = (name, v, label, on) => `<label class="choice choice--sm ${on ? 'on' : ''}"><input type="checkbox" name="${name}" value="${v}" ${on ? 'checked' : ''}><span><b>${esc(label)}</b></span></label>`;
-    const step = (n, title, body, done) => `<section class="pstep ${done ? 'pstep--done' : ''}"><div class="pstep__num">${n}</div><div class="pstep__body"><h3>${title}</h3>${body}</div></section>`;
+    let doneCount = 0;
+    const step = (n, title, body, done) => { if (done) doneCount++; return `<section class="pstep ${done ? 'pstep--done' : ''}"><div class="pstep__num">${done ? '✓' : n}</div><div class="pstep__body"><h3>${title}</h3>${body}</div></section>`; };
     const countries = P.countries.map((c) => opt(c[0], c[1], null));
     const provs = data.regions;
     const out = [];
@@ -325,11 +349,15 @@
     if (ready) {
       const blocks = buildBlocks(P, data, s);
       s.umrah = blocks.some((b) => b.key === 'makkah_umrah');
+      s.pins = new Set(s.ad);
       const days = allocate(P, data, s, blocks);
       ctx.days = days;
       result = renderResult(ctx, s, days, visaVerdict(P, s));
     }
-    return `<div class="planner">${out.join('')}</div>${result}`;
+    const total = s.origin === 'outside' ? 9 : s.origin === 'inside' ? 8 : 1;
+    const pct = Math.min(100, Math.round((doneCount / total) * 100));
+    const prog = s.origin ? `<div class="pprog"><div class="pprog__bar"><i style="width:${pct}%"></i></div><span>${pct >= 100 ? '🎉 ' + t('plan.planReady') : Math.min(doneCount, total) + ' / ' + total}</span></div>` : '';
+    return `<div class="planner">${prog}${out.join('')}</div>${result}`;
   }
 
   function suggestExtras(s, muslim) {
@@ -362,21 +390,53 @@
     if (muslim && umrah) docs.push('Ihram clothing for Umrah (men: two unstitched white cloths) / loose modest clothing (women)');
     if (s.group === 'family') docs.push('Children\'s passports / IDs, stroller, snacks and sun protection');
 
-    const dayHtml = days.map((d) => `
+    const thumbOf = (id) => (ctx.coverThumb ? ctx.coverThumb(cid, id) : cover(cid, id));
+    const cities = []; days.forEach((d) => { if (!cities.length || cities[cities.length - 1] !== d.city) cities.push(d.city); });
+    const travelDays = days.filter((d) => d.items.some((i) => i.type === 'travel' && d.note === 'travel')).length;
+    const dayHtml = days.map((d) => {
+      const first = d.items.find((i) => i.type === 'spot');
+      const bgRaw = first ? thumbOf(first.id) : '';
+      const bg = bgRaw ? new URL(bgRaw, location.href.split('#')[0]).href : '';
+      return `
       <article class="pday reveal">
-        <header class="pday__head"><span class="pday__n">${t('plan.day')} ${d.n}</span><b>${fmtDate(d.date)}</b><span class="pday__city">${icon.pin} ${esc(d.city)}</span>${d.note === 'arrival' ? `<span class="badge">${t('plan.arrival')}</span>` : d.note === 'travel' ? `<span class="badge">${t('plan.travelDay')}</span>` : d.note === 'free' ? `<span class="badge">${t('plan.freeDay')}</span>` : ''}</header>
+        <header class="pday__hero ${bg ? 'has-img' : ''}" ${bg ? `style="--bg:url('${esc(bg)}')"` : ''}>
+          <div class="pday__num"><small>${t('plan.day')}</small><b>${d.n}</b></div>
+          <div class="pday__info"><b>${fmtDate(d.date)}</b><span>${icon.pin} ${esc(d.city)}</span></div>
+          ${d.note === 'arrival' ? `<span class="badge">✈️ ${t('plan.arrival')}</span>` : d.note === 'travel' ? `<span class="badge">🧭 ${t('plan.travelDay')}</span>` : d.note === 'free' ? `<span class="badge">🌴 ${t('plan.freeDay')}</span>` : ''}
+        </header>
         <ol class="pday__items">${d.items.map((it) => {
           if (it.type === 'spot') {
             const x = spot(it.id); const r = data.regions.find((z) => z.id === x.region) || {};
             const tk = x.tickets || {}; const cls = tk.required === true ? 'warn' : tk.required === 'partial' ? 'info' : 'ok';
-            return `<li class="pitem"><a href="#/c/${cid}/spot/${x.id}" class="pitem__thumb">${img(cover(cid, x.id), x.name, '', '', 330)}</a>
-              <div class="pitem__body"><a href="#/c/${cid}/spot/${x.id}"><b>${esc(x.name)}</b></a><small>${esc(x.city)} · ${esc(r.name || '')}${x.muslimsOnly ? ' · ☪️ ' + t('common.muslimsOnly') : ''}${x.status === 'check' ? ' · ⚠️ ' + t('common.checkStatus') : ''}</small>
-              <div class="pitem__meta"><span>${icon.clock} ${esc((x.hours && x.hours.summary) || '')}</span><span class="pill pill--${cls}">${icon.ticket} ${tk.required === true ? t('common.required') : tk.required === 'partial' ? t('common.partly') : t('common.notRequired')}${tk.price ? ' · ' + esc(tk.price.split('(')[0].trim().slice(0, 40)) : ''}</span>${tk.links && tk.links[0] && tk.required ? `<a class="link" href="${esc(tk.links[0].url)}" target="_blank" rel="noopener">${t('common.bookNow')} ${icon.ext}</a>` : ''}</div>
-              ${x.duration ? `<small class="muted">⏱ ${esc(x.duration)}</small>` : ''}</div></li>`;
+            return `<li class="pitem pitem--spot"><a href="#/c/${cid}/spot/${x.id}" class="pitem__thumb">${img(cover(cid, x.id), x.name, '', '', 330)}</a>
+              <div class="pitem__body"><div class="pitem__top"><a href="#/c/${cid}/spot/${x.id}"><b>${esc(x.name)}</b></a>
+                <button class="pitem__rm" data-rm="${x.id}" title="${esc(t('plan.removeHint'))}" aria-label="${esc(t('plan.remove'))}">✕ <span>${t('plan.remove')}</span></button></div>
+              <small>${esc(x.city)} · ${esc(r.name || '')}</small>
+              <div class="tags">${x.muslimsOnly ? `<span class="tag tag--g">☪️ ${t('common.muslimsOnly')}</span>` : ''}${x.unesco ? `<span class="tag tag--b">🏛️ ${t('common.unesco')}</span>` : ''}${x.status === 'check' ? `<span class="tag tag--o">⚠️ ${t('common.checkStatus')}</span>` : ''}${s.ad.includes(x.id) ? `<span class="tag tag--p">➕ ${t('plan.addedByYou')}</span>` : ''}</div>
+              <div class="pitem__meta"><span>${icon.clock} ${esc((x.hours && x.hours.summary) || '')}</span></div>
+              <div class="pitem__meta"><span class="pill pill--${cls}">${icon.ticket} ${tk.required === true ? t('common.required') : tk.required === 'partial' ? t('common.partly') : t('common.notRequired')}${tk.price ? ' · ' + esc(tk.price.split('(')[0].trim().slice(0, 40)) : ''}</span>${tk.links && tk.links[0] && tk.required ? `<a class="link" href="${esc(tk.links[0].url)}" target="_blank" rel="noopener">${t('common.bookNow')} ${icon.ext}</a>` : ''}${x.duration ? `<span>⏱ ${esc(x.duration)}</span>` : ''}</div></div></li>`;
           }
           return `<li class="pitem pitem--${it.type}"><span class="pitem__icon">${it.type === 'free' ? '🌴' : '🧭'}</span><div><p>${esc(it.text)}</p>${it.url ? `<a class="link" href="${esc(it.url)}" target="_blank" rel="noopener">${t('plan.bookTransport')} ${icon.ext}</a>` : ''}${it.alt && it.alt.length ? `<small class="muted">${t('plan.alternatives')}: ${it.alt.map(esc).join(' · ')}</small>` : ''}</div></li>`;
         }).join('')}</ol>
-      </article>`).join('');
+      </article>`;
+    }).join('');
+
+    // "Add a spot" panel + removed list
+    const inPlan = new Set(allSpots.map((x) => x.id));
+    const planProvs = new Set(allSpots.map((x) => x.region));
+    const ex = new Set(s.ex);
+    const candidates = data.spots.filter((x) => !inPlan.has(x.id) && !ex.has(x.id) && x.status !== 'closed' && (muslim || !x.muslimsOnly) && !(s.group === 'family' && STRENUOUS.has(x.id)))
+      .sort((a, b) => (planProvs.has(b.region) ? 1 : 0) - (planProvs.has(a.region) ? 1 : 0) || a.name.localeCompare(b.name));
+    const addPanel = `
+      <section class="padd glass-card reveal" id="planAdd">
+        <h3>➕ ${t('plan.addTitle')}</h3><p class="muted small">${t('plan.addSub')}</p>
+        <div class="padd__tools">
+          <label class="field"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="padSearch" placeholder="${esc(t('plan.searchSpots'))}"></label>
+          <label class="field"><select id="padProv"><option value="">${t('common.allRegions')}</option>${data.regions.map((r) => `<option value="${r.id}">${esc(r.name)}</option>`).join('')}</select></label>
+        </div>
+        <div class="padd__list" id="padList">${candidates.map((x) => { const r = data.regions.find((z) => z.id === x.region) || {}; return `<button class="padd__row" data-add="${x.id}" data-region="${x.region}" data-q="${esc((x.name + ' ' + x.city + ' ' + (r.name || '')).toLowerCase())}"><span class="padd__thumb">${img(cover(cid, x.id), '', '', '', 330)}</span><span class="padd__txt"><b>${esc(x.name)}</b><small>${esc(x.city)} · ${esc(r.name || '')}</small></span><em>＋ ${t('plan.add')}</em></button>`; }).join('')}<p class="padd__none" hidden>${t('common.noResults')}</p></div>
+        ${s.ex.length ? `<div class="padd__removed"><h4>${t('plan.removedList')}</h4><div class="chips">${s.ex.map((id) => { const x = spot(id); return x ? `<button class="chip chip--rm" data-restore="${id}">↩ ${esc(x.name.split(' (')[0].slice(0, 34))}</button>` : ''; }).join('')}</div></div>` : ''}
+      </section>`;
 
     const tips = [];
     if (muslim && umrah) tips.push(t('plan.tip.umrahFirst'));
@@ -394,8 +454,13 @@
             <p class="muted">${fmtDate(s.fromDate)} → ${fmtDate(s.toDate)} · ${t('plan.' + s.group)} · ${t('plan.' + s.style)} · ${allSpots.length} ${t('common.spots')}</p></div>
           <div class="btn-row"><button class="btn btn--ghost btn--sm" data-plan-copy>${icon.share} ${t('common.copyLink')}</button><button class="btn btn--primary btn--sm" data-plan-print>🖨️ ${t('plan.print')}</button></div>
         </div>
+        <div class="pstats reveal">
+          <div><b>${s.days}</b><span>${t('plan.statDays')}</span></div><div><b>${allSpots.length}</b><span>${t('plan.statSpots')}</span></div><div><b>${cities.length}</b><span>${t('plan.statCities')}</span></div><div><b>${bookings.length}</b><span>${t('plan.statBookings')}</span></div>
+        </div>
+        <div class="proute reveal">${cities.map((c, i) => `<span class="proute__stop"><i>${i + 1}</i>${esc(c)}</span>`).join('<span class="proute__arrow">→</span>')}</div>
+        <p class="pnote reveal">💡 ${t('plan.editHint')}</p>
         <div class="presult__grid">
-          <div class="presult__days">${dayHtml}</div>
+          <div class="presult__days">${dayHtml}${addPanel}</div>
           <aside class="presult__side">
             ${verdict ? `<div class="glass-card verdict verdict--${verdict.level}"><h3>${t('plan.visaStatus')}</h3><b>${verdict.level === 'ok' ? '✅' : '⚠️'} ${esc(verdict.title)}</b></div>` : ''}
             <div class="glass-card"><h3>📋 ${t('plan.bookings')}</h3>${bookings.length ? `<ul class="plist">${bookings.map((b) => `<li><a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.label)} ${icon.ext}</a></li>`).join('')}</ul>` : `<p class="muted">${t('plan.noBookings')}</p>`}</div>
@@ -412,13 +477,13 @@
     const rerender = () => { writeState(s); root.innerHTML = render(ctx); bind(ctx, root); if (ctx.onRender) ctx.onRender(); };
     root.querySelectorAll('input[type=radio]').forEach((el) => el.addEventListener('change', () => {
       const k = el.name; s[k] = el.value;
-      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; }
+      if (k === 'origin') { s.religion = s.group = s.style = s.transport = s.airport = s.car = ''; s.extras = []; s.dest = []; s.ex = []; s.ad = []; }
       if (k === 'religion' && s.origin === 'outside') { s.airport = ''; s.extras = []; }
       if (k === 'airport') s.extras = suggestExtras(s, s.religion === 'muslim');
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
       if (k !== 'origin') { const r = document.getElementById('planResult'); if (r) setTimeout(() => r.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }
     }));
-    root.querySelectorAll('select, input[type=date]').forEach((el) => el.addEventListener('change', () => {
+    root.querySelectorAll('select[name], input[type=date]').forEach((el) => el.addEventListener('change', () => {
       s[el.name] = el.value;
       if (el.name === 'from' && s.to && s.to < s.from) s.to = '';
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
@@ -428,6 +493,18 @@
       else { const arr = s[el.name]; const i = arr.indexOf(el.value); if (el.checked && i < 0) arr.push(el.value); if (!el.checked && i >= 0) arr.splice(i, 1); }
       const keepY = scrollY; rerender(); scrollTo(0, keepY);
     }));
+    // Skip / add / restore a spot (the itinerary re-arranges itself)
+    const act = (fn, msg) => { fn(); const keepY = scrollY; rerender(); scrollTo(0, keepY); if (msg) ctx.toast(msg); };
+    root.querySelectorAll('[data-rm]').forEach((el) => el.addEventListener('click', () => act(() => { const id = el.dataset.rm; if (!s.ex.includes(id)) s.ex.push(id); s.ad = s.ad.filter((x) => x !== id); }, ctx.t('plan.removedToast'))));
+    root.querySelectorAll('[data-add]').forEach((el) => el.addEventListener('click', () => act(() => { const id = el.dataset.add; if (!s.ad.includes(id)) s.ad.push(id); s.ex = s.ex.filter((x) => x !== id); }, ctx.t('plan.addedToast'))));
+    root.querySelectorAll('[data-restore]').forEach((el) => el.addEventListener('click', () => act(() => { s.ex = s.ex.filter((x) => x !== el.dataset.restore); }, ctx.t('plan.restoredToast'))));
+    const q = root.querySelector('#padSearch'), pv = root.querySelector('#padProv');
+    const filt = () => {
+      const v = (q ? q.value : '').trim().toLowerCase(), r = pv ? pv.value : ''; let n = 0;
+      root.querySelectorAll('.padd__row').forEach((row) => { const ok = (!v || row.dataset.q.includes(v)) && (!r || row.dataset.region === r); row.hidden = !ok; if (ok) n++; });
+      const none = root.querySelector('.padd__none'); if (none) none.hidden = n > 0;
+    };
+    if (q) q.addEventListener('input', filt); if (pv) pv.addEventListener('change', filt);
     const copy = root.querySelector('[data-plan-copy]');
     if (copy) copy.addEventListener('click', () => { const u = location.href; (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.resolve()).then(() => ctx.toast(ctx.t('common.copied'))); });
     const pr = root.querySelector('[data-plan-print]');

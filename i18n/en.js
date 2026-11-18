@@ -65,6 +65,10 @@ window.TG_I18N.en = {
     recommended: 'Recommended for your plan', medAlt: 'Start in Madinah instead',
     extrasHint: 'Based on your dates we pre-selected the ★ options.', extrasCoreMuslim: 'Makkah and Madinah are always included.', extrasCoreOther: 'Your arrival city is always included.',
     ownCar: 'Yes, own car', ownCarSub: 'Self-drive routes and desert spots', noCar: 'No car', noCarSub: 'Trains, flights, buses and taxis',
+    planReady: 'Your plan is ready',
+    remove: 'Skip', removeHint: 'Already visited or not interested? Skip it — the plan re-arranges itself.', removedToast: 'Spot removed — plan updated', addedToast: 'Spot added to your plan', restoredToast: 'Spot restored', undo: 'Undo',
+    addedByYou: 'Added by you', addTitle: 'Add a spot to your plan', addSub: 'Pick any place you want to include. Spots near your route are listed first; the days will be re-planned.', add: 'Add', searchSpots: 'Search spots, cities…', removedList: 'Skipped spots — tap to bring back',
+    statDays: 'Days', statSpots: 'Spots', statCities: 'Cities', statBookings: 'To book', editHint: 'Tap “✕ Skip” on any spot you have already visited or don’t want; use “Add a spot” below to include more. Everything is saved in the link, so you can share it.',
     yourPlan: 'Your tour plan', daysIn: 'days in', day: 'Day', arrival: 'Arrival', travelDay: 'Travel day', freeDay: 'Free day', print: 'Print / Save PDF',
     bookTransport: 'Book transport', alternatives: 'Alternatives', visaStatus: 'Visa status', bookings: 'Book in advance', noBookings: 'Nothing needs advance booking.', documents: 'Documents & packing', tips: 'Tips for your trip',
     tip: {

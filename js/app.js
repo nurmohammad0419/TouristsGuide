@@ -520,7 +520,7 @@
 
   /* ---------------- Tour planner page ---------------- */
   function plannerCtx(cid, data) {
-    return { cid, data, P: store.planner[cid], t, esc, cover, img, icon, toast };
+    return { cid, data, P: store.planner[cid], t, esc, cover, img, icon, toast, coverThumb: (c, id) => (media(c, id)[0] || {}).thumb || cover(c, id) };
   }
   function renderPlanPage(cid, data) {
     document.title = `${t('nav.plan')} — ${data.name} — TouristsGuide`;
