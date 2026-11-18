@@ -130,7 +130,6 @@
           <p class="hero__sub reveal">${esc(t('home.subtitle'))}</p>
           <div class="hero__cta reveal">
             <a class="btn btn--primary" href="#/c/${live.id}">${live.flag} ${esc(t('home.cta'))} ${icon.arrow}</a>
-            <a class="btn btn--glass" href="#/c/${live.id}/plan">🗓️ ${t('nav.plan')}</a>
             <button class="btn btn--glass" data-open-search>${t('common.searchPlaceholder')}</button>
           </div>
         </div>
