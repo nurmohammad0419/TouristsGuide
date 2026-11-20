@@ -10,6 +10,7 @@
   const strenuousSet = (P) => new Set(P.strenuous || []);
   const faithOf = (P) => P.faith || null;            // null = no religion step for this country
   const money = (P) => (P.currency || 'SAR');
+  const rlabel = (d, plural) => (plural ? (d && d.regionLabelPlural) || 'Provinces' : (d && d.regionLabel) || 'Province');
   const PACE = { solo: 3, couple: 3, family: 2, friends: 3 };
   const STYLE_ADJ = { relaxed: -1, balanced: 0, packed: 1 };
   const paceFor = (s) => Math.max(1, Math.min(4, (PACE[s.group] || 3) + (STYLE_ADJ[s.style] || 0)));
@@ -367,8 +368,8 @@
     let n = 1;
 
     out.push(step(n++, t('plan.q.origin'), `<div class="choices">
-      ${choice('origin', 'outside', t('plan.outside'), '✈️', s.origin, t('plan.outsideSub'))}
-      ${choice('origin', 'inside', t('plan.inside'), '🏠', s.origin, t('plan.insideSub'))}</div>`, !!s.origin));
+      ${choice('origin', 'outside', t('plan.outside', { country: data.name }), '✈️', s.origin, t('plan.outsideSub'))}
+      ${choice('origin', 'inside', t('plan.inside', { country: data.name }), '🏠', s.origin, t('plan.insideSub', { region: rlabel(data).toLowerCase() }))}</div>`, !!s.origin));
 
     if (s.origin === 'outside') {
       const v = visaVerdict(P, s);
@@ -377,20 +378,20 @@
           <label class="field field--sel"><span>${t('plan.nationality')}</span><select name="nat"><option value="">—</option>${P.countries.map((c) => opt(c[0], c[1], s.nat)).join('')}</select></label>
           <label class="field field--sel"><span>${t('plan.residence')}</span><select name="res"><option value="">${t('plan.sameAsNat')}</option>${P.countries.map((c) => opt(c[0], c[1], s.res)).join('')}</select></label>
         </div>
-        <label class="choice choice--sm ${s.visaHolder ? 'on' : ''}"><input type="checkbox" name="visaHolder" ${s.visaHolder ? 'checked' : ''}><span><b>${t('plan.visaHolder')}</b></span></label>
+        <label class="choice choice--sm ${s.visaHolder ? 'on' : ''}"><input type="checkbox" name="visaHolder" ${s.visaHolder ? 'checked' : ''}><span><b>${esc(((P.visa || {}).visaHolder || {}).label || t('plan.visaHolder'))}</b></span></label>
         ${v ? `<div class="verdict verdict--${v.level}"><b>${v.level === 'ok' ? '✅' : '⚠️'} ${esc(v.title)}</b><p>${esc(v.text)}</p>
           ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
-          ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${t('plan.nusukUmrah')}</a>` : ''}
+          ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${esc((faithOf(P) || {}).permitLabel || t('plan.nusukUmrah'))}</a>` : ''}
           <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)})</small></div>` : ''}`, !!s.nat));
       if (s.nat && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
-        ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, t('plan.muslimSub'))}
-        ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, t('plan.nonMuslimSub'))}</div>`, !!s.religion));
+        ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, esc((faithOf(P) || {}).muslimSub || ''))}
+        ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, esc((faithOf(P) || {}).nonMuslimSub || ''))}</div>`, !!s.religion));
     } else if (s.origin === 'inside') {
       out.push(step(n++, t('plan.q.current'), `<label class="field field--sel"><span>${t('plan.currentProv')}</span><select name="curProv"><option value="">—</option>${provs.map((r) => opt(r.id, r.name, s.curProv)).join('')}</select></label>`, !!s.curProv));
-      if (s.curProv) out.push(step(n++, t('plan.q.dest'), `<div class="choices choices--wrap">${provs.map((r) => check('dest', r.id, r.name + ' (' + data.spots.filter((x) => x.region === r.id).length + ')', s.dest.includes(r.id))).join('')}</div><small class="muted">${t('plan.destHint')}</small>`, s.dest.length > 0));
+      if (s.curProv) out.push(step(n++, t('plan.q.dest'), `<div class="choices choices--wrap">${provs.map((r) => check('dest', r.id, r.name + ' (' + data.spots.filter((x) => x.region === r.id).length + ')', s.dest.includes(r.id))).join('')}</div><small class="muted">${t('plan.destHint', { regions: rlabel(data, true).toLowerCase() })}</small>`, s.dest.length > 0));
       if (s.dest.length && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
-        ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, t('plan.muslimSub'))}
-        ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, t('plan.nonMuslimSub'))}</div>`, !!s.religion));
+        ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, esc((faithOf(P) || {}).muslimSub || ''))}
+        ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, esc((faithOf(P) || {}).nonMuslimSub || ''))}</div>`, !!s.religion));
     }
 
     const needFaith = !!faithOf(P);
@@ -424,17 +425,18 @@
     }
     if (ready1 && s.days && s.group && s.style) {
       if (s.origin === 'outside') {
+        const TS = P.transportSub || {};
         out.push(step(n++, t('plan.q.transport'), `<div class="choices">
-          ${choice('transport', 'taxi', t('plan.taxi'), '🚕', s.transport, t('plan.taxiSub'))}
-          ${choice('transport', 'train', t('plan.train'), '🚄', s.transport, t('plan.trainSub'))}
-          ${choice('transport', 'car', t('plan.rentCar'), '🚗', s.transport, t('plan.rentCarSub'))}</div>
+          ${choice('transport', 'taxi', t('plan.taxi'), '🚕', s.transport, esc(TS.taxi || ''))}
+          ${choice('transport', 'train', t('plan.train'), '🚄', s.transport, esc(TS.train || ''))}
+          ${choice('transport', 'car', t('plan.rentCar'), '🚗', s.transport, esc(TS.car || ''))}</div>
           ${s.transport === 'car' ? `<label class="choice choice--sm ${s.idp ? 'on' : ''}"><input type="checkbox" name="idp" ${s.idp ? 'checked' : ''}><span><b>${t('plan.idp')}</b></span></label>${!s.idp ? `<p class="pinfo pinfo--warn">${t('plan.idpWarn')}</p>` : ''}` : ''}`, !!s.transport));
         if (s.transport) {
           const intl = Object.entries(P.airports).filter(([, a]) => a.intl);
           const F = faithOf(P);
           const rec = (F && s.religion === 'muslim' && F.recommendAirport) || P.defaultAirport || (intl[0] || [])[0];
           const alt = F && s.religion === 'muslim' ? F.altAirport : '';
-          out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === alt ? t('plan.medAlt') : ''))).join('')}</div>`, !!s.airport));
+          out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === alt ? esc(F.altAirportNote || '') : ''))).join('')}</div>`, !!s.airport));
         }
         if (s.airport && P.partner && P.partner.flights) {
           const cur = fromCode(P, s);
@@ -583,7 +585,7 @@
         <div class="pbudget__total"><b>${range(bud.totLo, bud.totHi)}</b><small>≈ $${Math.round(bud.totLo / P.costs.usd).toLocaleString('en-US')} – $${Math.round(bud.totHi / P.costs.usd).toLocaleString('en-US')} · ${bud.ppl} ${t('plan.travellersLower')}</small>
           <small>${t('plan.perPerson')}: ${range(Math.round(bud.totLo / bud.ppl), Math.round(bud.totHi / bud.ppl))}</small></div>
         <ul class="pbudget__rows">${bud.rows.map((r) => `<li><span><b>${esc(r.label)}</b><small>${esc(r.note)}</small></span><em>${range(r.lo, r.hi)}</em></li>`).join('')}</ul>
-        <small class="muted">${t('plan.budgetNote')}</small>
+        <small class="muted">${esc(P.budgetNote || t('plan.budgetNote'))}</small>
       </div>`;
 
     // "Add a spot" panel + removed list
@@ -607,10 +609,11 @@
     const tx = (v) => (/^plan\./.test(v) ? t(v) : v);   // plan.js may give an i18n key or literal text
     if (muslim && umrah && F.tipRitual) tips.push(tx(F.tipRitual));
     if (F && !muslim && F.tipOther) tips.push(tx(F.tipOther));
-    if (s.group === 'family') tips.push(t('plan.tip.family'));
-    if (s.transport === 'car' && s.idp) tips.push(t('plan.tip.rentCar'));
-    if (s.transport === 'taxi') tips.push(t('plan.tip.taxi'));
-    if (s.origin === 'inside' && s.car === 'no') tips.push(t('plan.tip.noCar'));
+    const MT = P.modeTips || {};
+    if (s.group === 'family' && MT.family) tips.push(tx(MT.family));
+    if (s.transport === 'car' && s.idp && MT.rentCar) tips.push(tx(MT.rentCar));
+    if (s.transport === 'taxi' && MT.taxi) tips.push(tx(MT.taxi));
+    if (s.origin === 'inside' && s.car === 'no' && MT.noCar) tips.push(tx(MT.noCar));
     (P.tips || []).forEach((x) => tips.push(tx(x)));
 
     return `

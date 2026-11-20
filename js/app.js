@@ -16,11 +16,16 @@
   };
   if (!CFG.languages.some((l) => l.code === state.lang)) state.lang = CFG.defaultLang;
 
-  function t(path) {
+  // t('some.key') or t('some.key', { country: 'Türkiye' }) to fill {tokens} in the string
+  function t(path, vars) {
     const get = (lang) => path.split('.').reduce((o, k) => (o ? o[k] : undefined), window.TG_I18N[lang]);
     const v = get(state.lang);
-    return v !== undefined ? v : (get('en') !== undefined ? get('en') : path);
+    const str = v !== undefined ? v : (get('en') !== undefined ? get('en') : path);
+    return vars && typeof str === 'string' ? str.replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? vars[k] : m)) : str;
   }
+  // What this country calls its top-level divisions ("Province" in Saudi Arabia, "Region" in Türkiye)
+  const rlab = (d, plural) => (plural ? (d && d.regionLabelPlural) || 'Provinces' : (d && d.regionLabel) || 'Province');
+  const rlabLower = (d, plural) => rlab(d, plural).toLowerCase();
 
   /* ---------------- Public registration API (used by data files) ---------------- */
   window.TG = {
@@ -105,13 +110,16 @@
     document.documentElement.dir = cur.dir || 'ltr';
     $('#searchInput').placeholder = t('common.searchPlaceholder');
 
+    // "Useful" links belong to whichever country is open; the home page shows none.
+    const cdata = country ? (store.countries[country + ':' + state.lang] || store.countries[country + ':en']) : null;
+    const links2 = ((cdata && cdata.travel) || []).map((x) => x.link).filter(Boolean).slice(0, 4);
     $('#footer').innerHTML = `
       <div class="footer__brand">
         <a href="#/" class="brand"><span class="brand__text">Tourists<b>Guide</b></span></a>
         <p>${esc(t('footer.about'))}</p>
       </div>
       <div class="footer__col"><h4>${t('nav.countries')}</h4>${CFG.countries.map((c) => c.status === 'live' ? `<a href="#/c/${c.id}">${c.flag} ${esc(c.name)}</a>` : `<span class="muted">${c.flag} ${esc(c.name)} · ${t('common.comingSoon')}</span>`).join('')}</div>
-      <div class="footer__col"><h4>Useful</h4><a href="https://www.visitsaudi.com" target="_blank" rel="noopener">VisitSaudi</a><a href="https://visa.visitsaudi.com" target="_blank" rel="noopener">Saudi eVisa</a></div>
+      ${links2.length ? `<div class="footer__col"><h4>${t('footer.useful')}</h4>${links2.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('')}</div>` : ''}
       <div class="footer__bottom"><span>© ${new Date().getFullYear()} TouristsGuide · ${esc(t('footer.made'))}</span><span class="muted">${esc(t('common.photoCredit'))}</span></div>`;
   }
 
@@ -129,7 +137,7 @@
           <h1 class="hero__title reveal">${esc(t('home.title')).replace('remarkable', '<em>remarkable</em>')}</h1>
           <p class="hero__sub reveal">${esc(t('home.subtitle'))}</p>
           <div class="hero__cta reveal">
-            <a class="btn btn--primary" href="#/c/${live.id}">${live.flag} ${esc(t('home.cta'))} ${icon.arrow}</a>
+            <a class="btn btn--primary" href="#/c/${live.id}">${live.flag} ${esc(t('home.cta', { country: live.name }))} ${icon.arrow}</a>
             <button class="btn btn--glass" data-open-search>${t('common.searchPlaceholder')}</button>
           </div>
         </div>
@@ -227,7 +235,7 @@
 
       <nav class="subnav" id="subnav">
         <div class="container subnav__inner">
-          ${[['overview', t('nav.overview')], ['facts', t('country.factsTitle')], ['divisions', t('nav.divisions')], ['spots', t('nav.spots')], ['map', t('nav.map')], ['travel', t('nav.travel')]]
+          ${[['overview', t('nav.overview')], ['facts', t('country.factsTitle')], ['divisions', rlab(data, true)], ['spots', t('nav.spots')], ['map', t('nav.map')], ['travel', t('nav.travel')]]
             .map(([id, l]) => `<button data-jump="${id}">${esc(l)}</button>`).join('')}
         </div>
       </nav>
@@ -269,7 +277,7 @@
             <p>${t('country.divisionsSub')}</p>
           </div>
           <div class="div-summary reveal">
-            <div><b>${data.regions.length}</b><span>${t('country.provinces')}</span></div>
+            <div><b>${data.regions.length}</b><span>${rlab(data, true)}</span></div>
             <div><b>${govTotal}</b><span>${t('country.governoratesTotal')}</span></div>
             <div><b>${data.spots.length}</b><span>${t('nav.spots')}</span></div>
           </div>
@@ -290,7 +298,7 @@
                 <details class="region__govs"><summary>${t('country.seeGovernorates')} (${r.governorates.length})</summary>
                   <div class="chips"><span class="chip chip--capital" title="${t('country.regionalCapital')}">★ ${esc(r.capital)}</span>${r.governorates.map((g) => `<span class="chip">${esc(g)}</span>`).join('')}</div>
                 </details>
-                <button class="region__spots" data-region="${r.id}">${countBy(r.id)} ${t('country.inThisProvince')} ${icon.arrow}</button>
+                <button class="region__spots" data-region="${r.id}">${countBy(r.id)} ${t('country.inThisProvince', { region: rlabLower(data) })} ${icon.arrow}</button>
               </article>`).join('')}
           </div>
           <p class="note">Population figures are approximate (2022 census). Each province is also administered from its regional capital, which is not counted as a separate governorate.</p>
@@ -303,11 +311,11 @@
           <div class="toolbar">
             <label class="field field--search">${'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'}
               <input type="search" id="spotQ" placeholder="${t('common.searchPlaceholder')}" value="${esc(state.filters.q)}"></label>
-            <label class="field"><select id="spotRegion"><option value="all">${t('common.allRegions')}</option>${data.regions.map((r) => `<option value="${r.id}" ${state.filters.region === r.id ? 'selected' : ''}>${esc(r.name)} (${countBy(r.id)})</option>`).join('')}</select></label>
+            <label class="field"><select id="spotRegion"><option value="all">${t('common.allRegions', { regions: rlabLower(data, true) })}</option>${data.regions.map((r) => `<option value="${r.id}" ${state.filters.region === r.id ? 'selected' : ''}>${esc(r.name)} (${countBy(r.id)})</option>`).join('')}</select></label>
             <label class="field"><select id="spotSort">
               <option value="featured">${t('common.sortBy')}: ${t('common.sortFeatured')}</option>
               <option value="az">${t('common.sortBy')}: ${t('common.sortAZ')}</option>
-              <option value="region">${t('common.sortBy')}: ${t('common.sortRegion')}</option></select></label>
+              <option value="region">${t('common.sortBy')}: ${t('common.sortRegion', { region: rlabLower(data) })}</option></select></label>
           </div>
           <div class="cats" id="spotCats">
             <button data-cat="all" class="${state.filters.cat === 'all' ? 'active' : ''}">${t('common.allCategories')}</button>
@@ -643,7 +651,7 @@
       d.regions.forEach((r) => { if (q && (r.name + ' ' + r.capital).toLowerCase().includes(q)) out.unshift({ c, d, region: r }); });
     });
     $('#searchResults').innerHTML = out.slice(0, 40).map((o, i) => o.region
-      ? `<li><a href="#/c/${o.c.id}" data-region-jump="${o.region.id}" class="${i === 0 ? 'hl' : ''}"><span class="sr__thumb">🗺️</span><span><b>${esc(o.region.name)}</b><small>${t('common.province')} · ${esc(o.d.name)}</small></span></a></li>`
+      ? `<li><a href="#/c/${o.c.id}" data-region-jump="${o.region.id}" class="${i === 0 ? 'hl' : ''}"><span class="sr__thumb">🗺️</span><span><b>${esc(o.region.name)}</b><small>${rlab(o.d)} · ${esc(o.d.name)}</small></span></a></li>`
       : `<li><a href="#/c/${o.c.id}/spot/${o.s.id}" class="${i === 0 ? 'hl' : ''}"><span class="sr__thumb">${img(cover(o.c.id, o.s.id), '', '', '', 330)}</span><span><b>${esc(o.s.name)}</b><small>${esc(o.s.city)} · ${esc(o.r.name)} · ${o.c.flag}</small></span></a></li>`).join('')
       || `<li class="empty">${t('common.noResults')}</li>`;
   }

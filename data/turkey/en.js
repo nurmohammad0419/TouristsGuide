@@ -21,6 +21,8 @@ TG.registerCountry('turkey', 'en', {
   officialName: 'Republic of Türkiye',
   nativeName: 'Türkiye Cumhuriyeti',
   nativeLang: 'tr',
+  regionLabel: 'Region',
+  regionLabelPlural: 'Regions',
   flag: '🇹🇷',
   tagline: 'Two continents, ten thousand years of cities, and a coastline that never ends.',
   heroImage: 'assets/photos/cappadocia-goreme/e1.jpg',

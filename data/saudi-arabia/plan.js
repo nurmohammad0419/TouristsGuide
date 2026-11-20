@@ -44,6 +44,13 @@ TG.registerPlanner('saudi-arabia', {
     { match: 'SAR ', label: 'SAR train tickets', url: 'https://www.sar.com.sa' }
   ],
   tips: ['plan.tip.prayer', 'plan.tip.weather'],
+  modeTips: { family: 'plan.tip.family', rentCar: 'plan.tip.rentCar', taxi: 'plan.tip.taxi', noCar: 'plan.tip.noCar' },
+  transportSub: {
+    taxi: 'Uber / Careem everywhere; no licence needed',
+    train: 'Haramain & SAR trains between cities',
+    car: 'Freedom for desert & mountain spots'
+  },
+  budgetNote: 'Rough planning estimates in SAR. Prices swing with Ramadan, Hajj, school holidays and events. Excludes international flights, visa and insurance fees, shopping and tips.',
 
   // Entry rules. The first matching rule wins, so order matters.
   visa: {
@@ -69,7 +76,8 @@ TG.registerPlanner('saudi-arabia', {
     visaHolder: {
       title: 'Eligible for the eVisa / visa on arrival as a visa holder',
       text: 'Holders of {of} can apply for the tourist eVisa online or get a visa on arrival. Bring the passport containing that visa.',
-      of: 'a valid US, UK or Schengen visa (used at least once)'
+      of: 'a valid US, UK or Schengen visa (used at least once)',
+      label: 'I hold a valid, used US, UK or Schengen visa'
     },
     none: {
       title: 'Visa required in advance',
@@ -85,6 +93,10 @@ TG.registerPlanner('saudi-arabia', {
     ritualSpot: 'masjid-al-haram',
     recommendAirport: 'JED',
     altAirport: 'MED',
+    altAirportNote: 'Start in Madinah instead',
+    permitLabel: 'Umrah visa (Nusuk)',
+    muslimSub: 'Umrah first, then Makkah & Madinah ziyarat',
+    nonMuslimSub: 'Makkah is closed to non-Muslims; the rest of the country is open',
     ihramFromProv: 'madinah',
     ihramNote: 'If you are performing Umrah, many pilgrims bathe and put on ihram at their Madinah hotel, then make the intention (niyyah) at or before the miqat of Dhul Hulayfah (Abyar Ali) — ask your Umrah agent or check the Nusuk app for the exact steps.',
     extrasCoreNote: 'Makkah and Madinah are already in your plan.',

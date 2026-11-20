@@ -31,6 +31,18 @@ TG.registerPlanner('turkey', {
     { match: 'YHT|high-speed', label: 'YHT high-speed train tickets (sell out on weekends)', url: 'https://ebilet.tcddtasimacilik.gov.tr' },
     { match: 'Eastern Express|Doğu Ekspresi', label: 'Eastern Express sleeper tickets — released about a month ahead and sell out fast', url: 'https://ebilet.tcddtasimacilik.gov.tr' }
   ],
+  modeTips: {
+    family: 'Turkish families travel everywhere, so children are welcome in restaurants late into the evening. Ancient sites have uneven marble and few railings — hold on to small children, and skip the steep climbs in midsummer heat.',
+    rentCar: 'Driving is on the right. Motorways (otoyol) use the HGS electronic toll sticker — ask the hire company to include one. City traffic in Istanbul and Izmir is heavy; park outside the centre and use the metro.',
+    taxi: 'Insist the meter (taksimetre) is running, or agree the fare first. In Istanbul the BiTaksi and Uber apps avoid most disputes. Dolmuş shared minibuses are cheap for short hops.',
+    noCar: 'Book YHT high-speed train seats a few days ahead for weekends. Intercity coaches are comfortable, run through the night and reach almost every town; obilet.com compares the operators.'
+  },
+  transportSub: {
+    taxi: 'BiTaksi / Uber in cities, dolmuş minibuses for short hops',
+    train: 'YHT high-speed trains plus coaches between cities',
+    car: 'Best for Cappadocia, the Lycian coast and the east'
+  },
+  budgetNote: 'Rough planning estimates in EUR, because the lira moves fast. Museum entry for foreigners is priced in euros and usually rises each year. Excludes international flights, visa fees, shopping and tips.',
   tips: [
     'Buy a Museum Pass if you plan more than three or four state sites: Museum Pass Türkiye countrywide, or the Istanbul, Aegean, Mediterranean and Cappadocia regional passes. Hagia Sophia is not covered by any of them.',
     'Entry fees for foreigners are set in euros and rise most years — treat every price on this site as indicative and check muze.gov.tr.',
@@ -64,7 +76,8 @@ TG.registerPlanner('turkey', {
     visaHolder: {
       title: 'Eligible for the e-Visa as a visa holder',
       text: 'Holders of {of} can apply for the Turkish e-Visa online. Bring the passport containing that visa — it is checked at boarding and on arrival.',
-      of: 'a valid Schengen, US, UK or Irish visa or residence permit'
+      of: 'a valid Schengen, US, UK or Irish visa or residence permit',
+      label: 'I hold a valid Schengen, US, UK or Irish visa or residence permit'
     },
     none: {
       title: 'Visa required in advance',
