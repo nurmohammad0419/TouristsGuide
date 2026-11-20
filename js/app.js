@@ -92,7 +92,7 @@
     if (country) {
       links.push(`<a href="#/c/${country}" data-jump="spots">${t('nav.spots')}</a>`);
       links.push(`<a href="#/c/${country}" data-jump="map">${t('nav.map')}</a>`);
-      links.push(`<a href="#/c/${country}/plan" class="nav__cta">🗓️ ${t('nav.plan')}</a>`);
+      if (store.planner[country]) links.push(`<a href="#/c/${country}/plan" class="nav__cta">🗓️ ${t('nav.plan')}</a>`);
     }
     $('#navLinks').innerHTML = links.join('');
 
@@ -210,13 +210,13 @@
         <div class="hero__shade"></div>
         <div class="container hero__content">
           <nav class="crumbs reveal"><a href="#/">${t('nav.home')}</a><span>/</span><span>${esc(data.name)}</span></nav>
-          <span class="eyebrow reveal">${data.flag} ${esc(data.officialName)} · <bdi lang="ar">${esc(data.nativeName)}</bdi></span>
+          <span class="eyebrow reveal">${data.flag} ${esc(data.officialName)} · <bdi lang="${esc(data.nativeLang || '')}">${esc(data.nativeName)}</bdi></span>
           <h1 class="hero__title reveal">${esc(data.name)}</h1>
           <p class="hero__sub reveal">${esc(data.tagline)}</p>
           <div class="hero__cta reveal">
             <button class="btn btn--primary" data-jump="spots">${data.spots.length} ${t('nav.spots')} ${icon.arrow}</button>
             <button class="btn btn--glass" data-jump="map">${t('nav.map')}</button>
-            <a class="btn btn--glass" href="#/c/${cid}/plan">🗓️ ${t('nav.plan')}</a>
+            ${store.planner[cid] ? `<a class="btn btn--glass" href="#/c/${cid}/plan">🗓️ ${t('nav.plan')}</a>` : ''}
           </div>
         </div>
         <div class="stats container">
@@ -278,7 +278,7 @@
               <article class="region reveal" style="--d:${(i % 6) * 50}ms">
                 <header>
                   <span class="region__num">${String(i + 1).padStart(2, '0')}</span>
-                  <div><h3>${esc(r.name)}</h3><small><bdi lang="ar">${esc(r.nativeName)}</bdi></small></div>
+                  <div><h3>${esc(r.name)}</h3><small><bdi lang="${esc(data.nativeLang || '')}">${esc(r.nativeName)}</bdi></small></div>
                 </header>
                 <p>${esc(r.description)}</p>
                 <dl class="region__stats">
@@ -420,7 +420,7 @@
             ${s.status === 'check' ? `<span class="badge badge--check">⚠️ ${t('common.checkStatus')}</span>` : ''}
           </div>
           <h1 class="hero__title reveal">${esc(s.name)}</h1>
-          ${s.nativeName ? `<p class="hero__native reveal"><bdi lang="ar">${esc(s.nativeName)}</bdi></p>` : ''}
+          ${s.nativeName ? `<p class="hero__native reveal"><bdi lang="${esc(data.nativeLang || '')}">${esc(s.nativeName)}</bdi></p>` : ''}
           <p class="hero__sub reveal">${esc(s.tagline)}</p>
           <p class="hero__loc reveal">${icon.pin} ${esc(s.city)}, ${esc(r.name)}</p>
         </div>
@@ -738,6 +738,7 @@
         if (!store.countries[cid + ':' + state.lang]) app.innerHTML = '<div class="loader"><span></span></div>';
         const data = await loadCountry(cid);
         if (!data) throw new Error('notfound');
+        renderChrome(cid); // again: the Tour Plan link depends on plan.js, which has only just loaded
         if (cid !== lastCountry && !pendingJump) state.filters = { q: '', region: 'all', cat: 'all', sort: 'featured', view: 'grid' };
         lastCountry = cid;
         if (parts[2] === 'plan') {

@@ -31,7 +31,15 @@ window.TG_CONFIG = {
       tagline: 'Holy cities, Nabataean tombs, coral seas and endless dunes.',
       cover: 'assets/photos/hegra/1.jpg'
     },
-    { id: 'turkey', name: 'Türkiye', flag: '🇹🇷', region: 'Europe / Asia', status: 'soon', tagline: 'Where continents meet.' },
+    {
+      id: 'turkey',
+      name: 'Türkiye',
+      flag: '🇹🇷',
+      region: 'Europe / Asia',
+      status: 'live',
+      tagline: 'Two continents, ten thousand years of cities, and a coastline that never ends.',
+      cover: 'assets/photos/cappadocia-goreme/e1.jpg'
+    },
     { id: 'egypt', name: 'Egypt', flag: '🇪🇬', region: 'Africa', status: 'soon', tagline: 'Pharaohs, the Nile and the Red Sea.' },
     { id: 'malaysia', name: 'Malaysia', flag: '🇲🇾', region: 'Southeast Asia', status: 'soon', tagline: 'Rainforests, islands and skylines.' },
     { id: 'bangladesh', name: 'Bangladesh', flag: '🇧🇩', region: 'South Asia', status: 'soon', tagline: 'Rivers, mangroves and the longest beach.' },

@@ -6,7 +6,14 @@ A travel guide website that covers a country spot by spot. Each country page has
 2. **Administrative divisions**: every province (region), with its capital, area, population and governorate list.
 3. **Tourist spots**: each spot has its province, history, religious significance, highlights, a photo gallery with a full-screen viewer, opening hours, ticket and booking details with official links, how to get there, an interactive map and travel tips.
 
-The first country is **Saudi Arabia**. It has 136 spots across all 13 provinces and lists 139 governorates.
+Countries live on the site:
+
+| Country | Spots | Divisions | Tour Plan |
+|---|---|---|---|
+| 🇸🇦 Saudi Arabia | 136 | 13 provinces, 139 governorates | yes |
+| 🇹🇷 Türkiye | 88 | 7 regions, 81 provinces | not yet |
+
+The Tour Plan wizard is per country and needs a `data/<country>/plan.js` file. Countries without one simply do not show the Tour Plan link.
 
 ## Features
 - Dark and light themes, glass styling, parallax heroes, scroll reveal effects and animated counters
@@ -29,18 +36,25 @@ css/styles.css          design system & layout
 js/config.js            languages + country registry
 js/app.js               router, rendering, search, maps, lightbox
 i18n/en.js              interface text (English)
-data/saudi-arabia/en.js all Saudi Arabia content (English)
-data/saudi-arabia/media.js  photos for each spot (Wikimedia Commons)
+data/<country>/en.js    all content for that country (English)
+data/<country>/media.js photos for each spot (Wikimedia Commons)
+data/<country>/plan.js  Tour Plan rules (optional)
+assets/photos/<spot-id>/  downloaded photos + -sm thumbnails
 ```
 
 ## Adding content
 - **Add or edit a spot:** add or edit an object in `spots` in `data/<country>/en.js`. The template comment at the top of that file lists the fields.
 - **Add photos:** add `{ src, credit, license, page }` entries under the spot id in `data/<country>/media.js`.
-- **Add a country:** create `data/<new-country>/en.js` (copy the Saudi file as a template) and `media.js`. Then set the country's `status: 'live'` in `js/config.js`.
+- **Add a country:** create `data/<new-country>/en.js` (copy an existing file as a template) and `media.js`. Then set the country's `status: 'live'` in `js/config.js` and give it a `cover` image. Set `nativeLang` in the data file so native-script names are tagged with the right language. Add `plan.js` only if you want the Tour Plan for that country.
+- **Check a data file** before committing:
+  ```bash
+  node tools/validate.js data/<country>/en.js data/<country>/media.js
+  ```
+  It checks ids, regions, categories, coordinates, required fields and UNESCO cross-references.
 - **Add a language:** copy `i18n/en.js` to `i18n/<code>.js` and translate it. Add the language to `languages` in `js/config.js` and a `<script>` tag in `index.html`. For translated content, create `data/<country>/<code>.js`. If that file is missing, the site falls back to English.
 
 ## Data notes
-Opening hours, prices and booking rules change often. Each page says so and links to the official source (Nusuk, Experience AlUla, Diriyah, Ithra, VisitSaudi and others). Photos come from Wikimedia Commons, and each image links to its author and license page.
+Opening hours, prices and booking rules change often, and Türkiye raises its museum fees in euros most years. Every price on the site is indicative; each page links to the official source (Nusuk and VisitSaudi for Saudi Arabia, muze.gov.tr and GoTürkiye for Türkiye). Photos come from Wikimedia Commons, and each image links to its author and license page.
 
 ### Marking a spot as closed
 Add these two fields to a spot in `data/<country>/en.js`:

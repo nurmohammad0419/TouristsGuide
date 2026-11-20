@@ -16,6 +16,7 @@ TG.registerCountry('saudi-arabia', 'en', {
   name: 'Saudi Arabia',
   officialName: 'Kingdom of Saudi Arabia',
   nativeName: 'المملكة العربية السعودية',
+  nativeLang: 'ar',
   flag: '🇸🇦',
   tagline: 'From the two holiest sites in Islam to Nabataean tombs, coral reefs and the Empty Quarter.',
   heroImage: 'assets/photos/hegra/1.jpg',
