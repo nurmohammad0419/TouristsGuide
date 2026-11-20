@@ -1281,23 +1281,23 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/izmir-kemeralti/e2.jpg",
    "thumb": "assets/photos/izmir-kemeralti/e2-sm.jpg",
-   "credit": "Mehmet Aktugan",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/47388974@N02/4965772514"
+   "credit": "Ingo Mehling",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=18155857"
   },
   {
    "src": "assets/photos/izmir-kemeralti/e3.jpg",
    "thumb": "assets/photos/izmir-kemeralti/e3-sm.jpg",
-   "credit": "E&G PhotoPage",
-   "license": "CC BY-NC-ND 2.0",
-   "page": "https://www.flickr.com/photos/16086842@N00/332253671"
+   "credit": "AntepCastleView.jpg: Vav derivative work: chansey",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=27925149"
   },
   {
    "src": "assets/photos/izmir-kemeralti/e4.jpg",
    "thumb": "assets/photos/izmir-kemeralti/e4-sm.jpg",
-   "credit": "Mehmet Aktugan",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/47388974@N02/4965751688"
+   "credit": "Francisco Anzola",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=79403458"
   }
  ],
  "iznik": [
@@ -1698,30 +1698,30 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/priene-miletus-didyma/e1.jpg",
    "thumb": "assets/photos/priene-miletus-didyma/e1-sm.jpg",
-   "credit": "Egisto Sani",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/69716881@N02/15835070288"
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/5659608910"
   },
   {
    "src": "assets/photos/priene-miletus-didyma/e2.jpg",
    "thumb": "assets/photos/priene-miletus-didyma/e2-sm.jpg",
-   "credit": "Egisto Sani",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/69716881@N02/16025370171"
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/5659561780"
   },
   {
    "src": "assets/photos/priene-miletus-didyma/e3.jpg",
    "thumb": "assets/photos/priene-miletus-didyma/e3-sm.jpg",
-   "credit": "Egisto Sani",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/69716881@N02/16012798076"
+   "credit": "faktor1komma5",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/128436023@N04/49145362373"
   },
   {
    "src": "assets/photos/priene-miletus-didyma/e4.jpg",
    "thumb": "assets/photos/priene-miletus-didyma/e4-sm.jpg",
-   "credit": "Egisto Sani",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/69716881@N02/15405077004"
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/5659600844"
   }
  ],
  "princes-islands": [
