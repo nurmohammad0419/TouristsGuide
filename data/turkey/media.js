@@ -113,6 +113,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/49707497@N06/4835030405"
   }
  ],
+ "antalya-kaleici": [
+  {
+   "src": "assets/photos/antalya-kaleici/e1.jpg",
+   "thumb": "assets/photos/antalya-kaleici/e1-sm.jpg",
+   "credit": "TurkeyVision",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/76841049@N08/7393963242"
+  },
+  {
+   "src": "assets/photos/antalya-kaleici/e2.jpg",
+   "thumb": "assets/photos/antalya-kaleici/e2-sm.jpg",
+   "credit": "Alpennys",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/69129528@N05/7887383646"
+  },
+  {
+   "src": "assets/photos/antalya-kaleici/e3.jpg",
+   "thumb": "assets/photos/antalya-kaleici/e3-sm.jpg",
+   "credit": "marla_rochester",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/33694524@N04/19280956099"
+  },
+  {
+   "src": "assets/photos/antalya-kaleici/e4.jpg",
+   "thumb": "assets/photos/antalya-kaleici/e4-sm.jpg",
+   "credit": "Thijs van Exel",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/42302576@N00/4393986225"
+  }
+ ],
  "aphrodisias": [
   {
    "src": "assets/photos/aphrodisias/e1.jpg",
@@ -371,6 +401,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "gordontour",
    "license": "CC BY-NC-ND 2.0",
    "page": "https://www.flickr.com/photos/29486666@N00/52013618870"
+  }
+ ],
+ "cesme-alacati": [
+  {
+   "src": "assets/photos/cesme-alacati/e1.jpg",
+   "thumb": "assets/photos/cesme-alacati/e1-sm.jpg",
+   "credit": "E&G PhotoPage",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/16086842@N00/2922700230"
+  },
+  {
+   "src": "assets/photos/cesme-alacati/e2.jpg",
+   "thumb": "assets/photos/cesme-alacati/e2-sm.jpg",
+   "credit": "Neşe Avcıl",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/26421246@N07/6403459163"
+  },
+  {
+   "src": "assets/photos/cesme-alacati/e3.jpg",
+   "thumb": "assets/photos/cesme-alacati/e3-sm.jpg",
+   "credit": "E&G PhotoPage",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/16086842@N00/2922701662"
+  },
+  {
+   "src": "assets/photos/cesme-alacati/e4.jpg",
+   "thumb": "assets/photos/cesme-alacati/e4-sm.jpg",
+   "credit": "E&G PhotoPage",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/16086842@N00/2922700826"
   }
  ],
  "chora-church": [
@@ -825,6 +885,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/14878709@N00/6681758483"
   }
  ],
+ "izmir-kemeralti": [
+  {
+   "src": "assets/photos/izmir-kemeralti/e1.jpg",
+   "thumb": "assets/photos/izmir-kemeralti/e1-sm.jpg",
+   "credit": "dungodung",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/16953270@N00/3973657655"
+  },
+  {
+   "src": "assets/photos/izmir-kemeralti/e2.jpg",
+   "thumb": "assets/photos/izmir-kemeralti/e2-sm.jpg",
+   "credit": "Mehmet Aktugan",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/47388974@N02/4965772514"
+  },
+  {
+   "src": "assets/photos/izmir-kemeralti/e3.jpg",
+   "thumb": "assets/photos/izmir-kemeralti/e3-sm.jpg",
+   "credit": "E&G PhotoPage",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/16086842@N00/332253671"
+  },
+  {
+   "src": "assets/photos/izmir-kemeralti/e4.jpg",
+   "thumb": "assets/photos/izmir-kemeralti/e4-sm.jpg",
+   "credit": "Mehmet Aktugan",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/47388974@N02/4965751688"
+  }
+ ],
  "iznik": [
   {
    "src": "assets/photos/iznik/e1.jpg",
@@ -855,6 +945,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/33278601@N00/4612893138"
   }
  ],
+ "kas-kekova": [
+  {
+   "src": "assets/photos/kas-kekova/e1.jpg",
+   "thumb": "assets/photos/kas-kekova/e1-sm.jpg",
+   "credit": "the_junes",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/45634276@N00/6164368692"
+  },
+  {
+   "src": "assets/photos/kas-kekova/e2.jpg",
+   "thumb": "assets/photos/kas-kekova/e2-sm.jpg",
+   "credit": "Jon Young UK",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/60388322@N00/2889780080"
+  },
+  {
+   "src": "assets/photos/kas-kekova/e3.jpg",
+   "thumb": "assets/photos/kas-kekova/e3-sm.jpg",
+   "credit": "Jon Young UK",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/60388322@N00/2888947121"
+  },
+  {
+   "src": "assets/photos/kas-kekova/e4.jpg",
+   "thumb": "assets/photos/kas-kekova/e4-sm.jpg",
+   "credit": "Jon Young UK",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/60388322@N00/2888946297"
+  }
+ ],
  "maidens-tower": [
   {
    "src": "assets/photos/maidens-tower/e1.jpg",
@@ -883,6 +1003,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "Güven Gül",
    "license": "CC BY-NC-SA 2.0",
    "page": "https://www.flickr.com/photos/130386597@N04/16932806286"
+  }
+ ],
+ "marmaris-datca": [
+  {
+   "src": "assets/photos/marmaris-datca/e1.jpg",
+   "thumb": "assets/photos/marmaris-datca/e1-sm.jpg",
+   "credit": "fotozyth",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/20914189@N00/402198796"
+  },
+  {
+   "src": "assets/photos/marmaris-datca/e2.jpg",
+   "thumb": "assets/photos/marmaris-datca/e2-sm.jpg",
+   "credit": "ross_hawkes",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/52768784@N07/9676604621"
+  },
+  {
+   "src": "assets/photos/marmaris-datca/e3.jpg",
+   "thumb": "assets/photos/marmaris-datca/e3-sm.jpg",
+   "credit": "ross_hawkes",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/52768784@N07/9679841482"
+  },
+  {
+   "src": "assets/photos/marmaris-datca/e4.jpg",
+   "thumb": "assets/photos/marmaris-datca/e4-sm.jpg",
+   "credit": "jenniferhiscock",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/118551693@N07/12738207985"
   }
  ],
  "mevlana-konya": [
@@ -933,6 +1083,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/84474308@N00/2996399985"
   }
  ],
+ "olympos-chimaera": [
+  {
+   "src": "assets/photos/olympos-chimaera/e1.jpg",
+   "thumb": "assets/photos/olympos-chimaera/e1-sm.jpg",
+   "credit": "ccdoh1",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/96588621@N00/6438348571"
+  },
+  {
+   "src": "assets/photos/olympos-chimaera/e2.jpg",
+   "thumb": "assets/photos/olympos-chimaera/e2-sm.jpg",
+   "credit": "Adam Franco",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/60594606@N00/236847031"
+  },
+  {
+   "src": "assets/photos/olympos-chimaera/e3.jpg",
+   "thumb": "assets/photos/olympos-chimaera/e3-sm.jpg",
+   "credit": "GOC53",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30659367@N00/52862277388"
+  },
+  {
+   "src": "assets/photos/olympos-chimaera/e4.jpg",
+   "thumb": "assets/photos/olympos-chimaera/e4-sm.jpg",
+   "credit": "GOC53",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/30659367@N00/52862226725"
+  }
+ ],
  "pamukkale": [
   {
    "src": "assets/photos/pamukkale/e1.jpg",
@@ -961,6 +1141,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "shankar s.",
    "license": "CC BY 2.0",
    "page": "https://www.flickr.com/photos/77742560@N06/16123139980"
+  }
+ ],
+ "patara": [
+  {
+   "src": "assets/photos/patara/e1.jpg",
+   "thumb": "assets/photos/patara/e1-sm.jpg",
+   "credit": "Rol247*",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/25001294@N00/4064022337"
+  },
+  {
+   "src": "assets/photos/patara/e2.jpg",
+   "thumb": "assets/photos/patara/e2-sm.jpg",
+   "credit": "Borya",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/48599100@N00/15959556025"
+  },
+  {
+   "src": "assets/photos/patara/e3.jpg",
+   "thumb": "assets/photos/patara/e3-sm.jpg",
+   "credit": "andrewprice001",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/27457334@N02/14963278649"
+  },
+  {
+   "src": "assets/photos/patara/e4.jpg",
+   "thumb": "assets/photos/patara/e4-sm.jpg",
+   "credit": "stijn",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/44124363356@N01/7432295574"
   }
  ],
  "pergamon": [
