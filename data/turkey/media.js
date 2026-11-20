@@ -44,6 +44,45 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/182475920@N08/48187548462"
   }
  ],
+ "amasra": [
+  {
+   "src": "assets/photos/amasra/e1.jpg",
+   "thumb": "assets/photos/amasra/e1-sm.jpg",
+   "credit": "CharlesFred",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/40279823@N00/20484257748"
+  },
+  {
+   "src": "assets/photos/amasra/e2.jpg",
+   "thumb": "assets/photos/amasra/e2-sm.jpg",
+   "credit": "CharlesFred",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/40279823@N00/20508297868"
+  },
+  {
+   "src": "assets/photos/amasra/e3.jpg",
+   "thumb": "assets/photos/amasra/e3-sm.jpg",
+   "credit": "CharlesFred",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/40279823@N00/20670057136"
+  },
+  {
+   "src": "assets/photos/amasra/e4.jpg",
+   "thumb": "assets/photos/amasra/e4-sm.jpg",
+   "credit": "CharlesFred",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/40279823@N00/20073777514"
+  }
+ ],
+ "amasya": [
+  {
+   "src": "assets/photos/amasya/e1.jpg",
+   "thumb": "assets/photos/amasya/e1-sm.jpg",
+   "credit": "mariurupe",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/38517504@N00/400760125"
+  }
+ ],
  "anatolian-civilizations": [
   {
    "src": "assets/photos/anatolian-civilizations/e1.jpg",
@@ -173,6 +212,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/14878709@N00/5085302033"
   }
  ],
+ "arslantepe": [
+  {
+   "src": "assets/photos/arslantepe/e1.jpg",
+   "thumb": "assets/photos/arslantepe/e1-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=98713431"
+  },
+  {
+   "src": "assets/photos/arslantepe/e2.jpg",
+   "thumb": "assets/photos/arslantepe/e2-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=98713432"
+  },
+  {
+   "src": "assets/photos/arslantepe/e3.jpg",
+   "thumb": "assets/photos/arslantepe/e3-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=98713419"
+  },
+  {
+   "src": "assets/photos/arslantepe/e4.jpg",
+   "thumb": "assets/photos/arslantepe/e4-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=98713417"
+  }
+ ],
  "aspendos": [
   {
    "src": "assets/photos/aspendos/e1.jpg",
@@ -231,6 +300,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "justinvandyke",
    "license": "CC BY-NC 2.0",
    "page": "https://www.flickr.com/photos/85857342@N00/4814275977"
+  }
+ ],
+ "ayder-rize": [
+  {
+   "src": "assets/photos/ayder-rize/e1.jpg",
+   "thumb": "assets/photos/ayder-rize/e1-sm.jpg",
+   "credit": "mustafa gider",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/17964590@N00/5300631414"
+  },
+  {
+   "src": "assets/photos/ayder-rize/e2.jpg",
+   "thumb": "assets/photos/ayder-rize/e2-sm.jpg",
+   "credit": "NURETTIN MERT AYDIN",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/13860968@N07/3802749689"
+  },
+  {
+   "src": "assets/photos/ayder-rize/e3.jpg",
+   "thumb": "assets/photos/ayder-rize/e3-sm.jpg",
+   "credit": "NURETTIN MERT AYDIN",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/13860968@N07/3803570440"
+  },
+  {
+   "src": "assets/photos/ayder-rize/e4.jpg",
+   "thumb": "assets/photos/ayder-rize/e4-sm.jpg",
+   "credit": "NURETTIN MERT AYDIN",
+   "license": "CC BY-NC-ND 2.0",
+   "page": "https://www.flickr.com/photos/13860968@N07/3802754089"
   }
  ],
  "balat-fener": [
@@ -516,6 +615,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/93317998@N00/1471371467"
   }
  ],
+ "divrigi": [
+  {
+   "src": "assets/photos/divrigi/e1.jpg",
+   "thumb": "assets/photos/divrigi/e1-sm.jpg",
+   "credit": "R Prazeres",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=110893745"
+  },
+  {
+   "src": "assets/photos/divrigi/e2.jpg",
+   "thumb": "assets/photos/divrigi/e2-sm.jpg",
+   "credit": "R Prazeres",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=110755850"
+  },
+  {
+   "src": "assets/photos/divrigi/e3.jpg",
+   "thumb": "assets/photos/divrigi/e3-sm.jpg",
+   "credit": "R Prazeres",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=110818843"
+  },
+  {
+   "src": "assets/photos/divrigi/e4.jpg",
+   "thumb": "assets/photos/divrigi/e4-sm.jpg",
+   "credit": "R Prazeres",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=110911415"
+  }
+ ],
  "dolmabahce-palace": [
   {
    "src": "assets/photos/dolmabahce-palace/e1.jpg",
@@ -606,6 +735,38 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/92154034@N00/355759032"
   }
  ],
+ "eskisehir-odunpazari": [
+  {
+   "src": "assets/photos/eskisehir-odunpazari/e1.jpg",
+   "thumb": "assets/photos/eskisehir-odunpazari/e1-sm.jpg",
+   "credit": "Honacan",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=82346065"
+  },
+  {
+   "src": "assets/photos/eskisehir-odunpazari/e2.jpg",
+   "thumb": "assets/photos/eskisehir-odunpazari/e2-sm.jpg",
+   "credit": "Raicem",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=103051487"
+  }
+ ],
+ "esrefoglu-mosque": [
+  {
+   "src": "assets/photos/esrefoglu-mosque/e1.jpg",
+   "thumb": "assets/photos/esrefoglu-mosque/e1-sm.jpg",
+   "credit": "Basak",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=59738867"
+  },
+  {
+   "src": "assets/photos/esrefoglu-mosque/e2.jpg",
+   "thumb": "assets/photos/esrefoglu-mosque/e2-sm.jpg",
+   "credit": "Basak",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=59738860"
+  }
+ ],
  "eyup-sultan": [
   {
    "src": "assets/photos/eyup-sultan/e1.jpg",
@@ -673,6 +834,66 @@ TG.registerMedia('turkey', { spots: {
    "credit": "Trinity College, University of Melbourne",
    "license": "CC BY-NC-ND 2.0",
    "page": "https://www.flickr.com/photos/47979578@N02/14819751271"
+  }
+ ],
+ "gobekli-tepe": [
+  {
+   "src": "assets/photos/gobekli-tepe/e1.jpg",
+   "thumb": "assets/photos/gobekli-tepe/e1-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=173203921"
+  },
+  {
+   "src": "assets/photos/gobekli-tepe/e2.jpg",
+   "thumb": "assets/photos/gobekli-tepe/e2-sm.jpg",
+   "credit": "Wretch Fossil",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12527956@N07/53958004826"
+  },
+  {
+   "src": "assets/photos/gobekli-tepe/e3.jpg",
+   "thumb": "assets/photos/gobekli-tepe/e3-sm.jpg",
+   "credit": "Dosseman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=178792027"
+  },
+  {
+   "src": "assets/photos/gobekli-tepe/e4.jpg",
+   "thumb": "assets/photos/gobekli-tepe/e4-sm.jpg",
+   "credit": "tobeytravels",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=172665589"
+  }
+ ],
+ "gordion": [
+  {
+   "src": "assets/photos/gordion/e1.jpg",
+   "thumb": "assets/photos/gordion/e1-sm.jpg",
+   "credit": "voyageAnatolia.blogspot.com",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/10362153@N03/2942414990"
+  },
+  {
+   "src": "assets/photos/gordion/e2.jpg",
+   "thumb": "assets/photos/gordion/e2-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/25744619884"
+  },
+  {
+   "src": "assets/photos/gordion/e3.jpg",
+   "thumb": "assets/photos/gordion/e3-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/26257102292"
+  },
+  {
+   "src": "assets/photos/gordion/e4.jpg",
+   "thumb": "assets/photos/gordion/e4-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/26283283021"
   }
  ],
  "grand-bazaar": [
@@ -795,6 +1016,36 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/21013862@N08/2253413162"
   }
  ],
+ "hattusa": [
+  {
+   "src": "assets/photos/hattusa/e1.jpg",
+   "thumb": "assets/photos/hattusa/e1-sm.jpg",
+   "credit": "Maarten Dirkse",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/23336697@N00/4886109469"
+  },
+  {
+   "src": "assets/photos/hattusa/e2.jpg",
+   "thumb": "assets/photos/hattusa/e2-sm.jpg",
+   "credit": "Verity Cridland",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/58789412@N00/2930938977"
+  },
+  {
+   "src": "assets/photos/hattusa/e3.jpg",
+   "thumb": "assets/photos/hattusa/e3-sm.jpg",
+   "credit": "zolakoma",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/15164743@N05/6674678763"
+  },
+  {
+   "src": "assets/photos/hattusa/e4.jpg",
+   "thumb": "assets/photos/hattusa/e4-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/25725048044"
+  }
+ ],
  "house-virgin-mary": [
   {
    "src": "assets/photos/house-virgin-mary/e1.jpg",
@@ -823,6 +1074,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "kasio69",
    "license": "CC BY 2.0",
    "page": "https://www.flickr.com/photos/37904342@N04/30447464785"
+  }
+ ],
+ "ihlara-valley": [
+  {
+   "src": "assets/photos/ihlara-valley/e1.jpg",
+   "thumb": "assets/photos/ihlara-valley/e1-sm.jpg",
+   "credit": "Moody Man",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/21579885@N08/15489273987"
+  },
+  {
+   "src": "assets/photos/ihlara-valley/e2.jpg",
+   "thumb": "assets/photos/ihlara-valley/e2-sm.jpg",
+   "credit": "Moody Man",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/21579885@N08/15489083678"
+  },
+  {
+   "src": "assets/photos/ihlara-valley/e3.jpg",
+   "thumb": "assets/photos/ihlara-valley/e3-sm.jpg",
+   "credit": "Moody Man",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/21579885@N08/15055243613"
+  },
+  {
+   "src": "assets/photos/ihlara-valley/e4.jpg",
+   "thumb": "assets/photos/ihlara-valley/e4-sm.jpg",
+   "credit": "Moody Man",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/21579885@N08/15674482085"
   }
  ],
  "ishak-pasha-palace": [
@@ -975,6 +1256,22 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/60388322@N00/2888946297"
   }
  ],
+ "lake-salda": [
+  {
+   "src": "assets/photos/lake-salda/e1.jpg",
+   "thumb": "assets/photos/lake-salda/e1-sm.jpg",
+   "credit": "vaRiax_",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43151611@N04/7568981872"
+  },
+  {
+   "src": "assets/photos/lake-salda/e2.jpg",
+   "thumb": "assets/photos/lake-salda/e2-sm.jpg",
+   "credit": "payzanoglu",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/9438225@N08/29936420131"
+  }
+ ],
  "maidens-tower": [
   {
    "src": "assets/photos/maidens-tower/e1.jpg",
@@ -1049,6 +1346,36 @@ TG.registerMedia('turkey', { spots: {
    "credit": "voyageAnatolia.blogspot.com",
    "license": "CC BY-NC-SA 2.0",
    "page": "https://www.flickr.com/photos/10362153@N03/2858561017"
+  }
+ ],
+ "mount-ararat": [
+  {
+   "src": "assets/photos/mount-ararat/e1.jpg",
+   "thumb": "assets/photos/mount-ararat/e1-sm.jpg",
+   "credit": "patrick colgan",
+   "license": "CC BY-NC 2.0",
+   "page": "https://www.flickr.com/photos/82058184@N00/251200473"
+  },
+  {
+   "src": "assets/photos/mount-ararat/e2.jpg",
+   "thumb": "assets/photos/mount-ararat/e2-sm.jpg",
+   "credit": "Xevi V",
+   "license": "CC BY-NC-SA 2.0",
+   "page": "https://www.flickr.com/photos/29624180@N04/3243341931"
+  },
+  {
+   "src": "assets/photos/mount-ararat/e3.jpg",
+   "thumb": "assets/photos/mount-ararat/e3-sm.jpg",
+   "credit": "Ai@ce",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78368745@N00/48755901928"
+  },
+  {
+   "src": "assets/photos/mount-ararat/e4.jpg",
+   "thumb": "assets/photos/mount-ararat/e4-sm.jpg",
+   "credit": "Ai@ce",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/78368745@N00/48756218296"
   }
  ],
  "mount-nemrut": [
@@ -1507,6 +1834,15 @@ TG.registerMedia('turkey', { spots: {
    "page": "https://www.flickr.com/photos/10404073@N05/46136101184"
   }
  ],
+ "termessos": [
+  {
+   "src": "assets/photos/termessos/e1.jpg",
+   "thumb": "assets/photos/termessos/e1-sm.jpg",
+   "credit": "Capyusuf",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=91525585"
+  }
+ ],
  "topkapi-palace": [
   {
    "src": "assets/photos/topkapi-palace/e1.jpg",
@@ -1648,6 +1984,52 @@ TG.registerMedia('turkey', { spots: {
    "credit": "kcakduman",
    "license": "CC BY-NC-SA 2.0",
    "page": "https://www.flickr.com/photos/58371104@N08/8545792380"
+  }
+ ],
+ "uzungol": [
+  {
+   "src": "assets/photos/uzungol/e1.jpg",
+   "thumb": "assets/photos/uzungol/e1-sm.jpg",
+   "credit": "Siraj Almogrby",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=106556806"
+  },
+  {
+   "src": "assets/photos/uzungol/e2.jpg",
+   "thumb": "assets/photos/uzungol/e2-sm.jpg",
+   "credit": "Canerdi",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=133770511"
+  },
+  {
+   "src": "assets/photos/uzungol/e3.jpg",
+   "thumb": "assets/photos/uzungol/e3-sm.jpg",
+   "credit": "Seyma Ihtiyar",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=90872506"
+  },
+  {
+   "src": "assets/photos/uzungol/e4.jpg",
+   "thumb": "assets/photos/uzungol/e4-sm.jpg",
+   "credit": "g",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=90942133"
+  }
+ ],
+ "yedigoller": [
+  {
+   "src": "assets/photos/yedigoller/e1.jpg",
+   "thumb": "assets/photos/yedigoller/e1-sm.jpg",
+   "credit": "Ipek Morel",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=91385101"
+  },
+  {
+   "src": "assets/photos/yedigoller/e2.jpg",
+   "thumb": "assets/photos/yedigoller/e2-sm.jpg",
+   "credit": "Ipek Morel",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=91385099"
   }
  ],
  "zeugma-museum": [
