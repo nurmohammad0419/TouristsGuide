@@ -12,11 +12,11 @@
 TG.registerPlanner('saudi-arabia', {
   reviewed: 'November 2026',
 
-  // Travel partner: FeniTravels (flight search + hotel booking). Set name to '' to hide the buttons.
-  // URL templates — {tokens} are replaced and URL-encoded; empty parameters are dropped automatically.
-  //   flights: {from} {to} airport codes, {depart} {return} dates (YYYY-MM-DD), {adults}
-  //   hotels : {citycode} (airport-style city code), {checkin} {checkout}, {rooms}, {adults}
+  // Travel partner: flight search + hotel booking.
+  // TURNED OFF until the partner site fully supports ticket and hotel booking.
+  // To switch it back on, set enabled: true — nothing else needs changing.
   partner: {
+    enabled: false,
     name: 'FeniTravels',
     home: 'https://fenitravels.com',
     flights: 'https://fenitravels.com/search/results?origin={from}&destination={to}&departureDate={depart}&returnDate={return}&cabinClass=economy&adults={adults}&children=0&infants=0',

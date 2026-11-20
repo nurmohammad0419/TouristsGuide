@@ -10,6 +10,8 @@
   const strenuousSet = (P) => new Set(P.strenuous || []);
   const faithOf = (P) => P.faith || null;            // null = no religion step for this country
   const money = (P) => (P.currency || 'SAR');
+  // The booking partner is only used while plan.js has it switched on.
+  const partnerOf = (P) => (P.partner && P.partner.enabled !== false && P.partner.name ? P.partner : null);
   const rlabel = (d, plural) => (plural ? (d && d.regionLabelPlural) || 'Provinces' : (d && d.regionLabel) || 'Province');
   const PACE = { solo: 3, couple: 3, family: 2, friends: 3 };
   const STYLE_ADJ = { relaxed: -1, balanced: 0, packed: 1 };
@@ -297,12 +299,12 @@
   const ymd = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   // Default departure airport: first airport in the traveller's country of residence (or nationality)
   function defFrom(P, s) {
-    const list = (P.partner && P.partner.airports) || [];
+    const list = (partnerOf(P) || {}).airports || [];
     const hit = list.find((a) => a[2] === (s.res || s.nat)) || list.find((a) => a[2] === s.nat);
     return hit ? hit[0] : '';
   }
   function fromCode(P, s) { return s.fr || defFrom(P, s); }
-  function airportOk(P, code) { return !!code && ((P.partner && P.partner.airports) || []).some((a) => a[0] === code); }
+  function airportOk(P, code) { return !!code && (((partnerOf(P) || {}).airports) || []).some((a) => a[0] === code); }
   function people(s) { return Math.max(1, Math.min(12, parseInt(s.ppl, 10) || ({ solo: 1, couple: 2, family: 4, friends: 3 }[s.group] || 2))); }
   function tierIdx(s) { return { eco: 0, comfort: 1, lux: 2 }[s.bl || 'comfort']; }
   function lodgingRate(P, city, tier) { const L = P.costs.lodging; return (L[city] || L.default)[tier]; }
@@ -457,10 +459,10 @@
           const alt = F && s.religion === 'muslim' ? F.altAirport : '';
           out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === alt ? esc(F.altAirportNote || '') : ''))).join('')}</div>`, !!s.airport));
         }
-        if (s.airport && P.partner && P.partner.flights) {
+        if (s.airport && partnerOf(P) && partnerOf(P).flights) {
           const cur = fromCode(P, s);
           const names = Object.fromEntries(P.countries);
-          const sorted = P.partner.airports.filter((a) => a[2] !== P.country).slice().sort((a, b) => (names[a[2]] || a[2]).localeCompare(names[b[2]] || b[2]) || a[1].localeCompare(b[1]));
+          const sorted = partnerOf(P).airports.filter((a) => a[2] !== P.country).slice().sort((a, b) => (names[a[2]] || a[2]).localeCompare(names[b[2]] || b[2]) || a[1].localeCompare(b[1]));
           out.push(step(n++, t('plan.q.from'), `<label class="field field--sel"><span>${t('plan.flyingFrom')}</span><select name="fr">${sorted.map((a) => opt(a[0], `${a[1]} (${a[0]}) — ${names[a[2]] || a[2]}`, cur)).join('')}</select></label><p class="muted small">${t('plan.flyingFromHint')}</p>`, true));
         }
       if (s.airport) {
@@ -489,7 +491,7 @@
       result = renderResult(ctx, s, days, visaVerdict(P, s));
     }
     const faithStep = faithOf(P) ? 1 : 0;
-    const total = s.origin === 'outside' ? 9 + faithStep + (P.partner && P.partner.flights ? 1 : 0) : s.origin === 'inside' ? 8 + faithStep : 1;
+    const total = s.origin === 'outside' ? 9 + faithStep + (partnerOf(P) && partnerOf(P).flights ? 1 : 0) : s.origin === 'inside' ? 8 + faithStep : 1;
     const pct = Math.min(100, Math.round((doneCount / total) * 100));
     const prog = s.origin ? `<div class="pprog"><div class="pprog__bar"><i style="width:${pct}%"></i></div><span>${pct >= 100 ? '🎉 ' + t('plan.planReady') : Math.min(doneCount, total) + ' / ' + total}</span></div>` : '';
     return `<div class="planner">${prog}${out.join('')}</div>${result}`;
@@ -517,11 +519,12 @@
       else if (verdict.level === 'ok' && verdict.kind === 'arrival' && P.visa.arrivalBooking) bookings.push({ label: P.visa.arrivalBooking, url: P.visa.portal });
       else if (verdict.level === 'warn') bookings.push(umrah && F && F.visaBooking ? { label: F.visaBooking, url: F.permitUrl } : { label: P.visa.visaBooking || 'Visa — apply before travelling', url: verdict.link || P.visa.portal });
     }
-    if (P.partner && P.partner.flights) {
+    const PT = partnerOf(P);
+    if (PT && PT.flights) {
       const domestic = [];
-      days.forEach((d) => d.items.forEach((it) => { if (it.flight && airportOk(P, it.flight.from) && airportOk(P, it.flight.to)) domestic.push({ label: `Flight ${it.flight.from} → ${it.flight.to} on ${fmtDate(d.date)} — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: it.flight.from, to: it.flight.to, depart: ymd(d.date), adults: people(s) }) }); }));
+      days.forEach((d) => d.items.forEach((it) => { if (it.flight && airportOk(P, it.flight.from) && airportOk(P, it.flight.to)) domestic.push({ label: `Flight ${it.flight.from} → ${it.flight.to} on ${fmtDate(d.date)} — search on ${PT.name}`, url: fillUrl(PT.flights, { from: it.flight.from, to: it.flight.to, depart: ymd(d.date), adults: people(s) }) }); }));
       bookings.unshift(...domestic);
-      if (s.origin === 'outside') bookings.unshift({ label: `Flights ${fromCode(P, s) || '…'} → ${s.airport} (${s.from} → ${s.to}) — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: fromCode(P, s), to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
+      if (s.origin === 'outside') bookings.unshift({ label: `Flights ${fromCode(P, s) || '…'} → ${s.airport} (${s.from} → ${s.to}) — search on ${PT.name}`, url: fillUrl(PT.flights, { from: fromCode(P, s), to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
     }
     if (muslim) (F.permits || []).forEach((pm) => { if (allSpots.some((x) => x.id === pm.spot)) bookings.push({ label: pm.label, url: pm.url || F.permitUrl }); });
     (P.railBookings || []).forEach((rb) => { if (days.some((d) => d.items.some((i) => i.type === 'travel' && new RegExp(rb.match).test(i.text)))) bookings.push({ label: rb.label, url: rb.url }); });
@@ -598,10 +601,10 @@
         ${stayList.map((st) => `<div class="pstay__row"><div class="pstay__head"><b>${esc(st.city)}</b><span>${st.nights} ${t('plan.nights')} · ${fmtDate(st.from)} → ${fmtDate(st.to)}</span></div>
           <p>${esc(P.stay[st.city] || P.stay.default)}</p>
           <div class="pstay__foot"><span class="pill pill--info">≈ ${sar(st.rate[0])} – ${sar(st.rate[1])} ${t('plan.perRoomNight')}</span>
-          ${(() => { const cc = (P.partner.cityCodes || {})[st.city] || (P.hubs[st.prov] || {}).airport || ''; return P.partner && P.partner.hotels && cc ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(P.partner.hotels, { citycode: cc, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(P.partner.name)} ${icon.ext}</a>` : ''; })()}
+          ${(() => { if (!PT || !PT.hotels) return ''; const cc = (PT.cityCodes || {})[st.city] || (P.hubs[st.prov] || {}).airport || ''; return cc ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(PT.hotels, { citycode: cc, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(PT.name)} ${icon.ext}</a>` : ''; })()}
           <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', ' + data.name)}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
           <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' ' + data.name)}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
-        ${P.partner && P.partner.name ? `<p class="note">✈️ ${t('plan.partnerNote').replace('{name}', esc(P.partner.name))}</p>` : ''}
+        ${PT ? `<p class="note">✈️ ${t('plan.partnerNote').replace('{name}', esc(PT.name))}</p>` : ''}
       </section>` : '';
     const budgetHtml = `
       <div class="glass-card pbudget"><h3>💰 ${t('plan.budgetTitle')}</h3>

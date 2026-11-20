@@ -98,5 +98,16 @@ check('SA: Mexico is on the eVisa list after the Nov 2026 addition', 'saudi-arab
   'o=outside&n=MX&f=other&from=2027-04-10&to=2027-04-18&g=solo&st=balanced&tr=taxi&a=JED&bl=comfort', {
   'eVisa': has(/Eligible for the tourist eVisa/),
 });
+// The booking partner is switched off for now: no mention of it anywhere in a plan.
+for (const [cid, q] of [
+  ['turkey', 'o=outside&n=GB&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=IST&x=cappadocia&bl=comfort'],
+  ['saudi-arabia', 'o=outside&n=GB&f=other&from=2027-02-01&to=2027-02-09&g=solo&st=balanced&tr=taxi&a=RUH&bl=comfort']
+]) {
+  check(`${cid}: booking partner stays hidden while disabled`, cid, q, {
+    'no partner name': no(/FeniTravels/i),
+    'no partner domain': no(/fenitravels\.com/i),
+    'still produced a plan': has(/planResult/),
+  });
+}
 console.log(fails ? `\n${fails} FAILING` : '\nall content assertions passed');
-process.exit(fails?1:0);
+process.exit(fails ? 1 : 0);
