@@ -27,18 +27,127 @@ TG.registerPlanner('saudi-arabia', {
     airports: [["RUH","Riyadh","SA"],["JED","Jeddah","SA"],["DMM","Dammam","SA"],["MED","Madinah","SA"],["AHB","Abha","SA"],["TUU","Tabuk","SA"],["TIF","Taif","SA"],["ELQ","Qassim","SA"],["GIZ","Jazan","SA"],["HAS","Hail","SA"],["ULH","AlUla","SA"],["YNB","Yanbu","SA"],["HOF","Al-Ahsa","SA"],["EAM","Najran","SA"],["AJF","Al Jouf","SA"],["NUM","NEOM","SA"],["DXB","Dubai","AE"],["AUH","Abu Dhabi","AE"],["SHJ","Sharjah","AE"],["DOH","Doha","QA"],["BAH","Manama","BH"],["KWI","Kuwait City","KW"],["MCT","Muscat","OM"],["SLL","Salalah","OM"],["AMM","Amman","JO"],["BEY","Beirut","LB"],["DAM","Damascus","SY"],["BGW","Baghdad","IQ"],["BSR","Basra","IQ"],["EBL","Erbil","IQ"],["ADE","Aden","YE"],["SAH","Sana'a","YE"],["CAI","Cairo","EG"],["HBE","Alexandria","EG"],["SSH","Sharm El Sheikh","EG"],["HRG","Hurghada","EG"],["LXR","Luxor","EG"],["KRT","Khartoum","SD"],["PZU","Port Sudan","SD"],["ADD","Addis Ababa","ET"],["NBO","Nairobi","KE"],["DAR","Dar es Salaam","TZ"],["MGQ","Mogadishu","SO"],["JIB","Djibouti","DJ"],["CMN","Casablanca","MA"],["RAK","Marrakesh","MA"],["TUN","Tunis","TN"],["ALG","Algiers","DZ"],["LOS","Lagos","NG"],["JNB","Johannesburg","ZA"],["IST","Istanbul","TR"],["SAW","Istanbul","TR"],["AYT","Antalya","TR"],["ESB","Ankara","TR"],["TZX","Trabzon","TR"],["GYD","Baku","AZ"],["TBS","Tbilisi","GE"],["IKA","Tehran","IR"],["KHI","Karachi","PK"],["LHE","Lahore","PK"],["ISB","Islamabad","PK"],["PEW","Peshawar","PK"],["MUX","Multan","PK"],["SKT","Sialkot","PK"],["LYP","Faisalabad","PK"],["KBL","Kabul","AF"],["DEL","Delhi","IN"],["BOM","Mumbai","IN"],["HYD","Hyderabad","IN"],["COK","Kochi","IN"],["CCJ","Kozhikode","IN"],["TRV","Thiruvananthapuram","IN"],["MAA","Chennai","IN"],["BLR","Bengaluru","IN"],["LKO","Lucknow","IN"],["AMD","Ahmedabad","IN"],["CCU","Kolkata","IN"],["DAC","Dhaka","BD"],["CGP","Chattogram","BD"],["ZYL","Sylhet","BD"],["KTM","Kathmandu","NP"],["CMB","Colombo","LK"],["MLE","Mal\\xe9","MV"],["MNL","Manila","PH"],["CEB","Cebu","PH"],["CGK","Jakarta","ID"],["SUB","Surabaya","ID"],["DPS","Bali","ID"],["KUL","Kuala Lumpur","MY"],["PEN","Penang","MY"],["SIN","Singapore","SG"],["BKK","Bangkok","TH"],["HKT","Phuket","TH"],["SGN","Ho Chi Minh City","VN"],["HAN","Hanoi","VN"],["HKG","Hong Kong","HK"],["PEK","Beijing","CN"],["PVG","Shanghai","CN"],["CAN","Guangzhou","CN"],["NRT","Tokyo","JP"],["ICN","Seoul","KR"],["TAS","Tashkent","UZ"],["ALA","Almaty","KZ"],["LHR","London","GB"],["MAN","Manchester","GB"],["CDG","Paris","FR"],["FRA","Frankfurt","DE"],["MUC","Munich","DE"],["AMS","Amsterdam","NL"],["BRU","Brussels","BE"],["MAD","Madrid","ES"],["BCN","Barcelona","ES"],["FCO","Rome","IT"],["MXP","Milan","IT"],["VIE","Vienna","AT"],["ZRH","Zurich","CH"],["GVA","Geneva","CH"],["ATH","Athens","GR"],["CPH","Copenhagen","DK"],["ARN","Stockholm","SE"],["SJJ","Sarajevo","BA"],["SVO","Moscow","RU"],["JFK","New York","US"],["IAD","Washington","US"],["ORD","Chicago","US"],["IAH","Houston","US"],["LAX","Los Angeles","US"],["YYZ","Toronto","CA"],["SYD","Sydney","AU"],["MEL","Melbourne","AU"]]
   },
 
+  country: 'SA',
+  currency: 'SAR',
+  defaultAirport: 'RUH',
+  bus: { label: 'SAPTCO intercity bus', url: 'https://www.saptco.com.sa' },
+  rideHailing: 'Uber / Careem / taxis',
+  passportNote: 'Passport valid for at least 6 months',
+  insuranceNote: 'Travel insurance (included with the eVisa fee)',
+  localIdNote: 'National ID / Iqama',
+  cityFlightHint: { AlUla: 'flights to AlUla (ULH) also available' },
+  // Spots too demanding for a family plan (long climbs, caves, off-road desert)
+  strenuous: ['jabal-al-nour', 'jabal-thawr', 'edge-of-the-world', 'umm-jarsan', 'dahl-heet', 'wadi-lajab',
+    'habala', 'jabal-aja', 'uruq-bani-maarid', 'al-faw', 'hisma-desert', 'jabal-al-lawz'],
+  railBookings: [
+    { match: 'Haramain', label: 'Haramain High Speed Railway tickets (book ahead on busy days)', url: 'https://sar.hhr.sa' },
+    { match: 'SAR ', label: 'SAR train tickets', url: 'https://www.sar.com.sa' }
+  ],
+  tips: ['plan.tip.prayer', 'plan.tip.weather'],
+
+  // Entry rules. The first matching rule wins, so order matters.
   visa: {
     portal: 'https://visa.visitsaudi.com',
-    nusuk: 'https://www.nusuk.sa',
-    // Citizens of GCC states: no visa required
-    gcc: ['AE', 'BH', 'KW', 'OM', 'QA'],
-    // Nationalities eligible for the tourist eVisa / visa on arrival
-    evisa: ['AD', 'AL', 'AR', 'AT', 'AU', 'AZ', 'BA', 'BE', 'BG', 'BN', 'BR', 'CA', 'CH', 'CN', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GE', 'GR', 'HK', 'HR', 'HU', 'IE', 'IS', 'IT', 'JP', 'KG', 'KR', 'KZ', 'LI', 'LT', 'LU', 'LV', 'MC', 'MD', 'ME', 'MK', 'MO', 'MT', 'MU', 'MV', 'MY', 'NL', 'NO', 'NZ', 'PA', 'PL', 'PT', 'RO', 'RS', 'RU', 'SC', 'SE', 'SG', 'SI', 'SK', 'SM', 'TH', 'TJ', 'TR', 'TW', 'UA', 'US', 'UZ', 'VA', 'ZA'],
-    // Residents of these countries (any nationality) can apply for the eVisa
-    residentOf: ['AE', 'BH', 'KW', 'OM', 'QA', 'US', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'CH', 'SE', 'NO', 'DK', 'FI', 'IE', 'PT', 'GR', 'PL', 'CZ', 'HU', 'LU', 'IS', 'LI', 'MT', 'SK', 'SI', 'EE', 'LV', 'LT', 'HR', 'CA', 'AU', 'NZ', 'JP', 'KR', 'SG'],
-    // Holders of a valid, used US / UK / Schengen visa can apply for the eVisa or visa on arrival
-    visaHolderOf: 'a valid US, UK or Schengen visa (used at least once)'
+    evisaBooking: 'Tourist eVisa (apply online before departure)',
+    visaBooking: 'Visit visa via the Saudi embassy or an authorised agent',
+    own: { title: 'No visa needed', text: 'Saudi citizens enter freely.' },
+    free: {
+      title: 'No visa needed — GCC citizen',
+      text: 'Citizens of GCC countries can enter with a valid passport or national ID.',
+      codes: ['AE', 'BH', 'KW', 'OM', 'QA']
+    },
+    evisa: {
+      title: 'Eligible for the tourist eVisa / visa on arrival',
+      text: 'Apply online before you fly (recommended) or get a visa on arrival at major airports. The tourist visa is valid for 1 year, multiple entry, up to 90 days per stay, and allows Umrah outside the Hajj season.',
+      codes: ['AD', 'AL', 'AR', 'AT', 'AU', 'AZ', 'BA', 'BE', 'BG', 'BN', 'BR', 'CA', 'CH', 'CN', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GE', 'GR', 'HK', 'HR', 'HU', 'IE', 'IS', 'IT', 'JP', 'KG', 'KR', 'KZ', 'LI', 'LT', 'LU', 'LV', 'MC', 'MD', 'ME', 'MK', 'MO', 'MT', 'MU', 'MV', 'MY', 'NL', 'NO', 'NZ', 'PA', 'PL', 'PT', 'RO', 'RS', 'RU', 'SC', 'SE', 'SG', 'SI', 'SK', 'SM', 'TH', 'TR', 'TW', 'UA', 'US', 'UZ', 'VA', 'ZA']
+    },
+    resident: {
+      title: 'Eligible for the tourist eVisa as a resident',
+      text: 'Holders of a valid residence permit in your country of residence can apply for the Saudi tourist eVisa online. Carry your residence permit and passport (valid 6+ months).',
+      codes: ['AE', 'BH', 'KW', 'OM', 'QA', 'US', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'CH', 'SE', 'NO', 'DK', 'FI', 'IE', 'PT', 'GR', 'PL', 'CZ', 'HU', 'LU', 'IS', 'LI', 'MT', 'SK', 'SI', 'EE', 'LV', 'LT', 'HR', 'CA', 'AU', 'NZ', 'JP', 'KR', 'SG']
+    },
+    visaHolder: {
+      title: 'Eligible for the eVisa / visa on arrival as a visa holder',
+      text: 'Holders of {of} can apply for the tourist eVisa online or get a visa on arrival. Bring the passport containing that visa.',
+      of: 'a valid US, UK or Schengen visa (used at least once)'
+    },
+    none: {
+      title: 'Visa required in advance',
+      text: 'Your nationality is not currently on the eVisa list. Apply for a visit visa through the Saudi embassy or an authorised agent before travelling.'
+    }
   },
+
+  // Pilgrimage routing. Remove this whole block and the planner stops asking about religion.
+  faith: {
+    permitUrl: 'https://www.nusuk.sa',
+    visaBooking: 'Umrah visa via the Nusuk platform or a licensed Umrah agent',
+    ritualCluster: 'makkah_umrah',
+    ritualSpot: 'masjid-al-haram',
+    recommendAirport: 'JED',
+    altAirport: 'MED',
+    ihramFromProv: 'madinah',
+    ihramNote: 'If you are performing Umrah, many pilgrims bathe and put on ihram at their Madinah hotel, then make the intention (niyyah) at or before the miqat of Dhul Hulayfah (Abyar Ali) — ask your Umrah agent or check the Nusuk app for the exact steps.',
+    extrasCoreNote: 'Makkah and Madinah are already in your plan.',
+    tipRitual: 'plan.tip.umrahFirst',
+    tipOther: 'plan.tip.nonMuslim',
+    permits: [
+      { spot: 'masjid-al-haram', label: 'Free Umrah permit — book a time slot in the Nusuk app' },
+      { spot: 'masjid-an-nabawi', label: 'Al-Rawdah visit permit (only if you want to pray in the Rawdah) — Nusuk app' }
+    ],
+    docs: [
+      { when: 'ritual', text: 'Nusuk app installed and account created (for the Umrah permit)' },
+      { when: 'notRitual', spot: 'masjid-an-nabawi', text: 'Nusuk app (only if you want a Rawdah visit permit)' },
+      { when: 'ritual', text: 'Ihram clothing for Umrah (men: two unstitched white cloths) / loose modest clothing (women)' }
+    ],
+    // The two holy cities lead the trip; arriving at MED flips the order.
+    route: {
+      a: [['makkah_umrah', 'makkah'], ['makkah_ziyarat', 'makkah']],
+      b: [['madinah_core', 'madinah'], ['madinah_ziyarat', 'madinah']],
+      startWhenAirport: ['MED'],
+      insert: [{ id: 'jeddah', cluster: ['jeddah', 'makkah'], at: 2 }]
+    }
+  },
+
+  // Routing for trips that start outside the country
+  tour: {
+    coreNote: 'Your arrival city is already in the plan.',
+    core: {
+      '*': [['jeddah', 'makkah']],
+      RUH: [['riyadh', 'riyadh']],
+      DMM: [['eastern_metro', 'eastern']],
+      AHB: [['asir', 'asir']]
+    },
+    extras: [
+      { id: 'jeddah', label: 'Jeddah (Al-Balad, Red Sea)', clusters: [['jeddah', 'makkah']], minDays: 9, minDaysFaith: 7 },
+      { id: 'riyadh', label: 'Riyadh & Diriyah', clusters: [['riyadh', 'riyadh']], minDays: 9, minDaysFaith: 12 },
+      { id: 'riyadh_day', label: 'Day trips from Riyadh', clusters: [['riyadh_day', 'riyadh']], minDays: 4, airports: ['RUH'] },
+      { id: 'taif', label: 'Taif mountains & roses', clusters: [['taif', 'makkah']], minDays: 4, minDaysFaith: 10 },
+      { id: 'alula', label: 'AlUla & Hegra', clusters: [['alula', 'madinah']], minDays: 6, minDaysFaith: 9 },
+      { id: 'eastern', label: 'Eastern Province (Al-Ahsa, Khobar)', clusters: [['eastern_metro', 'eastern'], ['alahsa', 'eastern']], minDays: 10 },
+      { id: 'asir', label: 'Asir mountains (Abha)', clusters: [['asir', 'asir']], minDays: 10 }
+    ]
+  },
+
+  // What to do on landing, per arrival airport
+  arrival: {
+    JED: {
+      car: 'Collect your rental car — Jeddah city centre is about 30 minutes away.',
+      public: 'Taxi or ride-hailing to Jeddah city centre (about 30 minutes).',
+      pilgrim: 'Take the Haramain High Speed Railway from the airport station straight to Makkah (about 1 h) or a taxi / ride-hailing (about 1 h 15 min). If you are performing Umrah, enter ihram at the airport or on the plane before passing the miqat.',
+      pilgrimCar: 'Collect your rental car and drive to Makkah (about 1 h 15 min via Highway 40); non-residents must park at the edge of the city and use the Haram buses.'
+    },
+    MED: {
+      car: 'Collect your rental car — central Madinah is about 20 minutes away.',
+      public: 'Taxi or ride-hailing to the Prophet\'s Mosque area (about 20 minutes).',
+      pilgrim: 'Taxi or ride-hailing to the Prophet\'s Mosque area (about 20 minutes). You will enter ihram later, at the Dhul Hulayfah (Abyar Ali) miqat, when you travel on to Makkah.',
+      pilgrimCar: 'Collect your rental car — central Madinah is about 20 minutes away. You will enter ihram later, at the Dhul Hulayfah (Abyar Ali) miqat, when you travel on to Makkah.'
+    },
+    RUH: { car: 'Collect your rental car — central Riyadh is about 35 minutes away.', public: 'Riyadh Metro (airport line) or taxi / ride-hailing to the city (about 35 minutes).' },
+    DMM: { car: 'Collect your rental car — Dammam is about 40 minutes, Khobar about 50 minutes.', public: 'Taxi or ride-hailing to Dammam / Khobar (40–50 minutes).' },
+    AHB: { car: 'Collect your rental car — Abha city is about 20 minutes away.', public: 'Taxi to Abha city (about 20 minutes).' },
+    GIZ: { car: 'Taxi to Jazan city (about 15 minutes).', public: 'Taxi to Jazan city (about 15 minutes).' }
+  },
+
 
   countries: [
     ['AF', 'Afghanistan'], ['AL', 'Albania'], ['DZ', 'Algeria'], ['AD', 'Andorra'], ['AR', 'Argentina'], ['AU', 'Australia'], ['AT', 'Austria'], ['AZ', 'Azerbaijan'], ['BH', 'Bahrain'], ['BD', 'Bangladesh'], ['BE', 'Belgium'], ['BA', 'Bosnia & Herzegovina'], ['BR', 'Brazil'], ['BN', 'Brunei'], ['BG', 'Bulgaria'], ['KH', 'Cambodia'], ['CM', 'Cameroon'], ['CA', 'Canada'], ['CL', 'Chile'], ['CN', 'China'], ['CO', 'Colombia'], ['HR', 'Croatia'], ['CY', 'Cyprus'], ['CZ', 'Czechia'], ['DK', 'Denmark'], ['EG', 'Egypt'], ['EE', 'Estonia'], ['ET', 'Ethiopia'], ['FI', 'Finland'], ['FR', 'France'], ['GE', 'Georgia'], ['DE', 'Germany'], ['GH', 'Ghana'], ['GR', 'Greece'], ['HK', 'Hong Kong'], ['HU', 'Hungary'], ['IS', 'Iceland'], ['IN', 'India'], ['ID', 'Indonesia'], ['IR', 'Iran'], ['IQ', 'Iraq'], ['IE', 'Ireland'], ['IT', 'Italy'], ['JP', 'Japan'], ['JO', 'Jordan'], ['KZ', 'Kazakhstan'], ['KE', 'Kenya'], ['KW', 'Kuwait'], ['KG', 'Kyrgyzstan'], ['LV', 'Latvia'], ['LB', 'Lebanon'], ['LY', 'Libya'], ['LI', 'Liechtenstein'], ['LT', 'Lithuania'], ['LU', 'Luxembourg'], ['MO', 'Macau'], ['MY', 'Malaysia'], ['MV', 'Maldives'], ['MT', 'Malta'], ['MU', 'Mauritius'], ['MX', 'Mexico'], ['MD', 'Moldova'], ['MC', 'Monaco'], ['ME', 'Montenegro'], ['MA', 'Morocco'], ['NP', 'Nepal'], ['NL', 'Netherlands'], ['NZ', 'New Zealand'], ['NG', 'Nigeria'], ['MK', 'North Macedonia'], ['NO', 'Norway'], ['OM', 'Oman'], ['PK', 'Pakistan'], ['PA', 'Panama'], ['PH', 'Philippines'], ['PL', 'Poland'], ['PT', 'Portugal'], ['QA', 'Qatar'], ['RO', 'Romania'], ['RU', 'Russia'], ['SM', 'San Marino'], ['SA', 'Saudi Arabia'], ['SN', 'Senegal'], ['RS', 'Serbia'], ['SC', 'Seychelles'], ['SG', 'Singapore'], ['SK', 'Slovakia'], ['SI', 'Slovenia'], ['SO', 'Somalia'], ['ZA', 'South Africa'], ['KR', 'South Korea'], ['ES', 'Spain'], ['LK', 'Sri Lanka'], ['SD', 'Sudan'], ['SE', 'Sweden'], ['CH', 'Switzerland'], ['SY', 'Syria'], ['TW', 'Taiwan'], ['TJ', 'Tajikistan'], ['TZ', 'Tanzania'], ['TH', 'Thailand'], ['TN', 'Tunisia'], ['TR', 'Türkiye'], ['TM', 'Turkmenistan'], ['UG', 'Uganda'], ['UA', 'Ukraine'], ['AE', 'United Arab Emirates'], ['GB', 'United Kingdom'], ['US', 'United States'], ['UZ', 'Uzbekistan'], ['VA', 'Vatican City'], ['VN', 'Vietnam'], ['YE', 'Yemen']
@@ -107,9 +216,9 @@ TG.registerPlanner('saudi-arabia', {
 
   // Itinerary building blocks: ordered spot ids per city cluster
   clusters: {
-    makkah_umrah: { title: 'Makkah — Umrah & the Haram', city: 'Makkah', muslimsOnly: true, spots: ['masjid-al-haram', 'clock-tower-museum'] },
+    makkah_umrah: { title: 'Makkah — Umrah & the Haram', city: 'Makkah', muslimsOnly: true, minSpots: 1, spots: ['masjid-al-haram', 'clock-tower-museum'] },
     makkah_ziyarat: { title: 'Makkah — Ziyarat (historic sites)', city: 'Makkah', muslimsOnly: true, spots: ['jabal-al-nour', 'jabal-thawr', 'arafat-mina', 'jannat-al-mualla', 'masjid-al-bayah', 'kiswa-complex', 'masjid-aisha', 'masjid-jiranah'] },
-    madinah_core: { title: 'Madinah — The Prophet\'s Mosque & nearby', city: 'Madinah', spots: ['masjid-an-nabawi', 'al-baqi', 'masjid-ghamama', 'hejaz-railway-museum', 'dar-al-madinah'] },
+    madinah_core: { title: 'Madinah — The Prophet\'s Mosque & nearby', city: 'Madinah', minSpots: 1, spots: ['masjid-an-nabawi', 'al-baqi', 'masjid-ghamama', 'hejaz-railway-museum', 'dar-al-madinah'] },
     madinah_ziyarat: { title: 'Madinah — Ziyarat', city: 'Madinah', spots: ['quba-mosque', 'masjid-al-jumuah', 'masjid-qiblatain', 'seven-mosques', 'mount-uhud', 'madinah-dates-market', 'wadi-al-jinn'] },
     jeddah: { title: 'Jeddah', city: 'Jeddah', spots: ['historic-jeddah', 'king-fahd-fountain', 'tayebat-museum', 'obhur', 'fakieh-aquarium'] },
     taif: { title: 'Taif', city: 'Taif', spots: ['taif-al-hada', 'al-rudaf-park', 'shubra-palace', 'souq-okaz', 'al-wahbah-crater'] },

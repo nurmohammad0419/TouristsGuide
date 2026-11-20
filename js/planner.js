@@ -6,7 +6,10 @@
   'use strict';
 
   const DAY = 86400000;
-  const STRENUOUS = new Set(['jabal-al-nour', 'jabal-thawr', 'edge-of-the-world', 'umm-jarsan', 'dahl-heet', 'wadi-lajab', 'habala', 'jabal-aja', 'uruq-bani-maarid', 'al-faw', 'hisma-desert', 'jabal-al-lawz']);
+  // Country-specific settings all come from data/<country>/plan.js; these are the fallbacks.
+  const strenuousSet = (P) => new Set(P.strenuous || []);
+  const faithOf = (P) => P.faith || null;            // null = no religion step for this country
+  const money = (P) => (P.currency || 'SAR');
   const PACE = { solo: 3, couple: 3, family: 2, friends: 3 };
   const STYLE_ADJ = { relaxed: -1, balanced: 0, packed: 1 };
   const paceFor = (s) => Math.max(1, Math.min(4, (PACE[s.group] || 3) + (STYLE_ADJ[s.style] || 0)));
@@ -41,15 +44,18 @@
   }
 
   /* ---------------- Visa logic ---------------- */
+  // Each rule is { codes?, title, text } in data/<country>/plan.js; the first match wins.
   function visaVerdict(P, s) {
     const V = P.visa;
-    if (!s.nat) return null;
-    if (s.nat === 'SA') return { level: 'ok', title: 'No visa needed', text: 'Saudi citizens enter freely.' };
-    if (V.gcc.includes(s.nat)) return { level: 'ok', title: 'No visa needed — GCC citizen', text: 'Citizens of GCC countries can enter with a valid passport or national ID.' };
-    if (V.evisa.includes(s.nat)) return { level: 'ok', title: 'Eligible for the tourist eVisa / visa on arrival', text: 'Apply online before you fly (recommended) or get a visa on arrival at major airports. The tourist visa is valid for 1 year, multiple entry, up to 90 days per stay, and allows Umrah outside the Hajj season.', link: V.portal };
-    if (s.res && s.res !== s.nat && V.residentOf.includes(s.res)) return { level: 'ok', title: 'Eligible for the tourist eVisa as a resident', text: 'Holders of a valid residence permit in your country of residence can apply for the Saudi tourist eVisa online. Carry your residence permit and passport (valid 6+ months).', link: V.portal };
-    if (s.visaHolder) return { level: 'ok', title: 'Eligible for the eVisa / visa on arrival as a visa holder', text: 'Holders of ' + V.visaHolderOf + ' can apply for the tourist eVisa online or get a visa on arrival. Bring the passport containing that visa.', link: V.portal };
-    return { level: 'warn', title: 'Visa required in advance', text: 'Your nationality is not currently on the eVisa list. Apply for a visit visa through the Saudi embassy or an authorised agent before travelling.', link: V.portal, nusukLink: V.nusuk };
+    if (!s.nat || !V) return null;
+    const ok = (r, extra) => ({ level: 'ok', title: r.title, text: r.text, link: r.link || V.portal, ...extra });
+    if (V.own && s.nat === P.country) return { level: 'ok', title: V.own.title, text: V.own.text };
+    if (V.free && (V.free.codes || []).includes(s.nat)) return { level: 'ok', title: V.free.title, text: V.free.text };
+    if (V.evisa && (V.evisa.codes || []).includes(s.nat)) return ok(V.evisa);
+    if (V.resident && s.res && s.res !== s.nat && (V.resident.codes || []).includes(s.res)) return ok(V.resident);
+    if (V.visaHolder && s.visaHolder) return ok(V.visaHolder, { text: V.visaHolder.text.replace('{of}', V.visaHolder.of || '') });
+    const no = V.none || { title: 'Visa required in advance', text: 'Apply through an embassy or an authorised agent before travelling.' };
+    return { level: 'warn', title: no.title, text: no.text, link: V.portal, nusukLink: (P.faith || {}).permitUrl };
   }
 
   /* ---------------- Transport between provinces ---------------- */
@@ -63,7 +69,8 @@
     if (!modes.some((m) => m.type === 'drive')) modes.push({ type: 'drive', hours: driveH });
     modes.forEach((m) => { if (m.type === 'drive' && !m.label) m.label = `Drive ${ha.city} → ${hb.city} (about ${m.hours} h, ~${km} km)`; });
     if (!modes.some((m) => m.type === 'flight') && driveH > 5 && ha.airport && hb.airport) modes.push({ type: 'flight', label: `Domestic flight ${ha.airport} → ${hb.airport}` });
-    modes.push({ type: 'bus', label: `SAPTCO intercity bus ${ha.city} → ${hb.city}`, url: 'https://www.saptco.com.sa' });
+    const bus = P.bus || { label: 'Intercity bus' };
+    modes.push({ type: 'bus', label: `${bus.label} ${ha.city} → ${hb.city}`, url: bus.url });
     return { from: ha, to: hb, km, driveH, modes };
   }
   function pickTransport(cor, s) {
@@ -76,13 +83,15 @@
 
   /* ---------------- Itinerary builder ---------------- */
   function buildBlocks(P, data, s) {
-    const muslim = s.religion === 'muslim';
+    const F = faithOf(P);
+    const muslim = !!F && s.religion === 'muslim';
+    const hard = strenuousSet(P);
     const clusters = P.clusters;
     const ok = (id) => {
       const sp = data.spots.find((x) => x.id === id);
       if (!sp) return false;
       if (!muslim && sp.muslimsOnly) return false;
-      if (s.group === 'family' && STRENUOUS.has(id)) return false;
+      if (s.group === 'family' && hard.has(id)) return false;
       if (sp.status === 'closed') return false;
       return true;
     };
@@ -93,28 +102,27 @@
     };
     let seq = [];
     if (s.origin === 'outside') {
-      const days = s.days;
-      if (muslim) {
-        const startMadinah = s.airport === 'MED';
-        const makkah = [block('makkah_umrah', 'makkah'), block('makkah_ziyarat', 'makkah')];
-        const madinah = [block('madinah_core', 'madinah'), block('madinah_ziyarat', 'madinah')];
-        seq = startMadinah ? [...madinah, ...makkah] : [...makkah, ...madinah];
-        const x = new Set(s.extras);
-        if (x.has('jeddah')) seq.splice(startMadinah ? seq.length : 2, 0, block('jeddah', 'makkah'));
-        if (x.has('taif')) seq.push(block('taif', 'makkah'));
-        if (x.has('alula')) seq.push(block('alula', 'madinah'));
-        if (x.has('riyadh')) seq.push(block('riyadh', 'riyadh'));
-        if (x.has('eastern')) seq.push(block('eastern_metro', 'eastern'), block('alahsa', 'eastern'));
-        if (x.has('asir')) seq.push(block('asir', 'asir'));
+      const T = P.tour || { core: {}, extras: [] };
+      const chosen = new Set(s.extras);
+      // Faith-first routing (pilgrimage countries): the sacred-city clusters lead the trip
+      if (muslim && F.route) {
+        const flip = (F.route.startWhenAirport || []).includes(s.airport);
+        const a = F.route.a.map(([k, p]) => block(k, p));
+        const bq = F.route.b.map(([k, p]) => block(k, p));
+        seq = flip ? [...bq, ...a] : [...a, ...bq];
+        (F.route.insert || []).forEach((ins) => {
+          if (chosen.has(ins.id)) seq.splice(flip ? seq.length : (ins.at || seq.length), 0, block(ins.cluster[0], ins.cluster[1]));
+        });
       } else {
-        const x = new Set(s.extras);
-        const fromRiyadh = s.airport === 'RUH';
-        const west = [block('jeddah', 'makkah'), x.has('taif') ? block('taif', 'makkah') : null, x.has('alula') ? block('alula', 'madinah') : null];
-        const centre = [block('riyadh', 'riyadh'), x.has('riyadh_day') ? block('riyadh_day', 'riyadh') : null];
-        seq = fromRiyadh ? [...centre, ...(x.has('alula') ? [block('alula', 'madinah')] : []), ...(x.has('jeddah') ? [block('jeddah', 'makkah')] : [])] : [...west, ...(x.has('riyadh') ? centre : [])];
-        if (x.has('eastern')) seq.push(block('eastern_metro', 'eastern'), block('alahsa', 'eastern'));
-        if (x.has('asir')) seq.push(block('asir', 'asir'));
+        const core = T.core[s.airport] || T.core['*'] || [];
+        seq = core.map(([k, p]) => block(k, p));
       }
+      // Optional regions the traveller ticked, in the order plan.js lists them
+      (T.extras || []).forEach((x) => {
+        if (!chosen.has(x.id)) return;
+        if (muslim && F && F.route && (F.route.insert || []).some((i) => i.id === x.id)) return; // already placed
+        x.clusters.forEach(([k, p]) => seq.push(block(k, p)));
+      });
     } else {
       s.dest.forEach((prov) => (P.provinceClusters[prov] || []).forEach((k) => seq.push(block(k, prov))));
     }
@@ -141,7 +149,7 @@
   // Simulate the itinerary; if it does not fit the trip, trim one spot (longest / most optional cluster first) and retry
   function allocate(P, data, s, blocks) {
     blocks = blocks.map((b) => ({ ...b, spots: b.spots.slice() }));
-    const minLen = (b) => (['makkah_umrah', 'madinah_core'].includes(b.key) ? 1 : 2);
+    const minLen = (b) => ((P.clusters[b.key] || {}).minSpots ?? 2);
     const want = () => blocks.reduce((n, b) => n + b.spots.length, 0);
     const trimmed = [];
     const pins = new Set(s.ad);
@@ -178,9 +186,9 @@
     const firstProv = blocks[0] ? blocks[0].prov : (s.dest[0] || 'riyadh');
     let cur = null;
     if (s.origin === 'outside') {
-      const ap = P.airports[s.airport] || P.airports.JED;
+      const ap = P.airports[s.airport] || Object.values(P.airports)[0] || { name: 'the airport' };
       cur = newDay(blocks[0] ? blocks[0].city : P.hubs[firstProv].city, firstProv, 'arrival');
-      cur.items.push({ type: 'travel', text: `Arrive at ${ap.name} (${s.airport}). ${airportTransfer(s)}` });
+      cur.items.push({ type: 'travel', text: `Arrive at ${ap.name} (${s.airport}). ${airportTransfer(P, s)}` });
       cur.capacity = 1;
     } else {
       const from = s.curProv, to = firstProv;
@@ -199,14 +207,15 @@
         const c = corridor(P, lastProv, b.prov);
         const modes = pickTransport(c, s);
         cur = newDay(b.city, b.prov, 'travel');
-        const ihramNote = (s.umrah && b.key === 'makkah_umrah' && lastProv === 'madinah') ? ' If you are performing Umrah, many pilgrims bathe and put on ihram at their Madinah hotel, then make the intention (niyyah) at or before the miqat of Dhul Hulayfah (Abyar Ali) — ask your Umrah agent or check the Nusuk app for the exact steps.' : '';
+        const FR = faithOf(P);
+        const ihramNote = (s.umrah && FR && FR.ihramNote && b.key === FR.ritualCluster && lastProv === FR.ihramFromProv) ? ' ' + FR.ihramNote : '';
         cur.items.push({ type: 'travel', text: `Travel from ${P.hubs[lastProv].city} area to ${b.city}: ${modes[0].label}.${ihramNote}`, alt: modes.slice(1, 3).map((m) => m.label), url: modes[0].url, flight: modes[0].type === 'flight' ? { from: P.hubs[lastProv].airport, to: P.hubs[b.prov].airport } : null });
         cur.capacity = c.driveH >= 4 ? 1 : Math.max(1, pace - 1);
       } else if (b.city !== lastCity) {
         const dKm = cityDistance(data, lastCity, b.city);
         if (cur.items.some((i) => i.type === 'spot')) { if (days.length >= total) break; cur = newDay(b.city, b.prov, dKm > 150 ? 'travel' : undefined); cur.capacity = dKm > 150 ? Math.max(1, pace - 1) : pace; }
         else cur.city = b.city;
-        if (dKm > 150) cur.items.push({ type: 'travel', text: `Transfer ${lastCity} → ${b.city}: about ${Math.round(dKm)} km (${Math.round((dKm / 90 + 0.5) * 2) / 2} h by road${b.city === 'AlUla' ? '; flights to AlUla (ULH) also available' : ''}).` });
+        if (dKm > 150) cur.items.push({ type: 'travel', text: `Transfer ${lastCity} → ${b.city}: about ${Math.round(dKm)} km (${Math.round((dKm / 90 + 0.5) * 2) / 2} h by road${(P.cityFlightHint || {})[b.city] ? '; ' + P.cityFlightHint[b.city] : ''}).` });
         else if (dKm > 40) cur.items.push({ type: 'travel', text: `Day trip / transfer to ${b.city} (about ${Math.round(dKm)} km each way).` });
       } else if (isDayTrip(b) && cur.items.some((i) => i.type === 'spot')) {
         if (days.length >= total) break;
@@ -314,7 +323,7 @@
     if (n) add('Travel between cities', lo + (ownCar ? fuelLo : km * 0.9), hi + (ownCar ? fuelHi : km * 1.6), `${n} transfer(s) between cities — ${ownCar ? 'own car / ' : ''}train, flight, bus or taxi`);
     // local transport
     if (ownCar) add('Car hire & fuel in cities', s.origin === 'outside' ? C.rentalPerDay[ti][0] * s.days : 40 * s.days, s.origin === 'outside' ? C.rentalPerDay[ti][1] * s.days : 110 * s.days, s.origin === 'outside' ? 'Rental car (IDP needed) + fuel' : 'Fuel & parking');
-    else add('Taxis & ride-hailing', C.taxiPerDay[0] * s.days * Math.ceil(ppl / 4), C.taxiPerDay[1] * s.days * Math.ceil(ppl / 4), 'Uber / Careem / taxis');
+    else add('Taxis & ride-hailing', C.taxiPerDay[0] * s.days * Math.ceil(ppl / 4), C.taxiPerDay[1] * s.days * Math.ceil(ppl / 4), P.rideHailing || 'Taxis and ride-hailing apps');
     // tickets
     const sp = days.flatMap((d) => d.items.filter((i) => i.type === 'spot').map((i) => data.spots.find((x) => x.id === i.id))).filter(Boolean);
     const req = sp.filter((x) => x.tickets && x.tickets.required === true).length, par = sp.filter((x) => x.tickets && x.tickets.required === 'partial').length;
@@ -328,18 +337,14 @@
     return ca && cb ? haversine(ca.coords, cb.coords) : 0;
   }
 
-  function airportTransfer(s) {
-    const m = s.religion === 'muslim';
+  // Arrival advice per airport, from plan.js: { car, public, pilgrim? } or a plain string.
+  function airportTransfer(P, s) {
     const car = s.transport === 'car' && s.idp;
-    switch (s.airport) {
-      case 'JED': return m && s.umrah ? (car ? 'Collect your rental car and drive to Makkah (about 1 h 15 min via Highway 40); non-residents must park at the edge of the city and use the Haram buses.' : 'Take the Haramain High Speed Railway from the airport station straight to Makkah (about 1 h) or a taxi / ride-hailing (about 1 h 15 min). If you are performing Umrah, enter ihram at the airport or on the plane before passing the miqat.') : (car ? 'Collect your rental car — Jeddah city centre is about 30 minutes away.' : 'Taxi or ride-hailing to Jeddah city centre (about 30 minutes).');
-      case 'MED': return s.umrah ? (car ? 'Collect your rental car — central Madinah is about 20 minutes away. You will enter ihram later, at the Dhul Hulayfah (Abyar Ali) miqat, when you travel on to Makkah.' : 'Taxi or ride-hailing to the Prophet\'s Mosque area (about 20 minutes). You will enter ihram later, at the Dhul Hulayfah (Abyar Ali) miqat, when you travel on to Makkah.') : car ? 'Collect your rental car — central Madinah is about 20 minutes away.' : 'Taxi or ride-hailing to the Prophet\'s Mosque area (about 20 minutes).';
-      case 'RUH': return car ? 'Collect your rental car — central Riyadh is about 35 minutes away.' : 'Riyadh Metro (airport line) or taxi / ride-hailing to the city (about 35 minutes).';
-      case 'DMM': return car ? 'Collect your rental car — Dammam is about 40 minutes, Khobar about 50 minutes.' : 'Taxi or ride-hailing to Dammam / Khobar (40–50 minutes).';
-      case 'AHB': return car ? 'Collect your rental car — Abha city is about 20 minutes away.' : 'Taxi to Abha city (about 20 minutes).';
-      case 'GIZ': return 'Taxi to Jazan city (about 15 minutes).';
-      default: return 'Taxi or rental car into the city.';
-    }
+    const a = (P.arrival || {})[s.airport];
+    if (!a) return car ? 'Collect your rental car at the airport.' : 'Taxi, airport bus or rail into the city.';
+    if (typeof a === 'string') return a;
+    if (s.umrah && a.pilgrim) return car ? (a.pilgrimCar || a.pilgrim) : a.pilgrim;
+    return (car ? a.car : a.public) || a.public || a.car || '';
   }
 
   /* ---------------- Rendering ---------------- */
@@ -377,18 +382,19 @@
           ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
           ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${t('plan.nusukUmrah')}</a>` : ''}
           <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)})</small></div>` : ''}`, !!s.nat));
-      if (s.nat) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
+      if (s.nat && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
         ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, t('plan.muslimSub'))}
         ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, t('plan.nonMuslimSub'))}</div>`, !!s.religion));
     } else if (s.origin === 'inside') {
       out.push(step(n++, t('plan.q.current'), `<label class="field field--sel"><span>${t('plan.currentProv')}</span><select name="curProv"><option value="">—</option>${provs.map((r) => opt(r.id, r.name, s.curProv)).join('')}</select></label>`, !!s.curProv));
       if (s.curProv) out.push(step(n++, t('plan.q.dest'), `<div class="choices choices--wrap">${provs.map((r) => check('dest', r.id, r.name + ' (' + data.spots.filter((x) => x.region === r.id).length + ')', s.dest.includes(r.id))).join('')}</div><small class="muted">${t('plan.destHint')}</small>`, s.dest.length > 0));
-      if (s.dest.length) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
+      if (s.dest.length && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
         ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, t('plan.muslimSub'))}
         ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, t('plan.nonMuslimSub'))}</div>`, !!s.religion));
     }
 
-    const ready1 = s.origin === 'outside' ? !!s.religion : (s.origin === 'inside' && s.dest.length && s.religion);
+    const needFaith = !!faithOf(P);
+    const ready1 = s.origin === 'outside' ? (!!s.nat && (!needFaith || !!s.religion)) : (s.origin === 'inside' && s.dest.length && (!needFaith || !!s.religion));
     if (ready1) {
       out.push(step(n++, t('plan.q.dates'), `<div class="pgrid">
         <label class="field field--sel"><span>${t('plan.from')}</span><input type="date" name="from" value="${esc(s.from)}" min="${new Date().toISOString().slice(0, 10)}"></label>
@@ -425,21 +431,23 @@
           ${s.transport === 'car' ? `<label class="choice choice--sm ${s.idp ? 'on' : ''}"><input type="checkbox" name="idp" ${s.idp ? 'checked' : ''}><span><b>${t('plan.idp')}</b></span></label>${!s.idp ? `<p class="pinfo pinfo--warn">${t('plan.idpWarn')}</p>` : ''}` : ''}`, !!s.transport));
         if (s.transport) {
           const intl = Object.entries(P.airports).filter(([, a]) => a.intl);
-          const rec = s.religion === 'muslim' ? 'JED' : 'RUH';
-          out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === 'MED' && s.religion === 'muslim' ? t('plan.medAlt') : ''))).join('')}</div>`, !!s.airport));
+          const F = faithOf(P);
+          const rec = (F && s.religion === 'muslim' && F.recommendAirport) || P.defaultAirport || (intl[0] || [])[0];
+          const alt = F && s.religion === 'muslim' ? F.altAirport : '';
+          out.push(step(n++, t('plan.q.airport'), `<div class="choices choices--wrap">${intl.map(([code, a]) => choice('airport', code, `${code} — ${a.name}`, '🛬', s.airport, code === rec ? t('plan.recommended') : (code === alt ? t('plan.medAlt') : ''))).join('')}</div>`, !!s.airport));
         }
         if (s.airport && P.partner && P.partner.flights) {
           const cur = fromCode(P, s);
           const names = Object.fromEntries(P.countries);
-          const sorted = P.partner.airports.filter((a) => a[2] !== 'SA').slice().sort((a, b) => (names[a[2]] || a[2]).localeCompare(names[b[2]] || b[2]) || a[1].localeCompare(b[1]));
+          const sorted = P.partner.airports.filter((a) => a[2] !== P.country).slice().sort((a, b) => (names[a[2]] || a[2]).localeCompare(names[b[2]] || b[2]) || a[1].localeCompare(b[1]));
           out.push(step(n++, t('plan.q.from'), `<label class="field field--sel"><span>${t('plan.flyingFrom')}</span><select name="fr">${sorted.map((a) => opt(a[0], `${a[1]} (${a[0]}) — ${names[a[2]] || a[2]}`, cur)).join('')}</select></label><p class="muted small">${t('plan.flyingFromHint')}</p>`, true));
         }
       if (s.airport) {
-          const m = s.religion === 'muslim';
-          const opts = m ? [['jeddah', 'Jeddah (Al-Balad, corniche)'], ['taif', 'Taif mountains & roses'], ['alula', 'AlUla & Hegra'], ['riyadh', 'Riyadh & Diriyah'], ['eastern', 'Eastern Province (Al-Ahsa, Khobar)'], ['asir', 'Asir mountains (Abha)']]
-            : (s.airport === 'RUH' ? [['riyadh_day', 'Day trips from Riyadh'], ['alula', 'AlUla & Hegra'], ['jeddah', 'Jeddah (Al-Balad, Red Sea)'], ['eastern', 'Eastern Province'], ['asir', 'Asir mountains']] : [['taif', 'Taif mountains & roses'], ['alula', 'AlUla & Hegra'], ['riyadh', 'Riyadh & Diriyah'], ['eastern', 'Eastern Province'], ['asir', 'Asir mountains']]);
-          const sugg = suggestExtras(s, m);
-          out.push(step(n++, t('plan.q.extras'), `<p class="muted small">${t('plan.extrasHint')} ${m ? t('plan.extrasCoreMuslim') : t('plan.extrasCoreOther')}</p><div class="choices choices--wrap">${opts.map(([k, l]) => check('extras', k, l + (sugg.includes(k) ? ' ★' : ''), s.extras.includes(k))).join('')}</div>`, true));
+          const F = faithOf(P), m = !!F && s.religion === 'muslim';
+          const opts = (P.tour && P.tour.extras || []).filter((x) => !x.airports || x.airports.includes(s.airport));
+          const sugg = suggestExtras(P, s, m);
+          const core = m && F && F.extrasCoreNote ? F.extrasCoreNote : ((P.tour && P.tour.coreNote) || '');
+          if (opts.length) out.push(step(n++, t('plan.q.extras'), `<p class="muted small">${t('plan.extrasHint')} ${esc(core)}</p><div class="choices choices--wrap">${opts.map((x) => check('extras', x.id, esc(x.label) + (sugg.includes(x.id) ? ' ★' : ''), s.extras.includes(x.id))).join('')}</div>`, true));
         }
       } else {
         out.push(step(n++, t('plan.q.car'), `<div class="choices">
@@ -452,59 +460,75 @@
     let result = '';
     if (ready) {
       const blocks = buildBlocks(P, data, s);
-      s.umrah = blocks.some((b) => b.key === 'makkah_umrah');
+      s.umrah = !!faithOf(P) && blocks.some((b) => b.key === faithOf(P).ritualCluster);
       s.pins = new Set(s.ad);
       const days = allocate(P, data, s, blocks);
       applyEdits(days, s);
       ctx.days = days;
       result = renderResult(ctx, s, days, visaVerdict(P, s));
     }
-    const total = s.origin === 'outside' ? 10 + (P.partner && P.partner.flights ? 1 : 0) : s.origin === 'inside' ? 9 : 1;
+    const faithStep = faithOf(P) ? 1 : 0;
+    const total = s.origin === 'outside' ? 9 + faithStep + (P.partner && P.partner.flights ? 1 : 0) : s.origin === 'inside' ? 8 + faithStep : 1;
     const pct = Math.min(100, Math.round((doneCount / total) * 100));
     const prog = s.origin ? `<div class="pprog"><div class="pprog__bar"><i style="width:${pct}%"></i></div><span>${pct >= 100 ? '🎉 ' + t('plan.planReady') : Math.min(doneCount, total) + ' / ' + total}</span></div>` : '';
     return `<div class="planner">${prog}${out.join('')}</div>${result}`;
   }
 
-  function suggestExtras(s, muslim) {
-    const d = s.days, x = [];
-    if (muslim) { if (d >= 7) x.push('jeddah'); if (d >= 9) x.push('alula'); if (d >= 12) x.push('riyadh'); if (d >= 10) x.push('taif'); }
-    else { if (s.airport === 'RUH') { if (d >= 4) x.push('riyadh_day'); if (d >= 6) x.push('alula'); if (d >= 9) x.push('jeddah'); } else { if (d >= 4) x.push('taif'); if (d >= 6) x.push('alula'); if (d >= 9) x.push('riyadh'); } }
-    return x;
+  // Star the extras that comfortably fit the trip length the traveller picked.
+  function suggestExtras(P, s, muslim) {
+    return (P.tour && P.tour.extras || [])
+      .filter((x) => !x.airports || x.airports.includes(s.airport))
+      .filter((x) => s.days >= ((muslim && x.minDaysFaith) || x.minDays || 4))
+      .map((x) => x.id);
   }
 
   function renderResult(ctx, s, days, verdict) {
     const { P, data, t, esc, cover, img, icon, cid } = ctx;
     const spot = (id) => data.spots.find((x) => x.id === id);
     const fmtDate = (d) => d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
-    const muslim = s.religion === 'muslim';
-    const umrah = muslim && days.some((d) => d.items.some((i) => i.type === 'spot' && i.id === 'masjid-al-haram'));
+    const F = faithOf(P);
+    const muslim = !!F && s.religion === 'muslim';
+    const umrah = muslim && !!F.ritualSpot && days.some((d) => d.items.some((i) => i.type === 'spot' && i.id === F.ritualSpot));
     const allSpots = days.flatMap((d) => d.items.filter((i) => i.type === 'spot').map((i) => spot(i.id)));
     const bookings = [];
-    if (s.origin === 'outside' && verdict && verdict.level === 'ok' && s.nat !== 'SA' && !P.visa.gcc.includes(s.nat)) bookings.push({ label: 'Tourist eVisa (apply online before departure)', url: P.visa.portal });
-    if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push(umrah ? { label: 'Umrah visa via the Nusuk platform or a licensed Umrah agent', url: P.visa.nusuk } : { label: 'Visit visa via the Saudi embassy or an authorised agent', url: P.visa.portal });
+    const visaFree = s.nat === P.country || ((P.visa.free || {}).codes || []).includes(s.nat);
+    if (s.origin === 'outside' && verdict && verdict.level === 'ok' && !visaFree && P.visa.evisaBooking) bookings.push({ label: P.visa.evisaBooking, url: P.visa.portal });
+    if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push(umrah && F && F.visaBooking ? { label: F.visaBooking, url: F.permitUrl } : { label: P.visa.visaBooking || 'Visa — apply before travelling', url: P.visa.portal });
     if (P.partner && P.partner.flights) {
       const domestic = [];
       days.forEach((d) => d.items.forEach((it) => { if (it.flight && airportOk(P, it.flight.from) && airportOk(P, it.flight.to)) domestic.push({ label: `Flight ${it.flight.from} → ${it.flight.to} on ${fmtDate(d.date)} — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: it.flight.from, to: it.flight.to, depart: ymd(d.date), adults: people(s) }) }); }));
       bookings.unshift(...domestic);
       if (s.origin === 'outside') bookings.unshift({ label: `Flights ${fromCode(P, s) || '…'} → ${s.airport} (${s.from} → ${s.to}) — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: fromCode(P, s), to: s.airport, depart: s.from, return: s.to, adults: people(s) }) });
     }
-    if (muslim && allSpots.some((x) => x.id === 'masjid-al-haram')) bookings.push({ label: 'Free Umrah permit — book a time slot in the Nusuk app', url: P.visa.nusuk });
-    if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) bookings.push({ label: 'Al-Rawdah visit permit (only if you want to pray in the Rawdah) — Nusuk app', url: P.visa.nusuk });
-    if (days.some((d) => d.items.some((i) => i.type === 'travel' && /Haramain/.test(i.text)))) bookings.push({ label: 'Haramain High Speed Railway tickets (book ahead on busy days)', url: 'https://sar.hhr.sa' });
-    if (days.some((d) => d.items.some((i) => i.type === 'travel' && /SAR /.test(i.text)))) bookings.push({ label: 'SAR train tickets', url: 'https://www.sar.com.sa' });
-    allSpots.forEach((x) => { if (x.tickets && (x.tickets.required === true || x.tickets.required === 'partial') && x.tickets.links && x.tickets.links[0] && !/nusuk\.sa/.test(x.tickets.links[0].url) && !bookings.some((b) => b.url === x.tickets.links[0].url && b.label.includes(x.name.split('(')[0].trim()))) bookings.push({ label: `${x.name.split(' — ')[0]} — ${x.tickets.required === true ? 'advance booking required' : 'some parts need booking'}`, url: x.tickets.links[0].url, spot: x.id }); });
+    if (muslim) (F.permits || []).forEach((pm) => { if (allSpots.some((x) => x.id === pm.spot)) bookings.push({ label: pm.label, url: pm.url || F.permitUrl }); });
+    (P.railBookings || []).forEach((rb) => { if (days.some((d) => d.items.some((i) => i.type === 'travel' && new RegExp(rb.match).test(i.text)))) bookings.push({ label: rb.label, url: rb.url }); });
+    const permitHost = F && F.permitUrl ? F.permitUrl.replace(/^https?:\/\//, '').split('/')[0] : null;
+    allSpots.forEach((x) => { if (x.tickets && (x.tickets.required === true || x.tickets.required === 'partial') && x.tickets.links && x.tickets.links[0] && !(permitHost && x.tickets.links[0].url.includes(permitHost)) && !bookings.some((b) => b.url === x.tickets.links[0].url && b.label.includes(x.name.split('(')[0].trim()))) bookings.push({ label: `${x.name.split(' — ')[0]} — ${x.tickets.required === true ? 'advance booking required' : 'some parts need booking'}`, url: x.tickets.links[0].url, spot: x.id }); });
 
     const docs = [];
-    if (s.origin === 'outside') { docs.push('Passport valid for at least 6 months'); docs.push(verdict && verdict.level === 'ok' ? 'Printed / saved eVisa or visa-on-arrival eligibility proof' : 'Visa stamped in passport'); if (s.res && s.res !== s.nat) docs.push('Residence permit of your country of residence'); if (s.visaHolder) docs.push('Passport with the valid US / UK / Schengen visa'); docs.push('Travel insurance (included with the eVisa fee)'); if (s.transport === 'car') docs.push('National driving licence + International Driving Permit'); docs.push('Hotel booking confirmations'); }
-    else { docs.push('National ID / Iqama'); if (s.car === 'yes') docs.push('Driving licence, vehicle registration and insurance'); }
-    if (umrah) docs.push('Nusuk app installed and account created (for the Umrah permit)');
-    else if (muslim && allSpots.some((x) => x.id === 'masjid-an-nabawi')) docs.push('Nusuk app (only if you want a Rawdah visit permit)');
-    if (muslim && umrah) docs.push('Ihram clothing for Umrah (men: two unstitched white cloths) / loose modest clothing (women)');
+    if (s.origin === 'outside') {
+      docs.push(P.passportNote || 'Passport valid for at least 6 months');
+      docs.push(verdict && verdict.level === 'ok' ? 'Printed / saved visa or visa-exemption proof' : 'Visa stamped in passport');
+      if (s.res && s.res !== s.nat) docs.push('Residence permit of your country of residence');
+      if (s.visaHolder && (P.visa.visaHolder || {}).of) docs.push('Passport containing ' + P.visa.visaHolder.of);
+      docs.push(P.insuranceNote || 'Travel insurance');
+      if (s.transport === 'car') docs.push('National driving licence + International Driving Permit');
+      docs.push('Hotel booking confirmations');
+    } else {
+      docs.push(P.localIdNote || 'National ID');
+      if (s.car === 'yes') docs.push('Driving licence, vehicle registration and insurance');
+    }
+    if (muslim && F) (F.docs || []).forEach((d) => {
+      if (d.when === 'ritual' && !umrah) return;
+      if (d.when === 'spot' && !allSpots.some((x) => x.id === d.spot)) return;
+      if (d.when === 'notRitual' && umrah) return;
+      docs.push(d.text);
+    });
     if (s.group === 'family') docs.push('Children\'s passports / IDs, stroller, snacks and sun protection');
 
     const stayList = stays(P, s, days);
     const bud = budget(P, data, s, days, stayList);
-    const sar = (n) => 'SAR ' + n.toLocaleString('en-US');
+    const sar = (n) => money(P) + ' ' + n.toLocaleString('en-US');
     const range = (lo, hi) => `${sar(lo)} – ${sar(hi)}`;
     const ctrl = (id, d) => {
       const ids = d.items.filter((i) => i.type === 'spot').map((i) => i.id); const k = ids.indexOf(id);
@@ -550,8 +574,8 @@
           <p>${esc(P.stay[st.city] || P.stay.default)}</p>
           <div class="pstay__foot"><span class="pill pill--info">≈ ${sar(st.rate[0])} – ${sar(st.rate[1])} ${t('plan.perRoomNight')}</span>
           ${(() => { const cc = (P.partner.cityCodes || {})[st.city] || (P.hubs[st.prov] || {}).airport || ''; return P.partner && P.partner.hotels && cc ? `<a class="btn btn--sm btn--primary" href="${esc(fillUrl(P.partner.hotels, { citycode: cc, checkin: fmtShort(st.from), checkout: fmtShort(st.to), adults: bud.ppl, rooms: st.rooms }))}" target="_blank" rel="noopener">${t('plan.bookOn')} ${esc(P.partner.name)} ${icon.ext}</a>` : ''; })()}
-          <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', Saudi Arabia')}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
-          <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' Saudi Arabia')}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
+          <a class="btn btn--sm btn--ghost" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(st.city + ', ' + data.name)}&checkin=${fmtShort(st.from)}&checkout=${fmtShort(st.to)}&group_adults=${bud.ppl}&no_rooms=${st.rooms}" target="_blank" rel="noopener">${t('plan.searchHotels')} ${icon.ext}</a>
+          <a class="link" href="https://www.google.com/maps/search/hotels+in+${encodeURIComponent(st.city + ' ' + data.name)}" target="_blank" rel="noopener">${icon.pin} ${t('common.openMap')}</a></div></div>`).join('')}
         ${P.partner && P.partner.name ? `<p class="note">✈️ ${t('plan.partnerNote').replace('{name}', esc(P.partner.name))}</p>` : ''}
       </section>` : '';
     const budgetHtml = `
@@ -566,7 +590,7 @@
     const inPlan = new Set(allSpots.map((x) => x.id));
     const planProvs = new Set(allSpots.map((x) => x.region));
     const ex = new Set(s.ex);
-    const candidates = data.spots.filter((x) => !inPlan.has(x.id) && !ex.has(x.id) && x.status !== 'closed' && (muslim || !x.muslimsOnly) && !(s.group === 'family' && STRENUOUS.has(x.id)))
+    const candidates = data.spots.filter((x) => !inPlan.has(x.id) && !ex.has(x.id) && x.status !== 'closed' && (muslim || !x.muslimsOnly) && !(s.group === 'family' && strenuousSet(P).has(x.id)))
       .sort((a, b) => (planProvs.has(b.region) ? 1 : 0) - (planProvs.has(a.region) ? 1 : 0) || a.name.localeCompare(b.name));
     const addPanel = `
       <section class="padd glass-card reveal" id="planAdd">
@@ -580,13 +604,14 @@
       </section>`;
 
     const tips = [];
-    if (muslim && umrah) tips.push(t('plan.tip.umrahFirst'));
-    if (!muslim) tips.push(t('plan.tip.nonMuslim'));
+    const tx = (v) => (/^plan\./.test(v) ? t(v) : v);   // plan.js may give an i18n key or literal text
+    if (muslim && umrah && F.tipRitual) tips.push(tx(F.tipRitual));
+    if (F && !muslim && F.tipOther) tips.push(tx(F.tipOther));
     if (s.group === 'family') tips.push(t('plan.tip.family'));
     if (s.transport === 'car' && s.idp) tips.push(t('plan.tip.rentCar'));
     if (s.transport === 'taxi') tips.push(t('plan.tip.taxi'));
     if (s.origin === 'inside' && s.car === 'no') tips.push(t('plan.tip.noCar'));
-    tips.push(t('plan.tip.prayer'), t('plan.tip.weather'));
+    (P.tips || []).forEach((x) => tips.push(tx(x)));
 
     return `
       <section class="presult" id="planResult">
