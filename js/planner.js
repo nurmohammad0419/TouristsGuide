@@ -401,7 +401,7 @@
         ${v ? `<div class="verdict verdict--${v.level}"><b>${v.level === 'ok' ? '✅' : '⚠️'} ${esc(v.title)}</b><p>${esc(v.text)}</p>
           ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.kind === 'exempt' ? t('plan.checkPortal') : v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
           ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${esc((faithOf(P) || {}).permitLabel || t('plan.nusukUmrah'))}</a>` : ''}
-          <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)})</small></div>` : ''}`, !!s.nat));
+          <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)}${(P.visa || {}).source ? ' · ' + esc(P.visa.source) : ''})</small></div>` : ''}`, !!s.nat));
       if (s.nat && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
         ${choice('religion', 'muslim', t('plan.muslim'), '🕋', s.religion, esc((faithOf(P) || {}).muslimSub || ''))}
         ${choice('religion', 'other', t('plan.nonMuslim'), '🧭', s.religion, esc((faithOf(P) || {}).nonMuslimSub || ''))}</div>`, !!s.religion));

@@ -66,7 +66,7 @@ check('SA: GCC citizen visa-free', 'saudi-arabia',
 });
 check('SA: eVisa nationality shows booking row', 'saudi-arabia',
   'o=outside&n=GB&f=other&from=2027-02-01&to=2027-02-07&g=couple&st=balanced&tr=taxi&a=JED&bl=comfort', {
-  'eVisa verdict': has(/tourist eVisa \/ visa on arrival/i), 'eVisa booking': has(/Tourist eVisa \(apply online/),
+  'eVisa verdict': has(/Eligible for the tourist eVisa/), 'eVisa booking': has(/Tourist eVisa \(apply online/),
 });
 check('SA: SAPTCO still used', 'saudi-arabia',
   'o=inside&cp=riyadh&dp=qassim&f=muslim&from=2027-02-01&to=2027-02-06&g=friends&st=balanced&car=no&bl=eco', {
@@ -81,6 +81,22 @@ check('TR: Bangladeshi with Saudi residence is told to use an embassy', 'turkey'
 check('TR: Bangladeshi with German residence qualifies', 'turkey',
   'o=outside&n=BD&r=DE&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=IST&bl=comfort', {
   'qualifies': has(/you qualify/), 'tells them to carry it': has(/carry that document/),
+});
+check('SA: Bangladeshi with no qualifying document is not told to just apply online', 'saudi-arabia',
+  'o=outside&n=BD&f=muslim&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=JED&bl=comfort', {
+  'warned': has(/cannot apply for the Saudi eVisa on nationality alone/),
+  'names the package route': has(/qualifying package from an approved Saudi tourism provider/),
+  'names the GCC residence route': has(/residence in a GCC country/),
+});
+check('SA: Bangladeshi resident in the UAE qualifies online', 'saudi-arabia',
+  'o=outside&n=BD&r=AE&f=muslim&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=JED&bl=comfort', {
+  'qualifies': has(/qualifies you to apply online/),
+  'states the used-visa condition': has(/already used it to enter that country/),
+  'states the airline condition': has(/Saudi-based airline/),
+});
+check('SA: Mexico is on the eVisa list after the Nov 2026 addition', 'saudi-arabia',
+  'o=outside&n=MX&f=other&from=2027-04-10&to=2027-04-18&g=solo&st=balanced&tr=taxi&a=JED&bl=comfort', {
+  'eVisa': has(/Eligible for the tourist eVisa/),
 });
 console.log(fails ? `\n${fails} FAILING` : '\nall content assertions passed');
 process.exit(fails?1:0);

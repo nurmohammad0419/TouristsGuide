@@ -53,34 +53,50 @@ TG.registerPlanner('saudi-arabia', {
   budgetNote: 'Rough planning estimates in SAR. Prices swing with Ramadan, Hajj, school holidays and events. Excludes international flights, visa and insurance fees, shopping and tips.',
 
   // ---------------------------------------------------------------------
-  // Entry rules for ORDINARY (tourist) passports, checked in order; '*' is the
-  // catch-all. Source: the Saudi eVisa portal and the Ministry of Foreign
-  // Affairs, as reviewed in November 2026.
+  // Entry rules for ORDINARY (tourist) passports, checked in order; '*' is
+  // the catch-all. Reviewed November 2026.
+  //
+  // SOURCE NOTE: the official portal (visa.visitsaudi.com) blocks automated
+  // reading and ksavisa.sa is a JavaScript shell, so this list was built from
+  // the Wikipedia "Visa policy of Saudi Arabia" article rather than from the
+  // portal itself. Treat it as indicative and send travellers to the portal,
+  // which every verdict links to.
   // ---------------------------------------------------------------------
   visa: {
     portal: 'https://visa.visitsaudi.com',
+    source: 'compiled from secondary sources — the official portal blocks automated checks',
     embassyFinder: 'https://www.mofa.gov.sa',
     evisaBooking: 'Tourist eVisa (apply online before departure)',
     visaBooking: 'Visit visa via the Saudi embassy or an authorised agent',
+    // Residence permits that open the online eVisa to other nationalities
     qualifyingDocs: {
-      label: 'a residence permit from an eligible country, or a valid US, UK or Schengen visa used at least once',
-      viaResidence: 'your residence permit',
-      viaVisa: 'the visa you ticked above',
-      countries: ['AE', 'AT', 'AU', 'BE', 'BH', 'CA', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'JP', 'KR', 'KW', 'LI', 'LT', 'LU', 'LV', 'MT', 'NL', 'NO', 'NZ', 'OM', 'PL', 'PT', 'QA', 'SE', 'SG', 'SI', 'SK', 'US']
+      label: 'residence in a GCC country, or a valid US, UK or Schengen visa you have already used',
+      viaResidence: 'your GCC residence',
+      viaVisa: 'the US, UK or Schengen visa you ticked above',
+      countries: ['AE', 'BH', 'KW', 'OM', 'QA']
     },
-    visaHolder: { of: 'a valid US, UK or Schengen visa (used at least once)' },
+    visaHolder: { of: 'a valid US, UK or Schengen visa that has been used at least once' },
     rules: [
       { match: ['SA'], kind: 'exempt', title: 'No visa needed',
         text: 'Saudi citizens enter freely.' },
+
       { match: ['AE', 'BH', 'KW', 'OM', 'QA'], kind: 'exempt', title: 'No visa needed — GCC citizen',
-        text: 'Citizens of GCC countries can enter with a valid passport or national ID.' },
-      { match: ['AD', 'AL', 'AR', 'AT', 'AU', 'AZ', 'BA', 'BE', 'BG', 'BN', 'BR', 'CA', 'CH', 'CN', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GE', 'GR', 'HK', 'HR', 'HU', 'IE', 'IS', 'IT', 'JP', 'KG', 'KR', 'KZ', 'LI', 'LT', 'LU', 'LV', 'MC', 'MD', 'ME', 'MK', 'MO', 'MT', 'MU', 'MV', 'MY', 'NL', 'NO', 'NZ', 'PA', 'PL', 'PT', 'RO', 'RS', 'RU', 'SC', 'SE', 'SG', 'SI', 'SK', 'SM', 'TH', 'TR', 'TW', 'UA', 'US', 'UZ', 'VA', 'ZA'], kind: 'evisa', title: 'Eligible for the tourist eVisa / visa on arrival',
-        text: 'Apply online before you fly (recommended) or get a visa on arrival at major airports. The tourist visa is valid for 1 year, multiple entry, up to 90 days per stay, and allows Umrah outside the Hajj season.' },
+        text: 'Citizens of Bahrain, Kuwait, Oman, Qatar and the UAE have freedom of movement in Saudi Arabia and may enter with a national ID card.' },
+
+      { match: ['AD', 'AL', 'AT', 'AU', 'AZ', 'BA', 'BB', 'BE', 'BG', 'BN', 'BS', 'CA', 'CH', 'CN', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GD', 'GE', 'GR', 'GY', 'HK', 'HR', 'HU', 'IE', 'IS', 'IT', 'JP', 'KG', 'KN', 'KR', 'KZ', 'LI', 'LT', 'LU', 'LV', 'MC', 'ME', 'MK', 'MO', 'MT', 'MU', 'MV', 'MX', 'MY', 'NL', 'NO', 'NZ', 'PA', 'PL', 'PT', 'RO', 'RS', 'RU', 'SC', 'SE', 'SG', 'SI', 'SK', 'SM', 'TH', 'TJ', 'TR', 'TW', 'UA', 'US', 'UZ', 'XK', 'ZA'], kind: 'evisa', title: 'Eligible for the tourist eVisa',
+        text: 'Apply online before you fly, or get the eVisa on arrival at a major airport — applying online first is safer and usually cheaper. The tourist visa is valid for one year, multiple entry, with up to 90 days per stay, and the fee includes compulsory health insurance. It also allows Umrah outside the Hajj season. Your passport must be valid for at least 6 months.' },
+
+      { match: ['BD', 'EG', 'ID', 'IN', 'JO', 'PK'], kind: 'cond',
+        titleOk: 'eVisa through your residence or visa — or through a tour package',
+        textOk: 'Your nationality cannot apply for the Saudi eVisa on nationality alone, but {how} qualifies you to apply online. Carry that document with you. A US, UK or Schengen visa only counts if you have already used it to enter that country, and that route is normally offered only when you fly with a Saudi-based airline such as Saudia, flynas or flyadeal. Your nationality can also get an eVisa by buying a qualifying package from an approved Saudi tourism provider.',
+        titleNo: 'eVisa only through a tour package, a GCC residence or a used US/UK/Schengen visa',
+        textNo: 'Your nationality cannot apply for the Saudi eVisa on nationality alone. Three routes are open to you: buy a qualifying package from an approved Saudi tourism provider (the package eVisa, introduced in 2026); hold residence in a GCC country and apply online; or hold a valid US, UK or Schengen visa that you have already used at least once, which is normally only accepted when flying with a Saudi-based airline such as Saudia, flynas or flyadeal. Otherwise apply for a visit visa at the Saudi embassy or through an authorised agent. For Umrah, use the Nusuk platform or a licensed Umrah agent instead.' },
+
       { match: '*', kind: 'cond',
         titleOk: 'Eligible for the tourist eVisa through your residence or visa',
-        textOk: 'Your nationality is not on the direct eVisa list, but you can still apply for the Saudi tourist eVisa online because of {how}. Carry that document with you, plus a passport valid for at least 6 months.',
+        textOk: 'Your nationality is not on the direct eVisa list, but {how} qualifies you to apply online. Carry that document with you, plus a passport valid for at least 6 months. A US, UK or Schengen visa only counts if you have already used it to enter that country, and that route is normally offered only when you fly with a Saudi-based airline such as Saudia, flynas or flyadeal.',
         titleNo: 'Visa required in advance',
-        textNo: 'Your nationality is not on the direct eVisa list. You would still qualify if you held {doc} — tell us your country of residence above, or tick the box, if that applies. Otherwise apply for a visit visa through the Saudi embassy or an authorised agent before travelling. For Umrah, use the Nusuk platform or a licensed Umrah agent instead.' }
+        textNo: 'Your nationality is not on the direct eVisa list. You would qualify to apply online if you held {doc} — set your country of residence above, or tick the box, if that applies to you. Otherwise apply for a visit visa at the Saudi embassy or through an authorised agent before travelling. For Umrah, use the Nusuk platform or a licensed Umrah agent instead.' }
     ]
   },
 

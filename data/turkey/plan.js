@@ -64,6 +64,7 @@ TG.registerPlanner('turkey', {
   // ---------------------------------------------------------------------
   visa: {
     portal: 'https://www.evisa.gov.tr',
+    source: 'from the Turkish MFA visa pages',
     embassyFinder: 'https://www.mfa.gov.tr/turkish-representations.en.mfa',
     evisaBooking: 'e-Visa — apply at evisa.gov.tr before you fly',
     visaBooking: 'Visa appointment at a Turkish embassy or consulate',
