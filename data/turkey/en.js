@@ -23,7 +23,7 @@ TG.registerCountry('turkey', 'en', {
   nativeLang: 'tr',
   flag: '🇹🇷',
   tagline: 'Two continents, ten thousand years of cities, and a coastline that never ends.',
-  heroImage: 'assets/photos/cappadocia-goreme/1.jpg',
+  heroImage: 'assets/photos/cappadocia-goreme/e1.jpg',
 
   intro: [
     'Türkiye straddles Europe and Asia across the Bosphorus, and almost every empire that mattered in the old world left something behind here: Hittite capitals, Greek theatres, Roman libraries, Byzantine churches, Seljuk caravanserais and Ottoman mosques, often stacked on the same hill.',
