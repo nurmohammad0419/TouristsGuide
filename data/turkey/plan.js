@@ -51,38 +51,90 @@ TG.registerPlanner('turkey', {
     'Summer on the coast and in the south-east is very hot; the interior and the east get heavy snow. April–June and September–October suit almost the whole country.'
   ],
 
-  // Entry rules. The first matching rule wins, so order matters.
-  // Türkiye changes its visa policy often — always send people to the official portal.
+  // ---------------------------------------------------------------------
+  // Entry rules, from the Turkish Ministry of Foreign Affairs
+  // ("Visa Information For Foreigners", mfa.gov.tr) as read in November 2026,
+  // for ORDINARY (tourist) passports. Rules are checked in order; the first
+  // nationality match wins, and '*' is the catch-all.
+  //
+  // The important case: several nationalities get the e-Visa ONLY if they also
+  // hold a valid Schengen / USA / UK / Ireland visa or residence permit. A
+  // residence permit from anywhere else (Saudi Arabia, the UAE, Qatar...) does
+  // NOT qualify, so those travellers must apply at a Turkish mission.
+  // ---------------------------------------------------------------------
   visa: {
     portal: 'https://www.evisa.gov.tr',
-    evisaBooking: 'e-Visa — apply online at evisa.gov.tr before you fly',
-    visaBooking: 'Visa via a Turkish embassy or consulate',
-    own: { title: 'No visa needed', text: 'Turkish citizens enter freely.' },
-    free: {
-      title: 'No visa needed for a short stay',
-      text: 'Your nationality can currently enter Türkiye without a visa for short tourist stays (commonly 90 days in any 180). Your passport should be valid at least 60 days beyond your stay. Confirm the current rule on the official portal before booking.',
-      codes: ['AL', 'AR', 'AT', 'AZ', 'BA', 'BE', 'BG', 'BR', 'BY', 'CH', 'CL', 'CO', 'CZ', 'DE', 'DK', 'EC', 'EE', 'ES', 'FI', 'FR', 'GB', 'GE', 'GR', 'HR', 'HU', 'ID', 'IE', 'IL', 'IR', 'IS', 'IT', 'JP', 'KG', 'KR', 'KW', 'KZ', 'LT', 'LU', 'LV', 'LI', 'MA', 'MC', 'MD', 'ME', 'MK', 'MN', 'MT', 'MY', 'NL', 'NO', 'NZ', 'PL', 'PT', 'QA', 'RO', 'RS', 'RU', 'SE', 'SG', 'SI', 'SK', 'SM', 'TH', 'TJ', 'TN', 'UA', 'US', 'UY', 'UZ', 'VA', 'ZA']
+    embassyFinder: 'https://www.mfa.gov.tr/turkish-representations.en.mfa',
+    evisaBooking: 'e-Visa — apply at evisa.gov.tr before you fly',
+    visaBooking: 'Visa appointment at a Turkish embassy or consulate',
+    qualifyingDocs: {
+      label: 'a valid Schengen, USA, UK or Ireland visa or residence permit',
+      viaResidence: 'your residence permit',
+      viaVisa: 'the visa or permit you ticked above',
+      countries: ['AT', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'US']
     },
-    evisa: {
-      title: 'Eligible for the online e-Visa',
-      text: 'Apply at evisa.gov.tr before you travel — it takes a few minutes and is usually issued at once. Visa on arrival has been withdrawn for e-Visa nationalities, so do not leave it until the airport. Some e-Visas are single entry, which matters if you plan to leave and re-enter.',
-      codes: ['AF', 'AM', 'AU', 'BD', 'BH', 'BT', 'CA', 'CN', 'CY', 'DZ', 'EG', 'FJ', 'IN', 'IQ', 'JM', 'KH', 'LY', 'LK', 'MV', 'MX', 'NP', 'OM', 'PK', 'PH', 'PS', 'SA', 'SN', 'SR', 'TW', 'AE', 'VN', 'YE', 'ZW']
-    },
-    resident: {
-      title: 'Eligible for the e-Visa as a resident or visa holder',
-      text: 'Some nationalities qualify for the Turkish e-Visa only if they also hold a valid visa or residence permit from a Schengen country, the USA, the UK or Ireland. Carry that document with you — airlines check it at boarding.',
-      codes: ['US', 'GB', 'IE', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'CH', 'SE', 'NO', 'DK', 'FI', 'PT', 'GR', 'PL', 'CZ', 'HU', 'LU', 'IS', 'LI', 'MT', 'SK', 'SI', 'EE', 'LV', 'LT', 'HR']
-    },
-    visaHolder: {
-      title: 'Eligible for the e-Visa as a visa holder',
-      text: 'Holders of {of} can apply for the Turkish e-Visa online. Bring the passport containing that visa — it is checked at boarding and on arrival.',
-      of: 'a valid Schengen, US, UK or Irish visa or residence permit',
-      label: 'I hold a valid Schengen, US, UK or Irish visa or residence permit'
-    },
-    none: {
-      title: 'Visa required in advance',
-      text: 'Your nationality is not on the visa-free or e-Visa list. Apply at a Turkish embassy or consulate before travelling, and allow several weeks.'
-    }
+    visaHolder: { of: 'a valid Schengen, USA, UK or Ireland visa or residence permit' },
+    rules: [
+      { match: ['TR'], kind: 'exempt', title: 'No visa needed',
+        text: 'Turkish citizens enter freely.' },
+
+      { match: ['AD', 'AE', 'AL', 'AR', 'AT', 'AU', 'AZ', 'BA', 'BE', 'BG', 'BO', 'BR', 'BZ', 'CA', 'CH', 'CL', 'CN', 'CO', 'CZ', 'DE', 'DK', 'EC', 'EE', 'ES', 'FI', 'FR', 'GB', 'GE', 'GR', 'GT', 'HK', 'HN', 'HR', 'HU', 'IL', 'IR', 'IS', 'IT', 'JO', 'JP', 'KG', 'KR', 'KW', 'KZ', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MD', 'ME', 'MT', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PL', 'PT', 'PY', 'QA', 'RO', 'RS', 'RU', 'SA', 'SC', 'SE', 'SG', 'SI', 'SK', 'SM', 'SV', 'TN', 'TT', 'UA', 'US', 'UY', 'UZ', 'VA', 'VE', 'XK'], kind: 'exempt', title: 'No visa needed',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa, normally for up to 90 days in any 180-day period. Your passport must stay valid for at least 60 days beyond that period. Exact limits vary by country — confirm on the official portal.' },
+
+      { match: ['BN'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['BY'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days per stay, up to 90 days in a year. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['CR'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['ID'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days per entry, up to 90 days in any 180. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['MN'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['MO'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days. Confirm the current limit on the official portal before booking.' },
+
+      { match: ['TH'], kind: 'exempt', title: 'No visa needed (short stay)',
+        text: 'Ordinary passport holders of your country can enter Türkiye for tourism without a visa for 30 days. Confirm the current limit on the official portal before booking.' },
+
+
+      { match: ['DZ'], kind: 'cond',
+        titleOk: 'Depends on your age — and on the document you hold',
+        textOk: 'Ordinary passport holders of your country are visa-exempt if they are under 15 or over 50. Outside those ages the e-Visa applies, and only together with {doc} — which, based on {how}, you have. Check your age band on the official portal before booking.',
+        titleNo: 'Depends on your age — check carefully',
+        textNo: 'Ordinary passport holders of your country are visa-exempt if they are under 15 or over 50. Outside those ages you need the e-Visa, which requires {doc}; a residence permit from another country does not qualify, and without one you must apply at a Turkish embassy or consulate. Confirm your own case on the official portal.' },
+
+      { match: ['IQ'], kind: 'cond',
+        titleOk: 'Depends on your age — and on the document you hold',
+        textOk: 'Ordinary passport holders of your country are visa-exempt if they are under 15 or over 50. Outside those ages the e-Visa applies, and only together with {doc} — which, based on {how}, you have. Check your age band on the official portal before booking.',
+        titleNo: 'Depends on your age — check carefully',
+        textNo: 'Ordinary passport holders of your country are visa-exempt if they are under 15 or over 50. Outside those ages you need the e-Visa, which requires {doc}; a residence permit from another country does not qualify, and without one you must apply at a Turkish embassy or consulate. Confirm your own case on the official portal.' },
+
+      { match: ['LY'], kind: 'cond',
+        titleOk: 'Depends on your age — and on the document you hold',
+        textOk: 'Ordinary passport holders of your country are visa-exempt if they are under 16 or over 45. Outside those ages the e-Visa applies, and only together with {doc} — which, based on {how}, you have. Check your age band on the official portal before booking.',
+        titleNo: 'Depends on your age — check carefully',
+        textNo: 'Ordinary passport holders of your country are visa-exempt if they are under 16 or over 45. Outside those ages you need the e-Visa, which requires {doc}; a residence permit from another country does not qualify, and without one you must apply at a Turkish embassy or consulate. Confirm your own case on the official portal.' },
+
+
+      { match: ['AG', 'BB', 'BS', 'DO', 'FJ', 'GD', 'JM', 'LC', 'MU', 'MV', 'MX', 'NA', 'SR', 'TL', 'TW', 'VC', 'VN', 'ZA'], kind: 'evisa', title: 'Apply online for the e-Visa',
+        text: 'You can get the Turkish e-Visa online at evisa.gov.tr in a few minutes, with no extra documents required. Visa on arrival has been withdrawn for e-Visa nationalities, so apply before you fly. Many e-Visas are single entry — check yours if you plan to leave and re-enter Türkiye.' },
+
+      { match: ['AF', 'BD', 'BT', 'CV', 'EG', 'GQ', 'IN', 'LK', 'NP', 'PH', 'PK', 'PS', 'SB', 'SN', 'VU', 'YE'], kind: 'cond',
+        titleOk: 'e-Visa — and you meet its condition',
+        textOk: 'Your nationality can only use the Turkish e-Visa together with {doc}. Based on {how}, you qualify: apply at evisa.gov.tr, and carry that document with you — airlines check it at boarding and again on arrival. The e-Visa is usually single entry for one month.',
+        titleNo: 'e-Visa only with a qualifying document — otherwise apply at an embassy',
+        textNo: 'Your nationality can use the Turkish e-Visa only if you also hold {doc}. A residence permit from any other country, including the Gulf states, does not qualify. If you do not hold one of those documents, you must apply for a visa at a Turkish embassy or consulate before travelling — allow several weeks.' },
+
+      { match: '*', kind: 'embassy', level: 'warn', title: 'Visa required from a Turkish embassy or consulate',
+        text: 'Your nationality is not on the visa-exempt or e-Visa lists, so you must apply in person at a Turkish embassy or consulate before travelling. Book the appointment well ahead — processing can take several weeks.',
+        link: 'https://www.mfa.gov.tr/turkish-representations.en.mfa' }
+    ]
   },
 
   // Routing for trips that start outside the country: the arrival city leads,

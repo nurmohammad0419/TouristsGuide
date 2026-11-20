@@ -28,17 +28,17 @@ check('TR: no religion step, EUR, no Nusuk/ihram', 'turkey',
   'o=outside&n=GB&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=train&a=IST&x=cappadocia&bl=comfort', {
   'has result': has(/planResult/), 'EUR budget': has(/EUR [\d,]+/), 'no SAR': no(/SAR [\d,]/),
   'no Nusuk': no(/Nusuk/i), 'no ihram': no(/ihram/i), 'no Umrah': no(/Umrah/i),
-  'no religion step': no(/name="religion"/), 'visa-free verdict': has(/No visa needed for a short stay/),
+  'no religion step': no(/name="religion"/), 'visa-free verdict': has(/No visa needed/),
   'museum pass tip': has(/Museum Pass/), 'bus is not SAPTCO': no(/SAPTCO/),
 });
 check('TR: e-Visa nationality', 'turkey',
   'o=outside&n=BD&from=2027-05-01&to=2027-05-12&g=family&st=relaxed&tr=car&idp=1&a=IST&x=cappadocia&bl=eco', {
-  'e-Visa verdict': has(/Eligible for the online e-Visa/), 'evisa.gov.tr link': has(/evisa\.gov\.tr/),
+  'conditional e-Visa, not met': has(/only with a qualifying document/), 'names the Gulf exclusion': has(/Gulf states, does not qualify/),
   'no Nusuk': no(/Nusuk/i),
 });
 check('TR: visa required fallback', 'turkey',
   'o=outside&n=SO&from=2027-05-01&to=2027-05-10&g=solo&st=balanced&tr=taxi&a=IST&bl=eco', {
-  'warn verdict': has(/Visa required in advance/), 'embassy wording': has(/embassy or consulate/),
+  'embassy verdict': has(/Visa required from a Turkish embassy/), 'embassy wording': has(/embassy or consulate/),
 });
 check('TR: Istanbul arrival advice', 'turkey',
   'o=outside&n=GB&from=2027-04-10&to=2027-04-16&g=solo&st=balanced&tr=taxi&a=IST&bl=comfort', {
@@ -71,6 +71,16 @@ check('SA: eVisa nationality shows booking row', 'saudi-arabia',
 check('SA: SAPTCO still used', 'saudi-arabia',
   'o=inside&cp=riyadh&dp=qassim&f=muslim&from=2027-02-01&to=2027-02-06&g=friends&st=balanced&car=no&bl=eco', {
   'has result': has(/planResult/),
+});
+check('TR: Bangladeshi with Saudi residence is told to use an embassy', 'turkey',
+  'o=outside&n=BD&r=SA&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=IST&bl=comfort', {
+  'warned': has(/only with a qualifying document/),
+  'Gulf permits excluded': has(/Gulf states, does not qualify/),
+  'not told it is simple': no(/apply online for the e-visa/i),
+});
+check('TR: Bangladeshi with German residence qualifies', 'turkey',
+  'o=outside&n=BD&r=DE&from=2027-04-10&to=2027-04-20&g=couple&st=balanced&tr=taxi&a=IST&bl=comfort', {
+  'qualifies': has(/you qualify/), 'tells them to carry it': has(/carry that document/),
 });
 console.log(fails ? `\n${fails} FAILING` : '\nall content assertions passed');
 process.exit(fails?1:0);

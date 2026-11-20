@@ -45,18 +45,37 @@
   }
 
   /* ---------------- Visa logic ---------------- */
-  // Each rule is { codes?, title, text } in data/<country>/plan.js; the first match wins.
+  // Does the traveller hold the document a conditional e-Visa requires?
+  // Either a residence permit from a qualifying country, or they ticked the box.
+  function holdsQualifyingDoc(P, s) {
+    const q = (P.visa || {}).qualifyingDocs || {};
+    if (s.visaHolder) return true;
+    return !!s.res && (q.countries || []).includes(s.res);
+  }
+
+  // Ordered rules from data/<country>/plan.js; the first whose `match` contains the
+  // nationality wins ('*' is the catch-all). Conditional rules resolve to a clear
+  // yes or no rather than a vague "you may be eligible".
   function visaVerdict(P, s) {
     const V = P.visa;
     if (!s.nat || !V) return null;
-    const ok = (r, extra) => ({ level: 'ok', title: r.title, text: r.text, link: r.link || V.portal, ...extra });
-    if (V.own && s.nat === P.country) return { level: 'ok', title: V.own.title, text: V.own.text };
-    if (V.free && (V.free.codes || []).includes(s.nat)) return { level: 'ok', title: V.free.title, text: V.free.text };
-    if (V.evisa && (V.evisa.codes || []).includes(s.nat)) return ok(V.evisa);
-    if (V.resident && s.res && s.res !== s.nat && (V.resident.codes || []).includes(s.res)) return ok(V.resident);
-    if (V.visaHolder && s.visaHolder) return ok(V.visaHolder, { text: V.visaHolder.text.replace('{of}', V.visaHolder.of || '') });
-    const no = V.none || { title: 'Visa required in advance', text: 'Apply through an embassy or an authorised agent before travelling.' };
-    return { level: 'warn', title: no.title, text: no.text, link: V.portal, nusukLink: (P.faith || {}).permitUrl };
+    const q = V.qualifyingDocs || {};
+    const rules = V.rules || [];
+    const hit = rules.find((r) => r.match === '*' || (r.match || []).includes(s.nat));
+    if (!hit) return null;
+    const base = { kind: hit.kind, link: hit.link || V.portal, nusukLink: (P.faith || {}).permitUrl, docLabel: q.label };
+    if (hit.kind === 'cond') {
+      const met = holdsQualifyingDoc(P, s);
+      const how = s.visaHolder ? (q.viaVisa || 'the visa you ticked above')
+        : (s.res ? (q.viaResidence || 'your residence permit') : '');
+      return met
+        ? { ...base, level: 'ok', met: true, title: hit.titleOk || hit.title,
+            text: (hit.textOk || hit.text || '').replace('{how}', how).replace('{doc}', q.label || '') }
+        : { ...base, level: 'warn', met: false, title: hit.titleNo || hit.title,
+            text: (hit.textNo || hit.text || '').replace('{doc}', q.label || ''),
+            link: hit.linkNo || V.embassyFinder || V.portal };
+    }
+    return { ...base, level: hit.level || (hit.kind === 'embassy' ? 'warn' : 'ok'), title: hit.title, text: hit.text };
   }
 
   /* ---------------- Transport between provinces ---------------- */
@@ -378,9 +397,9 @@
           <label class="field field--sel"><span>${t('plan.nationality')}</span><select name="nat"><option value="">—</option>${P.countries.map((c) => opt(c[0], c[1], s.nat)).join('')}</select></label>
           <label class="field field--sel"><span>${t('plan.residence')}</span><select name="res"><option value="">${t('plan.sameAsNat')}</option>${P.countries.map((c) => opt(c[0], c[1], s.res)).join('')}</select></label>
         </div>
-        <label class="choice choice--sm ${s.visaHolder ? 'on' : ''}"><input type="checkbox" name="visaHolder" ${s.visaHolder ? 'checked' : ''}><span><b>${esc(((P.visa || {}).visaHolder || {}).label || t('plan.visaHolder'))}</b></span></label>
+        ${((P.visa || {}).qualifyingDocs || {}).label ? `<label class="choice choice--sm ${s.visaHolder ? 'on' : ''}"><input type="checkbox" name="visaHolder" ${s.visaHolder ? 'checked' : ''}><span><b>${esc(t('plan.visaHolderHave', { doc: P.visa.qualifyingDocs.label }))}</b></span></label>` : ''}
         ${v ? `<div class="verdict verdict--${v.level}"><b>${v.level === 'ok' ? '✅' : '⚠️'} ${esc(v.title)}</b><p>${esc(v.text)}</p>
-          ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
+          ${v.link ? `<a class="btn btn--sm btn--primary" href="${v.link}" target="_blank" rel="noopener">${v.kind === 'exempt' ? t('plan.checkPortal') : v.level === 'ok' ? t('plan.applyEvisa') : t('plan.checkPortal')}</a>` : ''}
           ${v.nusukLink && s.religion === 'muslim' ? `<a class="btn btn--sm btn--ghost" href="${v.nusukLink}" target="_blank" rel="noopener">${esc((faithOf(P) || {}).permitLabel || t('plan.nusukUmrah'))}</a>` : ''}
           <small class="muted">${t('plan.visaDisclaimer')} (${esc(P.reviewed)})</small></div>` : ''}`, !!s.nat));
       if (s.nat && faithOf(P)) out.push(step(n++, t('plan.q.religion'), `<div class="choices">
@@ -493,9 +512,11 @@
     const umrah = muslim && !!F.ritualSpot && days.some((d) => d.items.some((i) => i.type === 'spot' && i.id === F.ritualSpot));
     const allSpots = days.flatMap((d) => d.items.filter((i) => i.type === 'spot').map((i) => spot(i.id)));
     const bookings = [];
-    const visaFree = s.nat === P.country || ((P.visa.free || {}).codes || []).includes(s.nat);
-    if (s.origin === 'outside' && verdict && verdict.level === 'ok' && !visaFree && P.visa.evisaBooking) bookings.push({ label: P.visa.evisaBooking, url: P.visa.portal });
-    if (s.origin === 'outside' && verdict && verdict.level === 'warn') bookings.push(umrah && F && F.visaBooking ? { label: F.visaBooking, url: F.permitUrl } : { label: P.visa.visaBooking || 'Visa — apply before travelling', url: P.visa.portal });
+    if (s.origin === 'outside' && verdict) {
+      if (verdict.level === 'ok' && (verdict.kind === 'evisa' || verdict.kind === 'cond') && P.visa.evisaBooking) bookings.push({ label: P.visa.evisaBooking, url: P.visa.portal });
+      else if (verdict.level === 'ok' && verdict.kind === 'arrival' && P.visa.arrivalBooking) bookings.push({ label: P.visa.arrivalBooking, url: P.visa.portal });
+      else if (verdict.level === 'warn') bookings.push(umrah && F && F.visaBooking ? { label: F.visaBooking, url: F.permitUrl } : { label: P.visa.visaBooking || 'Visa — apply before travelling', url: verdict.link || P.visa.portal });
+    }
     if (P.partner && P.partner.flights) {
       const domestic = [];
       days.forEach((d) => d.items.forEach((it) => { if (it.flight && airportOk(P, it.flight.from) && airportOk(P, it.flight.to)) domestic.push({ label: `Flight ${it.flight.from} → ${it.flight.to} on ${fmtDate(d.date)} — search on ${P.partner.name}`, url: fillUrl(P.partner.flights, { from: it.flight.from, to: it.flight.to, depart: ymd(d.date), adults: people(s) }) }); }));
@@ -510,9 +531,11 @@
     const docs = [];
     if (s.origin === 'outside') {
       docs.push(P.passportNote || 'Passport valid for at least 6 months');
-      docs.push(verdict && verdict.level === 'ok' ? 'Printed / saved visa or visa-exemption proof' : 'Visa stamped in passport');
+      docs.push(verdict && verdict.kind === 'exempt' ? 'No visa needed — carry proof of onward travel and accommodation'
+        : verdict && verdict.level === 'ok' ? 'Printed / saved visa approval'
+        : 'Visa stamped in passport (apply before you travel)');
+      if (verdict && verdict.kind === 'cond' && verdict.met && verdict.docLabel) docs.push('The document your e-Visa depends on: ' + verdict.docLabel + ' — carry the original, it is checked at boarding');
       if (s.res && s.res !== s.nat) docs.push('Residence permit of your country of residence');
-      if (s.visaHolder && (P.visa.visaHolder || {}).of) docs.push('Passport containing ' + P.visa.visaHolder.of);
       docs.push(P.insuranceNote || 'Travel insurance');
       if (s.transport === 'car') docs.push('National driving licence + International Driving Permit');
       docs.push('Hotel booking confirmations');

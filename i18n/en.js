@@ -53,7 +53,7 @@ window.TG_I18N.en = {
     outside: 'Coming from outside {country}', outsideSub: 'Visa check, arrival airport and a full itinerary',
     inside: 'Already inside {country}', insideSub: 'Plan a trip from one {region} to another',
     nationality: 'Nationality (passport)', residence: 'Country of residence', sameAsNat: 'Same as nationality',
-    visaHolder: 'I hold a valid visa for another country that qualifies', applyEvisa: 'Apply online', nusukUmrah: 'Pilgrimage visa', checkPortal: 'Check visa portal',
+    visaHolder: 'I hold a valid visa for another country that qualifies', visaHolderHave: 'I hold {doc}', applyEvisa: 'Apply online', nusukUmrah: 'Pilgrimage visa', checkPortal: 'Check visa portal',
     visaDisclaimer: 'Visa rules change — always confirm on the official portal before booking. Last reviewed',
     muslim: 'Muslim', muslimSub: '', nonMuslim: 'Not Muslim', nonMuslimSub: '',
     currentProv: 'Current province', destHint: 'Choose 1–3 {regions}. They will be visited in the order you select.',
