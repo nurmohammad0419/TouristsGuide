@@ -433,16 +433,9 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/bodrum/e2.jpg",
    "thumb": "assets/photos/bodrum/e2-sm.jpg",
-   "credit": "redchillihead",
-   "license": "CC BY-NC-ND 2.0",
-   "page": "https://www.flickr.com/photos/42906305@N05/18787401878"
-  },
-  {
-   "src": "assets/photos/bodrum/e3.jpg",
-   "thumb": "assets/photos/bodrum/e3-sm.jpg",
-   "credit": "Patrick_Down",
-   "license": "CC BY-NC 2.0",
-   "page": "https://www.flickr.com/photos/97206958@N00/14326005111"
+   "credit": "Serhio Magpie",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=73616731"
   }
  ],
  "bosphorus-cruise": [
@@ -587,20 +580,13 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/dalyan-kaunos/e1.jpg",
    "thumb": "assets/photos/dalyan-kaunos/e1-sm.jpg",
-   "credit": "Simon Grubb",
-   "license": "CC BY-NC-ND 2.0",
-   "page": "https://www.flickr.com/photos/11298518@N05/4708628078"
-  },
-  {
-   "src": "assets/photos/dalyan-kaunos/e2.jpg",
-   "thumb": "assets/photos/dalyan-kaunos/e2-sm.jpg",
    "credit": "Wloski",
    "license": "CC0",
    "page": "https://www.flickr.com/photos/56022513@N04/52704878099"
   },
   {
-   "src": "assets/photos/dalyan-kaunos/e3.jpg",
-   "thumb": "assets/photos/dalyan-kaunos/e3-sm.jpg",
+   "src": "assets/photos/dalyan-kaunos/e2.jpg",
+   "thumb": "assets/photos/dalyan-kaunos/e2-sm.jpg",
    "credit": "Wloski",
    "license": "CC0",
    "page": "https://www.flickr.com/photos/56022513@N04/52704624066"
@@ -1447,23 +1433,23 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/marmaris-datca/e2.jpg",
    "thumb": "assets/photos/marmaris-datca/e2-sm.jpg",
-   "credit": "ross_hawkes",
-   "license": "CC BY-NC 2.0",
-   "page": "https://www.flickr.com/photos/52768784@N07/9676604621"
+   "credit": "Mstyslav Chernov",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=26092220"
   },
   {
    "src": "assets/photos/marmaris-datca/e3.jpg",
    "thumb": "assets/photos/marmaris-datca/e3-sm.jpg",
-   "credit": "ross_hawkes",
-   "license": "CC BY-NC 2.0",
-   "page": "https://www.flickr.com/photos/52768784@N07/9679841482"
+   "credit": "Mstyslav Chernov",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=26092221"
   },
   {
    "src": "assets/photos/marmaris-datca/e4.jpg",
    "thumb": "assets/photos/marmaris-datca/e4-sm.jpg",
-   "credit": "jenniferhiscock",
-   "license": "CC BY-NC-SA 2.0",
-   "page": "https://www.flickr.com/photos/118551693@N07/12738207985"
+   "credit": "Mstyslav Chernov",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=26092223"
   }
  ],
  "mevlana-konya": [
@@ -1532,16 +1518,9 @@ TG.registerMedia('turkey', { spots: {
   {
    "src": "assets/photos/oludeniz/e1.jpg",
    "thumb": "assets/photos/oludeniz/e1-sm.jpg",
-   "credit": "FatMandy",
-   "license": "CC BY-NC-ND 2.0",
-   "page": "https://www.flickr.com/photos/35723943@N00/1418068118"
-  },
-  {
-   "src": "assets/photos/oludeniz/e2.jpg",
-   "thumb": "assets/photos/oludeniz/e2-sm.jpg",
-   "credit": "--Tico--",
-   "license": "CC BY-NC-ND 2.0",
-   "page": "https://www.flickr.com/photos/84474308@N00/2996399985"
+   "credit": "Tolga Kanik",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=118747854"
   }
  ],
  "olympos-chimaera": [
