@@ -2547,6 +2547,268 @@ TG.registerCountry('saudi-arabia', 'en', {
       ]
     },
 
+    /* ======================= ROUND 5: RIYADH PROVINCE ======================= */
+    {
+      id: 'qasr-al-hukm', name: 'Qasr Al-Hukm District', nativeName: 'منطقة قصر الحكم',
+      region: 'riyadh', city: 'Riyadh', categories: ['heritage'], approx: true,
+      coords: [24.6306, 46.7126], wiki: 'https://en.wikipedia.org/wiki/Qasr_al-Hukm',
+      tagline: 'The old governing heart of Riyadh, rebuilt in Najdi style.',
+      overview: [
+        'Qasr Al-Hukm — the Palace of Justice — is the historic seat of government in old Riyadh and the square around it. The district links the palace, the Grand Mosque of Imam Turki bin Abdullah, Deira Square and Masmak Fort by a chain of pedestrian plazas and covered walkways.',
+        'It was rebuilt from the 1980s in a modern reading of Najdi architecture: thick pale walls, triangular vents, timber shutters and shaded colonnades. Friday is the liveliest day, when worshippers fill the mosque and the surrounding souqs.'
+      ],
+      history: [
+        'A governor\'s palace has stood here since the 18th century. King Abdulaziz used the old Qasr Al-Hukm as his base after retaking Riyadh in 1902, governing from it until the court moved to Murabba Palace in 1938.',
+        'The present building dates from the Qasr Al-Hukm redevelopment, a long project to restore the old centre rather than clear it.'
+      ],
+      religious: ['The Imam Turki bin Abdullah Grand Mosque on the square is one of the largest in Riyadh and a major Friday prayer venue. Visitors should not enter during prayers.'],
+      highlights: ['Qasr Al-Hukm and Deira Square', 'Imam Turki bin Abdullah Grand Mosque', 'Covered walkway to Masmak Fort', 'Souq Al-Zal and the gold souq nearby', 'Najdi revival architecture'],
+      hours: { summary: 'Squares open at all times; the palace interior is a working government building', details: ['Souqs are busiest in the evening', 'Shops close around prayer times'], note: 'The palace itself is not generally open to tourists — the district and square are.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket for the district, square or souqs.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Old Riyadh (Deira), beside Masmak Fort.', transport: 'Riyadh Metro: Qasr Al-Hukm station is in the district and is an interchange on Lines 1 and 3.' },
+      bestTime: 'November – March, late afternoon into the evening', duration: '2 hours with Masmak and the souq',
+      dress: 'Modest clothing — this is a conservative, busy quarter.',
+      tips: ['Combine with Masmak Fort and Souq Al-Zal; they are a few minutes\' walk apart.', 'The map pin marks the square — the district covers several blocks.', 'Evening is when the area comes alive.']
+    },
+    {
+      id: 'bujairi-terrace', name: 'Bujairi Terrace', nativeName: 'البجيري تراس',
+      region: 'riyadh', city: 'Diriyah', categories: ['modern', 'heritage'], featured: true,
+      coords: [24.7358, 46.5759], wiki: 'https://en.wikipedia.org/wiki/Diriyah',
+      tagline: 'Mud-brick dining terraces looking straight across at At-Turaif.',
+      overview: [
+        'Bujairi Terrace sits on the lip of Wadi Hanifa facing the UNESCO-listed At-Turaif district, so the ruins of the first Saudi state are the view from the tables. It opened in 2022 as the first completed piece of the Diriyah Gate development.',
+        'Around twenty restaurants occupy low buildings built in Najdi style, from Saudi cooking to international names, with palm-shaded walkways, a date museum and the Bujairi mosque alongside.'
+      ],
+      history: [
+        'Bujairi is the quarter where Muhammad ibn Abd al-Wahhab lived and taught in the 18th century, across the valley from the ruling family\'s seat at At-Turaif.',
+        'The terrace is part of the wider Diriyah Gate project, which is restoring the whole oasis as a cultural destination.'
+      ],
+      religious: ['The Imam Muhammad bin Abdul Wahhab Mosque and Foundation stand in Bujairi and can be visited outside prayer times.'],
+      highlights: ['Sunset view across to At-Turaif', 'Twenty-odd restaurants and cafés', 'Bujairi Museum and the date displays', 'Najdi mud-brick architecture', 'Walkways down into Wadi Hanifa'],
+      hours: { summary: 'Daily, late afternoon until late at night', details: ['Busiest Thursday and Friday evenings', 'Some restaurants need a booking at weekends'], note: 'Most of the terrace is outdoors and is at its best from November to March.' },
+      tickets: { required: false, price: 'Free to enter; restaurants are expensive', how: ['No ticket for the terrace itself.', 'At-Turaif across the valley is a separate, ticketed site.'], links: [{ label: 'Diriyah (official)', url: 'https://www.diriyah.sa' }] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 20 minutes north-west of central Riyadh in Diriyah; large paid car parks.', transport: 'Taxi or ride-hailing is easiest; no metro station nearby.' },
+      bestTime: 'November – March, from an hour before sunset', duration: '2–3 hours, or an evening',
+      dress: 'Smart casual; modest clothing as elsewhere in the Kingdom.',
+      tips: ['Book a table with a terrace view if you want the At-Turaif panorama.', 'Visit At-Turaif in the afternoon, then walk over for dinner.', 'Summer evenings are hot even after dark — the outdoor seating is misted but still warm.']
+    },
+    {
+      id: 'diplomatic-quarter', name: 'Diplomatic Quarter (Al-Safarat)', nativeName: 'حي السفارات',
+      region: 'riyadh', city: 'Riyadh', categories: ['modern', 'nature'],
+      coords: [24.6771, 46.6251], wiki: 'https://en.wikipedia.org/wiki/Diplomatic_Quarter',
+      tagline: 'Riyadh\'s greenest district, built for walking.',
+      overview: [
+        'The Diplomatic Quarter is a planned district on the edge of Wadi Hanifa that houses the embassies, and it is the most pedestrian-friendly part of Riyadh: landscaped wadi gardens, shaded walking and cycling paths and a string of small parks along the escarpment.',
+        'Tuwaiq Palace, a curving wall of pale stone wrapped around a garden, is one of the most admired modern buildings in the Gulf and won an Aga Khan Award for Architecture.'
+      ],
+      history: [
+        'The quarter was laid out in the 1980s to bring the embassies from Jeddah to the capital, and was designed around a continuous network of public open space rather than around cars.'
+      ],
+      religious: null,
+      highlights: ['Wadi Hanifa walking and cycling paths', 'Tuwaiq Palace architecture', 'Rock Park and the escarpment viewpoints', 'Landscaped gardens between the embassies', 'Cafés around the DQ shopping centres'],
+      hours: { summary: 'Public parks and paths open daily, dawn to late evening', details: ['Early morning and after sunset are the pleasant hours'], note: 'Embassy compounds are not open to visitors; the parks and paths are.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket for the public parks and paths.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'West of the city centre, above Wadi Hanifa.', transport: 'Taxi or ride-hailing; bus routes serve the quarter.' },
+      bestTime: 'November – March; early morning year-round', duration: '2–3 hours',
+      dress: 'Comfortable walking or running clothes; modest in public.',
+      tips: ['The wadi-side path is the best free walk in Riyadh.', 'Security checks apply at some entrances — carry ID.', 'Combine with Wadi Hanifa further down the valley.']
+    },
+    {
+      id: 'salam-park', name: 'Salam Park', nativeName: 'منتزه السلام',
+      region: 'riyadh', city: 'Riyadh', categories: ['nature', 'modern'],
+      coords: [24.6200, 46.7083], wiki: 'https://en.wikipedia.org/wiki/Salam_Park',
+      tagline: 'A lake, lawns and palm groves in the middle of the city.',
+      overview: [
+        'Salam Park is one of central Riyadh\'s largest green spaces: a boating lake, wide lawns, date palms, play areas and walking loops, a short drive south of the old centre.',
+        'It fills with families in the evening, especially at weekends and during Riyadh Season, when parts of it host events.'
+      ],
+      history: ['The park was developed on part of the historic Al-Futah gardens and opened in its present form in the 2000s as part of the municipality\'s programme of large public parks.'],
+      religious: null,
+      highlights: ['Boating lake', 'Shaded lawns and palm groves', 'Children\'s play areas', 'Evening family picnics', 'Walking and running loops'],
+      hours: { summary: 'Daily, roughly 08:00 until midnight', details: ['Busiest on Thursday and Friday evenings'], note: 'Some areas may be closed during events.' },
+      tickets: { required: false, price: 'Free; boat hire and rides are paid', how: ['No ticket to enter.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Al-Futah / Al-Dahu area, south of the old centre.', transport: 'Taxi or ride-hailing; metro Line 1 passes nearby.' },
+      bestTime: 'November – March, evenings', duration: '1–2 hours',
+      dress: 'Casual, modest.',
+      tips: ['Go after sunset in warmer months.', 'Easy to combine with the National Museum and Murabba Palace.', 'Families and single men use separate areas at some parks — follow the signage.']
+    },
+    {
+      id: 'riyadh-zoo', name: 'Riyadh Zoo', nativeName: 'حديقة الحيوان بالرياض',
+      region: 'riyadh', city: 'Riyadh', categories: ['nature', 'modern'],
+      coords: [24.6768, 46.7374], wiki: 'https://en.wikipedia.org/wiki/Riyadh_Zoo',
+      tagline: 'The capital\'s zoo, in the old Al-Malaz district.',
+      overview: [
+        'Riyadh Zoo covers about 22 hectares in Al-Malaz and holds mammals, birds and reptiles from Arabia, Africa and Asia, with shaded walkways and a small train around the grounds.',
+        'It is primarily a family outing rather than a conservation showcase; expect a busy, cheerful park on weekend evenings.'
+      ],
+      history: ['The collection began in 1957 as a royal menagerie and opened to the public in 1987. It has been renovated in stages since.'],
+      religious: null,
+      highlights: ['Arabian wildlife including oryx and gazelle', 'Big cats and primates', 'Reptile house', 'Internal train', 'Shaded picnic areas'],
+      hours: { summary: 'Open most days; closing day and family-only days vary', details: ['Some days are reserved for families', 'Longer evening hours in summer'], note: 'Check the current timetable before going — the schedule changes seasonally.' },
+      tickets: { required: true, price: 'Low entry fee', how: ['Buy at the gate; tickets may also be sold online.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Al-Malaz, east-central Riyadh.', transport: 'Taxi or ride-hailing; metro Line 2 serves Al-Malaz.' },
+      bestTime: 'November – March; mornings or evenings', duration: '2–3 hours',
+      dress: 'Casual, with sun protection; much of the route is open.',
+      tips: ['Avoid the middle of the day in summer — both for you and the animals.', 'Weekday mornings are far quieter.', 'Combine with Salam Park, which is close by.']
+    },
+    {
+      id: 'saqr-aljazirah', name: 'Saqr Aljazirah Aviation Museum', nativeName: 'متحف صقر الجزيرة للطيران',
+      region: 'riyadh', city: 'Riyadh', categories: ['modern', 'heritage'],
+      coords: [24.7528, 46.7371], wiki: 'https://en.wikipedia.org/wiki/Saqr_Aljazirah_Aviation_Museum',
+      tagline: 'Saudi air force history, with the aircraft parked outside.',
+      overview: [
+        'The Saqr Aljazirah ("Falcon of the Peninsula") museum on the Eastern Ring Road tells the story of the Royal Saudi Air Force from the 1920s onwards, with an indoor gallery of uniforms, instruments and models and an outdoor park of real aircraft.',
+        'The outdoor collection includes Lightnings, Strikemasters, a Hawk, transport aircraft and helicopters, which children can get close to.'
+      ],
+      history: ['The museum opened in 1999 to mark the centenary of the founding of the Saudi state, and is run by the Ministry of Defence.'],
+      religious: null,
+      highlights: ['Outdoor aircraft park', 'English Electric Lightning and other early jets', 'RSAF uniforms and instruments', 'Flight simulator displays', 'Air-defence and radar exhibits'],
+      hours: { summary: 'Open most days except the weekly closing day; mornings and evenings', details: ['Separate visiting times may apply for families and for single visitors'], note: 'Photography rules are strict in parts of the museum — ask first.' },
+      tickets: { required: true, price: 'Low entry fee', how: ['Pay at the gate.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'On the Eastern Ring Road in the Al-Quds / King Abdullah district.', transport: 'Taxi or ride-hailing.' },
+      bestTime: 'November – March', duration: '1.5–2 hours',
+      dress: 'Casual; sun protection for the outdoor park.',
+      tips: ['The aircraft outside are the highlight — leave time for them.', 'Good for children, with space to move around.', 'Bring ID; this is a military-run site.']
+    },
+    {
+      id: 'via-riyadh', name: 'VIA Riyadh', nativeName: 'فيا الرياض',
+      region: 'riyadh', city: 'Riyadh', categories: ['modern'], approx: true,
+      coords: [24.7539, 46.6008],
+      tagline: 'A luxury dining, cinema and shopping quarter in Hittin.',
+      overview: [
+        'VIA Riyadh is an open-air luxury complex in the Hittin district, built in the pale-stone Salmani style the capital has adopted for its new civic architecture. It gathers high-end restaurants, flagship boutiques and premium cinemas, including an opera-style theatre, around landscaped courtyards.',
+        'It is primarily an evening destination and one of the places where Riyadh\'s new entertainment sector is most visible.'
+      ],
+      history: ['Developed by the Public Investment Fund as part of the push to keep luxury spending and entertainment inside the Kingdom, it opened in stages from 2023.'],
+      religious: null,
+      highlights: ['Salmani-style architecture and courtyards', 'Premium cinemas and a theatre', 'Flagship restaurants', 'Luxury boutiques', 'Evening people-watching'],
+      hours: { summary: 'Daily, afternoon until late', details: ['Restaurants and cinemas keep their own hours'], note: 'Opening times shift during Ramadan.' },
+      tickets: { required: false, price: 'Free to enter; everything inside is expensive', how: ['No entry ticket. Book restaurants and cinema seats in advance at weekends.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Hittin district, north-west Riyadh, near the Diplomatic Quarter.', transport: 'Taxi or ride-hailing; valet parking on site.' },
+      bestTime: 'November – March, evenings', duration: '2–3 hours',
+      dress: 'Smart; this is the dressiest venue in the city.',
+      tips: ['The map pin marks the Hittin district — confirm the exact entrance in your maps app.', 'Weekday evenings are far less crowded than Thursday and Friday.', 'Not a budget stop; Boulevard City is the livelier, cheaper alternative.']
+    },
+    {
+      id: 'riyadh-park-mall', name: 'Riyadh Park', nativeName: 'الرياض بارك',
+      region: 'riyadh', city: 'Riyadh', categories: ['modern'],
+      coords: [24.7569, 46.6301],
+      tagline: 'One of the capital\'s biggest malls, with a large cinema.',
+      overview: [
+        'Riyadh Park in Al-Aqiq is a large modern mall with international and Saudi brands, a wide food court, a multiplex cinema and indoor entertainment for children.',
+        'Like most Gulf malls it doubles as a public space: people come to walk, eat and escape the heat as much as to shop.'
+      ],
+      history: ['Opened in 2017 and extended since, it was one of the first malls in Riyadh to open a cinema after the 35-year ban on cinemas ended in 2018.'],
+      religious: null,
+      highlights: ['Cinema multiplex', 'International and local brands', 'Food court and restaurants', 'Indoor play areas', 'Air-conditioned walking in summer'],
+      hours: { summary: 'Daily, roughly 10:00 until midnight (longer at weekends)', details: ['Shorter daytime hours and very late nights during Ramadan'], note: 'Some shops pause briefly at prayer times.' },
+      tickets: { required: false, price: 'Free to enter', how: ['No ticket.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Al-Aqiq, north-west Riyadh, near KAFD.', transport: 'Taxi or ride-hailing; metro Line 4 and 6 stations are near KAFD.' },
+      bestTime: 'Any time; a useful refuge in summer', duration: '2 hours',
+      dress: 'Modest casual.',
+      tips: ['Combine with KAFD, which is a short drive away.', 'Weekday afternoons are the quietest.', 'Cinema tickets are cheaper before the evening shows.']
+    },
+    {
+      id: 'al-nakheel-mall', name: 'Al Nakheel Mall', nativeName: 'النخيل مول',
+      region: 'riyadh', city: 'Riyadh', categories: ['modern'],
+      coords: [24.7668, 46.7158],
+      tagline: 'A family shopping centre in north Riyadh.',
+      overview: [
+        'Al Nakheel Mall on Othman bin Affan Road is a long-established family mall with department stores, a hypermarket, a food court and children\'s entertainment.',
+        'It is less glossy than the newer developments but busy, central to the northern suburbs and easy to reach.'
+      ],
+      history: ['One of the larger malls built during Riyadh\'s northward expansion in the 2000s.'],
+      religious: null,
+      highlights: ['Department stores and hypermarket', 'Food court', 'Children\'s entertainment area', 'Electronics and perfume shops'],
+      hours: { summary: 'Daily, roughly 10:00 until midnight', details: [], note: 'Shops pause briefly at prayer times.' },
+      tickets: { required: false, price: 'Free to enter', how: ['No ticket.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Al-Mughrizat, north Riyadh, on Othman bin Affan Road.', transport: 'Taxi or ride-hailing.' },
+      bestTime: 'Any time', duration: '1–2 hours',
+      dress: 'Modest casual.',
+      tips: ['More practical than scenic — useful for everyday shopping.', 'Quieter than Riyadh Park on weekend evenings.', 'Good for a cheap meal in the food court.']
+    },
+    {
+      id: 'sadus', name: 'Sadus Heritage Village', nativeName: 'قرية سدوس التراثية',
+      region: 'riyadh', city: 'Sadus, Diriyah', categories: ['heritage', 'archaeology'],
+      coords: [24.9917, 46.2075], wiki: 'https://en.wikipedia.org/wiki/Sadus',
+      tagline: 'A ruined mud town and palace on the old Najd caravan road.',
+      overview: [
+        'Sadus lies in a wadi north-west of Riyadh, a cluster of collapsing mud-brick houses, a fortified palace and an old mosque around palm gardens. Little has been restored, so it feels more like a ruin than a museum.',
+        'The surrounding wadi and the rock outcrops above the village make it a popular weekend drive from the capital.'
+      ],
+      history: [
+        'Sadus is an old settlement of the Al-Washm and Diriyah borderlands, mentioned in Najdi histories and built around a spring and palm gardens.',
+        'Qasr Sadus, the village\'s fortified palace, and the surrounding walls are the most substantial survivals.'
+      ],
+      religious: null,
+      highlights: ['Qasr Sadus and the mud-brick ruins', 'The old village mosque', 'Palm gardens and the wadi', 'Rock outcrops and desert drives', 'Very few other visitors'],
+      hours: { summary: 'Open site, daylight hours', details: [], note: 'Unrestored ruins — walls are fragile and unfenced. Take care, especially with children.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket or booking.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 90 km north-west of Riyadh via Huraymila; the last stretch is a minor road.', transport: 'A car is essential — there is no public transport.' },
+      bestTime: 'November – March; after winter rain the wadi is green', duration: '2 hours',
+      dress: 'Sturdy shoes, hat and water.',
+      tips: ['Do not climb on the mud walls — they are unstable and part of the heritage.', 'Combine with Huraymila and the Tuwaiq escarpment.', 'Take everything you need; there are no facilities at the village.']
+    },
+    {
+      id: 'rawdat-khuraim', name: 'Rawdat Khuraim (The King\'s Forest)', nativeName: 'روضة خريم',
+      region: 'riyadh', city: 'Rumah', categories: ['nature'],
+      coords: [25.3631, 47.3020], wiki: 'https://en.wikipedia.org/wiki/Rawdhat_Khuraim',
+      tagline: 'A desert meadow that turns green after the winter rains.',
+      overview: [
+        'Rawdat Khuraim is the best known of Najd\'s rawdahs — shallow basins where rainwater collects and grass, wildflowers and acacia and sidr trees grow thickly for a few weeks each year.',
+        'In a good spring the floor of the basin is carpeted in green and yellow and the whole of Riyadh seems to drive out to camp, picnic and let children run. In summer it reverts to dry scrub.'
+      ],
+      history: ['The area has long been protected royal grazing land, which is why it is also called the King\'s Forest, and its acacia woodland is unusually intact for central Arabia.'],
+      religious: null,
+      highlights: ['Spring wildflowers and green grass', 'Acacia and sidr woodland', 'Camping and barbecues', 'Birdwatching on migration', 'Night skies away from the city'],
+      hours: { summary: 'Open at all times; the season is roughly January to April', details: ['Peak greenery follows good winter rain — some years it barely greens at all', 'Weekends in spring are extremely busy'], note: 'There are no facilities: no water, no toilets, no shops.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket. Camping is informal.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 100 km north-east of Riyadh, in Rumah governorate off the Riyadh–Rumah road.', transport: 'A car is essential; a 4x4 helps if you leave the graded tracks.' },
+      bestTime: 'February – March after a wet winter', duration: 'Half a day, or an overnight camp',
+      dress: 'Layers — desert nights are cold in winter — plus sun protection.',
+      tips: ['Check with locals whether it has actually greened before driving out; dry years are common.', 'Take all your rubbish home; the rawdah suffers badly from litter.', 'Do not drive over the vegetation — park on the tracks.']
+    },
+    {
+      id: 'rawdat-al-tanhat', name: 'Rawdat Al-Tanhat', nativeName: 'روضة التنهاة',
+      region: 'riyadh', city: 'Rumah', categories: ['nature'], approx: true,
+      coords: [25.2000, 47.1500],
+      tagline: 'A quieter rawdah north-east of Riyadh for winter camping.',
+      overview: [
+        'Rawdat Al-Tanhat is one of the natural meadows in the belt of rawdahs north-east of Riyadh, in the same landscape as Rawdat Khuraim but with far fewer visitors.',
+        'Like the other rawdahs it depends entirely on the winter rains: after a wet season the basin fills with grass and wildflowers and becomes a favourite camping ground, and in a dry year there is little to see.'
+      ],
+      history: ['The rawdahs of Najd have been seasonal grazing grounds for Bedouin herds for centuries, and are now mainly used for weekend camping by families from the capital.'],
+      religious: null,
+      highlights: ['Seasonal wildflowers', 'Quiet winter camping', 'Dark skies for stargazing', 'Acacia trees and open desert'],
+      hours: { summary: 'Open at all times; the season is roughly January to April', details: [], note: 'No facilities of any kind — bring water, fuel and everything else.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket. Camping is informal.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'North-east of Riyadh in the Rumah area; the final approach is on desert tracks.', transport: 'A 4x4 is strongly recommended.' },
+      bestTime: 'February – March after a wet winter', duration: 'Half a day, or an overnight camp',
+      dress: 'Warm layers for the night, sun protection by day.',
+      tips: ['The map pin is approximate — confirm the exact spot in a maps app or with a local guide before setting off.', 'Do not rely on phone signal out here; tell someone your plans.', 'Carry out everything you bring in.']
+    },
+    {
+      id: 'al-kharj-water-tower', name: 'Al-Kharj Water Tower', nativeName: 'برج المياه بالخرج',
+      region: 'riyadh', city: 'Al-Kharj', categories: ['modern', 'heritage'],
+      coords: [24.1154, 47.2915],
+      tagline: 'The landmark that marks the old farming capital of Najd.',
+      overview: [
+        'The steel water tower on King Abdullah Road is Al-Kharj\'s most recognisable landmark, standing over a town that was the Kingdom\'s first large modern farming project.',
+        'Al-Kharj itself is the reason to come: the giant natural water pits (Ain Al-Dhila and the Al-Kharj sinkholes) that fed its agriculture, and the date and dairy farms around it.'
+      ],
+      history: [
+        'In the 1930s and 1940s King Abdulaziz developed Al-Kharj into the country\'s first mechanised farming scheme, drawing on the deep natural wells that had watered the oasis for centuries.',
+        'The town remains one of Saudi Arabia\'s main agricultural centres.'
+      ],
+      religious: null,
+      highlights: ['The water tower itself', 'Al-Kharj natural water pits (Ain Al-Dhila)', 'Date farms and dairy country', 'Al-Kharj old quarter', 'An easy stop on the road south from Riyadh'],
+      hours: { summary: 'The tower is a roadside landmark, visible at all times', details: [], note: 'The tower is not generally open to climb; the water pits are the real attraction.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 80 km south-east of Riyadh on the Al-Kharj highway.', transport: 'Car or intercity bus from Riyadh.' },
+      bestTime: 'November – March', duration: '1–2 hours with the water pits',
+      dress: 'Sun protection; sturdy shoes near the pits.',
+      tips: ['Stand well back from the edges of the water pits — they are deep and unfenced.', 'Combine with Heet Cave, which is on the same road back to Riyadh.', 'Buy dates directly from the farms along the highway.']
+    },
     /* ======================= ROUND 4: RIYADH PROVINCE ======================= */
     {
       id: 'murabba-palace', name: 'Murabba Palace', nativeName: 'قصر المربع',

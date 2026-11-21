@@ -3878,5 +3878,55 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "",
    "page": ""
   }
+ ],
+ "qasr-al-hukm": [
+  {
+   "src": "assets/photos/qasr-al-hukm/e1.jpg",
+   "thumb": "assets/photos/qasr-al-hukm/e1-sm.jpg",
+   "credit": "Geektaker",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=127027405"
+  },
+  {
+   "src": "assets/photos/qasr-al-hukm/e2.jpg",
+   "thumb": "assets/photos/qasr-al-hukm/e2-sm.jpg",
+   "credit": "Geektaker",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=132632554"
+  }
+ ],
+ "diplomatic-quarter": [
+  {
+   "src": "assets/photos/diplomatic-quarter/e1.jpg",
+   "thumb": "assets/photos/diplomatic-quarter/e1-sm.jpg",
+   "credit": "Pedronet",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/40271931@N00/5217630483"
+  }
+ ],
+ "salam-park": [
+  {
+   "src": "assets/photos/salam-park/e1.jpg",
+   "thumb": "assets/photos/salam-park/e1-sm.jpg",
+   "credit": "Hamza A. Durrani",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=181898509"
+  }
+ ],
+ "riyadh-zoo": [
+  {
+   "src": "assets/photos/riyadh-zoo/e1.jpg",
+   "thumb": "assets/photos/riyadh-zoo/e1-sm.jpg",
+   "credit": "കാക്കര",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=36124685"
+  },
+  {
+   "src": "assets/photos/riyadh-zoo/e2.jpg",
+   "thumb": "assets/photos/riyadh-zoo/e2-sm.jpg",
+   "credit": "കാക്കര",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=36124686"
+  }
  ]
 } });
