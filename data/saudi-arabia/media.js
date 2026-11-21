@@ -3902,6 +3902,13 @@ TG.registerMedia('saudi-arabia', { spots: {
    "credit": "Pedronet",
    "license": "CC BY 2.0",
    "page": "https://www.flickr.com/photos/40271931@N00/5217630483"
+  },
+  {
+   "src": "assets/photos/diplomatic-quarter/e2.jpg",
+   "thumb": "assets/photos/diplomatic-quarter/e2-sm.jpg",
+   "credit": "Pedronet",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/40271931@N00/5217633977"
   }
  ],
  "salam-park": [
@@ -3927,6 +3934,29 @@ TG.registerMedia('saudi-arabia', { spots: {
    "credit": "കാക്കര",
    "license": "CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=36124686"
+  },
+  {
+   "src": "assets/photos/riyadh-zoo/e3.jpg",
+   "thumb": "assets/photos/riyadh-zoo/e3-sm.jpg",
+   "credit": "hamza82",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/66245442@N00/12486945545"
+  }
+ ],
+ "al-kharj-water-tower": [
+  {
+   "src": "assets/photos/al-kharj-water-tower/e1.jpg",
+   "thumb": "assets/photos/al-kharj-water-tower/e1-sm.jpg",
+   "credit": "Slayym",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=115801507"
+  },
+  {
+   "src": "assets/photos/al-kharj-water-tower/e2.jpg",
+   "thumb": "assets/photos/al-kharj-water-tower/e2-sm.jpg",
+   "credit": "kees torn",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/68359921@N08/42333853375"
   }
  ]
 } });
