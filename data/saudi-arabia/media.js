@@ -4038,5 +4038,14 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=192752189"
   }
+ ],
+ "miqat-wadi-mahram": [
+  {
+   "src": "assets/photos/miqat-wadi-mahram/e1.jpg",
+   "thumb": "assets/photos/miqat-wadi-mahram/e1-sm.jpg",
+   "credit": "Unknown authorUnknown author",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=168633838"
+  }
  ]
 } });
