@@ -2547,6 +2547,32 @@ TG.registerCountry('saudi-arabia', 'en', {
       ]
     },
 
+    {
+      id: 'al-gharabah-mountain-trail', name: 'Al-Gharabah Mountain Trail', nativeName: 'مسار جبل الغرابة',
+      region: 'riyadh', city: 'Al-Thadiq', categories: ['nature'], featured: true,
+      coords: [25.2512, 45.8122], status: 'check',
+      notice: 'This trail opened to the public on 14 November 2026. It is brand new, undeveloped and run informally — there are no official facilities yet, so details here may change quickly. Confirm current access before travelling.',
+      tagline: 'A newly opened desert hiking trail up a standalone hill near Thadiq.',
+      overview: [
+        'Al-Gharabah is a standalone hill rising about 115 m above its base camp in the open desert near Thadiq, north-west of Riyadh. A trail to its summit opened to the public on 14 November 2026, with an inaugural hike that drew hundreds of participants of all ages and nationalities.',
+        'From the flat plateau at the top, hikers get a 360-degree view over the desert valleys of Thadiq, Rughaba, Qasab and the surrounding country — a genuinely new vantage point rather than a renamed existing site.'
+      ],
+      history: ['The trail was opened by MAD Adventure, a local hiking and adventure group, with the inaugural climb attended by the area\'s governor. It is deliberately kept undeveloped — no electricity, no water supply, no facilities — to preserve the site in its natural state.'],
+      religious: null,
+      highlights: ['360-degree summit plateau views', 'Standalone desert hill, about 115 m of ascent', 'Desert valleys of Thadiq, Rughaba and Qasab', 'Overnight camping on clear nights', 'A genuinely new, uncrowded trail'],
+      hours: { summary: 'Open at all times; no gate or ticket office', details: ['Winter daytime is most comfortable', 'In summer, hike early morning or at night'], note: 'No facilities exist yet: no toilets, no water, no electricity, no shop nearby. Bring everything you need and a bag for your rubbish.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket or booking — it is an open, informal trail.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'About 137 km north-west of central Riyadh (roughly 1 h 40 min), via Thadiq. The road to Thadiq town is in good condition; the final stretch from the town to the trailhead is unpaved desert track.', transport: 'Car required — a high-clearance vehicle is recommended, and a sedan may need to park before the roughest section and walk in.' },
+      bestTime: 'November – March for daytime hiking; summer nights for camping', duration: 'About 3 hours to climb, explore the plateau and descend',
+      dress: 'Sturdy hiking shoes, a hat and sun protection; warm layers for an overnight camp.',
+      tips: [
+        'Bring all your own water, food and a torch or lantern — there is no electricity on site.',
+        'If your group includes women, bring a portable toilet or a small private tent, since there are no facilities.',
+        'Carry a rubbish bag and take everything away with you — the trail is kept deliberately unspoiled.',
+        'Combine with the Thadiq & Ghamra Tourist Village, which is in the same area.',
+        'As a very new, informal trail, conditions and access can change — a local operator (MAD Adventure) ran the opening hike and can be a useful contact for current conditions.'
+      ]
+    },
     /* ======================= ROUND 6: RIYADH PROVINCE ======================= */
     {
       id: 'qiddiya-six-flags', name: 'Qiddiya City & Six Flags Qiddiya', nativeName: 'مدينة القدية وسكس فلاجز القدية',
