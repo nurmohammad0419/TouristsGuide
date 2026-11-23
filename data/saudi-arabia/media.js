@@ -3958,5 +3958,53 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY-SA 2.0",
    "page": "https://www.flickr.com/photos/68359921@N08/42333853375"
   }
+ ],
+ "qiddiya-six-flags": [
+  {
+   "src": "assets/photos/qiddiya-six-flags/e1.jpg",
+   "thumb": "assets/photos/qiddiya-six-flags/e1-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=180127277"
+  },
+  {
+   "src": "assets/photos/qiddiya-six-flags/e2.jpg",
+   "thumb": "assets/photos/qiddiya-six-flags/e2-sm.jpg",
+   "credit": "Martin Lewison",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=185399238"
+  },
+  {
+   "src": "assets/photos/qiddiya-six-flags/e3.jpg",
+   "thumb": "assets/photos/qiddiya-six-flags/e3-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=180128044"
+  }
+ ],
+ "kingdom-arena": [
+  {
+   "src": "assets/photos/kingdom-arena/e1.jpg",
+   "thumb": "assets/photos/kingdom-arena/e1-sm.jpg",
+   "credit": "Bahraini Carguy",
+   "license": "Public domain",
+   "page": "https://www.flickr.com/photos/198128242@N04/54320639066"
+  },
+  {
+   "src": "assets/photos/kingdom-arena/e2.jpg",
+   "thumb": "assets/photos/kingdom-arena/e2-sm.jpg",
+   "credit": "Bahraini Carguy",
+   "license": "Public domain",
+   "page": "https://www.flickr.com/photos/198128242@N04/54319749232"
+  }
+ ],
+ "wadi-al-dawasir-town": [
+  {
+   "src": "assets/photos/wadi-al-dawasir-town/e1.jpg",
+   "thumb": "assets/photos/wadi-al-dawasir-town/e1-sm.jpg",
+   "credit": "Z thomas",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=183033842"
+  }
  ]
 } });
