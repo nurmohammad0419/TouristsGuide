@@ -2821,6 +2821,25 @@ TG.registerCountry('saudi-arabia', 'en', {
         'As a very new, informal trail, conditions and access can change — a local operator (MAD Adventure) ran the opening hike and can be a useful contact for current conditions.'
       ]
     },
+    {
+      id: 'shuaib-umm-qasr', name: 'Shuaib Umm Qasr (Wadi Umm Al-Qasr) Walkway', nativeName: 'شعيب أم قصر',
+      region: 'riyadh', city: 'Riyadh', categories: ['nature', 'modern'], approx: true, featured: true,
+      coords: [24.6051, 46.6368],
+      tagline: 'A dramatically lit sports bridge zigzagging down a rehabilitated wadi in western Riyadh.',
+      overview: [
+        'Shuaib Umm Qasr is a natural tributary of Wadi Hanifa in the Al-Oraija Al-Wusta district, rehabilitated under the Green Riyadh Project and reopened as a landscaped urban park. A zigzagging elevated "sports bridge" — the site\'s architectural centrepiece — switches back and forth down the slope of the wadi, lit end to end at night.',
+        'Beneath and around the bridge are walking, jogging and cycling paths, planted terraces, small waterfalls and water features, with seating areas and restrooms for visitors. After dark the lighting along the whole structure makes it one of Riyadh\'s most photographed new spots.'
+      ],
+      history: ['The site is one of several natural valleys the Green Riyadh Project has rehabilitated and reopened as public green space, turning what was previously an unused desert wadi into a landscaped park.'],
+      religious: null,
+      highlights: ['The zigzag elevated sports bridge, lit at night', 'Small waterfalls and water features', 'Walking, jogging and cycling paths', 'Landscaped planting along the valley', 'Free, family-friendly evening outing'],
+      hours: { summary: 'Open daily; most photographed and busiest after sunset when the lighting is on', details: [], note: 'A newly reopened public space — facilities are being finished in stages.' },
+      tickets: { required: false, price: 'Free', how: ['No ticket needed.'], links: [] },
+      gettingThere: { airport: 'King Khalid International (RUH)', road: 'Al-Oraija Al-Wusta district, western Riyadh.', transport: 'Taxi or ride-hailing; a car is convenient given the district\'s size.' },
+      bestTime: 'Evenings, year-round — the lighting is the highlight', duration: '1–1.5 hours',
+      dress: 'Comfortable walking shoes; modest clothing as elsewhere in the Kingdom.',
+      tips: ['Go after sunset to see the bridge fully lit — this is when it looks its best.', 'Combine with Wadi Hanifa, which this tributary feeds into, if you have more time.', 'As a newly opened site, exact opening hours and facilities may still be settling — check recent visitor reports before a special trip.']
+    },
     /* ======================= ROUND 6: RIYADH PROVINCE ======================= */
     {
       id: 'qiddiya-six-flags', name: 'Qiddiya City & Six Flags Qiddiya', nativeName: 'مدينة القدية وسكس فلاجز القدية',
