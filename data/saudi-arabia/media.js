@@ -4006,5 +4006,37 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY 4.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=183033842"
   }
+ ],
+ "red-sea-mall-jeddah": [
+  {
+   "src": "assets/photos/red-sea-mall-jeddah/e1.jpg",
+   "thumb": "assets/photos/red-sea-mall-jeddah/e1-sm.jpg",
+   "credit": "Tahir mq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=57706702"
+  },
+  {
+   "src": "assets/photos/red-sea-mall-jeddah/e2.jpg",
+   "thumb": "assets/photos/red-sea-mall-jeddah/e2-sm.jpg",
+   "credit": "PaperStainer",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/34215138@N05/5963623859"
+  },
+  {
+   "src": "assets/photos/red-sea-mall-jeddah/e3.jpg",
+   "thumb": "assets/photos/red-sea-mall-jeddah/e3-sm.jpg",
+   "credit": "PaperStainer",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/34215138@N05/5964175484"
+  }
+ ],
+ "taif-rose-factory": [
+  {
+   "src": "assets/photos/taif-rose-factory/e1.jpg",
+   "thumb": "assets/photos/taif-rose-factory/e1-sm.jpg",
+   "credit": "وكالة الأنباء السعودية",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=192752189"
+  }
  ]
 } });
