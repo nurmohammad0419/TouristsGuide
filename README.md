@@ -10,7 +10,7 @@ Countries live on the site:
 
 | Country | Spots | Divisions | Tour Plan |
 |---|---|---|---|
-| 🇸🇦 Saudi Arabia | 247 | 13 provinces, 139 governorates | yes |
+| 🇸🇦 Saudi Arabia | 258 | 13 provinces, 139 governorates | yes |
 | 🇹🇷 Türkiye | 88 | 7 regions, 81 provinces | yes |
 
 The Tour Plan wizard is per country and needs a `data/<country>/plan.js` file. Countries without one simply do not show the Tour Plan link.
