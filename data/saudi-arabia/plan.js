@@ -260,9 +260,11 @@ TG.registerPlanner('saudi-arabia', {
     jazan: { title: 'Jazan', city: 'Jazan', spots: ['farasan-islands', 'fayfa', 'wadi-lajab', 'dosariyah-fort'] },
     najran: { title: 'Najran', city: 'Najran', spots: ['al-ukhdood', 'emara-palace', 'al-aan-palace', 'najran-dam', 'hima'] },
     bahah: { title: 'Al-Bahah', city: 'Al-Bahah', spots: ['raghadan-forest', 'thee-ain', 'al-atawlah', 'shada-al-ala'] },
-    tabuk_city: { title: 'Tabuk & the north-west', city: 'Tabuk', spots: ['tabuk-castle', 'wadi-disah', 'tayma', 'hisma-desert', 'jabal-al-lawz'] },
-    tabuk_coast: { dayTrip: true, title: 'Gulf of Aqaba coast', city: 'Al-Bad\'', spots: ['maghaer-shuaib', 'maqna', 'tayeb-ism', 'ras-alsheikh-hamid', 'georgios-shipwreck'] },
-    red_sea: { title: 'Red Sea coast', city: 'Umluj', spots: ['umluj', 'red-sea-global'] },
+    tabuk_city: { title: 'Tabuk & the north-west', city: 'Tabuk', spots: ['tabuk-castle', 'wadi-disah', 'tayma', 'hisma-desert', 'jabal-al-lawz', 'tabuk-hejaz-railway-station', 'souq-twaheen', 'al-tawbah-mosque', 'prince-fahd-sultan-park', 'astra-farms-tabuk', 'tabuk-mud-house-museum', 'al-shaq-canyon', 'qurayyah-archaeological-site', 'al-naslaa-rock'] },
+    tabuk_coast: { dayTrip: true, title: 'Gulf of Aqaba coast', city: 'Al-Bad\'', spots: ['maghaer-shuaib', 'maqna', 'tayeb-ism', 'ras-alsheikh-hamid', 'georgios-shipwreck', 'jabal-maqla', 'haql-castle', 'haql-corniche'] },
+    tabuk_duba_wajh: { dayTrip: true, title: 'Duba & Al-Wajh coast', city: 'Al-Wajh', spots: ['al-muwaylih-castle', 'king-abdulaziz-castle-duba', 'al-wajh-old-town'] },
+    neom: { dayTrip: true, title: 'NEOM coast', city: 'Sharma', spots: ['sharma-beach-neom', 'sindalah-island'] },
+    red_sea: { title: 'Red Sea coast', city: 'Umluj', spots: ['umluj', 'red-sea-global', 'six-senses-southern-dunes', 'ummahat-islands-resorts', 'desert-rock-resort', 'amaala-triple-bay', 'harrat-lunayyir'] },
     hail: { title: 'Hail', city: 'Hail', spots: ['hail-rock-art', 'qishlah-palace', 'aarif-fort', 'barzan-palace', 'jabal-aja', 'fayd'] },
     qassim: { title: 'Al-Qassim', city: 'Buraidah', spots: ['buraidah', 'buraidah-camel-market', 'unaizah', 'al-shinanah', 'al-mithnab', 'al-bukayriyah', 'uyun-al-jiwa'] },
     jawf: { title: 'Al-Jawf', city: 'Sakaka', spots: ['zaabal-castle', 'al-rajajil', 'jouf-olive-festival', 'marid-castle', 'dumat-lake', 'qasr-kaf'] },
@@ -315,7 +317,7 @@ TG.registerPlanner('saudi-arabia', {
     riyadh: ['riyadh', 'riyadh_day'],
     eastern: ['eastern_metro', 'alahsa', 'hafar_batin'],
     asir: ['asir'], jazan: ['jazan'], najran: ['najran'], bahah: ['bahah'],
-    tabuk: ['tabuk_city', 'tabuk_coast', 'red_sea'],
+    tabuk: ['tabuk_city', 'tabuk_coast', 'tabuk_duba_wajh', 'neom', 'red_sea'],
     hail: ['hail'], qassim: ['qassim'], jawf: ['jawf'], 'northern-borders': ['north']
   }
 });
