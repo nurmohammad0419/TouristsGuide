@@ -314,6 +314,20 @@ TG.registerCountry('saudi-arabia', 'en', {
       dress: 'Modest clothing; women cover hair inside.', tips: ['Perform wudu at your hotel before going to follow the Sunnah.', 'Date shops nearby sell Madinah\'s famous Ajwa dates.']
     },
     {
+      id: 'as-safiyyah-museum-park', name: 'As-Safiyyah Museum & Park, Madinah', nativeName: 'متحف وحديقة الصفية',
+      region: 'madinah', city: 'Madinah', categories: ['heritage', 'modern'],
+      approx: true, coords: [24.4650, 39.6100],
+      tagline: 'An underground "Story of Creation" museum beneath a park south of the Prophet\'s Mosque.',
+      overview: ['As-Safiyyah Museum & Park sits south of the Prophet\'s Mosque, on the axis of Bab Al-Salam, one of the mosque\'s historic gates, on the site of a former palm garden. The complex covers over 4,400 m², with a roughly 2,200 m² digital interactive exhibition — the "Story of Creation" / Khair Al-Khalq (Best of Creation) Museum — built two storeys underground beneath the park to preserve the mosque\'s sacred sightlines, using around 187 interactive screens.'],
+      history: ['Developed by the Madinah Region Development Authority with private-sector partners and inaugurated by Prince Salman bin Sultan, Emir of Madinah.'],
+      religious: ['The museum\'s exhibits present aspects of the life of Prophet Muhammad ﷺ.'],
+      highlights: ['Underground interactive museum', 'Park with retail and dining', 'Views toward Bab Al-Salam'],
+      hours: { summary: 'Check locally for current hours', details: [], note: 'A recently opened attraction — confirm hours and ticketing before visiting.' },
+      tickets: { required: true, price: 'Unconfirmed', how: ['Check the Madinah Region Development Authority or on-site for current ticketing.'], links: [] },
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz International (MED)', road: 'South of the Prophet\'s Mosque, near Bab Al-Salam.', transport: 'Walk from the Haram area.' },
+      bestTime: 'Year-round', duration: '1–2 hours', dress: 'Modest clothing.', tips: ['Combine with a Prophet\'s Mosque visit — it is just outside the Haram precinct.']
+    },
+    {
       id: 'mount-uhud', name: 'Mount Uhud & the Martyrs\' Cemetery', nativeName: 'جبل أحد',
       region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage', 'nature'],
       muslimSite: true, coords: [24.5227, 39.6183], wiki: 'https://en.wikipedia.org/wiki/Mount_Uhud',
@@ -1250,6 +1264,20 @@ TG.registerCountry('saudi-arabia', 'en', {
       tickets: { required: true, price: 'Paid entry', how: ['Buy at the gate or via the official website.'], links: [] },
       gettingThere: { airport: 'King Abdulaziz International (JED)', road: 'North Corniche, Jeddah.', transport: 'Taxi.' },
       bestTime: 'Any time', duration: '1–2 hours', dress: 'Casual.', tips: ['Good option on hot days.']
+    },
+    {
+      id: 'jeddah-yacht-club-marina', name: 'Jeddah Yacht Club & Marina', nativeName: 'نادي جدة لليخوت والمرسى',
+      region: 'makkah', city: 'Jeddah', categories: ['modern', 'coast'],
+      coords: [21.6530, 39.1015],
+      tagline: 'A Red Sea marina and official port of entry on Jeddah\'s North Corniche.',
+      overview: ['Jeddah Yacht Club & Marina sits on the North Corniche waterfront and is an official port of entry to Saudi Arabia, with customs and immigration handled on site for arriving vessels, including foreign-flagged charters. Berths reportedly accommodate yachts and superyachts up to around 120 m; club facilities include a clubhouse, wellness centre and beach club, though full club membership is members-only.'],
+      history: ['Opened ahead of Saudi Arabia\'s first Formula One race, held on the North Corniche circuit in December 2021.'],
+      religious: null,
+      highlights: ['Marina berths for yachts and superyachts', 'Beach club and dining', 'Port-of-entry customs/immigration facilities'],
+      hours: { summary: 'Marina grounds generally open; club facilities members-only', details: [], note: '' },
+      tickets: { required: false, price: 'Free to view the marina; club access is members-only', how: ['Dining/beach-club reservations via the venue directly.'], links: [] },
+      gettingThere: { airport: 'King Abdulaziz International (JED), about 20 minutes', road: 'North Corniche, Ash Shati, Jeddah.', transport: 'Taxi.' },
+      bestTime: 'October – April', duration: '1 hour', dress: 'Smart casual.', tips: ['Good spot for sunset views over the marina even without club membership.']
     },
 
     /* ======================= MORE: MADINAH PROVINCE ======================= */
