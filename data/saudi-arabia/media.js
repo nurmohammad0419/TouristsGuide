@@ -4047,5 +4047,231 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=168633838"
   }
+ ],
+ "al-qasab": [
+  {
+   "src": "assets/photos/al-qasab/e1.jpg",
+   "thumb": "assets/photos/al-qasab/e1-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50569855197"
+  },
+  {
+   "src": "assets/photos/al-qasab/e2.jpg",
+   "thumb": "assets/photos/al-qasab/e2-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50569113473"
+  },
+  {
+   "src": "assets/photos/al-qasab/e3.jpg",
+   "thumb": "assets/photos/al-qasab/e3-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50568969868"
+  }
+ ],
+ "al-majmaah-marqab": [
+  {
+   "src": "assets/photos/al-majmaah-marqab/e1.jpg",
+   "thumb": "assets/photos/al-majmaah-marqab/e1-sm.jpg",
+   "credit": "haitham alfalah",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=4472322"
+  },
+  {
+   "src": "assets/photos/al-majmaah-marqab/e2.jpg",
+   "thumb": "assets/photos/al-majmaah-marqab/e2-sm.jpg",
+   "credit": "haitham alfalah",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=4472125"
+  },
+  {
+   "src": "assets/photos/al-majmaah-marqab/e3.jpg",
+   "thumb": "assets/photos/al-majmaah-marqab/e3-sm.jpg",
+   "credit": "haitham alfalah",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=4472325"
+  }
+ ],
+ "harrat-khaybar-volcanoes": [
+  {
+   "src": "assets/photos/harrat-khaybar-volcanoes/e1.jpg",
+   "thumb": "assets/photos/harrat-khaybar-volcanoes/e1-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50225204146"
+  },
+  {
+   "src": "assets/photos/harrat-khaybar-volcanoes/e2.jpg",
+   "thumb": "assets/photos/harrat-khaybar-volcanoes/e2-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50224562438"
+  },
+  {
+   "src": "assets/photos/harrat-khaybar-volcanoes/e3.jpg",
+   "thumb": "assets/photos/harrat-khaybar-volcanoes/e3-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50225204356"
+  }
+ ],
+ "alula-oasis-trail": [
+  {
+   "src": "assets/photos/alula-oasis-trail/e1.jpg",
+   "thumb": "assets/photos/alula-oasis-trail/e1-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/54036138870"
+  },
+  {
+   "src": "assets/photos/alula-oasis-trail/e2.jpg",
+   "thumb": "assets/photos/alula-oasis-trail/e2-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/54035940888"
+  },
+  {
+   "src": "assets/photos/alula-oasis-trail/e3.jpg",
+   "thumb": "assets/photos/alula-oasis-trail/e3-sm.jpg",
+   "credit": "Following Hadrian",
+   "license": "CC BY-SA 2.0",
+   "page": "https://www.flickr.com/photos/41523983@N08/54035687436"
+  }
+ ],
+ "king-fahd-quran-complex": [
+  {
+   "src": "assets/photos/king-fahd-quran-complex/e1.jpg",
+   "thumb": "assets/photos/king-fahd-quran-complex/e1-sm.jpg",
+   "credit": "علاء",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=95363636"
+  },
+  {
+   "src": "assets/photos/king-fahd-quran-complex/e2.jpg",
+   "thumb": "assets/photos/king-fahd-quran-complex/e2-sm.jpg",
+   "credit": "علاء",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=95363633"
+  },
+  {
+   "src": "assets/photos/king-fahd-quran-complex/e3.jpg",
+   "thumb": "assets/photos/king-fahd-quran-complex/e3-sm.jpg",
+   "credit": "علاء",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=95363634"
+  }
+ ],
+ "miqat-dhul-hulayfah": [
+  {
+   "src": "assets/photos/miqat-dhul-hulayfah/e1.jpg",
+   "thumb": "assets/photos/miqat-dhul-hulayfah/e1-sm.jpg",
+   "credit": "Aiman titi",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=14860516"
+  }
+ ],
+ "sira-quran-exhibition": [
+  {
+   "src": "assets/photos/sira-quran-exhibition/e1.jpg",
+   "thumb": "assets/photos/sira-quran-exhibition/e1-sm.jpg",
+   "credit": "Saudi Press Agency (SPA)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=178886120"
+  }
+ ],
+ "hafar-al-batin": [
+  {
+   "src": "assets/photos/hafar-al-batin/e1.jpg",
+   "thumb": "assets/photos/hafar-al-batin/e1-sm.jpg",
+   "credit": "GAlshammari",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44530781@N05/9524464834"
+  },
+  {
+   "src": "assets/photos/hafar-al-batin/e2.jpg",
+   "thumb": "assets/photos/hafar-al-batin/e2-sm.jpg",
+   "credit": "GAlshammari",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/44530781@N05/9524477532"
+  }
+ ],
+ "yanbu-flower-festival-park": [
+  {
+   "src": "assets/photos/yanbu-flower-festival-park/e1.jpg",
+   "thumb": "assets/photos/yanbu-flower-festival-park/e1-sm.jpg",
+   "credit": "Ahmed Abdulbasit (Pakistan)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=76301606"
+  }
+ ],
+ "az-zulfi": [
+  {
+   "src": "assets/photos/az-zulfi/e1.jpg",
+   "thumb": "assets/photos/az-zulfi/e1-sm.jpg",
+   "credit": "Slayym",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=87678288"
+  }
+ ],
+ "al-hada-cable-car": [
+  {
+   "src": "assets/photos/al-hada-cable-car/e2.jpg",
+   "thumb": "assets/photos/al-hada-cable-car/e2-sm.jpg",
+   "credit": "Basheer Olakara",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/34068250@N08/3947435108"
+  }
+ ],
+ "masjid-al-suqya": [
+  {
+   "src": "assets/photos/masjid-al-suqya/e3.jpg",
+   "thumb": "assets/photos/masjid-al-suqya/e3-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/52501905445"
+  }
+ ],
+ "al-bukayriyah": [
+  {
+   "src": "assets/photos/al-bukayriyah/e1.jpg",
+   "thumb": "assets/photos/al-bukayriyah/e1-sm.jpg",
+   "credit": "FShbib",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=106991107"
+  }
+ ],
+ "jana-kurayn-islands": [
+  {
+   "src": "assets/photos/jana-kurayn-islands/e1.jpg",
+   "thumb": "assets/photos/jana-kurayn-islands/e1-sm.jpg",
+   "credit": "DonToofee",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/39844984@N02/16027715181"
+  }
+ ],
+ "qatif-corniche": [
+  {
+   "src": "assets/photos/qatif-corniche/e1.jpg",
+   "thumb": "assets/photos/qatif-corniche/e1-sm.jpg",
+   "credit": "AhmedAlElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=98525450"
+  },
+  {
+   "src": "assets/photos/qatif-corniche/e2.jpg",
+   "thumb": "assets/photos/qatif-corniche/e2-sm.jpg",
+   "credit": "AhmadElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=60572876"
+  },
+  {
+   "src": "assets/photos/qatif-corniche/e3.jpg",
+   "thumb": "assets/photos/qatif-corniche/e3-sm.jpg",
+   "credit": "AhmadElq",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=60572875"
+  }
  ]
 } });
