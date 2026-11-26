@@ -266,7 +266,7 @@ TG.registerPlanner('saudi-arabia', {
     neom: { dayTrip: true, title: 'NEOM coast', city: 'Sharma', spots: ['sharma-beach-neom', 'sindalah-island'] },
     red_sea: { title: 'Red Sea coast', city: 'Umluj', spots: ['umluj', 'red-sea-global', 'six-senses-southern-dunes', 'ummahat-islands-resorts', 'desert-rock-resort', 'amaala-triple-bay', 'harrat-lunayyir'] },
     hail: { title: 'Hail', city: 'Hail', spots: ['hail-rock-art', 'qishlah-palace', 'aarif-fort', 'barzan-palace', 'jabal-aja', 'fayd'] },
-    qassim: { title: 'Al-Qassim', city: 'Buraidah', spots: ['buraidah', 'buraidah-camel-market', 'unaizah', 'al-shinanah', 'al-mithnab', 'al-bukayriyah', 'uyun-al-jiwa'] },
+    qassim: { title: 'Al-Qassim', city: 'Buraidah', spots: ['buraidah', 'buraidah-camel-market', 'unaizah', 'al-shinanah', 'al-mithnab', 'al-bukayriyah', 'uyun-al-jiwa', 'buraydah-water-tower', 'al-oqilat-museum', 'buraydah-museum', 'al-dubaikhi-heritage-palace', 'al-musawkaf-market', 'al-khabra-historical-village', 'jadiyah-museum', 'sakhrat-antarah', 'al-awshaziyah-salt-lake', 'wadi-al-rummah', 'jabal-tamiyah', 'ain-ibn-fuhayd', 'king-abdullah-park-buraydah', 'an-nabhaniyah-park'] },
     jawf: { title: 'Al-Jawf', city: 'Sakaka', spots: ['zaabal-castle', 'al-rajajil', 'jouf-olive-festival', 'marid-castle', 'dumat-lake', 'qasr-kaf'] },
     north: { title: 'Northern Borders', city: 'Rafha', spots: ['linah', 'darb-zubaydah'] }
   },
