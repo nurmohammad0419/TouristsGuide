@@ -829,6 +829,23 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: 'Half day', dress: 'Sturdy shoes, sun protection.', tips: ['Treat the "Mount Sinai" claim as folklore/theory, not fact.', 'Combine with Jabal Al-Lawz and Madyan Shuaib.']
     },
     {
+      id: 'moses-altar', name: "Moses Altar (Altar of Moses)", nativeName: 'مذبح موسى',
+      region: 'tabuk', city: 'Al-Bad\'', categories: ['nature', 'archaeology'],
+      coords: [28.5847, 35.3786],
+      tagline: 'A scattered dry-stone ruin near Jabal Maqla, promoted by fringe tour guides as the biblical "altar of the twelve tribes".',
+      overview: [
+        'A low, dry-stone-wall ruin and a scatter of standing stones in a rocky valley near Radmiyah As-Sarw, a few kilometres from Jabal Maqla in the Jabal al-Lawz range.',
+        'Some independent tour operators and researchers present the site as the "Altar of Moses" tied to the Exodus account of twelve pillars raised for the twelve tribes of Israel (Exodus 24:4). This is a fringe, disputed claim, not an archaeological or scholarly consensus — the ruin has not been professionally excavated or dated, and mainstream scholarship does not place these Exodus events in Saudi Arabia. It is mentioned here only because it is popular with visitors on self-styled "Mount Sinai in Arabia" tours; treat it as folklore, not established fact.'
+      ],
+      history: ['Local stone ruins of undetermined age and origin; popularised in recent decades by alternative-history tour guides alongside Jabal Maqla.'],
+      religious: null,
+      highlights: ['Dry-stone wall ruins', 'Scattered stone pillars', 'Part of the disputed "Mount Sinai in Arabia" tour circuit'],
+      hours: { summary: 'Daylight hours', details: [], note: 'Remote site with no facilities — access has reportedly been restricted at times; confirm locally before planning a trip.' },
+      tickets: { required: false, price: 'Free (guided tours available)', how: ['Usually visited as part of a guided day tour from Tabuk alongside Jabal Maqla.'], links: [] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'Near Radmiyah As-Sarw, a few km from Jabal Maqla, north-west Tabuk Province.', transport: 'Car or 4x4; a local guide is recommended.' },
+      bestTime: 'October – April', duration: '30–60 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Treat the "altar of the twelve tribes" claim as folklore/theory, not fact.', 'Combine with Jabal Maqla and Jabal Al-Lawz on the same trip.']
+    },
+    {
       id: 'al-shaq-canyon', name: 'Al-Shaq Canyon (Shaq Al-Ajuz)', nativeName: 'الشق',
       region: 'tabuk', city: 'Tabuk', categories: ['nature'],
       approx: true, coords: [27.9500, 36.2200],
