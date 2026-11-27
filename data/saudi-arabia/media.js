@@ -4274,15 +4274,6 @@ TG.registerMedia('saudi-arabia', { spots: {
    "page": "https://commons.wikimedia.org/w/index.php?curid=60572875"
   }
  ],
- "tabuk-hejaz-railway-station": [
-  {
-   "src": "assets/photos/tabuk-hejaz-railway-station/e2.jpg",
-   "thumb": "assets/photos/tabuk-hejaz-railway-station/e2-sm.jpg",
-   "credit": "amanderson2",
-   "license": "CC BY 2.0",
-   "page": "https://www.flickr.com/photos/49399018@N00/51945995040"
-  }
- ],
  "haql-corniche": [
   {
    "src": "assets/photos/haql-corniche/e1.jpg",
