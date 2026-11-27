@@ -4373,5 +4373,62 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY 3.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=60664628"
   }
+ ],
+ "al-khabra-historical-village": [
+  {
+   "src": "assets/photos/al-khabra-historical-village/e1.jpg",
+   "thumb": "assets/photos/al-khabra-historical-village/e1-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/49316855108"
+  },
+  {
+   "src": "assets/photos/al-khabra-historical-village/e3.jpg",
+   "thumb": "assets/photos/al-khabra-historical-village/e3-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/49316834968"
+  },
+  {
+   "src": "assets/photos/al-khabra-historical-village/e4.jpg",
+   "thumb": "assets/photos/al-khabra-historical-village/e4-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/49317544907"
+  }
+ ],
+ "great-nafud-desert": [
+  {
+   "src": "assets/photos/great-nafud-desert/e2.jpg",
+   "thumb": "assets/photos/great-nafud-desert/e2-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/43714545@N06/50224748886"
+  }
+ ],
+ "qandal-mangrove-forest": [
+  {
+   "src": "assets/photos/qandal-mangrove-forest/e1.jpg",
+   "thumb": "assets/photos/qandal-mangrove-forest/e1-sm.jpg",
+   "credit": "Abd_Mohrat",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/143058743@N07/44437859574"
+  },
+  {
+   "src": "assets/photos/qandal-mangrove-forest/e2.jpg",
+   "thumb": "assets/photos/qandal-mangrove-forest/e2-sm.jpg",
+   "credit": "Abd_Mohrat",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/143058743@N07/44440388804"
+  }
+ ],
+ "al-najdi-mosque": [
+  {
+   "src": "assets/photos/al-najdi-mosque/e1.jpg",
+   "thumb": "assets/photos/al-najdi-mosque/e1-sm.jpg",
+   "credit": "Richard Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=145183673"
+  }
  ]
 } });
