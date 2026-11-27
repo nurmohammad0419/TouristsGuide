@@ -1054,6 +1054,23 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: '20–30 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Do not remove or disturb stone tools or site material — it is a legally protected site.', 'Combine with Jabal Maqla, Moses Altar and the Altar of the Golden Calf in the same area.']
     },
     {
+      id: 'jabal-al-safinah', name: 'Jabal Al-Safinah ("Ship Mountain")', nativeName: 'جبل السفينة',
+      region: 'tabuk', city: 'Tabuk', categories: ['archaeology', 'nature'], featured: true,
+      coords: [28.3271, 35.8032], wiki: 'https://saudipedia.com/en/jabal-al-safinah',
+      tagline: 'A wind-carved sandstone outcrop in the Hisma Desert, covered in 2,600-year-old inscriptions.',
+      overview: [
+        'Jabal Al-Safinah ("Ship Mountain") is a sandstone formation in the Hisma Desert, about 80 km west of Tabuk city, eroded by wind and water into a shape resembling a ship anchored on the sand.',
+        'Its rock faces carry a dense layer of ancient writing: Thamudic inscriptions dating back more than 2,600 years, pre-Islamic Arabic writings, and early Islamic-era inscriptions in the Madani and early Kufic scripts (undotted, dating to the first century of the Hijra). The site also carries Hismaic-script inscriptions — a dialect connected letter-by-letter in a style similar to Nabataean and resembling the Safaitic script — and is cited as one of the first places where early Arabic inscriptions were discovered.'
+      ],
+      history: ['Part of the wider Hisma Desert/Jibal Hisma range, a corridor long used by Thamudic, Nabataean and early Arab travellers; its inscriptions span millennia of use before and after the rise of Islam.'],
+      religious: null,
+      highlights: ['Ship-shaped sandstone formation', 'Thamudic inscriptions over 2,600 years old', 'Early Kufic and Madani-script Islamic-era inscriptions', 'Hismaic rock writing'],
+      hours: { summary: 'Open at all times — remote desert site', details: [], note: 'No facilities on site; a 4x4 and local guide are recommended.' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'About 80 km west of Tabuk city, in the Hisma Desert.', transport: 'Car or 4x4; a local guide is recommended for navigation.' },
+      bestTime: 'October – April', duration: '1–2 hours', dress: 'Sturdy shoes, sun protection.', tips: ['Do not touch or scratch the inscriptions.', 'Combine with other Hisma Desert/Jibal Hisma sites on the same trip.']
+    },
+    {
       id: 'six-senses-southern-dunes', name: 'Six Senses Southern Dunes, The Red Sea', nativeName: 'سيكس سينسز ساذرن ديونز',
       region: 'tabuk', city: 'Umluj area', categories: ['coast', 'modern'],
       approx: true, coords: [24.9500, 37.3000],
