@@ -4273,5 +4273,105 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=60572875"
   }
+ ],
+ "tabuk-hejaz-railway-station": [
+  {
+   "src": "assets/photos/tabuk-hejaz-railway-station/e2.jpg",
+   "thumb": "assets/photos/tabuk-hejaz-railway-station/e2-sm.jpg",
+   "credit": "amanderson2",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/49399018@N00/51945995040"
+  }
+ ],
+ "haql-corniche": [
+  {
+   "src": "assets/photos/haql-corniche/e1.jpg",
+   "thumb": "assets/photos/haql-corniche/e1-sm.jpg",
+   "credit": "Marc Ryckaert (MJJR)",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=5288693"
+  },
+  {
+   "src": "assets/photos/haql-corniche/e3.jpg",
+   "thumb": "assets/photos/haql-corniche/e3-sm.jpg",
+   "credit": "Faisal Almaiman",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/71216001@N07/9625493833"
+  }
+ ],
+ "harrat-lunayyir": [
+  {
+   "src": "assets/photos/harrat-lunayyir/e1.jpg",
+   "thumb": "assets/photos/harrat-lunayyir/e1-sm.jpg",
+   "credit": "Free Public Domain Illustrations by rawpixel",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/153584064@N07/46364139971"
+  },
+  {
+   "src": "assets/photos/harrat-lunayyir/e3.jpg",
+   "thumb": "assets/photos/harrat-lunayyir/e3-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=115638202"
+  },
+  {
+   "src": "assets/photos/harrat-lunayyir/e4.jpg",
+   "thumb": "assets/photos/harrat-lunayyir/e4-sm.jpg",
+   "credit": "Prof. Mortel",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=115638195"
+  }
+ ],
+ "al-naslaa-rock": [
+  {
+   "src": "assets/photos/al-naslaa-rock/e1.jpg",
+   "thumb": "assets/photos/al-naslaa-rock/e1-sm.jpg",
+   "credit": "Wretch Fossil",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/12527956@N07/54553448083"
+  }
+ ],
+ "six-senses-southern-dunes": [
+  {
+   "src": "assets/photos/six-senses-southern-dunes/e1.jpg",
+   "thumb": "assets/photos/six-senses-southern-dunes/e1-sm.jpg",
+   "credit": "Ali Lajami",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/199903594@N07/53709369829"
+  }
+ ],
+ "ummahat-islands-resorts": [
+  {
+   "src": "assets/photos/ummahat-islands-resorts/e1.jpg",
+   "thumb": "assets/photos/ummahat-islands-resorts/e1-sm.jpg",
+   "credit": "Ali Lajami",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/199903594@N07/53683334937"
+  }
+ ],
+ "art-street-abha": [
+  {
+   "src": "assets/photos/art-street-abha/e1.jpg",
+   "thumb": "assets/photos/art-street-abha/e1-sm.jpg",
+   "credit": "Ali Lajami",
+   "license": "CC BY 2.0",
+   "page": "https://www.flickr.com/photos/199903594@N07/53696657392"
+  }
+ ],
+ "al-birk-beaches": [
+  {
+   "src": "assets/photos/al-birk-beaches/e2.jpg",
+   "thumb": "assets/photos/al-birk-beaches/e2-sm.jpg",
+   "credit": "الحسن هادي منجحي",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=60653699"
+  },
+  {
+   "src": "assets/photos/al-birk-beaches/e3.jpg",
+   "thumb": "assets/photos/al-birk-beaches/e3-sm.jpg",
+   "credit": "الحسن هادي منجحي",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=60664628"
+  }
  ]
 } });
