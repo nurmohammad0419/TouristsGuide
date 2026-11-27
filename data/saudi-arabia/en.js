@@ -671,7 +671,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'tabuk-castle', name: 'Tabuk Castle', nativeName: 'قلعة تبوك',
       region: 'tabuk', city: 'Tabuk', categories: ['heritage', 'religious'],
-      coords: [28.3836, 36.5550], wiki: 'https://en.wikipedia.org/wiki/Tabuk_Castle',
+      coords: [28.3828, 36.5566], wiki: 'https://en.wikipedia.org/wiki/Tabuk_Castle',
       tagline: 'An Ottoman fort on the Syrian pilgrim road.',
       overview: ['A small restored fortress with a museum, mosque and courtyard, beside the spring said to be visited by the Prophet ﷺ.'],
       history: ['Rebuilt in 1559 by the Ottomans to protect the Hajj route from Damascus.'],
