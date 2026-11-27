@@ -1085,6 +1085,23 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: '30–45 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Combine with Jabal Al-Safinah on the same desert trip.', 'Confirm current access with a local guide before heading out.']
     },
     {
+      id: 'bajdah-wildlife-reserve', name: 'Bajdah Wildlife Reserve (NEOM Nature Reserve)', nativeName: 'محمية بجدة للحياة الفطرية',
+      region: 'tabuk', city: 'Bajdah', categories: ['nature'], featured: true,
+      coords: [28.5903, 35.6968],
+      tagline: 'A NEOM rewilding reserve where Arabian oryx roam again, anchored by the dramatic "Secret Garden" canyon.',
+      overview: [
+        'Bajdah is one of NEOM\'s flagship rewilding sites, a protected desert and canyon landscape in Tabuk Province where Arabian oryx, once locally extinct, have been reintroduced and are now breeding in the wild again.',
+        'Visitors highlight the "Secret Garden" — a narrow, winding slot canyon through tall sandstone walls — as the reserve\'s standout feature, alongside open desert plains where oryx and other wildlife can be seen.'
+      ],
+      history: ['Part of NEOM\'s nature-reserve network, launched as part of the project\'s stated commitment to protect and rewild roughly 95% of NEOM\'s total area; Arabian oryx reintroductions here have been reported in Saudi and international media.'],
+      religious: null,
+      highlights: ['Reintroduced Arabian oryx', '"Secret Garden" slot canyon', 'Open desert and sandstone scenery'],
+      hours: { summary: 'Typically open mornings, closing mid-afternoon (hours vary)', details: [], note: 'Confirm current opening hours and access rules with NEOM or a local tour operator before visiting — access to NEOM reserve areas can change.' },
+      tickets: { required: false, price: 'Free to enter; most visitors arrive via a guided 4x4 tour', how: ['Usually visited as part of a guided Bajdah/Hisma Desert day tour or overnight camp booked from Tabuk.'], links: [{ label: 'NEOM Nature', url: 'https://www.neom.com/en-us/nature' }] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'Bajdah, in the NEOM area of north-west Tabuk Province.', transport: '4x4 required for the sandy terrain; a local guide is strongly recommended, and offline maps help as network signal can be weak.' },
+      bestTime: 'October – April', duration: 'Half day to full day', dress: 'Sturdy shoes, sun protection, a warm layer for cool desert mornings.', tips: ['Book a 4x4 tour rather than attempting the sandy tracks solo.', 'Combine with Jabal Al-Safinah and Ship Rock in the same NEOM desert area.']
+    },
+    {
       id: 'six-senses-southern-dunes', name: 'Six Senses Southern Dunes, The Red Sea', nativeName: 'سيكس سينسز ساذرن ديونز',
       region: 'tabuk', city: 'Umluj area', categories: ['coast', 'modern'],
       approx: true, coords: [24.9500, 37.3000],
