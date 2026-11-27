@@ -1040,6 +1040,20 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: '1–2 hours', dress: 'Comfortable clothes, sun protection.', tips: ['Best suited to visitors with a strong interest in archaeology — infrastructure for casual tourists is limited.']
     },
     {
+      id: 'masyoun-archaeological-site', name: 'Masyoun Archaeological Site', nativeName: 'موقع مصيون الأثري',
+      region: 'tabuk', city: 'Al-Bad\'', categories: ['archaeology'],
+      coords: [28.6319, 35.3795],
+      tagline: 'One of the area\'s largest Early Stone Age sites, with over fifty excavated stone tools.',
+      overview: ['Masyoun is a fenced, Heritage Commission-protected site near Radmiyah As-Sarw in north-west Tabuk Province, dating back to the early Stone Age (Palaeolithic). More than fifty stone tools of varying shapes and sizes have been recovered here, including arrowheads, grinding tools, hand axes, scrapers, hammerstones and chisels. The site also contains stone building foundations.'],
+      history: ['Attributed to the early Stone Age based on the recovered lithic toolkit; officially protected under Saudi Arabia\'s Antiquities, Museums and Urban Heritage Law (Royal Decree M/3, 1436H).'],
+      religious: null,
+      highlights: ['Over 50 recovered Stone Age tools (arrowheads, hand axes, scrapers, chisels)', 'Stone building foundations', 'Official Heritage Commission protection and signage'],
+      hours: { summary: 'Fenced heritage site — viewable from outside the perimeter', details: [], note: 'Entry past the fence line is restricted; defacing or removing material is a legal offence.' },
+      tickets: { required: false, price: 'Free to view', how: ['No booking; view from outside the fenced perimeter.'], links: [] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'Near Radmiyah As-Sarw, north-west Tabuk Province, close to Jabal Maqla.', transport: 'Car or 4x4; a local guide is recommended.' },
+      bestTime: 'October – April', duration: '20–30 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Do not remove or disturb stone tools or site material — it is a legally protected site.', 'Combine with Jabal Maqla, Moses Altar and the Altar of the Golden Calf in the same area.']
+    },
+    {
       id: 'six-senses-southern-dunes', name: 'Six Senses Southern Dunes, The Red Sea', nativeName: 'سيكس سينسز ساذرن ديونز',
       region: 'tabuk', city: 'Umluj area', categories: ['coast', 'modern'],
       approx: true, coords: [24.9500, 37.3000],
