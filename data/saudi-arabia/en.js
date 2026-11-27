@@ -316,7 +316,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'as-safiyyah-museum-park', name: 'As-Safiyyah Museum & Park, Madinah', nativeName: 'متحف وحديقة الصفية',
       region: 'madinah', city: 'Madinah', categories: ['heritage', 'modern'],
-      approx: true, coords: [24.4650, 39.6100],
+      coords: [24.4638, 39.6110],
       tagline: 'An underground "Story of Creation" museum beneath a park south of the Prophet\'s Mosque.',
       overview: ['As-Safiyyah Museum & Park sits south of the Prophet\'s Mosque, on the axis of Bab Al-Salam, one of the mosque\'s historic gates, on the site of a former palm garden. The complex covers over 4,400 m², with a roughly 2,200 m² digital interactive exhibition — the "Story of Creation" / Khair Al-Khalq (Best of Creation) Museum — built two storeys underground beneath the park to preserve the mosque\'s sacred sightlines, using around 187 interactive screens.'],
       history: ['Developed by the Madinah Region Development Authority with private-sector partners and inaugurated by Prince Salman bin Sultan, Emir of Madinah.'],
@@ -3959,7 +3959,7 @@ TG.registerCountry('saudi-arabia', 'en', {
       region: 'qassim', city: 'Al-Asyah', categories: ['nature'],
       status: 'check',
       notice: 'Sourcing for this spring and its surrounding dam was thin and partly from an unreviewed source — treat details as indicative and confirm locally.',
-      approx: true, coords: [27.4046, 44.3663],
+      coords: [26.7738, 44.2127],
       tagline: 'A historic spring-fed settlement in Al-Asyah Governorate, with a nearby dam.',
       overview: ['Ain Ibn Fuhayd (also spelled Ayn Ibn Fuhayd) gives its name to a town in Al-Asyah Governorate, northern Qassim, said to be founded around a spring identified by Muhammad bin Fuhaid Al-Asadi Al-Otaibi in the early 19th century. The nearby Marid Dam is reported to draw visitors, though with limited tourist facilities.'],
       history: ['Local tradition credits Muhammad bin Fuhaid Al-Asadi Al-Otaibi (d. c. 1844) with founding the settlement after securing the land around the spring from Imam Abdulaziz bin Muhammad Al Saud.'],
@@ -4309,7 +4309,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jabal-al-qahar', name: 'Jabal Al-Qahar', nativeName: 'جبال القهر',
       region: 'jazan', city: 'Ar Rayth', categories: ['nature'], featured: true,
-      approx: true, coords: [17.6200, 42.9000],
+      coords: [17.6292, 42.9129],
       tagline: 'Rugged 2,000 m peaks in Al-Rayth Governorate — the mountain enclosing Wadi Lajab.',
       overview: ['Jabal Al-Qahar ("struggle mountain") is a rugged mountain range in Al-Rayth Governorate, north-eastern Jazan, rising to around 2,000 m. It encloses Wadi Lajab, the moss-covered slot canyon that has become one of Jazan\'s best-known hiking destinations, and geological studies suggest the range once lay beneath the sea. Access is via a pass on the mountain\'s eastern side; the area was historically a caravan passageway.'],
       history: ['Researchers believe the area was home to some of the Arabian Peninsula\'s earliest inhabitants.'],
@@ -5108,7 +5108,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     },
     {
       id: 'al-hamra-mall', name: 'Al Hamra Mall', nativeName: 'مول الحمراء',
-      region: 'riyadh', city: 'Riyadh', categories: ['modern'], approx: true,
+      region: 'riyadh', city: 'Riyadh', categories: ['modern'],
       coords: [24.7665, 46.7546],
       tagline: 'A popular family mall in eastern Riyadh.',
       overview: ['Al Hamra Mall serves the eastern districts of Riyadh with mainstream shops, a food court and family entertainment, and is a well-known local landmark rather than a tourist destination.'],
