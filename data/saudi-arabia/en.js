@@ -800,7 +800,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'tabuk-mud-house-museum', name: 'Tabuk Mud House Museum', nativeName: 'بيت الطين – تبوك',
       region: 'tabuk', city: 'Tabuk', categories: ['heritage'],
-      approx: true, coords: [28.3834, 36.5548],
+      coords: [28.3834, 36.5548],
       tagline: 'A small private museum of Tabuk folklife, housed in a traditional mud-brick home.',
       overview: ['A small heritage museum in Tabuk\'s Al-Awayshah district, just in front of Tabuk Castle. Founded in 2020 by local collector Odeh Al-Atwi, it displays everyday objects tied to the region\'s older lifestyle inside an authentic mud-brick building, whose earthen walls keep the interior cool.'],
       history: ['Founded 2020 by Odeh Al-Atwi.'],

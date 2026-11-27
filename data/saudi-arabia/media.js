@@ -4430,5 +4430,42 @@ TG.registerMedia('saudi-arabia', { spots: {
    "license": "CC BY 2.0",
    "page": "https://commons.wikimedia.org/w/index.php?curid=145183673"
   }
+ ],
+ "tabuk-mud-house-museum": [
+  {
+   "src": "assets/photos/tabuk-mud-house-museum/1.jpg",
+   "thumb": "assets/photos/tabuk-mud-house-museum/1-sm.jpg",
+   "credit": "Photo contributed by a TouristsGuide visitor",
+   "license": "Used with permission",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tabuk-mud-house-museum/2.jpg",
+   "thumb": "assets/photos/tabuk-mud-house-museum/2-sm.jpg",
+   "credit": "Photo contributed by a TouristsGuide visitor",
+   "license": "Used with permission",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tabuk-mud-house-museum/3.jpg",
+   "thumb": "assets/photos/tabuk-mud-house-museum/3-sm.jpg",
+   "credit": "Photo contributed by a TouristsGuide visitor",
+   "license": "Used with permission",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tabuk-mud-house-museum/4.jpg",
+   "thumb": "assets/photos/tabuk-mud-house-museum/4-sm.jpg",
+   "credit": "Photo contributed by a TouristsGuide visitor",
+   "license": "Used with permission",
+   "page": ""
+  },
+  {
+   "src": "assets/photos/tabuk-mud-house-museum/5.jpg",
+   "thumb": "assets/photos/tabuk-mud-house-museum/5-sm.jpg",
+   "credit": "Photo contributed by a TouristsGuide visitor",
+   "license": "Used with permission",
+   "page": ""
+  }
  ]
 } });
