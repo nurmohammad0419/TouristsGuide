@@ -865,7 +865,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-shaq-canyon', name: 'Al-Shaq Canyon (Shaq Al-Ajuz)', nativeName: 'الشق',
       region: 'tabuk', city: 'Tabuk', categories: ['nature'],
-      approx: true, coords: [27.9500, 36.2200],
+      coords: [28.0645, 35.9117],
       tagline: 'A dramatic tectonic canyon nicknamed "the Grand Canyon of Saudi Arabia".',
       overview: ['Al-Shaq ("the tear/rip") is a canyon off the Tabuk–Al-Disah road, with cliffs reported to drop more than 250 m. The name refers to its tectonic origin.'],
       history: ['Located near the village of Shiqri off the Duba–Tabuk road.'],
