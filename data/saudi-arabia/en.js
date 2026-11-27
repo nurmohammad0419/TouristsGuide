@@ -1048,6 +1048,84 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – May', duration: '2–3 days', dress: 'Resort wear.', tips: ['A very different Red Sea experience from the beach/island resorts — mountains rather than coast.']
     },
 
+    {
+      id: 'mount-al-rumah', name: "Mount Al-Rumah (The Archers' Mount)", nativeName: 'جبل الرماة (جبل عينين)',
+      region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
+      muslimSite: true, approx: true, coords: [24.5000, 39.6150],
+      tagline: 'The small hill where the Prophet\'s ﷺ archers were stationed at the Battle of Uhud.',
+      overview: ['Mount Al-Rumah (also called Jabal al-Rumat or Jabal Aynayn) is a small hill just south of Mount Uhud, about 3 km north of the Prophet\'s Mosque.'],
+      history: ['At the Battle of Uhud (624 CE), the Prophet ﷺ stationed about 50 archers here under Abdullah ibn Jubayr to guard the Muslims\' flank, with strict orders to hold the position regardless of how the battle turned. When many archers left their post believing victory was won, the enemy cavalry attacked from behind, turning the battle against the Muslims — a episode often cited as a lesson in discipline and obedience.'],
+      religious: ['Directly tied to the events of the Battle of Uhud, described in Surah Al Imran.'],
+      highlights: ['Battle of Uhud archers\' position', 'Views toward Mount Uhud'],
+      hours: { summary: 'Open at all times', details: [], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      access: 'Open to all visitors.',
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz International (MED)', road: 'About 3 km north of the Prophet\'s Mosque, just south of Mount Uhud.', transport: 'Taxi or ziyarat tour.' },
+      bestTime: 'Morning', duration: '20–30 minutes', dress: 'Modest clothes.', tips: ['Combine with Mount Uhud and the Martyrs\' Cemetery on the same visit.']
+    },
+    {
+      id: 'mount-ayr', name: 'Mount Ayr (Jabal Ayr)', nativeName: 'جبل عير',
+      region: 'madinah', city: 'Madinah', categories: ['religious', 'nature'],
+      muslimSite: true, approx: true, coords: [24.4000, 39.5700],
+      tagline: 'The mountain marking the southern boundary of Madinah\'s sacred precinct (Haram).',
+      overview: ['Mount Ayr, about 7–8 km south-west of the Prophet\'s Mosque, is Madinah\'s second-largest mountain after Uhud, rising to roughly 900–950 m. The Miqat of Dhul Hulayfah (Abyar Ali) sits at its foot.'],
+      history: ['A hadith describes the sanctified area of Madinah as lying between Mount Ayr and Mount Thawr (to the north); Shia sources instead describe the boundary as running between Ayr and Mount Wa\'ir. Crossing beyond Ayr marks leaving Madinah\'s sacred territory.'],
+      religious: ['Marks the Haram boundary of Madinah, paired with Mount Thawr to the north.'],
+      highlights: ['Haram boundary landmark', 'Near Miqat Dhul Hulayfah'],
+      hours: { summary: 'Open at all times', details: [], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      access: 'Open to all visitors; the mountain itself is not developed for tourism.',
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz International (MED)', road: 'South-west Madinah, near Dhul Hulayfah.', transport: 'Taxi.' },
+      bestTime: 'Morning', duration: 'Viewpoint stop, 15–20 minutes', dress: 'Modest clothes.', tips: ['Combine with a visit to Miqat Dhul Hulayfah (Abyar Ali) at its foot.']
+    },
+    {
+      id: 'radwa-mountains', name: 'Radwa Mountains, Yanbu', nativeName: 'جبال رضوى',
+      region: 'madinah', city: 'Yanbu', categories: ['nature', 'heritage'], featured: true,
+      coords: [24.5842, 38.3516], wiki: 'https://en.wikipedia.org/wiki/Radwa_Mount',
+      tagline: 'A dramatic 2,280 m range above Yanbu, site of a historic 1945 royal meeting.',
+      overview: ['The Radwa Mountains rise north-east of Yanbu, reaching about 2,282 m, with striking rock formations, relatively abundant water for the region, and sweeping views over the Red Sea coast — among the most prominent ranges in Madinah Province.'],
+      history: ['In January 1945, King Abdulaziz Al Saud met King Farouk of Egypt near Radwa Bay in the shadow of these mountains; local accounts also point to a preserved clay oven from that visit as a small heritage marker.'],
+      religious: null,
+      highlights: ['Dramatic peaks and rock formations', 'Red Sea coastal views', 'Site of the 1945 Abdulaziz–Farouk meeting'],
+      hours: { summary: 'Open at all times', details: [], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      gettingThere: { airport: 'Yanbu (YNB)', road: 'North-east of Yanbu city.', transport: 'Car; 4x4 recommended for deeper exploration.' },
+      bestTime: 'October – April', duration: 'Half day', dress: 'Sturdy shoes, sun protection.', tips: ['Combine with a wider Yanbu coastal day trip.']
+    },
+    {
+      id: 'wadi-al-aqiq-madinah', name: 'Wadi Al-Aqiq, Madinah', nativeName: 'وادي العقيق',
+      region: 'madinah', city: 'Madinah', categories: ['religious', 'nature'], featured: true,
+      muslimSite: true, approx: true, coords: [24.4300, 39.5800],
+      tagline: 'The "blessed valley" the Prophet ﷺ himself praised, now a restored walking trail.',
+      overview: [
+        'Wadi Al-Aqiq is a historic valley south of Madinah, long celebrated for the sweetness of its water. Sources vary on its total length (estimates range from about 52 km to over 150 km across its upper, middle and lower sections), but the stretch most visited today is a roughly 3 km rehabilitated walkway between the Miqat Mosque and the historic Palace of Urwah ibn al-Zubayr, about 6 km from the Prophet\'s Mosque.',
+        'A second environmental rehabilitation phase (launched June 2023) widened the valley bed to an average of about 184 m and added walking paths, making it one of Madinah\'s most popular recreation spots.'
+      ],
+      history: ['Narrated in Sahih al-Bukhari: Umar ibn al-Khattab reported hearing the Prophet ﷺ call it "a blessed valley." Early Islamic-era nobles, including Urwah ibn al-Zubayr and Sukaynah bint al-Hussein, built palaces here, some ruins of which remain.'],
+      religious: ['Referred to by the Prophet ﷺ as a blessed valley, per the hadith recorded by Umar ibn al-Khattab.'],
+      highlights: ['Restored walking/recreation trail', 'Ruins of the Palace of Urwah ibn al-Zubayr', 'Historic water source for Madinah'],
+      hours: { summary: 'Open daily; walkway lit in the evening', details: [], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      access: 'Open to all visitors.',
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz International (MED)', road: 'About 6 km south of the Prophet\'s Mosque.', transport: 'Taxi.' },
+      bestTime: 'Evenings, year-round', duration: '1 hour', dress: 'Modest clothes; comfortable shoes for walking.', tips: ['A pleasant, less touristy stop between Madinah ziyarat sites.']
+    },
+    {
+      id: 'thaniyat-al-wada', name: "Thaniyat Al-Wada' (The Farewell Pass)", nativeName: 'ثنية الوداع',
+      region: 'madinah', city: 'Madinah', categories: ['religious', 'heritage'],
+      muslimSite: true, approx: true, coords: [24.4800, 39.6050],
+      tagline: 'The hilltop pass where Madinah\'s residents welcomed and bid farewell to travellers — including the Prophet ﷺ himself.',
+      overview: ['Thaniyat Al-Wada\' is a historic pass about 1 km from the Prophet\'s Mosque, on Madinah\'s old northern route toward Syria. It was traditionally where residents would see off departing travellers and welcome returning ones.'],
+      history: ['Tradition holds that the Prophet ﷺ was welcomed here by the people of Madinah upon his arrival during the Hijrah, with the poem "Tala\'a al-badru alayna" ("The full moon has risen over us") recited in celebration — a poem still sung today at Islamic celebrations. A separate site of the same name on Madinah\'s southern route toward Makkah is also recorded in historical sources.'],
+      religious: ['Associated with the Prophet\'s ﷺ arrival in Madinah after the Hijrah and the famous welcome poem "Tala\'a al-badru alayna".'],
+      highlights: ['Site of the traditional Hijrah welcome', 'Historic Madinah–Syria route marker'],
+      hours: { summary: 'Open at all times', details: [], note: '' },
+      tickets: { required: false, price: 'Free', how: ['No booking.'], links: [] },
+      access: 'Open to all visitors.',
+      gettingThere: { airport: 'Prince Mohammad bin Abdulaziz International (MED)', road: 'About 1 km from the Prophet\'s Mosque.', transport: 'Taxi or on foot.' },
+      bestTime: 'Any time', duration: '15–20 minutes', dress: 'Modest clothes.', tips: ['A quick, meaningful stop to combine with nearby ziyarat sites.']
+    },
+
     /* ======================= AL-JAWF PROVINCE ======================= */
     {
       id: 'marid-castle', name: 'Marid Castle, Dumat al-Jandal', nativeName: 'قلعة مارد',
