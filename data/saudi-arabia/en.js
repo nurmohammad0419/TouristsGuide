@@ -725,7 +725,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'tabuk-hejaz-railway-station', name: 'Hejaz Railway Station & Museum, Tabuk', nativeName: 'محطة سكة حديد الحجاز ومتحف تبوك',
       region: 'tabuk', city: 'Tabuk', categories: ['heritage'],
-      approx: true, coords: [28.3858, 36.5602],
+      coords: [28.3880, 36.5608],
       tagline: 'One of the best-preserved stations on the old Hejaz pilgrim railway.',
       overview: [
         'Tabuk\'s early-20th-century Hejaz Railway station is one of the best-preserved stops on the historic line that once linked Damascus to Madinah. The site covers around 80,000 m² with 13 restored buildings, including a workshop, a handicrafts hall and a building housing a locomotive, a freight wagon and other railway relics.',
