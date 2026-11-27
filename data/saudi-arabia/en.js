@@ -814,7 +814,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'jabal-maqla', name: 'Jabal Maqla', nativeName: 'جبل مقلة',
       region: 'tabuk', city: 'Al-Bad\'', categories: ['nature'],
-      approx: true, coords: [28.5956, 35.3342],
+      coords: [28.5956, 35.3342],
       tagline: 'A striking blackened peak in the Jabal al-Lawz range, near Al-Bad\'.',
       overview: [
         'Jabal Maqla is a mountain in the Jabal al-Lawz range of north-western Tabuk Province, notable for the dark, scorched-looking colouring of its upper slopes.',
