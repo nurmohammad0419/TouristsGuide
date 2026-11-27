@@ -756,7 +756,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'al-tawbah-mosque', name: 'Al-Tawbah Mosque, Tabuk', nativeName: 'مسجد التوبة',
       region: 'tabuk', city: 'Tabuk', categories: ['religious', 'heritage'],
-      approx: true, coords: [28.3841, 36.5557],
+      coords: [28.3840, 36.5577],
       tagline: 'A mosque tied to the Prophet\'s ﷺ 630 CE expedition to Tabuk.',
       overview: ['Al-Tawbah ("Repentance") Mosque sits in Tabuk\'s historic district next to Tabuk Castle. Its current building echoes the style of the Prophet\'s Mosque in Madinah.'],
       history: ['Sources differ on the exact founding date (accounts range from the early Islamic period to a 716 CE construction under Caliph Umar bin Abdulaziz, with an Ottoman rebuilding in the 17th century). The name comes from Surah At-Tawbah, revealed during the Prophet\'s ﷺ 630 CE expedition to Tabuk.'],
