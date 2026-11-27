@@ -1071,6 +1071,20 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: '1–2 hours', dress: 'Sturdy shoes, sun protection.', tips: ['Do not touch or scratch the inscriptions.', 'Combine with other Hisma Desert/Jibal Hisma sites on the same trip.']
     },
     {
+      id: 'ship-rock-bajdah', name: 'Ship Rock (Bajdah Desert)', nativeName: 'صخرة السفينة',
+      region: 'tabuk', city: 'Tabuk', categories: ['nature', 'archaeology'],
+      approx: true, coords: [28.3427, 35.8104],
+      tagline: 'A sandstone-and-limestone tower in the Bajdah Desert, a couple of kilometres from Jabal Al-Safinah.',
+      overview: ['A free-standing rock formation in the Bajdah Desert (Tabuk region, near the NEOM area), its stacked, prow-like shape giving it the same "ship" nickname as the nearby Jabal Al-Safinah. Travel accounts describe a tower of sandstone and limestone roughly 50 m high and mention petroglyphs on its surface, though neither the exact height nor the content and age of the carvings are documented in any scholarly or heritage-authority source we could find — treat those details as unconfirmed until verified locally.'],
+      history: ['Documented mainly in tour-operator listings and travel blogs rather than academic or Heritage Commission sources; its relationship to the better-documented Jabal Al-Safinah inscriptions a few kilometres away is unclear.'],
+      religious: null,
+      highlights: ['Ship-shaped sandstone/limestone tower', 'Reported (unverified) petroglyphs', 'Near Jabal Al-Safinah in the same desert cluster'],
+      hours: { summary: 'Open at all times — remote desert site', details: [], note: 'No facilities on site; a 4x4 and local guide are recommended.' },
+      tickets: { required: false, price: 'Free', how: ['No booking; usually visited with a local guide or desert tour.'], links: [] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'Bajdah Desert, a few km from Jabal Al-Safinah, west of Tabuk city.', transport: 'Car or 4x4; a local guide is recommended for navigation.' },
+      bestTime: 'October – April', duration: '30–45 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Combine with Jabal Al-Safinah on the same desert trip.', 'Confirm current access with a local guide before heading out.']
+    },
+    {
       id: 'six-senses-southern-dunes', name: 'Six Senses Southern Dunes, The Red Sea', nativeName: 'سيكس سينسز ساذرن ديونز',
       region: 'tabuk', city: 'Umluj area', categories: ['coast', 'modern'],
       approx: true, coords: [24.9500, 37.3000],
