@@ -846,6 +846,23 @@ TG.registerCountry('saudi-arabia', 'en', {
       bestTime: 'October – April', duration: '30–60 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Treat the "altar of the twelve tribes" claim as folklore/theory, not fact.', 'Combine with Jabal Maqla and Jabal Al-Lawz on the same trip.']
     },
     {
+      id: 'golden-calf-altar', name: 'Altar of the Golden Calf', nativeName: 'مذبح العجل الذهبي',
+      region: 'tabuk', city: 'Al-Bad\'', categories: ['nature', 'archaeology'],
+      coords: [28.5814, 35.3961],
+      tagline: 'A rock outcrop with ancient cattle petroglyphs near Jabal Maqla, marked by an official heritage sign.',
+      overview: [
+        'A cluster of large sandstone boulders near Radmiyah As-Sarw, a few kilometres from Jabal Maqla and the Moses Altar site, carved with petroglyphs that visitors describe as depicting cattle and dancing human figures.',
+        'A Saudi Heritage Commission sign at the base, titled "أبا العجل" ("Aba Al-Ajl"), marks it as a protected site, confirming the rock art itself is officially recognised. The "Golden Calf" name and its link to the biblical Exodus narrative (Exodus 32) is a separate, fringe claim promoted by independent tour guides as part of the same disputed "Mount Sinai in Arabia" theory as nearby Jabal Maqla and the Moses Altar — mainstream scholarship does not place these Exodus events in Saudi Arabia. Treat the biblical association as folklore, not established fact; the petroglyphs themselves are genuine ancient rock art.'
+      ],
+      history: ['Ancient petroglyphs of undetermined date in the Jabal al-Lawz area; protected under a Saudi Heritage Commission marker.'],
+      religious: null,
+      highlights: ['Petroglyphs of cattle and human figures', 'Official Heritage Commission signage', 'Part of the disputed "Mount Sinai in Arabia" tour circuit'],
+      hours: { summary: 'Daylight hours', details: [], note: 'Remote site with no facilities — access has reportedly been restricted at times; confirm locally before planning a trip.' },
+      tickets: { required: false, price: 'Free (guided tours available)', how: ['Usually visited as part of a guided day tour from Tabuk alongside Jabal Maqla and Moses Altar.'], links: [] },
+      gettingThere: { airport: 'Tabuk (TUU)', road: 'Near Radmiyah As-Sarw, a few km from Jabal Maqla, north-west Tabuk Province.', transport: 'Car or 4x4; a local guide is recommended.' },
+      bestTime: 'October – April', duration: '30–60 minutes', dress: 'Sturdy shoes, sun protection.', tips: ['Treat the "Golden Calf" biblical claim as folklore/theory, not fact — the petroglyphs are genuine ancient rock art.', 'Combine with Jabal Maqla and Moses Altar on the same trip.']
+    },
+    {
       id: 'al-shaq-canyon', name: 'Al-Shaq Canyon (Shaq Al-Ajuz)', nativeName: 'الشق',
       region: 'tabuk', city: 'Tabuk', categories: ['nature'],
       approx: true, coords: [27.9500, 36.2200],
