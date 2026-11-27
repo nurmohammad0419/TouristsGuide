@@ -770,7 +770,7 @@ TG.registerCountry('saudi-arabia', 'en', {
     {
       id: 'prince-fahd-sultan-park', name: 'Prince Fahd bin Sultan Park, Tabuk', nativeName: 'منتزه الأمير فهد بن سلطان',
       region: 'tabuk', city: 'Tabuk', categories: ['nature'],
-      approx: true, coords: [28.4000, 36.5700],
+      coords: [28.4331, 36.5719],
       tagline: 'Tabuk\'s main city park and home of the annual Roses & Fruit Festival.',
       overview: ['A large green space of around 500,000 m² in Tabuk city with lawns, walking and cycling tracks, play areas and seating — a popular family spot, especially in the evenings.'],
       history: ['Named for Prince Fahd bin Sultan, governor of Tabuk Province since 1987. The park hosts Tabuk\'s annual Roses & Fruit Festival, a roughly 10-day event over 130,000 m² celebrating the region\'s roses, fruit and olives.'],
